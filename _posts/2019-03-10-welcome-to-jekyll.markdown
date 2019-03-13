@@ -1,29 +1,31 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2019-03-10 20:41:13 -0300
-categories: jekyll update
+title: Como mover arquivos para outros diretórios no Sublime Text?
+date: 2019-03-12 23:41:13 +0000
+categories:
+- sublime-text
+
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Ao contrário do VS Code, o Sublime Text não tem uma opção "padrão" para mover os arquivos. Bem, pelo menos não com a opção de "arrastar e soltar", mas existe uma solução para isso!
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Suponhamos que você tenha a seguinte estruruta no seu projeto:
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+```
+css/
+   default.css
+img/
+   logo.png
+js/
+	app.js
+app.css
+```
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Tomando como exemplo, no caso acima, para mover o `app.css` para dentro da pasta `css`, você teria que fazer o seguinte:
 
-Jekyll also offers powerful support for code snippets:
+- clicar com o botão direito sobre esse arquivo 
+- selecionar a opção "rename". 
+- Após isso, basta colocar o nome da pasta antes do nome do arquivo. Exemplo: `css/app.css`
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Após fazer isso, o arquivo será movido. 
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+A mesma regra se aplica para mover para fora da pasta. Você poderia usar `../app.css` caso quisesse, por exemplo, tirar o `app.css` dentro da pasta `css` e movê-lo para raiz.
