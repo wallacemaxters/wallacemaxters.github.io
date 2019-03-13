@@ -30,5 +30,5 @@ git config core.fileMode false
 
 Após fazer isso, use `git status` para ver se a configuração funcionou corretamente. 
 
-*Observação*
+**Observação:**
 No meu caso, a configuração global geralmente não afetava a configuração já vigente, sendo necessário sempre executar o segundo exemplo demonstrado.
