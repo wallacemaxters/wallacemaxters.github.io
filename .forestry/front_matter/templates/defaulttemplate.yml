@@ -11,5 +11,10 @@ fields:
 - type: datetime
   label: date
   name: date
+- type: text
+  label: title
+  name: title
+  config:
+    required: true
 pages:
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
