@@ -9,5 +9,3 @@ Aprendi que é possível você trazer apenas um arquivo específico!
 ```bash
 git checkout branch-desejado -- caminho/para/o/arquivo/no/branch
 ```
-
-
