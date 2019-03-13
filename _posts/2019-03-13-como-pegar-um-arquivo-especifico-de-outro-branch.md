@@ -1,9 +1,8 @@
 ---
-date: 2019-03-14 01:30:58 +0000
 layout: post
-title: Como pegar um arquivo específico de outro branch
-categories:
-- git
+date: 2019-03-13 20:36:58 -0300
+title: "Como pegar um arquivo específico de outro branch"
+categories: [git]
 
 ---
 Já aconteceu de eu precisar de um arquivo apenas que estava em outro branch, não sendo viável fazer o checkout no branch inteiro ou fazer um merge para trazer aquele arquivo.
