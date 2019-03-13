@@ -2,6 +2,12 @@
 label: DefaultTemplate
 hide_body: false
 fields:
+- type: text
+  label: layout
+  name: layout
+- type: tag_list
+  label: categories
+  name: categories
 - type: datetime
   label: date
   name: date
