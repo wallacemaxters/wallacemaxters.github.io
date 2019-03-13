@@ -1,6 +1,9 @@
 ---
 label: DefaultTemplate
 hide_body: false
-fields: []
+fields:
+- type: datetime
+  label: date
+  name: date
 pages:
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
