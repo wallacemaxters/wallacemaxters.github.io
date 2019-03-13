@@ -18,13 +18,15 @@ Para solucionar isso, descobri que existe uma configuração no GIT que faz as m
 Globalmente:
 
 ```bash
-git --global config core.fileMode false```
+git --global config core.fileMode false
+```
 
 Localmente:
 
 ```bash
 cd repositorio-desejado
-git config core.fileMode false```
+git config core.fileMode false
+```
 
 Após fazer isso, use `git status` para ver se a configuração funcionou corretamente. 
 
