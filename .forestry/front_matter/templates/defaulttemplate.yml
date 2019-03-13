@@ -5,16 +5,20 @@ fields:
 - type: text
   label: layout
   name: layout
-- type: tag_list
-  label: categories
-  name: categories
-- type: datetime
-  label: date
-  name: date
+  config:
+    required: true
 - type: text
   label: title
   name: title
   config:
     required: true
+- type: datetime
+  label: date
+  name: date
+  config:
+    required: true
+- type: tag_list
+  label: categories
+  name: categories
 pages:
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
