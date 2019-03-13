@@ -2,3 +2,5 @@
 label: DefaultTemplate
 hide_body: false
 fields: []
+pages:
+- _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
