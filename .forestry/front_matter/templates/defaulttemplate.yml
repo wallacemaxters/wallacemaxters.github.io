@@ -18,5 +18,8 @@ fields:
 - type: tag_list
   label: categories
   name: categories
+- type: boolean
+  name: sitemap
+  label: sitemap
 pages:
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
