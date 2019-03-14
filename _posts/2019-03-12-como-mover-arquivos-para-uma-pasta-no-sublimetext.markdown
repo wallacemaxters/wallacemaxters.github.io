@@ -4,6 +4,7 @@ title: Como mover arquivos para outros diretórios no Sublime Text?
 date: 2019-03-12 23:41:13 +0000
 categories:
 - sublime-text
+sitemap: true
 
 ---
 Ao contrário do VS Code, o Sublime Text não tem uma opção "padrão" para mover os arquivos. Bem, pelo menos não com a opção de "arrastar e soltar", mas existe uma solução para isso!
