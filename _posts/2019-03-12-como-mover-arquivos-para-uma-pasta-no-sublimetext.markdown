@@ -10,22 +10,24 @@ Ao contrário do VS Code, o Sublime Text não tem uma opção "padrão" para mov
 
 Suponhamos que você tenha a seguinte estruruta no seu projeto:
 
-```
-css/
-   default.css
-img/
-   logo.png
-js/
-	app.js
-app.css
-```
+    css/
+       default.css
+    img/
+       logo.png
+    js/
+    	app.js
+    app.css
 
 Tomando como exemplo, no caso acima, para mover o `app.css` para dentro da pasta `css`, você teria que fazer o seguinte:
 
-- clicar com o botão direito sobre esse arquivo 
-- selecionar a opção "rename". 
-- Após isso, basta colocar o nome da pasta antes do nome do arquivo. Exemplo: `css/app.css`
+* clicar com o botão direito sobre esse arquivo
+* selecionar a opção "rename".
+* Após isso, basta colocar o nome da pasta antes do nome do arquivo. Exemplo: `css/app.css`
 
-Após fazer isso, o arquivo será movido. 
+Após fazer isso, o arquivo será movido.
+
+Veja:
+
+![](/uploads/sublime-text-mover-arquivo.gif)
 
 A mesma regra se aplica para mover para fora da pasta. Você poderia usar `../app.css` caso quisesse, por exemplo, tirar o `app.css` dentro da pasta `css` e movê-lo para raiz.
