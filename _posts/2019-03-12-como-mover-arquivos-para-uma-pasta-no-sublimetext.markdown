@@ -28,6 +28,6 @@ Após fazer isso, o arquivo será movido.
 
 Veja:
 
-![](/uploads/sublime-text-mover-arquivo.gif)
+![Sublime text movendo arquivos](/uploads/sublime-text-mover-arquivo.gif)
 
 A mesma regra se aplica para mover para fora da pasta. Você poderia usar `../app.css` caso quisesse, por exemplo, tirar o `app.css` dentro da pasta `css` e movê-lo para raiz.
