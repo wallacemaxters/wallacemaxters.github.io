@@ -2,9 +2,9 @@
 label: DefaultTemplate
 hide_body: false
 fields:
-- type: include
+- type: text
   name: layout
-  label: layout
+  label: 'layout '
 - type: text
   label: title
   name: title
