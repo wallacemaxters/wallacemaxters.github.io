@@ -22,5 +22,6 @@ fields:
   name: sitemap
   label: sitemap
 pages:
+- _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-12-como-mover-arquivos-para-uma-pasta-no-sublimetext.markdown
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
