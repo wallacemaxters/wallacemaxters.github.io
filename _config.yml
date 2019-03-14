@@ -27,6 +27,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 github: https://github.com/wallacemaxters
 stackoverflow: https://pt.stackoverflow.com/users/4995/wallace-maxters
@@ -44,3 +45,6 @@ permalink: /blog/:year/:month/:day/:title
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+safe: false
