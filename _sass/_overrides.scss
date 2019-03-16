@@ -1,1 +1,43 @@
 // No overrides so far
+
+html, main{
+    height: 100%;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.post-card{
+    height: 100%;
+    
+    .post-card-cover{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.top-banner{
+    height: 250px;
+    background-color: $turquoise;
+    background-image: linear-gradient(to right, $cyan, transparent);
+    animation: top-banner 10s infinite alternate;
+    padding: 50px;
+    color: #fff;
+}
+
+@keyframes top-banner{
+    from{
+        background-color: $turquoise;
+    }
+
+    to{
+        background-color: $cyan;
+    }
+}
