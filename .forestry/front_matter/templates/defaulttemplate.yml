@@ -22,6 +22,7 @@ fields:
   name: sitemap
   label: sitemap
 pages:
+- _posts/teste.html
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-12-como-mover-arquivos-para-uma-pasta-no-sublimetext.markdown
