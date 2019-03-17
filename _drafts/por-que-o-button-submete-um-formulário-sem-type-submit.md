@@ -9,21 +9,21 @@ sitemap: true
 ---
 Já aconteceu de eu montar um formulário sem o `type="submit"` e, mesmo assim, esse botão agir como se fosse um botão de submissão e, ao clicar no mesmo, ele acaba submetendo o formulário.
 
-Como no seguinte cenário:
+O cenário é bem parecido com esse *exemplo*:
 
+HTML:
 ```html
 <form id="form">
   <button>Outra ação qualquer</button>
   <button type="submit">Submeter</button>
 </form>
 ```
-
+Javascript:
 ```javascript
 document.querySelector('#form')
 .addEventListener('submit', function (e) {
-
   e.preventDefault();
-  console.log('submetido')
+  console.log('submetido');
 })
 ```
 
