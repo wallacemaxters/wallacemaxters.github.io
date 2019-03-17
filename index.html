@@ -5,7 +5,7 @@ layout: page
 <div class="columns is-multiline">
     {% for post in site.posts %}
         <div class="column is-4-desktop">
-            <div class="card post-card">
+            <div class="card posts-card">
                 <header class="card-header">
                     <p class="card-header-title">
                         <a class="title is-6" href="{{ post.url }}">
@@ -13,11 +13,8 @@ layout: page
                         </a>
                     </p>
                 </header>
-                <!-- <div class="card-image">
-                    <div style="background-image: url('{{ post.image }}')" class="image is-5by3 post-card-cover"></div>
-                </div> -->
                 <div class="card-content">
-                    <div class="block">{{ post.excerpt | truncate:200 }}</div>
+                    <div class="block">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</div>
                     <div class="block">
                         {% for category in post.categories %}
                             <span class="tag">{{ category }}</span>
