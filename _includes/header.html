@@ -1,10 +1,23 @@
-<header>
-    <div class='hero is-primary'>
-        <div class="hero-body">
-            <div class="container">
-                <a href="/"><h1 class="title">{{ site.title }}</h1></a>
-                <h2 class="subtitle">{{site.description }}</h2>
-            </div>
-        </div>
-    </div>
+<header class="top-header">
+	<div class="overlay">
+		<div class="container">
+			{%- if page.title -%}
+				<a href="/">
+		        	<h1 class="title is-2 has-text-white">{{ page.title | escape }}</h1>
+				</a>
+				<p class="has-text-white">
+					Categorias:  
+					<span>{{ page.categories | join: ", "}}</span>
+				</p>
+				<p>
+					
+				</p>
+			{%- else -%}
+				<h1 class="title is-1 has-text-white">{{ site.title | escape }}</h1>
+			    <h2 class="subtitle has-text-white">
+			    	{{site.description }}
+				</h2>
+		    {%- endif -%}
+		</div>
+	</div>
 </header>

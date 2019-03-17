@@ -22,3 +22,21 @@ main {
         background-position: center;
     }
 }
+
+.top-header {
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    background-image: url("/assets/img/codes.jpg");
+
+    .overlay{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, .65);
+        height: 100%;
+        width: 100%;
+    }
+}

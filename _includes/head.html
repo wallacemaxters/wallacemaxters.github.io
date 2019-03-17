@@ -28,8 +28,16 @@
 
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 
+  {% if page.image %}
+  <style>
+    .top-header{
+      background-image: url('{{ page.image }}');
+    }
+  </style>
+  {% endif %}
 
   <script src="{{ '/assets/js/dropdown.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
