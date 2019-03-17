@@ -1,10 +1,22 @@
 ---
 layout: post
-title: teste
+title: Closures estáticas em PHP
 date: 2019-03-17 00:00:00 -0300
 categories:
 - html
 sitemap: false
 
 ---
-asdasdas
+As Closures no PHP, também conhecidas como "função anônimas", são bastante utilizadas bastante no dia a dia da programação. Sempre que precisamos de um callback, usamos ela.
+
+Uma coisa interessante sobre as funções anônimas que não vejo muitas pessoas comentado por aí é que é possível declarar uma closure como estática!
+
+Sim, através da palavra-chave <code>static</code>, você pode declarar uma closure 
+
+<pre>
+<code>
+$callback = static function ($a, $b) {
+	return $a + $b;
+}
+</code>
+</pre>
