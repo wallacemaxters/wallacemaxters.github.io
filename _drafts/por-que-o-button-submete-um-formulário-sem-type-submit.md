@@ -11,7 +11,7 @@ Já aconteceu de eu montar um formulário com vários botões, para realizar aç
 
 O cenário para esse problema é bem parecido com [esse exemplo](https://codepen.io/wallacemaxters/pen/vPrENK).
 
-Veja:
+**Veja esse exemplo:**
 
 HTML:
 ```html
@@ -22,7 +22,8 @@ HTML:
 ```
 Javascript:
 ```javascript
-document.querySelector('#form')
+document
+.querySelector('#form')
 .addEventListener('submit', function (e) {
   e.preventDefault();
   console.log('submetido');
