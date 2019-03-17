@@ -5,7 +5,7 @@ layout: page
 <div class="columns is-multiline">
     {% for post in site.posts %}
         <div class="column is-4-desktop">
-            <div class="card posts-card">
+             <div class="card posts-card">
                 <header class="card-header">
                     <p class="card-header-title">
                         <a class="title is-6" href="{{ post.url }}">
@@ -15,9 +15,12 @@ layout: page
                 </header>
                 <div class="card-content">
                     <div class="block">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</div>
+                    <div class="is-pulled-right is-size-7 has-text-grey">
+                        <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y - %H:%M" }}</span>
+                    </div>
                     <div class="block">
                         {% for category in post.categories %}
-                            <span class="tag">{{ category }}</span>
+                        <span class="tag">{{ category }}</span>
                         {% endfor %}
                     </div>
                 </div>
