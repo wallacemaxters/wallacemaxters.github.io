@@ -7,9 +7,11 @@ categories:
 sitemap: true
 
 ---
-Já aconteceu de eu montar um formulário sem o `type="submit"` e, mesmo assim, esse botão agir como se fosse um botão de submissão e, ao clicar no mesmo, ele acaba submetendo o formulário.
+Já aconteceu de eu montar um formulário com vários botões, para realizar ações como adição de um arquivo ou liberar a visualização de um campo e, mesmo estes botões não tendo o atributo `type="submit"`, os mesmos agiam como se fossem um botão de submissão formulário.
 
-O cenário é bem parecido com esse *exemplo*:
+O cenário para esse problema é bem parecido com [esse exemplo](https://codepen.io/wallacemaxters/pen/vPrENK).
+
+Veja:
 
 HTML:
 ```html
@@ -27,13 +29,15 @@ document.querySelector('#form')
 })
 ```
 
-[Link do Exemplo](https://codepen.io/wallacemaxters/pen/vPrENK)
+Como se pode ver, ao clicar em ambos os botões, a ação de submissão é executada, mesmo que um deles não tenha sido marcado como `type=submit`.
 
-Como se pode ver, ao clicar em ambos os botões, a ação de submissão é executada.
+Obviamente, a primeira coisa que se pensaria em fazer para resolver o problema seria colocar um Javascript com um `event.preventDefault()` para evitar uma ação padrão do botão.
 
-Obviamente, a primeira coisa que se pensaria em fazer para resolver o problema seria colocar um Javascript com um `event.preventDefault()` para evitar uma ação padrão.
+**Solução**
 
-Ocorre é que esse problema pode ser resolvido de uma maneira mais simples! Basta adicionar o `type="button"` no mesmo, para que seu comportamento mude.
+A questão é que esse problema pode ser resolvido de uma maneira mais simples que isso! 
+
+Basta adicionar o `type="button"` no mesmo, para que seu comportamento mude.
 
 [Veja](https://codepen.io/wallacemaxters/pen/pYKvyO)
 
