@@ -27,10 +27,17 @@ document.querySelector('#form')
 })
 ```
 
+[Link do Exemplo](https://codepen.io/wallacemaxters/pen/vPrENK)
+
+Como se pode ver, ao clicar em ambos os botões, a ação de submissão é executada.
+
 Obviamente, a primeira coisa que se pensaria em fazer para resolver o problema seria colocar um Javascript com um `event.preventDefault()` para evitar uma ação padrão.
 
-Ocorre é que esse problema pode ser resolvido de uma maneira mais simples. Basta adicionar o `type="button"` no mesmo, para que seu comportamento mude.
+Ocorre é que esse problema pode ser resolvido de uma maneira mais simples! Basta adicionar o `type="button"` no mesmo, para que seu comportamento mude.
 
-Por algum motivo, o `HTML5` faz com que tantos botões como `type="submit"` como os que não têm se comporte como botão de submissão.
+[Veja](https://codepen.io/wallacemaxters/pen/pYKvyO)
 
-Um pequeno exemplo de casos que poderiam gerar erros:
+
+Por algum motivo, o `HTML5` faz com que tantos botões como `type="submit"` como os que não têm se comporte como botão de submissão, sendo necessário adicionar o `type="button"` para corrigir esse comportamento.
+
+
