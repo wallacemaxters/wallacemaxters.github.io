@@ -22,6 +22,7 @@ fields:
   name: sitemap
   label: sitemap
 pages:
+- _posts/como-criar-uma-biblioteca-para-distribuição-via-composer.html
 - _posts/como-proteger-acesso-a-arquivos-via-login-com-laravel.html
 - _posts/qual-é-a-diferença-entre-readfile-fopen-e-file-get-contents.html
 - _posts/criando-um-bot-com-telegram-para-enviar-os-logs-de-erro-com-laravel.html
