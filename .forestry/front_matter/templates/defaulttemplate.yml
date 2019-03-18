@@ -22,6 +22,7 @@ fields:
   name: sitemap
   label: sitemap
 pages:
+- _posts/criando-um-bot-com-telegram-para-enviar-os-logs-de-erro-com-laravel.html
 - _posts/teste.html
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
