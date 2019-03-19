@@ -5,6 +5,7 @@ fields:
 - type: text
   name: layout
   label: 'layout '
+  default: post
 - type: text
   label: title
   name: title
@@ -21,6 +22,12 @@ fields:
 - type: boolean
   name: sitemap
   label: sitemap
+- type: file
+  name: image
+  label: image
+  description: Imagem de capa do post
+  config:
+    maxSize: '1'
 pages:
 - _posts/como-criar-uma-biblioteca-para-distribuição-via-composer.html
 - _posts/como-proteger-acesso-a-arquivos-via-login-com-laravel.html
