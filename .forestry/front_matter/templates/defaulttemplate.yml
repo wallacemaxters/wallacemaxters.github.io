@@ -29,7 +29,7 @@ fields:
   config:
     maxSize: '1'
 pages:
-- _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
+- _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
 - _posts/teste.html
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md

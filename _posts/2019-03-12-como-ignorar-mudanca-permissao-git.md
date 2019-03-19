@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como ignorar mudanças de permissão com o GIT?
-date: 2019-03-12 20:41:13 -0300
+date: 2019-03-19 21:04:13 -0300
 categories:
 - git
 - linux
