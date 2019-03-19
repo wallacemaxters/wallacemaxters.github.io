@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Por que o button submete um formulário sem type="submit"?
+title: Por que o button submete um formulário mesmo sem type="submit"?
 date: 2019-03-17 03:00:00 +0000
 categories:
 - html
