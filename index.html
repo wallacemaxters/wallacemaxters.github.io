@@ -28,7 +28,7 @@ image: /assets/img/codes.jpg
                     </div>
                     <div class="block">
                         {% for category in post.categories %}
-                            <a class="tag" href="/categorias/#{{ category | slugify }}">{{ category }}</a>
+                            <a class="tag" href="/categorias#{{ category | slugify }}">{{ category }}</a>
                         {% endfor %}
                     </div>
                 </div>
