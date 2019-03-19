@@ -29,12 +29,7 @@ fields:
   config:
     maxSize: '1'
 pages:
-- _posts/como-criar-uma-biblioteca-para-distribuição-via-composer.html
-- _posts/como-proteger-acesso-a-arquivos-via-login-com-laravel.html
-- _posts/qual-é-a-diferença-entre-readfile-fopen-e-file-get-contents.html
-- _posts/criando-um-bot-com-telegram-para-enviar-os-logs-de-erro-com-laravel.html
 - _posts/teste.html
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
-- _posts/2019-03-12-como-mover-arquivos-para-uma-pasta-no-sublimetext.markdown
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
