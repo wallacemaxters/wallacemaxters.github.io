@@ -1,0 +1,20 @@
+---
+layout: page
+image: /assets/img/codes.jpg
+permalink: /categorias
+---
+
+<div>
+    {% assign categories = site.categories | sort %}
+    {%- for category in categories -%}
+        <div id="{{  category[0] | slugify }}" class="box">
+            <h3 class="title is-5 has-text-primary">{{ category[0] }}</h3>
+            {%- for post in category[1] -%}
+                <a href="{{ post.url }}" class="box">
+                    <div class="is-pulled-right tag">{{ post.date | date: "%d/%m/%Y" }}</div>
+                    {{ post.title }}
+                </a>
+            {%- endfor -%}
+        </div>
+    {%- endfor -%}
+</div>

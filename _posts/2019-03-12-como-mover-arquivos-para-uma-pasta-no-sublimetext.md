@@ -3,7 +3,7 @@ layout: post
 title: Como mover arquivos para outros diretórios no Sublime Text?
 date: 2019-03-12 23:41:13 +0000
 categories:
-- sublime-text
+- "Sublime Text"
 sitemap: true
 image: "/uploads/covers/sublime-text-com-logo.jpg"
 

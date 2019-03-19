@@ -3,8 +3,8 @@ layout: post
 title: Como ignorar mudanças de permissão com o GIT?
 date: 2019-03-19 09:04:13 -0300
 categories:
-- git
-- linux
+- Git
+- Linux
 sitemap: true
 image: "/uploads/covers/git.jpg"
 

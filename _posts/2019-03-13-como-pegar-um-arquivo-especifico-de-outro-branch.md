@@ -3,7 +3,7 @@ layout: post
 date: 2019-03-13 23:36:58 +0000
 title: Como pegar um arquivo específico de outro branch
 categories:
-- git
+- Git
 sitemap: true
 image: "/uploads/covers/git.jpg"
 

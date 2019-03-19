@@ -2,18 +2,25 @@
 	<div class="overlay">
 		<div class="container">
 			{%- if page.title -%}
-				<a href="/">
-		        	<h1 class="title is-2 has-text-white">{{ page.title | escape }}</h1>
-				</a>
-				<p class="has-text-white">
-					Categorias:  
-					<span>{{ page.categories | join: ", "}}</span>
-				</p>
+					<div class="block">
+							<a href="/">
+									<h1 class="title is-2 has-text-white">{{ page.title | escape }}</h1>
+							</a>
+					</div>
+					{%- if page.categories | size -%}
+					<div class="block has-text-white">
+						{%- for category in page.categories -%}
+							<a href="/categorias/#{{ category | slugify }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
+						{%- endfor -%}
+					</div>
+					{%- endif -%}
 				<p>
 					
 				</p>
 			{%- else -%}
-				<h1 class="title is-1 has-text-white">{{ site.title | escape }}</h1>
+				<a href="{{ site.url }}">
+					<h1 class="title is-1 has-text-white">{{ site.title | escape }}</h1>
+				</a>
 			    <h2 class="subtitle has-text-white">
 			    	{{site.description }}
 				</h2>
