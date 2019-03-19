@@ -10,7 +10,7 @@
 					{%- if page.categories | size -%}
 					<div class="block has-text-white">
 						{%- for category in page.categories -%}
-							<a href="/categorias/#{{ category | slugify }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
+							<a href="/categorias#{{ category | slugify }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
 						{%- endfor -%}
 					</div>
 					{%- endif -%}
