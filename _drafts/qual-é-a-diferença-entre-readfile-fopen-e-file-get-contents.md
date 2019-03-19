@@ -4,7 +4,7 @@ title: Qual é a diferença entre readfile e  file_get_contents em PHP?
 date: 2019-03-18 03:00:00 +0000
 categories:
 - PHP
-sitemap: false
+sitemap: true
 
 ---
 No PHP, há muitas alternativas muitas vezes para obter um mesmo resultado parecido, como é o caso da manipulação de arquivos.
@@ -14,7 +14,7 @@ Um bom exemplo disso é com arquivos. Para ler um arquivo, você poderia usar as
  No caso acima, eu já utilizei muito `readfile` e `file_get_contents` e, apesar de serem parecidas, é necessário informar algumas variações entre as duas
  
  
- ### `file_get_contents`
+ ### file_get_contents
  
  A função [`file_get_contents`](http://php.net/manual/pt_BR/function.file-get-contents.php) tem como finalidade ler todo o conteúdo de um arquivo para uma `string`, sendo possível, por exemplo, armazenar todo valor de um arquivo de texto em uma variável.
  
@@ -25,7 +25,7 @@ Um bom exemplo disso é com arquivos. Para ler um arquivo, você poderia usar as
 No exemplo acima, ao fazer essa chamada, você obteria toda o valor de `config.json` em uma `string` e tratar conforme desejar.  
 
 
-### `readfile`
+### readfile
 
 Ela lê e exibe todo o conteúdo de um arquivo. Diferentemente do `file_get_contents`, que retorna a `string`, a função `readfile` envia para a saída todo o conteúdo do arquivo. Ela retorna um valor `int`, contendo o número de bytes contido no arquivo lido.
 
