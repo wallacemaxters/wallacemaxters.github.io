@@ -5,6 +5,7 @@ date: 2019-03-18 03:00:00 +0000
 categories:
 - PHP
 sitemap: true
+image: "/uploads/php-leader.png"
 
 ---
 O PHP é uma linguagem tem uma grande quantidade de funções que, as vezes, parecem fazer as mesmas coisas.
