@@ -18,7 +18,7 @@ email: wallacemaxters@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Um blog com dicas e tutoriais sobre programação
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://wallacemaxters.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wallacemaxters.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: wallacemaxters
 github_username:  wallacemaxters
 
