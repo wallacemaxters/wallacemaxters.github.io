@@ -19,7 +19,7 @@ image: /assets/img/codes.jpg
                 <div class="card-content">
                     <div class="block">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</div>
                     <div class="is-pulled-right is-size-7 has-text-grey">
-                        <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y - %H:%M" }}</span>
+                        <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y" }}</span>
                     </div>
                     <div class="block">
                         {% for category in post.categories %}
