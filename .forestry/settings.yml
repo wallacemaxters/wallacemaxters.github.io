@@ -7,6 +7,9 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
+  new_doc_ext: ".md"
+  templates:
+  - defaulttemplate
 - type: jekyll-pages
   label: Pages
   create: all
