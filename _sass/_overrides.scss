@@ -14,10 +14,11 @@ main {
 }
 
 .post-card{
-    max-height: 250px;
+
+    min-height: 250px;
     
     .post-card-cover{
-        background-size: cover;
+        background-size: auto;
         background-repeat: no-repeat;
         background-position: center;
     }

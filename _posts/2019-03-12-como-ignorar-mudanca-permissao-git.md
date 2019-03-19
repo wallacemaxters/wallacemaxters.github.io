@@ -6,7 +6,7 @@ categories:
 - git
 - linux
 sitemap: true
-image: "/uploads/git.jpg"
+image: "/uploads/covers/git.jpg"
 
 ---
 Vez ou outra, sempre tive problemas com alteração de permissões no GIT. Um amigo que trabalhava no mesmo projeto que eu costumava usar o usuário `root` do linux para muitas coisas, inclusive para abrir o Sublime Text e editar os arquivos do projeto.

@@ -8,7 +8,7 @@ image: /assets/img/codes.jpg
 <div class="columns is-multiline">
     {% for post in site.posts %}
         <div class="column is-4-desktop">
-             <div class="card posts-card">
+             <div class="card post-card">
                 <header class="card-header">
                     <p class="card-header-title">
                         <a class="title is-6" href="{{ post.url }}">
@@ -16,6 +16,11 @@ image: /assets/img/codes.jpg
                         </a>
                     </p>
                 </header>
+                <a class="card-image" href="{{ post.url }}">
+                    <figure class="image is-3by2 post-card-cover">
+                        <img src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
+                    </figure>
+                </a>
                 <div class="card-content">
                     <div class="block">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</div>
                     <div class="is-pulled-right is-size-7 has-text-grey">

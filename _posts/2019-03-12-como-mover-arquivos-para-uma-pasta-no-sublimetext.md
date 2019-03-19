@@ -5,6 +5,7 @@ date: 2019-03-12 23:41:13 +0000
 categories:
 - sublime-text
 sitemap: true
+image: "/uploads/covers/sublime-text-com-logo.jpg"
 
 ---
 Ao contrário do VS Code, o Sublime Text não tem uma opção "padrão" para mover os arquivos. Bem, pelo menos não com a opção de "arrastar e soltar", mas existe uma solução para isso!

@@ -5,7 +5,7 @@ title: Como pegar um arquivo específico de outro branch
 categories:
 - git
 sitemap: true
-image: "/uploads/git.jpg"
+image: "/uploads/covers/git.jpg"
 
 ---
 Já aconteceu de eu precisar de um arquivo apenas que estava em outro branch, não sendo viável fazer o checkout no branch inteiro ou fazer um merge para trazer aquele arquivo.
