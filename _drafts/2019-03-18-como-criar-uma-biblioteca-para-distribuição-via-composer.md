@@ -8,3 +8,18 @@ categories:
 sitemap: false
 
 ---
+composer init
+
+composer dump
+
+
+```json
+{
+  "name" : "wallacemaxters/test"
+  "autoload" : {
+  	    "psr-4" : {
+  			"src" : "WallaceMaxters\\Test\\",
+		}
+	}
+}
+```
