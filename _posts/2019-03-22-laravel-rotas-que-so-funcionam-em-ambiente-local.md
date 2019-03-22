@@ -68,7 +68,7 @@ O truque acima foi usar a chamada de `app()->isLocal()`. Esse método retorna `t
 
 No seu arquivo `.env` (que deve ser incluido apenas em ambiente local ou de testes), você pode notar que existe a seguinte configuração:
 
-```properties
+```
 APP_ENV=local
 ```
 
