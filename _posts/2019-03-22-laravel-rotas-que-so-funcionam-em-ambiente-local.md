@@ -13,9 +13,7 @@ No Laravel 4, era possível definir rotas que só funcionavam em ambiente local.
 
 Eu costumava usar muitos essas rotas para poder logar com um usuário de um nível qualquer, ou exibir uma informação de depuração da aplicação.
 
-No Laravel 5, porém, não existe um arquivo com uma configuração separada apenas para rotas locais.
-
-Mas é possível configurar um arquivo de rota personalizado para o ambiente local.
+No Laravel 5, porém, não existe um arquivo com uma configuração separada apenas para rotas locais. Mas é possível configurar um arquivo de rota personalizado para o ambiente local.
 
 Essa configuração pode ser feita através do arquivo `app/Providers/RouteServiceProvider.php`.
 
