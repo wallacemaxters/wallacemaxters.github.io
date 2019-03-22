@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Laravel Rotas que só funcionam em ambiente local
+title: Laravel - Rotas que só funcionam em ambiente local
 date: 2019-03-22 19:15:00 -0300
 categories:
 - laravel
