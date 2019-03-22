@@ -31,7 +31,7 @@ Em seguida, declare um método dentro da classe \`RouteServiceProvider\` especif
 
 Exemplo:
 
-\`\`\`php
+```php
 
 protected function mapLocalWebRoutes()
 
@@ -49,7 +49,7 @@ protected function mapLocalWebRoutes()
 
 }
 
-\`\`\`
+```
 
 No meu caso, estou usando a versão 5.4 do Laravel para configurar isso. Nessa versão, o \`RouteServiceProvider\` tem um método chamado \`map\`, que tem a seguinte estrutura:
 
