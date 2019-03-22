@@ -29,7 +29,6 @@ fields:
   config:
     maxSize: '1'
 pages:
-- _posts/2019-03-22-laravel-criar-rotas-que-só-funcionam-em-ambiente-de-desenvolvimento.md
 - _posts/como-executar-uma-requisição-com-php-sem-esperar-a-resposta.md
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
