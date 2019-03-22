@@ -31,7 +31,6 @@ Exemplo:
 ```php
 protected function mapLocalWebRoutes()
 {
-
 	if (! app()->isLocal()) return;
     
 	Route::middleware('web')
