@@ -21,12 +21,12 @@ image: /assets/img/codes.jpg
                         <img src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
                     </figure>
                 </a>
-                <div class="card-content">
-                    <div class="block">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</div>
-                    <div class="is-pulled-right is-size-7 has-text-grey">
-                        <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y" }}</span>
-                    </div>
+                <div class="card-content post-card-content">
+                    <div class="block post-card-description">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</div>
                     <div class="block">
+                        <div class="is-pulled-right is-size-7 has-text-grey">
+                            <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y" }}</span>
+                        </div>
                         {% for category in post.categories %}
                             <a class="tag" href="/categorias#{{ category | slugify }}">{{ category }}</a>
                         {% endfor %}

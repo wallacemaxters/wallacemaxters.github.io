@@ -3,9 +3,11 @@
 		<div class="container">
 			{%- if page.title -%}
 					<div class="block">
-							<a href="/">
-									<h1 class="title is-2 has-text-white">{{ page.title | escape }}</h1>
-							</a>
+							<h1 class="title is-2">
+								<a href="/" class="has-text-white">
+										{{ page.title | escape }}
+								</a>
+							</h1>
 					</div>
 					{%- if page.categories | size -%}
 					<div class="block has-text-white">
@@ -18,9 +20,11 @@
 					
 				</p>
 			{%- else -%}
-				<a href="{{ site.url }}">
-					<h1 class="title is-1 has-text-white">{{ site.title | escape }}</h1>
-				</a>
+				<h1 class="title is-1">
+					<a href="{{ site.url }}" class="has-text-white">
+						{{ site.title | escape }}
+					</a>
+				</h1>
 			    <h2 class="subtitle has-text-white">
 			    	{{site.description }}
 				</h2>
