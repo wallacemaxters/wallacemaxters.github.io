@@ -72,6 +72,4 @@ Você já pode incluir as rotas que desejar, para realizar testes e verificaçã
 
 O truque acima foi usar a chamada de `app()->isLocal()`. Esse método retorna `true` quando o valor de `php artisan env` é equivalente a `local`.
 
-> Caso sua aplicação em desenvolvimento não esteja retornando esse valor, verifique se seu arquivo `.env` possuio a linha abaixo:
-
-> `APP_ENV=local`
+> Caso sua aplicação em desenvolvimento não esteja retornando esse valor, verifique se seu arquivo `.env` possui o valor `APP_ENV` definido como `local`.
