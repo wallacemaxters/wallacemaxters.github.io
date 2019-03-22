@@ -18,7 +18,7 @@ No caso acima, eu já utilizei muito `readfile` e `file_get_contents` e, apesar 
 
 ### file_get_contents
 
-A função `[file_get_contents](http://php.net/manual/pt_BR/function.file-get-contents.php)` tem como finalidade ler todo o conteúdo de um arquivo para uma `string`, sendo possível, por exemplo, armazenar todo valor de um arquivo de texto em uma variável.
+A função [`file_get_contents`](http://php.net/manual/pt_BR/function.file-get-contents.php) tem como finalidade ler todo o conteúdo de um arquivo para uma `string`, sendo possível, por exemplo, armazenar todo valor de um arquivo de texto em uma variável.
 
 Por exemplo:
 
