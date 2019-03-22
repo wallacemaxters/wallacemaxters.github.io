@@ -41,13 +41,13 @@ protected function mapLocalWebRoutes()
 No meu caso, estou usando a versão 5.4 do Laravel para configurar isso. Nessa versão, o `RouteServiceProvider` tem um método chamado `map`, que tem a seguinte estrutura:
 
 ```php
-    public function map()
-    {
-        $this->mapApiRoutes();
+public function map()
+{
+    $this->mapApiRoutes();
 
-        $this->mapWebRoutes();
+    $this->mapWebRoutes();
 
-    }
+}
 ```
 
 Você pode incluir a chamada de `mapLocalWebRoutes` dentro do método `map`.
@@ -55,15 +55,15 @@ Você pode incluir a chamada de `mapLocalWebRoutes` dentro do método `map`.
 Assim:
 
 ```php
-    public function map()
-    {
-        $this->mapApiRoutes();
+public function map()
+{
+    $this->mapApiRoutes();
 
-        $this->mapWebRoutes();
-        
-        // inclusão de rotas locais
-        $this->mapLocalWebRoutes();
-    }
+    $this->mapWebRoutes();
+    
+    // inclusão de rotas locais
+    $this->mapLocalWebRoutes();
+}
 ```
 
 Após fazer isso, está pronta a sua configuração. 
