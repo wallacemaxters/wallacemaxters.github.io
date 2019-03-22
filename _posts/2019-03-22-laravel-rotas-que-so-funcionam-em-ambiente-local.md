@@ -62,6 +62,7 @@ Assim:
 
         $this->mapWebRoutes();
         
+        // inclusão de rotas locais
         $this->mapLocalWebRoutes();
     }
 ```
