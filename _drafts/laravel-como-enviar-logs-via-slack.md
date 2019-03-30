@@ -9,6 +9,10 @@ sitemap: false
 image: ''
 
 ---
+Nesse tutorial, vou ensinar a enviar os logs da sua aplicação pelo o Slack. Isso é algo que pode ser interessante, já que você poderá ser notificado em tempo real, caso alguma anomalía ocorra na sua aplicação.
+
+Vamos ao tutoral
+
 ### Criando uma aplicação no Slack
 
 Primeiro, você deve acessar a sua conta no Slack e acessar página de [api](https://api.slack.com/apps). Nessa primeira etapa, é necessário criar uma aplicação para prosseguir.
@@ -27,11 +31,13 @@ Após a confirmação, você será redirecionado para a tela da sua aplicação,
 
 Você deve clicar na opção _incoming webhooks_.
 
-Isso abrirá a tela de configurações de configuração do webhook da sua aplicação. É através dessa URL que você conseguirá enviar mensagens ao Slack através de um bot.
+Isso abrirá a tela de criação do webhook da sua aplicação.
 
-Agora, você deve clicar no  botão **_Activate Incoming Webhooks_.**
+> **Obseração**: O Webhook é a URL gerada pelo Slack, com a qual enviará mensagens ao Slack.
 
-Veja:
+A próxima etapa agora é ativar os webhooks. Clique no  botão **_Activate Incoming Webhooks_ para fazer isso.**
+
+Assim:
 
 ![](/uploads/ativando-webhook.png)
 
@@ -43,7 +49,7 @@ Clique em **Add New Webhook to Workspace**.
 
 Após isso, você será redirecionado para uma tela, onde poderá selecionar para qual canal ou qual usuário as mensagens serão enviadas.
 
-No meu caso, vou escolher `#general`, apenas para testarmos.
+No meu caso, vou escolher `#general`, apenas para testarmos, mas escolha conforme desejar.
 
 ![](/uploads/slack-escolhendo-o-canal-que-bot-vai-enviar-mensagens.png)
 
@@ -69,8 +75,6 @@ Na página da biblioteca, contém as instruções de instalação, mas resumidam
 
 Nesse caso, como a biblioteca não é específica para Laravel, não temos nenhum _Service Provider_ costumizado da biblioteca. Teremos que configurá-lo manualmente. Mas não se preocupe, isso é bem fácil de fazer.
 
- 
-
 ### configurando o makzn/slack
 
 Como dito anteriomente, não temos um service provider específico para essa biblioteca. A ideia do service provider do Laravel é facilitar o acesso ao serviço e definir configurações em um local só, evitando repetições. E é exatamente o que vamos fazer.
@@ -86,7 +90,7 @@ public function boot()
 }
 ```
 
-No caso acima, o método `bind` vai criar um `factory` para a criação da instância do cliente da nossa aplicação Slack. Ela poderá ser acessada futuramente através da chamada de `app('slack')`. 
+No caso acima, o método `bind` vai criar um `factory` para a criação da instância do cliente da nossa aplicação Slack. Ela poderá ser acessada futuramente através da chamada de `app('slack')`.
 
 ### criando uma configuração para o Slack no Laravel
 
@@ -97,11 +101,11 @@ Eu tenho preferência, nesta etapa, de usar a função `config` do Laravel para 
 Para fazer isso, abra a pasta `config` do seu projeto e crie um arquivo chamado `slack.php` lá dentro. Coloque as seguintes informações nele:
 
 ```php
+<?php
 return [
 	'webhook' => 'caminho_do_webhook_copiado_no_slack',
     'settings' => [
-    	'username' => '@meu_bot_laravel',
-		'channel' => '#general',
+    	// configurações adicionais
     ]
 
 ];
@@ -125,7 +129,32 @@ Feito isso, agora você já poderá ir para a próxima etapa: o envio do log.
 ### Configurando o `Handler` para enviar os erros para o Slack
 
 O arquivo `Handler` do Laravel tem duas funções:
-- Determinar o comportamento da sua aplicação quando a renderização do erro. Ou seja, você pode costumizar a página de erro, caso ocorra alguma.
-- Determinar como a aplicação registrará os logs quando ocorrer um erro. 
 
-Este último caso é o que vamos alterar. O método que vamos mexer é no `report`
+* Determinar o comportamento da sua aplicação quando a renderização do erro. Ou seja, você pode costumizar a página de erro, caso ocorra alguma.
+* Determinar como a aplicação registrará os logs quando ocorrer um erro.
+
+Este último caso é o que vamos alterar. O método que vamos mexer é no `report.`
+
+```php
+public function report(Exception $exception)
+{
+   parent::report($exception);
+   
+   app('slack')->attach([
+      'text' => (string) $exception,
+      'color' => 'danger',
+   ])->send($exception->getMessage());
+}
+```
+
+Ok. É simples, não é?
+
+A configuração acima fará com que qualquer erro que ocorra na aplicação seja enviado para seu Slack.
+
+Um teste que você poderá fazer por exemplo é errar um comando no `php artisan` de proprósito, para que a sua aplicação gere um log.
+
+Veja:
+
+```bash
+php artisan comando-nao-existe
+```
