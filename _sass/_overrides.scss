@@ -15,16 +15,16 @@ main {
 
 .post-card{
 
-    .post-card-cover{
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: center;
+
+    .post-card-title{
+        min-height: 60px;
+        overflow: hidden;
     }
 
     .post-card-content{
         display: flex;
         flex-direction: column;
-        min-height: 200px;
+        min-height: 250px;
 
         > .post-card-description {
             flex: 1;
