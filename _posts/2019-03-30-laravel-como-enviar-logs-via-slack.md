@@ -6,7 +6,7 @@ categories:
 - laravel
 - slack
 sitemap: true
-image: "/uploads/Laravel.jpg"
+image: "/uploads/banner-laravel-slack.jpeg"
 
 ---
 Nesse tutorial, vou ensinar a enviar os logs da sua aplicação pelo o Slack. Isso é algo que pode ser interessante, já que você poderá ser notificado em tempo real, caso alguma anomalía ocorra na sua aplicação.
