@@ -39,11 +39,11 @@ A próxima etapa agora é ativar os webhooks. Clique no  botão **_Activate Inco
 
 Assim:
 
-![](/uploads/ativando-webhook.png)
+![Ativando o webhook do Slack para integração com Laravel](/uploads/ativando-webhook.png)
 
 Quando você ativar o botão que está marcado como _off_ por padrão, a página será expandida e você terá acesso a essas opções:
 
-![](/uploads/slack-criando-url-webhook.png)
+![Criação do Webhook para integração com Laravel](/uploads/slack-criando-url-webhook.png)
 
 Clique em **Add New Webhook to Workspace**.
 
@@ -51,7 +51,7 @@ Após isso, você será redirecionado para uma tela, onde poderá selecionar par
 
 No meu caso, vou escolher `#general`, apenas para testarmos, mas escolha conforme desejar.
 
-![](/uploads/slack-escolhendo-o-canal-que-bot-vai-enviar-mensagens.png)
+![Escolhendo o canal que o Slack receberá as mensagens enviadas pelo Laravel](/uploads/slack-escolhendo-o-canal-que-bot-vai-enviar-mensagens.png)
 
 > **Observação**: Caso queria criar um outro canal para receber as mensagens do bot, você pode fazê-lo no painel principal do seu workspace
 
@@ -106,8 +106,7 @@ return [
 	'webhook' => 'caminho_do_webhook_copiado_no_slack',
     'settings' => [
     	// configurações adicionais
-    ]
-
+  ]
 ];
 ```
 
