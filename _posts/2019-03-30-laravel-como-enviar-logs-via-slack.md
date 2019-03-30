@@ -19,7 +19,7 @@ Primeiro, você deve acessar a sua conta no Slack e acessar página de [api](htt
 
 Clique no botão **Create an App** para começar, conforme a imagem abaixo:
 
-> ![](/uploads/Captura de tela de 2019-03-30 10-37-51.png)
+![](/uploads/criar-uma-aplicacao-no-slack-para-integrar-com-laravel.png)
 
 Preencha as informações da sua aplicação e confirme a criação da sua aplicação:
 

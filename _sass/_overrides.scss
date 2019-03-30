@@ -50,3 +50,12 @@ main {
         width: 100%;
     }
 }
+
+.content img{
+    border: 10px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content img:active{
+    transform: scale(1.3);
+}
