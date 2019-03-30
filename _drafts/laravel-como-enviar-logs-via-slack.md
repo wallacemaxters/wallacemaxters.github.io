@@ -158,3 +158,9 @@ Veja:
 ```bash
 php artisan comando-nao-existe
 ```
+
+Ao fazer isso, será gerado um erro interno no Laravel. Se tudo deu certo, basta conferir no canal que você escolheu para receber as mensagens via Webhook. O log do Laravel estará lá para você conferir!
+
+![](/uploads/laravel-webhook-slack-recebendo-mensagem.png)
+
+**Observação**: Apesar da biblioteca acima ter a opção `channel`, parece que o Webhook só funciona para o canal selecionado incialmente. Se desejar operar em outro canal, talvez seja necessário modificar as configurações do seu Webhook para que opere em outro canal.
