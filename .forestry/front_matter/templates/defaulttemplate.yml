@@ -29,9 +29,10 @@ fields:
   config:
     maxSize: '1'
 pages:
-- _posts/2019-03-30-laravel-como-enviar-logs-via-slack.md
-- _posts/2019-03-22-laravel-rotas-que-so-funcionam-em-ambiente-local.md
-- _posts/como-executar-uma-requisição-com-php-sem-esperar-a-resposta.md
+- _posts/programa-que-digita-sozinho.md
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
+- _posts/2019-03-22-laravel-rotas-que-so-funcionam-em-ambiente-local.md
 - _posts/2019-03-13-como-pegar-um-arquivo-especifico-de-outro-branch.md
+- _posts/2019-03-30-laravel-como-enviar-logs-via-slack.md
+- _posts/como-executar-uma-requisição-com-php-sem-esperar-a-resposta.md
