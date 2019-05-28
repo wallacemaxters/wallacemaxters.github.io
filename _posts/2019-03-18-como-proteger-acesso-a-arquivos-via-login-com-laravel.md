@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como proteger acesso a arquivos via login com Laravel?
-date: 2019-03-18T03:00:00.000+00:00
+date: 2019-05-27 21:35:00 -0300
 categories:
 - Laravel
 sitemap: true
@@ -56,6 +56,16 @@ Assim, para ver o arquivo armazenado, bastaria acessar `uploads/1`.
 É importante sempre informar o `Content-Type` na resposta, para que o navegador entenda seu arquivo de forma correta no momento da resposta.
 
 Como utilizei o Middleware `auth`, essa rota só poderá ser acessada mediante autenticação, ou seja, o arquivo só será visualizado se o usuário estiver autenticado.
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4119206527475379"
+     data-ad-slot="9977497686"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 **Autorização**
 
