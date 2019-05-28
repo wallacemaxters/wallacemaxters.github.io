@@ -67,14 +67,14 @@ Veja:
 
     Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
     
-        if (auth()->user()->tipo !== 'admin') {
+       if (auth()->user()->tipo !== 'admin') {
         	return response('Você não pode acessar esse arquivo', 403);
-        }
-    
-    	$path = $model_upload->path;
+       }
         
-         return response(Storage::get($path), 200, [
+        $path = $model_upload->path;
+        
+        return response(Storage::get($path), 200, [
          	'content-type' => Storage::mimeType($path)
-         ]);
+        ]);
     
     })->middleware('auth');
