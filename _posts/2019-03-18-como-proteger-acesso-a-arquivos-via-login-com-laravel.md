@@ -51,7 +51,9 @@ Veja:
     
     })->middleware('auth');
 
-Assim, para ver o arquivo armazenado, bastaria acessar `uploads/1`. É importante sempre informar o `Content-Type` na resposta, para que o navegador entenda seu arquivo de forma correta no momento da resposta.
+Assim, para ver o arquivo armazenado, bastaria acessar `uploads/1`. 
+
+É importante sempre informar o `Content-Type` na resposta, para que o navegador entenda seu arquivo de forma correta no momento da resposta.
 
 Como utilizei o Middleware `auth`, essa rota só poderá ser acessada mediante autenticação, ou seja, o arquivo só será visualizado se o usuário estiver autenticado.
 
