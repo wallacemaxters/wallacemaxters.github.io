@@ -4,7 +4,8 @@ title: Como proteger acesso a arquivos via login com Laravel?
 date: 2019-03-18T03:00:00.000+00:00
 categories:
 - Laravel
-sitemap: false
+sitemap: true
+image: "/uploads/laravel-seguranca.jpg"
 
 ---
 Quando fazemos uma aplicação que contenha upload, muitas vezes a regra de negócio exige que esses arquivos só possam ser acessado por meio de autenticação ou autorização.
