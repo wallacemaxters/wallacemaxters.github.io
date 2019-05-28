@@ -59,7 +59,7 @@ Como utilizei o Middleware `auth`, essa rota só poderá ser acessada mediante a
 
 **Autorização**
 
-Além disso, se você deseja adicionar mais restrição, você poderia utilizar o `[Policy](https://laravel.com/docs/5.8/authorization)` do Laravel. Esse rota de arquivo funcionará como uma outra rota qualquer, sendo diferente apenas no tipo de resposta. Sendo assim, você poderá aplicar normalmente restrições através do Gate ou Policy.
+Além disso, se você deseja adicionar mais restrição, você poderia utilizar o [`Policy`](https://laravel.com/docs/5.8/authorization) do Laravel. Esse rota de arquivo funcionará como uma outra rota qualquer, sendo diferente apenas no tipo de resposta. Sendo assim, você poderá aplicar normalmente restrições através do Gate ou Policy.
 
 Mas, tomando como base um pequeno exemplo, poderíamos verificar se determinado usuário é de um tipo. Caso corresponda ao requisitado, respondemos com o arquivo; Se não, respondemos com erro 403 (acesso não autorizado).
 
