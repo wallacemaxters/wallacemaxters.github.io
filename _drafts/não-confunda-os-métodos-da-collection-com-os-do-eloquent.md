@@ -107,13 +107,14 @@ $query->count();    // contagem vinda do banco
 ```
 
 
-Além disso, uma outra boa forma de descobrir qual das duas coisas você está usand o é  debugando. Você pode tentar a função `get_class`, por exemplo, para saber a classe do objeto utilizado.
+Além disso, nada impede que você descubra quem é quem através de um simples debug. Você pode tentar a função `get_class`, por exemplo, para saber a classe do objeto utilizado.
 
  ```
  $query = Usuario::where('nome', 'Wallace');
  
- var_dump(get_class($query));
+ var_dump(get_class($query)); // Builder
  
- var_dump(get_class($query->get()));
- 
+ var_dump(get_class($query->get())); // Collection
  ```
+ 
+ 
