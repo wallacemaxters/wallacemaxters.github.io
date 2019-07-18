@@ -117,4 +117,6 @@ Além disso, nada impede que você descubra quem é quem através de um simples 
  var_dump(get_class($query->get())); // Collection
  ```
  
+ > **Nota:** O `Model` tem um método chamado `all`, que muitos desenvolvedores usam também e fazem a mesma coisa que eu exemplifique acima. O `all` é apenas um alias e tem basicamente o mesmo efeito que o `get`: chamar o resultado da consulta ao banco numa coleção. Então, fique atento!
  
+ Espero que essas dicas ajudem a evitar dores de cabeça :)
