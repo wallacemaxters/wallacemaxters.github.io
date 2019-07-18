@@ -5,7 +5,7 @@ date: 2019-07-17 00:00:00 -0300
 categories:
 - laravel
 - eloquent
-sitemap: false
+sitemap: true
 image: "/uploads/Laravel.jpg"
 
 ---
