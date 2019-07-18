@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Não confunda os métodos da Collection com os do Eloquent!
-date: 2019-07-17 00:00:00 -0300
+date: 2019-07-17 23:33:00 -0300
 categories:
 - laravel
 - eloquent
