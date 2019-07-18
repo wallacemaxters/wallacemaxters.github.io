@@ -6,7 +6,7 @@ categories:
 - laravel
 - eloquent
 sitemap: false
-image: ''
+image: "/uploads/Laravel.jpg"
 
 ---
 No Laravel, temos o Eloquent que, na minha opnião, é uma das melhores coisas existentes no Laravel. Sua forma de trabalhar com os relacionamentos e com as consultas ajudam bastante a agilizar o desenvolvimento.  
