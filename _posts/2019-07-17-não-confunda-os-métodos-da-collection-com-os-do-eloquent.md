@@ -24,7 +24,7 @@ Usuario::get()->count();
 
 Ou mesmo dessa:
 
-```
+```php
 Usuario::where('idade', '>', 18)->count();
 Usuario::where('idade', '>', 18)->get()->count();
 ```
@@ -38,7 +38,9 @@ Eu creio que é preciso explicar as diferenças aqui.No primeiro exemplo, ao cha
 
 Em outras palavras, será executado uma SQL para contar os registros. Algo como:
 
-```SELECT COUNT(*) FROM usuarios```
+```sql
+SELECT COUNT(*) FROM usuarios
+```
 
 Na segunda chamada, ao usar `Usuario::get()->count()` você está fazendo algo muito diferente do primeiro exemplo. Você está simplesmente chamando TODOS os registros existentes no banco de dados e contando cada um deles pelo PHP.
 
@@ -56,22 +58,19 @@ Por exemplo, no caso do `sum`, poderíamos ter o mesmo problema mostrado anterio
 
 Veja:
 
-```
+```php
 // SELECT avg(idade) FROM usuarios
-
 Usuario::avg('idade'); 
-
 // Carrega todos os usuários para a memória 
 // e soma a média da idade pelo PHP
 Usuario::get()->avg('idade'); 
-
 ``` 
 
 ## Como distiguir esses métodos?
 
 A primeira coisa que é necessário reparar é que os métodos no Eloquent porem ser chamados tanto como estático como dinâmicos. Exemplo:
 
-```
+```php
 Usuario::count()
 Usuario::where('valor', '=', 1)->count();
 ```
@@ -86,7 +85,7 @@ O `Model` se vale desse comportamento e, ao chamar o método `count`, ou `where`
 
 Dessa forma, as duas chamadas abaixo são equivalentes:
 
-```
+```php
 Usuario::sum('idade');  // 'sum' como método estático
 Usuario::query()->sum('idade');  // 'sum' como método dinamico
 ```
@@ -98,7 +97,7 @@ Desses citados, o `get` é o que retorna uma coleção (a `Collection`). E é es
 Sendo assim, entendemos que, enquanto não charmamos o método `get`, estamos na verdade trabalhando com *query builder* do Laravel, cuja função é montar a SQL. E ao chamar `get`, estamos trazendo os resultados do `SELECT` em uma coleção.
 
 Exemplo:
-```
+```php
 $query = Usuario::where('idade', '>', 18); // Builder
 $usuarios = $query->get(); // Collection
 
@@ -109,13 +108,11 @@ $query->count();    // contagem vinda do banco
 
 Além disso, nada impede que você descubra quem é quem através de um simples debug. Você pode tentar a função `get_class`, por exemplo, para saber a classe do objeto utilizado.
 
- ```
- $query = Usuario::where('nome', 'Wallace');
- 
- var_dump(get_class($query)); // Builder
- 
- var_dump(get_class($query->get())); // Collection
- ```
+```php
+$query = Usuario::where('nome', 'Wallace');
+var_dump(get_class($query)); // Builder
+var_dump(get_class($query->get())); // Collection
+```
  
  > **Nota:** O `Model` tem um método chamado `all`, que muitos desenvolvedores usam também e fazem a mesma coisa que eu exemplifique acima. O `all` é apenas um alias e tem basicamente o mesmo efeito que o `get`: chamar o resultado da consulta ao banco numa coleção. Então, fique atento!
  
