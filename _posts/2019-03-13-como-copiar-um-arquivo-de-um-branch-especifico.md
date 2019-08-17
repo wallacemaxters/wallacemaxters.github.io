@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2019-03-13 23:36:58 +0000
-title: Como pegar um arquivo específico de outro branch
+title: Como copiar um arquivo de um branch específico
 categories:
 - Git
 sitemap: true
