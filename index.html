@@ -1,12 +1,12 @@
 ---
 layout: page
-image: /assets/img/codes.jpg
+image: /assets/img/bg.jpg
 
 ---
 
 <h4 class="title is-5">Publicações recentes</h4>
 <div class="columns is-multiline">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:10 %}
         <div class="column is-12-mobile is-6-tablet is-4-desktop">
              <div class="card post-card">
                 <header class="card-header">
