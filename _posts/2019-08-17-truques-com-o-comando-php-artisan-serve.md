@@ -6,7 +6,7 @@ categories:
 - laravel
 - ubuntu
 sitemap: true
-image: "/uploads/Laravel.jpg"
+image: "/uploads/laravel-terminal.png"
 
 ---
 
