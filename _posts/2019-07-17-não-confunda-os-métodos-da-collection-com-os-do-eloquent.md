@@ -17,7 +17,7 @@ Eu tenho a \[boa\] mania de sempre olhar o código-fonte para ver como os framew
 
 Por exemplo, alguém que está começando a usar o Laravel agora, talvez não soubesse responder qual é a diferença entre as duas chamadas abaixo:
 
-```
+```php
 Usuario::count();
 Usuario::get()->count();
 ```
