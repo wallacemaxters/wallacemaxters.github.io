@@ -139,6 +139,21 @@ Vamos modificar o método da seguinte forma:
 
 > No *Axios*, quando você deseja passar alguma parâmetro na url, você pode usar a opção `params` contendo um objeto, que representará os valores da query string. É possível concatenar `users?page=${page}`, mas, por questão de gosto, não costumo fazer isso.
 
+
+Para testar se a paginação funcionou, basta fazer o seguinte:
+
+```html
+<a @click="paginate(1)">1</a>
+<a @click="paginate(2)">2</a>
+<a @click="paginate(3)">3</a>
+```
+
+Clique nos links e veja se os mesmos modificam os valores retornados pelo endpoint.
+
+> **Dica**: Se você não tiver muitos dados para testar, você pode passar um parâmetro para `paginate`, que modifica a quantidade de itens para paginação. Quando não tenho muitos dados para testar, uso `paginate(1)` para retornar um item por página.
+
+
+
 **Mas por quê guardar todas as informações ao invés de simplesmente a lista?**
 
 O motivo disso é que vamos usar as outras informações para construir melhor a nossa interface a partir de algumas informações.
