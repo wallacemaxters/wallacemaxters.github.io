@@ -217,7 +217,7 @@ Exemplo:
 
 ```html
 <template>
-  	<ul>
+  	<ul v-if="pagination.last_page > 1">
         <li v-for="number in numbers" 
            :class="{'active' : number === pagination.current_page}">
             <a @click="$emit('input', number)">{{ number }}</a>
