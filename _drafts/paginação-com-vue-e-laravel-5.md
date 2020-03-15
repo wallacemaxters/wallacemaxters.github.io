@@ -218,9 +218,15 @@ Exemplo:
 ```html
 <template>
   	<ul v-if="pagination.last_page > 1">
+      <li>
+          <a @click="$emit('input', value - 1)">&laquo; anterior</a>
+      </li>
         <li v-for="number in numbers" 
            :class="{'active' : number === pagination.current_page}">
             <a @click="$emit('input', number)">{{ number }}</a>
+        </li>
+        <li>
+          <a @click="$emit('input', value + 1)">próximo &raquo;</a>
         </li>
     </ul>
 </template>
