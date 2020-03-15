@@ -46,6 +46,8 @@ A chamada desse componente vai funcionar assim:
 <pagination :last-page="100" v-model="currentPage"  />
 ```
 
+> **Nota:** O uso de `value` e `$emit('input')` possibilita que o `v-model` possa ser utilizado no nosso componente. Toda vez que `$emit('input')` é chamado, o valor do `v-model` é atualizado.
+
 Da forma atual, com o valor `100` definido em `lastPage`, faria com que tivéssemos 100 links. Mas não é o que desejamos. Precisamos que os links sejam limitados de 10 em 10. E claro, isso deve ser feito baseando-se no valor atual da paginação.
 
 Para fazer isso, podemos usar uma lógica onde obtemos os valores iniciais e finais baseando no limite e valor atual.
@@ -123,10 +125,33 @@ generateLinks() {
 </script>
 
 
-Conhecendo a estrutura do Vue, creio que nesse caso seja interessante usar essa lógica de `generateLinks` como propriedade computada do Vue. Sendo assim, adicionaremos esse método dentro de `computed`.
+Conhecendo a estrutura do Vue, creio que nesse caso seja interessante usar essa lógica de `generateLinks` como propriedade computada do Vue. Sendo assim, adicionaremos a função criada acima dentro de `computed` e chamaremos ela de `numbers`.
 
+```javascript
+export default {
+    // restante do código ...
+    
+    computed: {
+        numbers() {
 
-O código final ficou assim:
+            const links = [];
+            const start = Math.floor(this.value / this.limitLinks) * this.limitLinks;
+            const end = Math.min(start + this.limitLinks, this.lastPage);
+
+            for (let i = start; i < end; i++) {
+                links.push(i + 1);
+            }
+
+            return links;
+        }       
+    }
+}
+```
+
+Agora está tudo certo. Para finalizarmos, precisamos alterar o valor utilizado no `v-for`. Tiraremos o `lastPage` e usaremos a propriedade computada `numbers`. 
+Além disso, vamos adicionar também um link para voltar à página anterior e um para avançar para a próxima página. 
+
+Aqui está o código final:
 
 {% raw %}
 ```html
@@ -174,5 +199,3 @@ export default {
 </script>
 ```
 {% endraw %}
-
-**Nota:** O uso de `value` e `$emit('input')` possibilita que o `v-model` possa ser utilizada no nosso componente. Toda vez que `$emit('input')` é chamado, o valor de `value` é atualizado.
