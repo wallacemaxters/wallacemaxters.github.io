@@ -123,7 +123,7 @@ Assim:
 Nosso objetivo agora é avançar para o próximo offset de dados (_próxima página_, se preferir) na nossa listagem.
 Não é algo muito difícil. O Laravel precisa apenas que você passe um parâmetro na query string chamado `page` para indicar qual é a "página" de dados que vamos retornar do endpoint.
 
-Vamos modificar o método da seguinte forma:
+Vamos modificar o método `paginate` da seguinte forma:
 
 ```javascript
 {
@@ -153,7 +153,7 @@ Para testar se a paginação funcionou, basta fazer o seguinte:
 
 Clique nos links e veja se os mesmos modificam os valores retornados pelo endpoint.
 
-> **Dica**: Se você não tiver muitos dados para testar, você pode passar um parâmetro para `paginate`, que modifica a quantidade de itens para paginação. Quando não tenho muitos dados para testar, uso `paginate(1)` para retornar um item por página.
+> **Dica**: Se você não tiver muitos dados para testar, você pode passar um parâmetro para `paginate`, que modifica a quantidade de itens retornados por  página. Quando não tenho muitos dados para testar, uso `paginate(1)` para retornar um item por página.
 
 **Mas por quê guardar todas as informações ao invés de simplesmente a lista?**
 
@@ -200,6 +200,8 @@ Veja:
   <div class="right">Página {{ users.current_page }} de {{  users.last_page }}</div>
 </div>
 ```
+
+Então perceba que, além da paginação, o `paginate` do Laravel retorna informações importantes para serem mostradas ao usuário.
 
 # Finalmente, construindo o componente de paginação
 
@@ -275,3 +277,14 @@ export default {
   }
 </style>
 ```
+
+Como se vê, utilizamos as informações da propriedade `pagination` para montar os links do nosso componente. Essas informações podem ser passadas exatamente assim toda vez que os dados vierem do resultado da chamada de `paginate` feita na API.
+
+**Detalhando o código**
+
+* Utilizamos o `$emit("input", number)` para indicar qual página está sendo selecionada.
+* Em `previous` definimos o "recuo" de uma página com o valor mínimo de 1 (porque sempre é a primeira página).
+* Em `next` definimos o avanço de uma página com o valor máximo sendo a última página, para não ultrapassarmos o valor limite da página.
+* Nos demais links, do loop, usamos os números das páginas, limitados a `10`, conforme ensinei em [Como limitar a quantidade de links da paginação com Vue](https://wallacemaxters.com.br/blog/2020/03/14/limitar-links-paginacao-vue).
+* Na expressão `v-if="pagination.last_page > 1"`, definimos que a paginação só será exibida caso exista mais de uma página.
+* Na expressão `:class="{'active' : number === pagination.current_page}"` definimos um estilo diferenciado para a número da página atual.
