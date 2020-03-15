@@ -52,7 +52,7 @@ Para fazer isso, podemos usar uma lógica onde obtemos os valores iniciais e fin
 No caso, como o nosso limite padrão é 10. Sendo assim, podemos fazer o seguinte para descobrir o valor inicial do loop:
 
 ```javascript
-const start = Math.floor(this.currentPage / this.limitLinks) * this.limitLinks;
+const start = Math.floor(this.value / this.limitLinks) * this.limitLinks;
 ```
 
 Basicamente, o que estamos fazendo é arredondar o valor da divisão da página atual pelo número de links e multiplicando o resultado pelo número de links. Assim, conseguimos obter a dezena inicial de acordo com o valor atual.
@@ -82,7 +82,7 @@ Sendo assim, podemos construir um loop para gerar os números do nosso link:
 generateLinks() {
 
     const links = [];
-    const start = Math.floor(this.currentPage / this.limitLinks) * this.limitLinks;
+    const start = Math.floor(this.value / this.limitLinks) * this.limitLinks;
     const end = Math.min(start + this.limitLinks, this.lastPage);
 
     for (let i = start; i < end; i++) {
@@ -101,7 +101,7 @@ Sendo assim, basta somar `i + 1`:
 generateLinks() {
 
     const links = [];
-    const start = Math.floor(this.currentPage / this.limitLinks) * this.limitLinks;
+    const start = Math.floor(this.value / this.limitLinks) * this.limitLinks;
     const end = Math.min(start + this.limitLinks, this.lastPage);
 
     for (let i = start; i < end; i++) {
@@ -130,7 +130,7 @@ Conhecendo a estrutura do Vue, creio que nesse caso seja interessante usar essa 
 <template>
     <ul>
         <li v-for="number in numbers" :key="`pagination-number-${number}`">
-            <a @click="$emit('input', i)">{{ i }}</a>
+            <a @click="$emit('input', number)">{{ number }}</a>
         </li>
     </ul>
 </template>
@@ -154,7 +154,7 @@ export default {
         numbers() {
 
             const links = [];
-            const start = Math.floor(this.currentPage / this.limitLinks) * this.limitLinks;
+            const start = Math.floor(this.value / this.limitLinks) * this.limitLinks;
             const end = Math.min(start + this.limitLinks, this.lastPage);
 
             for (let i = start; i < end; i++) {
