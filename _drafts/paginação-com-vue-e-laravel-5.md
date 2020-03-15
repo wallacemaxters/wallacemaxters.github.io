@@ -219,14 +219,14 @@ Exemplo:
 <template>
   	<ul v-if="pagination.last_page > 1">
       <li>
-          <a @click="$emit('input', value - 1)">&laquo; anterior</a>
+          <a @click="previous()">&laquo; anterior</a>
       </li>
         <li v-for="number in numbers" 
            :class="{'active' : number === pagination.current_page}">
             <a @click="$emit('input', number)">{{ number }}</a>
         </li>
         <li>
-          <a @click="$emit('input', value + 1)">próximo &raquo;</a>
+          <a @click="next()">próximo &raquo;</a>
         </li>
     </ul>
 </template>
@@ -243,7 +243,6 @@ export default {
   },
 
   computed: {
-    
     numbers() {
       const links = [];
       const start = Math.floor(this.pagination.current_page / this.limitLinks) * this.limitLinks;
@@ -252,8 +251,20 @@ export default {
       for (let i = start; i < end; i++) {
         links.push(i + 1);
       }
-
+      
       return links;
+    }
+  },
+  
+  methods: {
+  	previous() {
+        const page = Math.max(1, this.pagination.current_page - 1);
+    	this.$emit('input', page);
+    },
+    
+    next() {
+    	const page = Math.min(this.pagination.last_page, this.pagination.current_page + 1);
+        this.$emit('input', page);
     }
   }
 };
