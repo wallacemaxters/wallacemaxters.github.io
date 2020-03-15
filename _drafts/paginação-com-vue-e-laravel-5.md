@@ -155,8 +155,6 @@ Clique nos links e veja se os mesmos modificam os valores retornados pelo endpoi
 
 > **Dica**: Se você não tiver muitos dados para testar, você pode passar um parâmetro para `paginate`, que modifica a quantidade de itens para paginação. Quando não tenho muitos dados para testar, uso `paginate(1)` para retornar um item por página.
 
-Utilizaremos como modelo um componente de paginação que ensinei a criar [nessa publicação](https://wallacemaxters.com.br/blog/2020/03/14/limitar-links-paginacao-vue)
-
 **Mas por quê guardar todas as informações ao invés de simplesmente a lista?**
 
 O motivo disso é que vamos usar as outras informações para construir melhor a nossa interface a partir de algumas informações.
@@ -180,7 +178,7 @@ Exemplo:
 
 `current_page` - Esse valor representa a página atual da paginação. Um exemplo de sua importância é poder marcar o link da página atual.
 
-`last_page` - Esse valor representa qual é o limite de páginas da paginação. Eu costumo utilizá-lo muito para definir se vou exibir os links da paginação ou não, caso seu valor seja `1`, uma vez que não faz sentido exibir links de paginação para uma página.
+`last_page` - Esse valor representa qual é o limite de páginas da paginação. Eu costumo utilizá-lo muito para definir se vou exibir os links da paginação ou não, caso seu valor seja `1`.
 
 Exemplo:
 
@@ -201,4 +199,62 @@ Veja:
   <div class="left">Exibindo {{ users.data.length }} de {{ users.total }} usuários</div>
   <div class="right">Página {{ users.current_page }} de {{  users.last_page }}</div>
 </div>
+```
+
+# Finalmente, construindo o componente de paginação
+
+Sabendo das informações demonstradas acima, podemos montar o componente de paginação baseado nas informações retornadas pelo Laravel. Podemos utilizar apenas uma propriedade para montar nossos links de paginação.
+
+Vamos fazer a chamada da seguinte forma:
+
+```html
+<laravel-pagination :pagination="users" @input="page => paginate(page)" /> 
+```
+
+Utilizaremos como modelo um componente de paginação que ensinei a criar [nessa publicação](https://wallacemaxters.com.br/blog/2020/03/14/limitar-links-paginacao-vue). Leia para entender a lógica detalhadamente.
+
+Exemplo:
+
+```html
+<template>
+  	<ul>
+        <li v-for="number in numbers" 
+           :class="{'active' : number === pagination.current_page}">
+            <a @click="$emit('input', number)">{{ number }}</a>
+        </li>
+    </ul>
+</template>
+<script>
+export default {
+  name: "laravel-pagination",
+
+  props: {
+    pagination: Object,
+    limitLinks: {
+      type: Number,
+      default: 10
+    }
+  },
+
+  computed: {
+    
+    numbers() {
+      const links = [];
+      const start = Math.floor(this.pagination.current_page / this.limitLinks) * this.limitLinks;
+      const end = Math.min(start + this.limitLinks, this.pagination.last_page);
+
+      for (let i = start; i < end; i++) {
+        links.push(i + 1);
+      }
+
+      return links;
+    }
+  }
+};
+</script>
+<style scope lang="scss">
+  .active{
+    color: red;
+  }
+</style>
 ```
