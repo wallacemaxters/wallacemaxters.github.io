@@ -84,6 +84,10 @@ Exemplo:
   
     name: 'users-list',
     
+    created() {
+      this.paginate()
+    },
+    
     data() {
       return {
         users: {data: []}
@@ -100,7 +104,7 @@ Exemplo:
 </script>
 ```
 
-No caso acima, eu deixei a variável `users` guardando todas as informações retornadas em `api/users`, e não apenas a lista. 
+No caso acima, eu deixei a variável `users` guardando todas as informações retornadas em `api/users`, e não apenas a lista.
 
 O motivo de fazer isso é justamente poder usufruir do padrão de retorno do Laravel e explicarei isso melhor mais a frente.
 
@@ -116,7 +120,7 @@ Assim:
 
 ### E a próxima página?
 
-Nosso objetivo agora é avançar para o próximo offset de dados (*próxima página*, se preferir) na nossa listagem. 
+Nosso objetivo agora é avançar para o próximo offset de dados (_próxima página_, se preferir) na nossa listagem.
 Não é algo muito difícil. O Laravel precisa apenas que você passe um parâmetro na query string chamado `page` para indicar qual é a "página" de dados que vamos retornar do endpoint.
 
 Vamos modificar o método da seguinte forma:
@@ -137,8 +141,7 @@ Vamos modificar o método da seguinte forma:
 }
 ```
 
-> No *Axios*, quando você deseja passar alguma parâmetro na url, você pode usar a opção `params` contendo um objeto, que representará os valores da query string. É possível concatenar `users?page=${page}`, mas, por questão de gosto, não costumo fazer isso.
-
+> No _Axios_, quando você deseja passar alguma parâmetro na url, você pode usar a opção `params` contendo um objeto, que representará os valores da query string. É possível concatenar `users?page=${page}`, mas, por questão de gosto, não costumo fazer isso.
 
 Para testar se a paginação funcionou, basta fazer o seguinte:
 
@@ -152,7 +155,7 @@ Clique nos links e veja se os mesmos modificam os valores retornados pelo endpoi
 
 > **Dica**: Se você não tiver muitos dados para testar, você pode passar um parâmetro para `paginate`, que modifica a quantidade de itens para paginação. Quando não tenho muitos dados para testar, uso `paginate(1)` para retornar um item por página.
 
-
+Utilizaremos como modelo um componente de paginação que ensinei a criar [nessa publicação](https://wallacemaxters.com.br/blog/2020/03/14/limitar-links-paginacao-vue)
 
 **Mas por quê guardar todas as informações ao invés de simplesmente a lista?**
 
@@ -175,13 +178,11 @@ Exemplo:
 </div>
 ```
 
-
-`current_page` - Esse valor representa a página atual da paginação. Um exemplo de sua importância é poder marcar o link da página atual. 
-
+`current_page` - Esse valor representa a página atual da paginação. Um exemplo de sua importância é poder marcar o link da página atual.
 
 `last_page` - Esse valor representa qual é o limite de páginas da paginação. Eu costumo utilizá-lo muito para definir se vou exibir os links da paginação ou não, caso seu valor seja `1`, uma vez que não faz sentido exibir links de paginação para uma página.
 
-Exemplo: 
+Exemplo:
 
 ```html
 <div v-if="users.last_page > 1">
@@ -191,7 +192,7 @@ Exemplo:
 
 Essa lógica também pode ser aplicado diretamente dentro do componente de paginação, caso seja conveniente, pois assim evitamos a repetição exaustiva do `v-if`.
 
-E no final, ainda, podemos combinar todos os valores para fazer um resumo da paginação. 
+E no final, ainda, podemos combinar todos os valores para fazer um resumo da paginação.
 
 Veja:
 
