@@ -123,48 +123,54 @@ generateLinks() {
 </script>
 
 
-Conhecendo a estrutura do Vue, creio que nesse caso seja interessante usar essa lógica de `generateLinks` como propriedade computada do Vue. Sendo assim, adicionaremos esse método dentro de `computed`, conforme o código abaixo:
+Conhecendo a estrutura do Vue, creio que nesse caso seja interessante usar essa lógica de `generateLinks` como propriedade computada do Vue. Sendo assim, adicionaremos esse método dentro de `computed`.
+
+
+O código final ficou assim:
 
 {% raw %}
 ```html
 <template>
-    <ul>
-        <li v-for="number in numbers" :key="`pagination-number-${number}`">
-            <a @click="$emit('input', number)">{{ number }}</a>
-        </li>
-    </ul>
+  <ul>
+    <li>
+      <a @click="$emit('input', value - 1)">&laquo; anterior</a>
+    </li>
+    <li v-for="number in numbers" :key="`pagination-number-${number}`">
+      <a @click="$emit('input', number)">{{ number }}</a>
+    </li>
+      <li>
+      <a @click="$emit('input', value + 1)">próximo &raquo;</a>
+    </li>
+  </ul>
 </template>
 
 <script>
 export default {
+  name: "Pagination",
 
-    name: 'Pagination',
-
-    props: {
-        lastPage: Number,
-        value: Number,
-        limitLinks: {
-            type: Number,
-            default: 10
-        }
-    },
-
-    computed: {
-
-        numbers() {
-
-            const links = [];
-            const start = Math.floor(this.value / this.limitLinks) * this.limitLinks;
-            const end = Math.min(start + this.limitLinks, this.lastPage);
-
-            for (let i = start; i < end; i++) {
-                links.push(i + 1);
-            }
-
-            return links;
-        }
+  props: {
+    lastPage: Number,
+    value: Number,
+    limitLinks: {
+      type: Number,
+      default: 10
     }
-}
+  },
+
+  computed: {
+    numbers() {
+      const links = [];
+      const start = Math.floor(this.value / this.limitLinks) * this.limitLinks;
+      const end = Math.min(start + this.limitLinks, this.lastPage);
+
+      for (let i = start; i < end; i++) {
+        links.push(i + 1);
+      }
+
+      return links;
+    }
+  }
+};
 </script>
 ```
 {% endraw %}
