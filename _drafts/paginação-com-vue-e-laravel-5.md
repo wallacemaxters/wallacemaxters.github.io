@@ -197,8 +197,7 @@ Veja:
 
 ```html
 <div>
-  <div class="left">Exibindo {{ users.data.length }} de {{ users.total }} usuários
-</div>
+  <div class="left">Exibindo {{ users.data.length }} de {{ users.total }} usuários</div>
   <div class="right">Página {{ users.current_page }} de {{  users.last_page }}</div>
 </div>
 ```
