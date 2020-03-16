@@ -1,15 +1,13 @@
 ---
 layout: post
 title: Como limitar a quantidade de links de paginação com Vue?
-date: 2020-03-14 17:45:00 -0300
+date: 2020-03-14T20:45:00.000+00:00
 categories:
 - vue
-- javascript
 sitemap: true
 image: "/uploads/covers/vue.jpeg"
 
 ---
-
 Ter um componente de paginação é essencial para qualquer projeto Vue. E, geralmente, a parte chata de um componente de paginação é ter que configurar a limitação dos links que são exibidos, uma vez que o excesso desses acaba causando problemas de usabilidade. 
 
 Bem, inicialmente, vamos pensar  no nosso componente de paginação com a seguinte estrutura básica:
