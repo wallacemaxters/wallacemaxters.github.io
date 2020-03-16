@@ -70,6 +70,16 @@ No Laravel 5, o resultado disso será algo parecido com:
 
 Basicamente, os dados que precisamos listar estão em `data`, que é um `array` contendo os dados de cada `User`.
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4119206527475379"
+     data-ad-slot="7774041254"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ### Construindo a visualização no Vue
 
 Tudo que temos que fazer agora é pegar o retorno desses dados pelo Vue e exibí-los na Vue.
