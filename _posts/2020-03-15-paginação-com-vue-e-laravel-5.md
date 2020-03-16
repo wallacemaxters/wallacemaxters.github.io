@@ -3,8 +3,8 @@ layout: post
 title: Paginação com Vue e Laravel 5
 date: 2020-03-15 13:20:00 -0300
 categories:
-- vue
 - laravel
+- vue
 sitemap: true
 image: "/uploads/laravel_vue.png"
 
