@@ -11,7 +11,7 @@ image: "/uploads/laravel_vue.png"
 ---
 Usar Laravel como backend e Vue como frontend tem sido algo bastante comum de um tempo para cá. Em vários projetos vejo a utilização dos mesmos e pessoalmente creio que seja uma combinação poderosa.
 
-Nesse tutorial, estaria demonstrando como criar uma paginação com Vue e Laravel.
+Nesse tutorial, estarei demonstrando como criar uma paginação com Vue e Laravel.
 
 ### Introdução
 
