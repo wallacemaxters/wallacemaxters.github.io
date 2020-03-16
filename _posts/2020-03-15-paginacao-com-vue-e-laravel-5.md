@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paginação com Vue e Laravel 5
-date: 2020-03-15 13:20:00 -0300
+date: 2020-03-15T16:20:00.000+00:00
 categories:
 - laravel
 - vue
@@ -15,7 +15,7 @@ Nesse tutorial, estarei demonstrando como criar uma paginação com Vue e Larave
 
 ### Introdução
 
-O primeiro ponto que gosto de observar que é os frameworks e bibliotecas costumam utilizar padrões para facilitar a nossa vida. Muitas vezes o desenvolvedor acaba criando ou fazendo coisas desnecessárias no momento de obter um dado ou fazer uma operação, sendo que o framework já tem uma solução fácil para isso.
+O primeiro ponto que gosto de observar é que os frameworks e bibliotecas costumam utilizar padrões para facilitar a nossa vida. Muitas vezes o desenvolvedor acaba criando ou fazendo coisas desnecessárias no momento de obter um dado ou fazer uma operação, sendo que o framework já tem uma solução fácil para isso.
 
 Um grande exemplo disso é o método `paginate` do Eloquent do Laravel. Já vi vários desenvolvedores utilizando o `paginate` apenas quando deseja exibir os links da paginação numa Blade View. Porém quando se trata de retornar os dados numa API, o desenvolvedor cria manualmente toda a operação, usando os métodos `take` e `skip` para fazer a paginação pelo Eloquent.
 
