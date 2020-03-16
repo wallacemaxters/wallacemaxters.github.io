@@ -122,11 +122,13 @@ O que vai mudar no nosso código será o momento de aplicar o `v-for`, que, ao i
 
 Assim:
 
+{% raw %}
 ```html
 <div class="user-info" v-for="user in users.data">
   	{{ user.name }}
 </div>
 ```
+{% endraw %}
 
 ### E a próxima página?
 
@@ -175,6 +177,7 @@ Vou detalhar cada uma delas:
 
 Exemplo:
 
+{% raw %}
 ```html
 <div v-if="users.total > 0">
   <div class="user-info" v-for="user in users.data">
@@ -185,6 +188,7 @@ Exemplo:
   Nenhum usuário foi encontrado
 </div>
 ```
+{% endraw %}
 
 `current_page` - Esse valor representa a página atual da paginação. Um exemplo de sua importância é poder marcar o link da página atual.
 
@@ -227,6 +231,7 @@ Utilizaremos como modelo um componente de paginação que ensinei a criar [nessa
 
 Exemplo:
 
+{% raw %}
 ```html
 <template>
   	<ul v-if="pagination.last_page > 1">
@@ -287,6 +292,7 @@ export default {
   }
 </style>
 ```
+{% endraw %}
 
 Como se vê, utilizamos as informações da propriedade `pagination` para montar os links do nosso componente. Essas informações podem ser passadas exatamente assim toda vez que os dados vierem do resultado da chamada de `paginate` feita na API.
 
