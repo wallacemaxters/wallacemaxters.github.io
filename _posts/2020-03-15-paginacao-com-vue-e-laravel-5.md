@@ -124,9 +124,7 @@ Assim:
 
 {% raw %}
 ```html
-<div class="user-info" v-for="user in users.data">
-  	{{ user.name }}
-</div>
+<div class="user-info" v-for="user in users.data">{{ user.name }}</div>
 ```
 {% endraw %}
 
@@ -198,7 +196,7 @@ Exemplo:
 
 ```html
 <div v-if="users.last_page > 1">
-	<pagination v-model="users.current_page" @input="paginate"  />
+  <pagination v-model="users.current_page" @input="paginate"  />
 </div>
 ```
 
