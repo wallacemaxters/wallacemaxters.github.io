@@ -11,25 +11,23 @@ image: "/uploads/laravel_database_search.svg"
 ---
 O Eloquent é um ORM do Laravel que permite facilitar bastante as consultas realizadas no seu banco de dados. Nesse tutorial, estarei ensinado uma maneira simples de filtrar dados no Eloquent de maneira eficiente, evitando repetições e códigos grandes;
 
-Geralmente quando trabalhamos com uma API ou até mesmo em uma aplicação monolítica, o Eloquent auxilia bastante a realizar a consulta de maneira bem simples.
 
-Por exemplo, se queremos em uma API retornar uma lista de Produtos paginada, podemos simplesmente fazer isso:
+Geralmente, quando estamos desenvolvendo uma API ou simplesmente uma página no Laravel, o Eloquent nos auxilia bastante na tarefa de realizar operações no banco de dados. Em, em muitos desses casos, quando precisamos realizar uma listagem de dados, precisamos também que os mesmos sejam filtrados.
+
+Podemos tomar como exemplo uma listagem de produtos, que pode ser representada da seguinte forma:
 
 ```php
 Route::get('/produtos', function () {
+
     $produtos = Produto::paginate();
 
     return $produtos;
 })
 ```
 
-Porém temos um detalhe: E se eu quiser que esse produto seja filtrado através do seu nome?
-
-
-Bem, no Laravel, podemos utilizar o object `Request` para fazermos isso. Nós podemos simplesmente verificar se o valor de uma query string foi preenchido e usar o LIKE para realizar o filtro.
+O código acima retorna uma lista paginada de produtos. Geralmente, além da listagem, quase sempre precisamos de filtrar essas consultas. No Laravel, por exemplo, podemos utilizar o object `Request` para fazermos isso. Nós podemos simplesmente verificar se o valor de uma query string foi preenchido e usar o `LIKE`  para realizar esse filtro.
 
 Exemplo:
-
 
 ```php
 Route::get('/produtos', function (Request $request) {
@@ -46,14 +44,15 @@ Route::get('/produtos', function (Request $request) {
 })
 ```
 
-No caso acima, ao acessar a url `/api/produtos?nome=parafuso`, serão retornados apenas os produtos contendo a palavra "parafuso".
+Esse é o tipo de código mais comum utilizado em filtros de pesquisa.
 
+No caso acima, ao acessar a url `/api/produtos?nome=parafuso`, serão retornados apenas os produtos contendo a palavra "parafuso" no campo `nome`.
 
 Obviamente, se quisermos pesquisar os produtos por outros campos, basta adicionarmos mais `if` e mais `wheres` para isso. Você pode inclusive variar a consulta entre consultas com `LIKE` ou `=`. 
 
-Por exemplo, suponhamos que queremos filtrar o nome do produto através de um termo e, ao mesmo tempo, por codigo de barras e o usuário responsável por cadastrar o mesmo.
-Poremos fazer assim:
+Por exemplo, suponhamos que queremos filtrar o nome do produto através de um termo e, ao mesmo tempo, por código de barras e o usuário responsável por cadastrar o mesmo.
 
+Podemos fazer assim:
 
 
 ```php
@@ -81,11 +80,9 @@ Route::get('/produtos', function (Request $request) {
 
 Nesse caso, a requisição `/api/produtos?nome=parafuso&usuario_id=1&codigo_barra=XXX` se encarregará de executar a nossa consulta.
 
+### Mas e se eu precisar de consultar por vários campos diferente?
 
-**Mas e se eu precisar de uma consulta com 20 campos diferentes?**
-
-Esse é exatamente o motivo de eu estar escrevendo essa publicação. Normalmente, se você for utilizar a abordagem do exemplo acima, dependendo da quantidade de campos que você deseja filtrar individualmente, você vai ter um código bem grande. Além do mais, é possível perceber que existem repetições nesse código. Note que o `if`, a verificação se o campo foi preenchido com `has` e até mesmo a execução do `where` são repetições, onde apenas o nome do campo é mudado.
-
+Se continuarmos com a abordagem acima, nosso filtro de pesquisa vai ter um código imenso. Além do mais, é possível perceber que existem repetições nesse código. Note que o `if`, a verificação se o campo foi preenchido com `has` e até mesmo a execução do `where` são repetições, onde apenas o nome do campo é mudado.
 
 Então, se eu desejar consultar os produtos pelos campos `nome`, `descricao` e `beneficios`, usando termos, eu teria que fazer isso:
 
@@ -113,13 +110,15 @@ Route::get('/produtos', function (Request $request) {
 })
 ```
 
-Eu, particularmente, penso que o programador que seja achar esperto vai copiar e colar o código e mudar o nome dos campos. Porém fico imaginando se ele precisar disso para mais 10 campos. 
+Isso não está muito bom...
 
 Minha opinião é que, se você precisou copiar e colar alguma coisa, você precisa mudar de estratégia, criando uma função ou mesmo usando um laço de repetição.
 
-É exatamente isso que vamos fazer!
+Foi exatamente por esse motivo que eu resolvi escrever essa publicação.
 
-Veja esse código vai ficar mais simples com uma pequena modificação:
+
+
+Vejamos como esse código vai ficar mais simples com uma pequena modificação:
 
 
 
@@ -142,7 +141,7 @@ Route::get('/produtos', function (Request $request) {
 })
 ```
 
-Acima utilizamos o `foreach` para iterar sobre os valores retornado por `Request::only`. Essa função retorna um `array`, contendo chave e valor, referente aos campos passados como parâmetro. Caso o valor não exista, o mesmo receberá o valor `NULL`.
+Acima, utilizamos o `foreach` para iterar sobre os valores retornado por `Request::only`. Essa função retorna um `array`, contendo chave e valor, referente aos campos passados como parâmetro. Caso o valor não exista, o mesmo receberá o valor `NULL`.
 
 Por exemplo, se preenchermos a url dessa forma: `api/produtos?nome=parafuso&beneficios=antiferrugem`, os resultado de `$request->only` seria algo parecido com:
 
@@ -153,7 +152,7 @@ Por exemplo, se preenchermos a url dessa forma: `api/produtos?nome=parafuso&bene
 Por essa razão é que dentro do `foreach` temos um `if` para evitar uma adição de LIKE sem necessidade, caso o campo seja vazio.
 
 
-Além disso, podemos usar essa mesma abordagem para os campos que queremos pesquisar pela igualdade.
+Além disso, podemos usar essa mesma abordagem para os campos que queremos pesquisar pela igualdade de valores.
 
 Veja:
 
@@ -184,22 +183,23 @@ Route::get('/produtos', function (Request $request) {
 })
 ```
 
-**Observação:**: Se você preferir, é possível simplificar mais ainda o `foreach`, tirando o `if` e deixando apenas uma expressão booleana `$valor && $query->where('nome', '=', $request->nome);`.
+> **Observação:** Se você preferir, é possível simplificar mais ainda o `foreach`, tirando o `if` e deixando apenas uma expressão booleana `$valor && $query->where('nome', '=', $request->nome);`.
 
 Ainda é possível fazer outro ajuste. 
 
 ### E se eu quiser executar esse mesmo filtro em outros lugares?
 
-Pode haver casos onde você necessite de listar os produtos dois ou mais endpoints e, consequentemente, repetir o código do nosso filtro.
-
+Pode haver casos onde você necessite de realizar consultas e filtros em dois ou mais endpoints lugares diferentes.
 
 A resposta do programador "esperto" para esse problema seria "copiar e colar". Eu detesto essa prática e prefiro sempre recorrer à reutilização do código.
 
-Existe pelo menos duas formas possíveis de fazermos isso fácil no Laravel.
+Para resolvermos isso, podemos elaborar duas formas fazermos isso de maneira bem fácil no Laravel.
 
-Na primeira, podemos utilizar uma `Closure`. Para quem não sabe, o Eloquent aceita passar uma `Closure` (função anônima) ao chamarmos `where`.
+# Utilizando Request e Closure
 
-Exemplo:
+Para quem não sabe, o Eloquent aceita uma `Closure` (função anônima) como argumento para o método `where`. As funções anônimas em PHP podem ser retornadas em funções/métodos e/ou armazenadas em váriaveis. Podemos usar desse artifício para implementarmos a nossa reutilização do filtro de pesquisa.
+
+Primeiro, vamos ver como fica o código atual encapsulado numa função anônima:
 
 ```php
 Route::get('/produtos', function (Request $request) {
@@ -230,12 +230,9 @@ Route::get('/produtos', function (Request $request) {
 > **Nota**: Ao construir a sua query dentro de uma `Closure`, esteja ciente que a expressão em SQL referente a essa closure será encapsulada por parêntesis. Exemplo: `select * from produtos where (nome like "%parafuso" and usuario_id = 1)`. Isso pode ser bastante útil se você seja isolar seu filtro, principalmente se estiver usando `OR` ao invés de `AND`.
 
 
-**Mas qual é a vantagem de se usar uma Closure?**
+Tendo isso em vista, agora podemos simplesmente isolar a consulta em uma função ou método e usar em qualquer lugar que necessitemos dessa consulta. 
 
-Nesse caso, poderíamos simplesmente isolar a consulta em uma função ou método e usar em qualquer lugar que necessitemos dessa consulta.
-
-Por exemplo, poderíamos criar um `Request` específico para consulta de produtos e usar um método para retornar essa Closure contendo as consultas.
-
+No nosso caso, vamos criar uma `Request` específica para realizar representar a nossa consulta e usar um método nela para retornar essa mesma função anônima acima.
 
 Para fazer isso, rode o comando `php artisan make:request ProdutoConsultaRequest` e em seguida utilize o código abaixo:
 
@@ -278,10 +275,10 @@ class ProdutoConsultaRequest extends FormRequest
 
 Por padrão, ao criar uma request, os métodos `authorize` e `rules` são criados. Eles são necessários para o funcionamento correto da request.
 
-Nós criamos a função `getSearchCallback`, que retorna a `Closure` que precisamos. Note que trocamos `$request` por `$this`, já que estamos dentro do contexto da classe. 
+Nós criamos a função `getSearchCallback`, que retorna a `Closure` que precisamos. Note que trocamos `$request` por `$this`, já que estamos dentro do contexto da classe que herda `Request`. 
 
 
-Vamos imaginar um cenário onde estejamos usando [SoftDelete](https://laravel.com/docs/5.8/eloquent#soft-deleting) em `Produto`. Queremos que um endpoint retorne todos os produtos e outro que retorne apenas os excluídos. 
+Vamos imaginar um cenário onde estejamos usando [SoftDelete](https://laravel.com/docs/5.8/eloquent#soft-deleting) em `Produto`. Queremos que um endpoint retorne os produtos normais e outro, que retorne apenas os excluídos. 
 
 Podemos usar esse código:
 
@@ -302,7 +299,9 @@ class ProdutosController extends Controller
 }
 ```
 
-No meu ponto de vista, a vantagem de usar uma `Request` para tal operação é você podar usar o `rules` para validar os campos que você utilizará como filtro.
+Dessa forma, podemos reduzir todo aquele código em uma simples linha.
+
+No meu ponto de vista, a vantagem de usar uma `Request` costumizada para tal operação é você podar usar o `rules` para validar os campos que você utilizará como filtro.
 
 Por exemplo, poderíamos adicionar a seguinte validação à `rules`:
 
@@ -317,6 +316,11 @@ public function rules()
 }
 ```
 
+No exemplo acima, o campo `usuario_id` só será aceito caso seja um valor existente na tabela `usuarios`.
+
+> Nota: Utilizei `nullable` porque campos de filtro de pesquisa geralmente são opcionais.
+
+# Usando Query Scopes
 
 A segunda opção para simplificar nosso filtro  seria usar as [Local Scopes](https://laravel.com/docs/5.8/eloquent#local-scopes).
 
@@ -375,9 +379,9 @@ class ProdutosController extends Controller
 }
 ```
 
-Eu preferi deixar a passagem de `$request` explicitamente, ao invés de chamar a função `request()` dentro da Local Scope. O motivo é que `request` sempre retorna a `request` padrão do Laravel. Ao usar parâmetro, podemos usar uma request costumizada.
+Eu preferi deixar a passagem de `$request` explicitamente, ao invés de chamar a função `request()` dentro da Local Scope. O motivo é que `request` sempre retorna a `Request` padrão do Laravel. Ao usar parâmetro, podemos usar uma request costumizada.
 
-Caso queira omitir a passagem de `request`, você pode criar alterar a sua Local Scope, da seguinte forma:
+Porém, caso queira omitir a passagem de `request`, você pode criar alterar a sua Local Scope, da seguinte forma:
 
 
 ```php
@@ -418,8 +422,7 @@ As chamadas poderíam ser alteradas para:
 Produto::search()->paginate()
 ```
 
-
-## E seu eu quiser usar isso em outros projetos?
+### E seu eu quiser usar isso em outros projetos?
 
 Há casos (como o meu) onde você não trabalha com um, mas com vários projetos escritos em cima do Laravel. E praticamente a maioria deles precisam que você escreva esses tipos de filtro.
 
