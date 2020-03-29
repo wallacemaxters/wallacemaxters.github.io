@@ -36,4 +36,5 @@ pages:
 - _posts/2019-07-17-erros-comuns-no-laravel.md
 - _posts/2019-07-17-não-confunda-os-métodos-da-collection-com-os-do-eloquent.md
 - _posts/como-executar-uma-requisição-com-php-sem-esperar-a-resposta.md
+- _posts/laravel-como-criar-filtros-de-pesquisa-no-eloquent-de-maneira-eficiente.md
 - _posts/programa-que-digita-sozinho.md
