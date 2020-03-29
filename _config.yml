@@ -31,6 +31,7 @@ plugins:
 
 github: https://github.com/wallacemaxters
 stackoverflow: https://pt.stackoverflow.com/users/4995/wallace-maxters
+facebook: https://www.facebook.com/wallace.maxters.7
 
 permalink: /blog/:year/:month/:day/:title
 
