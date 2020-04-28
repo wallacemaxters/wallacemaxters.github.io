@@ -82,7 +82,7 @@ Depois de fazer tudo isso, você já poderá testar se sua biblioteca está func
 
     composer require vendor_name/library_name
 
-\#Mas e o versionamento?
+#Mas e o versionamento?
 
 Você precisa definir uma tag no seu repositório para poder demarcar uma versão "utilizável" da sua biblioteca. Por exemplo, se você já tem certeza que sua biblioteca está pronta para o uso, poderá definir uma versão para ela.
 
