@@ -35,6 +35,7 @@ pages:
 - _posts/2019-03-30-laravel-como-enviar-logs-via-slack.md
 - _posts/2019-07-17-erros-comuns-no-laravel.md
 - _posts/2019-07-17-não-confunda-os-métodos-da-collection-com-os-do-eloquent.md
+- _posts/como-colocar-degradê-por-cima-de-uma-imagem-de-fundo.md
 - _posts/como-criar-um-usuário-através-do-artisan.md
 - _posts/como-executar-uma-requisição-com-php-sem-esperar-a-resposta.md
 - _posts/programa-que-digita-sozinho.md
