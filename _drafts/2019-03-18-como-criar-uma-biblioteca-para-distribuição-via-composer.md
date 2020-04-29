@@ -18,7 +18,7 @@ Por exemplo: para um pacote chamado `vendor_name/library_name` no Packagist, ser
 
 > **Observação**: _Vendor Name_ é o nome do "fornecedor" da biblioteca e _Library Name_ é o nome da biblioteca. O Composer utiliza "vendor name/library name" como padrão de nome para as bibliotecas.
 
-<sub>**Nota**: para continuar esse "tutorial", você deve ter em mente que você precisa ter um considerável conhecimento sobre ferramentas de versionamento (como o GIT, por exemplo).</sub>
+> **Nota**: para continuar esse "tutorial", você deve ter em mente que você precisa ter um considerável conhecimento sobre ferramentas de versionamento (como o GIT, por exemplo).
 
 Depois de criar seu repositório, recomendo seguir alguns padrões para a criação da sua biblioteca.
 
