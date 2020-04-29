@@ -1,0 +1,21 @@
+---
+---
+
+[
+    {% for post in site.posts | sort: "date" | reverse %}
+    {
+        "title":"{{post.title | escape}}", 
+        "image": "{{ post.image | prepend:site.url }}",
+        "description": "{{ post.excerpt |  strip_html |  strip_newlines | escape }}",
+        "date": "{{ post.date }}",
+        "permalink": "{{ post.url | prepend:site.url }}",
+        "sitemap" : {{ post.sitemap }},
+        "categories": [
+            {% for category in post.categories %}
+                "{{ category | escape }}"{% if post.categories.last != category %},{% endif %}
+            {% endfor %}
+        ]
+    }
+    {% if site.posts.last != post %},{% endif %}
+    {% endfor %}
+]
