@@ -11,7 +11,7 @@ image: ''
 
 ---
 ```javascript
-export async function loadImage(img, src) {
+function loadImage(img, src) {
     return new Promise((resolve, reject) => {
         img.src = src;
         img.completed ? resolve(img) : img.addEventListener('load', () => resolve(img));
@@ -19,7 +19,7 @@ export async function loadImage(img, src) {
     })
 }
 
-export async function resizeImage(src, options)
+function resizeImage(src, options)
 {
     const image = await loadImage(document.createElement('img'), src);
 
@@ -35,16 +35,13 @@ export async function resizeImage(src, options)
 
     canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
 
-    console.log(options)
-
     return new Promise(resolve => {
         canvas.toBlob(resolve, options.type || 'image/png', options.quality)
     })
 }
 
 
-export async function resizeImageFromBlob(blobImage, options) {
-    return await resizeImage(URL.createObjectURL(blobImage), options);
+function resizeImageFromBlob(blobImage, options) {
+    return resizeImage(URL.createObjectURL(blobImage), options);
 }
-
 ```
