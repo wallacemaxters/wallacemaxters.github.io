@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como redimensionar uma imagem com Canvas
+title: Como redimensionar uma imagem com Canvas?
 date: 2020-05-18 00:00:00 -0300
 categories:
 - javascript
