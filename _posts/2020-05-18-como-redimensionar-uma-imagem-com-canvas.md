@@ -7,7 +7,7 @@ categories:
 - " imagem"
 - " canvas"
 sitemap: true
-image: ''
+image: "/uploads/canvas-html5.png"
 
 ---
 Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através do Canvas.
