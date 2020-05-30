@@ -99,13 +99,13 @@ window.addEventListener('load', function () {
      resizeImage(src, {width: 200}).then(function (blob) {
         document.querySelector("#resized").src = URL.createObjectURL(blob)
      })
-  });```
-  
+  });
+})
+
+```
   
   No exemplo acima, usamos a função `URL.createObjectURL`. Essa função faz com que o `Blob` tenha uma URL temporária, contendo a nossa  imagem carregada na memória.
   
  
  
  Ao selecionar a imagem no `input[type=file]`, podemos ver em seguida como ficou o resultado da nossa função:
- 
- 
