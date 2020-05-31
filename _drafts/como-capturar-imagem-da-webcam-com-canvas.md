@@ -112,3 +112,5 @@ document.querySelector('#upload').addEventListener('click', function (e) {
 ```
 
 > **NOTA**: Observe que no nosso exemplo, utilizamos no segundo parâmetro de `toBlob` o valor `image/jpeg`. Isso porque preferencialmente preferi converter o resultado do `canvas` para JPEG. Caso queira usar outro formato, é possível informar o MIME desejado, como `image/png` e afins.
+
+Veja funcionando no [Codepen](https://codepen.io/wallacemaxters/pen/XWmvLXE)
