@@ -4,10 +4,10 @@ title: Como redimensionar uma imagem com Canvas?
 date: 2020-05-18 00:00:00 -0300
 categories:
 - javascript
-- " imagem"
-- " canvas"
+- imagem
+- canvas
 sitemap: true
-image: "/uploads/canvas-html5.png"
+image: "/uploads/covers/canvas_html5.png"
 
 ---
 Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através do Canvas.
