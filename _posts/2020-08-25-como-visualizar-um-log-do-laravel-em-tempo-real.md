@@ -4,7 +4,6 @@ title: Como visualizar um log do Laravel em tempo real
 date: 2020-08-25 00:00:00 -0300
 categories:
 - laravel
-- log
 sitemap: true
 image: "/uploads/Laravel.jpg"
 excerpt: 'Nesse tutorial, veremos como ler os logs de erro do Laravel em tempo real. '
