@@ -7,11 +7,14 @@ categories:
 - log
 sitemap: true
 image: "/uploads/Laravel.jpg"
+excerpt: 'Nesse tutorial, veremos como ler os logs de erro do Laravel em tempo real. '
 
 ---
-Muitas vezes é necessário descobrir a origem de um erro que não é visível diretamente na aplicação, por exemplo, quando estamos rodando uma aplicação em produção. Nesse caso, sempre precisamos recorrer a um log de erro para verificar o que está acontecendo na aplicação.
+Muitas vezes é necessário descobrir a origem de um erro que não é visível diretamente na aplicação, por exemplo, quando estamos rodando uma aplicação em produção. Nesse caso,  geralmente as aplicações costumam escrever um log de  erro, descrevendo os detalhes do problema ocorrido.
 
-O Laravel por padrão armazena os logs na pasta `storage/logs`.  Se sua aplicação estiver configurada como `single`, dentro desta pasta conterá um arquivo chamado `laravel.log`. Se estiver como `daily`, que é  maneira que costumo mais usar, ela terá o formato `laravel-%Y-%m-%d.log.`
+O Laravel também faz uso desse recurso . O Laravel armazena os logs de erro por padrão na pasta `storage/logs`.  O arquivo gerado pode depender da sua configuração.  Se sua aplicação estiver configurada como `single`, dentro desta pasta conterá um arquivo chamado `laravel.log`. Se estiver como `daily`, que é  maneira que costumo mais usar, ela terá o formato `laravel-%Y-%m-%d.log.`
+
+**Observação:** Versões anteriores a 5.5, essa configuração é feita em `config/app.php`. Já nas versões posteriores, é feita em `config/logging.php`
 
 Toda vez que ocorre um erro em produção, o Laravel vai escrever todos os detalhes do erro nesse arquivo. E é com ele que vamos poder acompanhar em tempo real os logs gerados, através de um simples comando: O `tail`.
 
