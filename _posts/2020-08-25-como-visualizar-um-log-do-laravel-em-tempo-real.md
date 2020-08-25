@@ -23,8 +23,20 @@ Você basicamente pode fazer algo como:
 tail -f storage/logs/laravel.log
 ```
 
-Ou 
+Ou
 
 ```bash
 tail -f storage/logs/laravel-2020-08-25.log
+```
+
+Uma boa forma de testar isso, é deixando dois terminais abertos e, após rodar `tail -f`, produzir um erro proposital, como rodar um comando inexistente no `artisan`. Assim:
+
+```bash
+php artisan xxx
+```
+
+Você verá algo parecido com isso no terminal onde roda o `tail`:
+
+```log
+[2020-08-25 14:16:44] local.ERROR: Command "xxx" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"xxx\" is not defined. at /my-directory/vendor/symfony/console/Application.php:576)
 ```
