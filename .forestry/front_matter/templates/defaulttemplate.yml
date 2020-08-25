@@ -28,6 +28,16 @@ fields:
   description: Imagem de capa do post
   config:
     maxSize: '1'
+- name: excerpt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: excerpt
+  description: Uma descrição curta sobre esse post
 pages:
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
