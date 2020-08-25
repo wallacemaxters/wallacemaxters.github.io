@@ -6,7 +6,9 @@ categories:
 - laravel
 sitemap: true
 image: "/uploads/Laravel.jpg"
-excerpt: 'Nesse tutorial, veremos como ler os logs de erro do Laravel em tempo real. '
+excerpt: 'Muitas vezes é necessário descobrir a origem de um erro que não é visível
+  diretamente na aplicação, por exemplo, quando estamos rodando uma aplicação em produção.
+  Nesse tutorial, veremos como ler os logs de erro do Laravel em tempo real. '
 
 ---
 Muitas vezes é necessário descobrir a origem de um erro que não é visível diretamente na aplicação, por exemplo, quando estamos rodando uma aplicação em produção. Nesse caso,  geralmente as aplicações costumam escrever um log de  erro, descrevendo os detalhes do problema ocorrido.
