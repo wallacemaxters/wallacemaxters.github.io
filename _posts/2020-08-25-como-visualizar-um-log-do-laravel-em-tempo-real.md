@@ -5,7 +5,7 @@ date: 2020-08-25 00:00:00 -0300
 categories:
 - laravel
 - log
-sitemap: false
+sitemap: true
 image: "/uploads/Laravel.jpg"
 
 ---
