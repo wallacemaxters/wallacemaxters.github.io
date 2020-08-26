@@ -5,7 +5,7 @@ date: 2019-05-28T00:35:00.000+00:00
 categories:
 - laravel
 - upload
-- segurança
+- "segurança"
 sitemap: true
 image: "/uploads/laravel-seguranca.jpg"
 
