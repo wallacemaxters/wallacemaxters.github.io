@@ -1,11 +1,10 @@
 ---
 layout: post
 title: Como proteger acesso a arquivos via login com Laravel?
-date: 2019-05-27 21:35:00 -0300
+date: 2019-05-28T00:35:00.000+00:00
 categories:
-- Laravel
+- laravel
 - upload
-- segurança
 sitemap: true
 image: "/uploads/laravel-seguranca.jpg"
 
