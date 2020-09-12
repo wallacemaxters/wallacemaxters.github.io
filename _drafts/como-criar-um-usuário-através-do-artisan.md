@@ -38,6 +38,13 @@ Artisan::command('make:user', function () {
     
     echo "O nome do usuário é $name";
 });
+```
+
+O próximo passo é utilizar o método `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, utilizaremos o mesmo para configurar nossa senha.
+
+**Nota**: Temos que chamar a função `bcrypt` para encriptar a senha para o formato do Laravel.
+
+Veja:
 
 ```php
 Artisan::command('make:user', function () {
@@ -47,14 +54,39 @@ Artisan::command('make:user', function () {
     $name = $this->ask('Digite o nome');
 
     $password = bcrypt($this->secret('Digite a senha'));
-
-    $api_token = str_random(80);
-
-    $user = \App\Models\User::firstOrNew(compact('email'));
-
-    $user->fill(compact('name', 'password', 'api_token'))->save();
-
+    
+    App\User::create(['email' => $email, 'name' => $name, 'password' => $password]);
+    
     $this->info('Usuário criado com sucesso!');
 
 })->describe('Cria um usuário pela linha de comando');
 ```
+
+
+Após rodar esse comando, o seu usuário será criado com sucesso.
+
+
+Uma dica extra é que você pode modificar o código para que um usuário não seja duplicado caso um e-mail já exista. Você pode trocar `create` por `firstOrNew`.
+
+```php
+Artisan::command('make:user', function () {
+    
+    $email = $this->ask('Digite um e-mail');
+
+    $name = $this->ask('Digite o nome');
+
+    $password = bcrypt($this->secret('Digite a senha'));
+    
+    $user = \App\User::firstOrNew(compact('email'));
+
+    $user->fill(compact('name', 'password'))->save();
+    
+    $this->info('Usuário criado com sucesso!');
+
+})->describe('Cria um usuário pela linha de comando');
+```
+
+Dessa forma, o usuário não será duplicado, mas apenas atualizado caso novos dados sejam inseridos.
+
+
+Além disso, você pode costumizar esse comando para adicionar `api_token` ou outros campos extras em seu usuário, caso seja necessário.
