@@ -6,7 +6,7 @@ categories:
 - laravel
 - artisan
 sitemap: true
-image: ''
+image: "/uploads/laravel-terminal.png"
 excerpt: ''
 
 ---
