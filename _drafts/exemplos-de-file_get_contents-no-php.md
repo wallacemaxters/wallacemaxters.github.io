@@ -5,7 +5,7 @@ date: 2020-10-16 00:00:00 -0300
 categories:
 - php
 sitemap: true
-image: ''
+image: "/uploads/captura-de-pantalla-de-2020-10-16-10-37-48.png"
 excerpt: Exemplos práticos de como usar a função file_get_contents no PHP para abrir
   arquivos e urls
 
