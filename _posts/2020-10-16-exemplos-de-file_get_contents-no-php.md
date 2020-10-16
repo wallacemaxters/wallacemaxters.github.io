@@ -3,7 +3,7 @@ layout: post
 title: Exemplos de file_get_contents no PHP
 date: 2020-10-16 00:00:00 -0300
 categories:
-- php
+- PHP
 sitemap: true
 image: "/uploads/captura-de-pantalla-de-2020-10-16-10-37-48.png"
 excerpt: 'Nesse tutorial,  veremos exemplos práticos de como usar a função file_get_contents
