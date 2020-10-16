@@ -7,7 +7,10 @@ categories:
 - artisan
 sitemap: true
 image: "/uploads/laravel-terminal.png"
-excerpt: ''
+excerpt: |-
+  O Artisan é a interface de linha de comando presente no Laravel. Ele fornece uma série de comandos úteis que podem ajudá-lo enquanto você constrói seu aplicativo.
+
+  Nesse tutorial, estarei ensinando como criar um comando customizado para criação de um usuário, através da linha de comando.
 
 ---
 O Artisan é a interface de linha de comando presente no Laravel. Ele fornece uma série de comandos úteis que podem ajudá-lo enquanto você constrói seu aplicativo.
