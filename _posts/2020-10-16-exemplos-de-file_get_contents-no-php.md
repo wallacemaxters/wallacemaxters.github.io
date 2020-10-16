@@ -6,8 +6,8 @@ categories:
 - php
 sitemap: true
 image: "/uploads/captura-de-pantalla-de-2020-10-16-10-37-48.png"
-excerpt: Exemplos práticos de como usar a função file_get_contents no PHP para abrir
-  arquivos e urls
+excerpt: 'Nesse tutorial,  veremos exemplos práticos de como usar a função file_get_contents
+  no PHP para abrir arquivos e urls. '
 
 ---
 ## Lendo arquivos com `file_get_contents`
