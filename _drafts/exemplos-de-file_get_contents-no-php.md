@@ -6,6 +6,7 @@ categories:
 - php
 sitemap: true
 image: ''
-excerpt: ''
+excerpt: Exemplos práticos de como usar a função file_get_contents no PHP para abrir
+  arquivos e urls
 
 ---
