@@ -16,15 +16,13 @@ Tomando como exemplo uma pesquisa de Produtos, vamos utilizar dois inputs para i
 
 Exemplo BLADE:
 
-```blade
-
+```html
 <input type="text" value="{{  request('data_inicio') }} name="data_inicio" />
 <input type="text" value="{{  request('data_fim') }} name="data_fim" />
 
 @foreach($produtos as $produto)
    <div>{{ $produto->nome }}</div>
 @endforeach
-
 ```
 
 Exemplo Controller:
