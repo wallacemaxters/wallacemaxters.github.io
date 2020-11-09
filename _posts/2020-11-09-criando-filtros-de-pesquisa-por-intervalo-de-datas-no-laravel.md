@@ -5,7 +5,7 @@ date: 2020-11-09 14:46:00 -0200
 categories:
 - laravel
 sitemap: true
-image: ''
+image: "/uploads/laravel_database_search.svg"
 excerpt: Aprenda a filtrar resultados de uma consulta no Laravel através de um intervalo
   de datas.
 
@@ -53,12 +53,15 @@ if ($data_inicio && $data_fim) {
 
 ```
 
-Acima verificamos se `$data_inicio` e `$data_fim` são `false`, pois `DateTime::createFromFormat` retornará `false` caso a data seja inválida. 
+Acima verificamos se `$data_inicio` e `$data_fim` são `false`, pois `DateTime::createFromFormat` retornará `false` caso a data seja inválida. Já o `Carbon`, costuma retornar uma exceção caso seja inválido.
 
-É possível utilizar o `Validator`, se desejar retornar um erro, caso uma data inválida seja passada pelo cliente. 
+É possível utilizar o `Validator`, se desejar retornar um erro, caso uma data inválida seja passada pelo cliente. Talvez seja o melhor caminho para manter a integridade do valor desejado a se buscar.
+
+Exemplo:
 
 ```php
-public function index(Request $request) {
+public function index(Request $request) 
+{
 
    $request->validate([
         'data_inicio' => 'nullable|date_format:d/m/Y',
@@ -77,7 +80,8 @@ Agora, que temos as datas convertidas, podemos usar os valores para captuar os r
 
 
 ```php
-public function index(Request $request) {
+public function index(Request $request) 
+{
 
    $query = Produto::query();
 
@@ -100,7 +104,7 @@ public function index(Request $request) {
 }
 ```
 
-Note que no caso acima, diferente do costume dos vários tutoriais que vejo, não utilizei o `whereBetween`. Isso porque geralmente, quando se usa o `whereBetween`, é necessário adicionar à data de início o valor `00:00:00` e no fim, `23:59:59`, para não ter problemas com alguma hora registrada que acaba deixando de ser capturada.  Para não termos que adicionar mais essa complexidade ao código, usei o `whereDate`, pois internamente ele adiciona `DATE(created_at)` na cláusula `WHERE` da SQL.
+Note que no caso acima, diferente do costume dos vários tutoriais, não utilizei o `whereBetween`. Isso porque geralmente, quando se usa o `whereBetween`, é necessário adicionar à data de início o valor `00:00:00` e no fim, `23:59:59`, para não ter problemas com alguma hora registrada que acaba deixando de ser capturada.  Para não termos que adicionar mais essa complexidade ao código, usei o `whereDate`, pois internamente ele adiciona `DATE(created_at)` na cláusula `WHERE` da SQL.
 
 
 A query gerada será algo parecido com 
