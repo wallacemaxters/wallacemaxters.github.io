@@ -16,7 +16,7 @@ Tomando como exemplo uma pesquisa de Produtos, vamos utilizar dois inputs para i
 
 Exemplo BLADE:
 
-```jinja
+```blade
 
 <input type="text" value="{{  request('data_inicio') }} name="data_inicio" />
 <input type="text" value="{{  request('data_fim') }} name="data_fim" />
@@ -43,7 +43,6 @@ public function index(Request $request)
 Geralmente, aqui no Brasil, usamos o formato `DD/MM/AAAA` para as datas. Nesse caso, precisamos de converter esses valores para `DateTime` ou `Carbon`, que tornará mais fácil nosso trabalho no Laravel. Podemos utilizar o método `DateTime::createFromFormat`, por exemplo:
 
 ```php
-
 $data_inicio = \DateTime::createFromFormat('d/m/Y', $request->get('data_inicio'));
 $data_fim    = \DateTime::createFromFormat('d/m/Y', $request->get('data_fim'));
 
