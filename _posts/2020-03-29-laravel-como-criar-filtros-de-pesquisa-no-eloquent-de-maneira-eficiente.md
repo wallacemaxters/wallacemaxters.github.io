@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Laravel: Como criar filtros de pesquisa no Eloquent de maneira eficiente?'
-date: 2020-03-29 10:45:34 -0300
+date: 2020-03-29T10:45:34.000-03:00
 categories:
 - laravel
 - eloquent
@@ -195,7 +195,7 @@ A resposta do programador "esperto" para esse problema seria "copiar e colar". E
 
 Para resolvermos isso, podemos elaborar duas formas fazermos isso de maneira bem fácil no Laravel.
 
-# Utilizando Request e Closure
+## Utilizando Request e Closure
 
 Para quem não sabe, o Eloquent aceita uma `Closure` (função anônima) como argumento para o método `where`. As funções anônimas em PHP podem ser retornadas em funções/métodos e/ou armazenadas em váriaveis. Podemos usar desse artifício para implementarmos a nossa reutilização do filtro de pesquisa.
 
@@ -320,7 +320,7 @@ No exemplo acima, o campo `usuario_id` só será aceito caso seja um valor exist
 
 > Nota: Utilizei `nullable` porque campos de filtro de pesquisa geralmente são opcionais.
 
-# Usando Query Scopes
+## Usando Query Scopes
 
 A segunda opção para simplificar nosso filtro  seria usar as [Local Scopes](https://laravel.com/docs/5.8/eloquent#local-scopes).
 
@@ -427,4 +427,3 @@ Produto::search()->paginate()
 Há casos (como o meu) onde você não trabalha com um, mas com vários projetos escritos em cima do Laravel. E praticamente a maioria deles precisam que você escreva esses tipos de filtro.
 
 Para ajudar a tornar esse trabalho menos repetitivo, eu criei uma biblioteca chamada [Eloquent Filter](https://github.com/LaravelLegends/eloquent-filter) no [Laravel Legends](https://github.com/LaravelLegends).
-
