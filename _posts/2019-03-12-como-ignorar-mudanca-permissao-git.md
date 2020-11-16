@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Como ignorar mudanças de permissão com o GIT?
-date: 2019-03-19 09:04:13 -0300
+date: 2019-03-19T09:04:13.000-03:00
 categories:
-- Git
-- Linux
+- linux
+- git
 sitemap: true
 image: "/uploads/covers/git.jpg"
+excerpt: ''
 
 ---
 Vez ou outra, sempre tive problemas com alteração de permissões no GIT. Um amigo que trabalhava no mesmo projeto que eu costumava usar o usuário `root` do linux para muitas coisas, inclusive para abrir o Sublime Text e editar os arquivos do projeto.
