@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como ignorar mudanças de permissão com o GIT?
-date: 2019-03-19T09:04:13.000-03:00
+date: 2020-11-16 16:17:13 -0200
 categories:
 - linux
 - git
@@ -21,7 +21,7 @@ Para solucionar isso, descobri que existe uma configuração no GIT que faz as m
 Globalmente:
 
 ```bash
-git --global config core.fileMode false
+git config --global core.fileMode false
 ```
 
 Localmente:
@@ -31,7 +31,7 @@ cd repositorio-desejado
 git config core.fileMode false
 ```
 
-Após fazer isso, use `git status` para ver se a configuração funcionou corretamente. 
+Após fazer isso, use `git status` para ver se a configuração funcionou corretamente.
 
 **Observação:**
 No meu caso, a configuração global geralmente não afetava a configuração já vigente, sendo necessário sempre executar o segundo exemplo demonstrado.
