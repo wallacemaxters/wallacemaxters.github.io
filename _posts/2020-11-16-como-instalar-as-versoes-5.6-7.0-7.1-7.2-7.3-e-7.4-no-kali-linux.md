@@ -22,9 +22,13 @@ Quando eu tentava rodar o comando `sudo apt install php7.2`, eu recebia o seguin
 
 Depois de algumas pesquisa, percebi a solução:
 
-## Instalando outras versões do PHP no Kali Linux
+## Por que as outras versões do PHP não instalava no  Kali Linux?
 
-Ao fazer uma pesquisa aprofundada sobre o problema, eu encontrei [esse trecho](https://www.kali.org/docs/policy/kali-linux-relationship-with-debian/ "Documentação do Kali Linux") na documentação da Kali Linux, que diz o seguinte (tradução livre):
+Percebi que no [Kali Linux Package Tracker](https://pkg.kali.org/pkg/php7.2), a respeito do PHP 7.2, constava a seguinte nota (tradução livre):
+
+> Este pacote não faz parte de nenhuma distribuição Kali Linux. Portanto, você não encontrará muitas informações aqui. O pacote é muito novo e ainda não apareceu nos espelhos ou é um pacote antigo que acabou sendo removido. As notícias antigas são mantidas apenas para fins históricos.
+
+Depois de fazer várias pesquisas aprofundadas sobre o problema, eu encontrei [esse trecho](https://www.kali.org/docs/policy/kali-linux-relationship-with-debian/ "Documentação do Kali Linux") na documentação da Kali Linux, que diz o seguinte (tradução livre):
 
 > A distribuição Kali Linux é baseada no [Debian Testing](https://www.debian.org/releases/testing/) . Portanto, a maioria dos pacotes Kali são importados, como estão, dos repositórios Debian. Em alguns casos, os pacotes mais novos podem ser importados do Debian Unstable ou Debian Experimental, seja para melhorar a experiência do usuário, ou para incorporar as correções de bugs necessárias.
 
