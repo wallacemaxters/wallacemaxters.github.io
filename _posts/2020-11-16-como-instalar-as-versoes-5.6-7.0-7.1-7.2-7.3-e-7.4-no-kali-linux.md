@@ -22,7 +22,7 @@ Quando eu tentava rodar o comando `sudo apt install php7.2`, eu recebia o seguin
 
 Depois de algumas pesquisa, percebi a solução:
 
-## Por que as outras versões do PHP não instalava no  Kali Linux?
+## Por que as outras versões do PHP não estão disponíveis no Kali Linux?
 
 Percebi que no [Kali Linux Package Tracker](https://pkg.kali.org/pkg/php7.2), a respeito do PHP 7.2, constava a seguinte nota (tradução livre):
 
@@ -34,7 +34,7 @@ Depois de fazer várias pesquisas aprofundadas sobre o problema, eu encontrei [e
 
 Sendo assim, eu fiz o teste de colocar o source do PHP apontando para o "buster", que é o nome da distro da versão 10 do Debian.
 
-### Solução
+## Instalando versões anteriores do PHP no Kali Linux
 
 Crie um arquivo chamado `php.list` dentro da pasta `/etc/apt/source.list.d`, dessa forma:
 
