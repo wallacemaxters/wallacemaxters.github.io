@@ -7,8 +7,9 @@ categories:
 - linux
 - kali
 sitemap: true
-image: ''
-excerpt: ''
+image: "/uploads/kali-linux.png"
+excerpt: 'Aprenda a resolver o erro a o instalar versões anteriores do PHP no Kali
+  Linux. '
 
 ---
 ## Problemas ao instalar versões anteriores do PHP no Kali Linux
