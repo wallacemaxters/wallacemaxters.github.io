@@ -1,9 +1,9 @@
 ---
 layout: post
-date: 2019-03-13 23:36:58 +0000
+date: 2019-03-13T23:36:58.000+00:00
 title: Como copiar um arquivo de um branch específico
 categories:
-- Git
+- git
 sitemap: true
 image: "/uploads/covers/git.jpg"
 
