@@ -7,7 +7,8 @@ categories:
 - git
 sitemap: true
 image: "/uploads/covers/git.jpg"
-excerpt: ''
+excerpt: Aprenda a solucionar o problema de permissão de arquivos no Linux que ocorre
+  toda vez que você faz um git pull
 
 ---
 Vez ou outra, sempre tive problemas com alteração de permissões no GIT. Um amigo que trabalhava no mesmo projeto que eu costumava usar o usuário `root` do linux para muitas coisas, inclusive para abrir o Sublime Text e editar os arquivos do projeto.
