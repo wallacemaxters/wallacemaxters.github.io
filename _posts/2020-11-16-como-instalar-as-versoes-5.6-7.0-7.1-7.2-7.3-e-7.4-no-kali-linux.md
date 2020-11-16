@@ -40,12 +40,17 @@ Crie um arquivo chamado `php.list` dentro da pasta `/etc/apt/source.list.d`, des
 
     sudo nano /etc/apt/source.list.d/php7.list
 
-Adicione a seguinte linha de código
+Adicione a seguinte linha de código:
 
     deb https://packages.sury.org/php/ buster main
     
 
-Após fazer isso e salvar, rode o comando `sudo apt update`.
+Após fazer isso e salvar, rode o comando abaixo:
+
+```
+sudo apt update
+```
+
 
 Se tudo deu certo, você poderá instalar as versões anteriores do PHP. No meu caso, tenho acesso a instalação das versões 5.6, 7.0, 7.1, 7.2 e 7.3 do PHP.
 
