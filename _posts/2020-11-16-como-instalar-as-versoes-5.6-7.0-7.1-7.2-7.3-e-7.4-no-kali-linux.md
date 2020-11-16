@@ -51,6 +51,6 @@ Se tudo deu certo, você poderá instalar as versões anteriores do PHP. No meu 
 
 Para testar, rode:
 
-```bash
+```
 sudo apt install php7-2
 ```
