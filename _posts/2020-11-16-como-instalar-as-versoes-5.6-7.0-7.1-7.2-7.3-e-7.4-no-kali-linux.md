@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Como instalar as versões múltiplas versões do PHP no Kali Linux
-date: 2020-11-16 01:25:00 -0200
+title: Como instalar múltiplas versões do PHP no Kali Linux
+date: 2020-11-16T01:25:00.000-02:00
 categories:
 - linux
 - kali
