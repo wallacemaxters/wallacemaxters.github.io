@@ -38,24 +38,18 @@ Sendo assim, eu fiz o teste de colocar o source do PHP apontando para o "buster"
 
 Crie um arquivo chamado `php.list` dentro da pasta `/etc/apt/source.list.d`, dessa forma:
 
-    sudo nano /etc/apt/source.list.d/php7.list
+    sudo nano /etc/apt/source.list.d/php.list
 
 Adicione a seguinte linha de código:
 
     deb https://packages.sury.org/php/ buster main
-    
 
 Após fazer isso e salvar, rode o comando abaixo:
 
-```
-sudo apt update
-```
-
+    sudo apt update
 
 Se tudo deu certo, você poderá instalar as versões anteriores do PHP. No meu caso, tenho acesso a instalação das versões 5.6, 7.0, 7.1, 7.2 e 7.3 do PHP.
 
 Para testar, rode:
 
-```
-sudo apt install php7-2
-```
+    sudo apt install php7-2
