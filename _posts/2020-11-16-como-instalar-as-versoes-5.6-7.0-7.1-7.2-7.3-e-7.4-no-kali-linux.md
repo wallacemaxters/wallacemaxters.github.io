@@ -52,4 +52,4 @@ Se tudo deu certo, você poderá instalar as versões anteriores do PHP. No meu 
 
 Para testar, rode:
 
-    sudo apt install php7-2
+    sudo apt install php7.2
