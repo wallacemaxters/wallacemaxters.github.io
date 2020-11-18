@@ -17,7 +17,7 @@ O ponto é que o Lumen é um microframework baseado no Laravel, contendo menos r
 
 É muito comum receber o seguinte erro ao tentar rodar o comando `php artisan serve` no Lumen:
 
-```b
+```bash
 Command "serve" not found
 ```
 
@@ -38,7 +38,9 @@ O exemplo acima dispensa explicações. O PHP fará sua aplicação ficar dispon
 
 Caso não queria especificar a pasta, você poderá fazer assim:
 
-    cd projeto-lumen/public
-    php -S localhost:8000
+```bash
+cd projeto-lumen/public
+php -S localhost:8000
+```
 
 Pronto! Agora você já pode executar o Lumen novamente em ambiente de testes.
