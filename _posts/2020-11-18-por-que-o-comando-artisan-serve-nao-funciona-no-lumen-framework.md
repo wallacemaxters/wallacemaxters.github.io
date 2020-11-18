@@ -11,7 +11,7 @@ excerpt: Nesse tutorial vamos entender por que o comando "php artisan serve" nã
   no Lumen e qual é a solução para esse problema.
 
 ---
-![](/uploads/lumen.png)O comando [artisan serve](blog/2019/08/17/truques-com-o-comando-php-artisan-serve) provavelmente é um dos mais utilizados no desenvolvimento com Laravel, e é muito comum que os desenvolvedores que utilizam o Lumen também tente rodá-lo para iniciar o servidor de testes.
+O comando [artisan serve](blog/2019/08/17/truques-com-o-comando-php-artisan-serve) provavelmente é um dos mais utilizados no desenvolvimento com Laravel, e é muito comum que os desenvolvedores que utilizam o Lumen também tente rodá-lo para iniciar o servidor de testes.
 
 O ponto é que o Lumen é um microframework baseado no Laravel, contendo menos recursos disponíveis.
 
@@ -21,12 +21,11 @@ O ponto é que o Lumen é um microframework baseado no Laravel, contendo menos r
 Command "serve" not found
 ```
 
-Isso ocorre porque o comando `php artisan serve` [foi removido no Lumen 5.2](https://stackoverflow.com/questions/34692894/why-has-the-artisan-serve-command-been-removed-from-lumen-5-2). 
-
+Isso ocorre porque o comando `php artisan serve` [foi removido no Lumen 5.2](https://stackoverflow.com/questions/34692894/why-has-the-artisan-serve-command-been-removed-from-lumen-5-2).
 
 ## Como rodar iniciar a aplicação Lumen sem o comando `artisan serve`?
 
-Existe uma simples solução para rodar sua aplicação Lumen, sem precisar de instalações ou configurações adicionais. Você pode simplesmente utilizar o [Built-In server do PHP](https://www.php.net/manual/pt_BR/features.commandline.webserver.php). 
+Existe uma simples solução para rodar sua aplicação Lumen, sem precisar de instalações ou configurações adicionais. Você pode simplesmente utilizar o [Built-In server do PHP](https://www.php.net/manual/pt_BR/features.commandline.webserver.php).
 
 Você simplesmente precisa entrar na pasta onde sua aplicação Lumen se encontra e rodar o seguinte comando:
 
@@ -37,14 +36,9 @@ php -S localhost:8000 -t public/
 
 O exemplo acima dispensa explicações. O PHP fará sua aplicação ficar disponível no host `localhost:8000`.  O parâmetro `-t public/` indica a partir de qual pasta o PHP vai considerar como raiz.
 
-
 Caso não queria especificar a pasta, você poderá fazer assim:
 
-```
-cd projeto-lumen/public
-php -S localhost:8000
-```
-
-
+    cd projeto-lumen/public
+    php -S localhost:8000
 
 Pronto! Agora você já pode executar o Lumen novamente em ambiente de testes.
