@@ -7,8 +7,8 @@
         {%- else -%}
         {{ site.title | escape }} - Um blog sobre programação
         {%- endif -%}</title>
-    <meta name="description" property="og:description" content="{%- if page.excerpt -%}
-                   {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
+    <meta name="description" content="{%- if page.excerpt -%}
+                   {{ page.excerpt | strip_html | strip_newlines | escape | truncate: 160 }}
                  {%- else -%}
                    {{ site.description }}
                  {%- endif -%}">
@@ -22,9 +22,9 @@
     <meta property="og:title" content="{%- if page.title -%} {{ page.title | escape }}{%- else -%}{{ site.title | escape }}{%- endif -%}" />
 
     <meta property="og:description" content="{%- if page.excerpt -%}
-                {{ page.excerpt | strip_html | strip_newlines | escape | truncate: 160 }}
+                {{ page.excerpt | strip_html | strip_newlines | escape |  truncate: 160 }}
                 {%- else -%}
-                {{ site.description | escape }}
+                {{ site.description }}
                 {%- endif -%}">
 
     <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
