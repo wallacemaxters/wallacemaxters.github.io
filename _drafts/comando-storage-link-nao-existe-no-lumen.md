@@ -10,3 +10,21 @@ image: "/uploads/lumen-2.png"
 excerpt: ''
 
 ---
+O Lumen é um microframework baseado no Laravel. E por ser um microframework, ele tem menos recursos, como demonstrei [nesse artigo](blog/2020/11/18/por-que-o-comando-artisan-serve-nao-funciona-no-lumen-framework).
+
+Ao tentar rodar o comando `php artisan storage:link` no Lumen, é comum receber esse erro:
+
+```
+There are no commands defined in the "storage" namespace.
+```
+
+Esse comando tem como finalidade de criar um link simbólico `public/storage` apontando para pasta `storage/app/public`.
+
+Sabendo disso, podemos contornar essa situação através do comando `ln`.
+
+Basta fazer o seguinte na pasta do projeto Lumen:
+
+```bash
+cd public
+ln -s ../storage/app/public storage
+```
