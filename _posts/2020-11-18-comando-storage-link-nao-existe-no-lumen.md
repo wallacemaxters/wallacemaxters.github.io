@@ -28,3 +28,18 @@ Basta fazer o seguinte na pasta do projeto Lumen:
 cd public
 ln -s ../storage/app/public storage
 ```
+
+Isso criará uma "pasta" chamada storage dentro da pasta public. 
+
+Para ver se está tudo correto, basta executar:
+
+```bash
+cd projeto-lumen/public
+readlink storage
+```
+
+
+A saída deverá ser algo parecido com:
+```bash
+...storage/app/public
+```
