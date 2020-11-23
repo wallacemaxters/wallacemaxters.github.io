@@ -29,7 +29,7 @@ Observe que acima, temos duas horas válidas e duas horas inválidas. Para traba
 
 Sendo assim, para começarmos a montar nossa validação, podemos testar a entrada dessas horas acima utilizando o seguinte código:
 
-```
+```php
 $datas = [
     '22:30',
     '24:44',
