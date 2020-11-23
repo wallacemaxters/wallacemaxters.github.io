@@ -79,7 +79,19 @@ Isso dificulta o pouco a nossa validação. Porém há um pequeno truque que pod
 
 # Validando a hora com o PHP
 
-Para resolvermos o problema acima, podemos fazer algo simples. Podemos simplesmente chamar o método `DateTime::format` para transformar o objeto `DateTime` que acabamos de criar para um 
+Para resolvermos o problema acima, podemos fazer algo simples. Podemos simplesmente chamar o método `DateTime::format` para transformar o objeto `DateTime` que acabamos de criar para uma `string` no formato de hora.
+
+Veja um exemplo de utilização do método `DateTime::format`:
+
+```php
+$datetime = new DateTime;
+echo $datetime->format('H:i');
+```
+
+O método `format` irá basicamente retornará a hora que está registrada no `DateTime`. 
+O que vamos fazer aqui basicamente é criar uma função que recebe a hora e comparar com o valor formatado em `DateTime`.
+
+Assim:
 
 ```php
 function validate_hour($input) 
@@ -92,7 +104,7 @@ function validate_hour($input)
 }
 ```
 
-
+**Mas para que isso?**
 
 Isso ocorre porque, ao aplicarmos `'H:i'` em `'24:44'` é convertido para `'1970-01-02 00:44:00'`. Quando chamamos `format('H:i')` no `DateTime` que criamos a partir de `DateTime::createFromFormat`, o valor retornado será `00:44`, que é diferente do valor do parâmetro passado em `validate_hour`.
 
