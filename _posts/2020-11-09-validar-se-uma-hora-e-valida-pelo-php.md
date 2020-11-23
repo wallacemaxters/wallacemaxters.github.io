@@ -84,7 +84,7 @@ Observe que a data foi alterada para `02/01/1970` e a hora foi alterada para `00
 
 Isso dificulta o pouco a nossa validação que desejamos fazer, porém há um pequeno truque que pode ser aplicado para contornar isso.
 
-# Validando a hora com o PHP
+## Validando a hora com o PHP
 
 Para resolvermos o problema acima, podemos fazer algo simples. Podemos simplesmente chamar o método `DateTime::format` para transformar o objeto `DateTime` que acabamos de criar para uma `string` no formato de hora.
 
