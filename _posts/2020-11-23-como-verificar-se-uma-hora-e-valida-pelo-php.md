@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Como verificar se uma hora é válida no PHP?
-date: 2020-11-23 23:31:00 -0200
+date: 2020-11-23T23:31:00.000-02:00
 categories:
 - PHP
 sitemap: true
-image: "/uploads/php-leader.png"
+image: "/uploads/validar_hora_php.png"
 excerpt: Aprenda como verificar se uma hora/horário é válido ou não pelo PHP
 
 ---
