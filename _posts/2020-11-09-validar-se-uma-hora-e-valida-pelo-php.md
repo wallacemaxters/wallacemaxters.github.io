@@ -2,8 +2,9 @@
 layout: post
 title: Como verificar se uma hora é válida no PHP?
 date: 2020-11-09T01:00:00.000-02:00
-categories: []
-sitemap: false
+categories:
+- php
+sitemap: true
 image: ''
 excerpt: ''
 
