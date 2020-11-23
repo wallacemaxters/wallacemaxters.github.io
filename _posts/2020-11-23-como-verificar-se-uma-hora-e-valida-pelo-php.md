@@ -25,7 +25,7 @@ Imagine um cenário onde você possua as seguintes datas:
 07:30
 ```
 
-Observe que acima, temos duas horas válidas e duas horas inválidas. Para trabalharmos com as horas em PHP, podemos utilizar o método `DateTime::createFromFormat`. Essa função converte uma entrada para Data e Hora a partir de um formato específico. No caso, o formato equivalente a horas em PHP é `H:i`.
+Observe que acima temos duas horas válidas e duas horas inválidas. Para trabalharmos com as horas em PHP, podemos utilizar o método `DateTime::createFromFormat`. Essa função converte uma entrada para Data e Hora a partir de um formato específico. No caso, o formato equivalente a horas em PHP é `H:i`.
 
 Sendo assim, para começarmos a montar nossa validação, podemos testar a entrada dessas horas acima utilizando o seguinte código:
 
