@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como verificar se uma hora é válida no PHP?
-date: 2020-11-23 23:38:00 -0200
+date: 2020-11-23 23:31:00 -0200
 categories:
 - php
 sitemap: true
