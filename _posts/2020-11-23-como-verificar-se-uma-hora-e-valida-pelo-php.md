@@ -5,7 +5,7 @@ date: 2020-11-23T23:31:00.000-02:00
 categories:
 - PHP
 sitemap: true
-image: "/uploads/validar_hora_php.png"
+image: "/uploads/validar_hora_php-1.png"
 excerpt: Aprenda como verificar se uma hora/horário é válido ou não pelo PHP
 
 ---
