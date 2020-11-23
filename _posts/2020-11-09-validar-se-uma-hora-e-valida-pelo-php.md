@@ -6,7 +6,7 @@ categories:
 - php
 sitemap: true
 image: ''
-excerpt: ''
+excerpt: Aprenda como verificar se uma hora/horário é válido ou não pelo PHP
 
 ---
 As vezes precisamos saber se uma hora específica está correta ou não. Podemos fazer isso no PHP através das funções de manipulação de data.
