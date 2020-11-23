@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Como listar pastas e subpastas no PHP?
-date: 2020-11-23 14:31:00 -0200
-categories: []
+title: "Como listar pastas e subpastas no PHP?"
+date: 2020-11-23 14:31:00 -0300
+categories: 
+ - PHP
 sitemap: false
 image: '/uploads/covers/php_pastas.png'
-excerpt: Aprenda como listar pastas e subpastas no PHP
+excerpt: "Aprenda como listar pastas e subpastas no PHP"
 
 ---
 Para listar pastas e subpastas no PHP, você pode utilizar simplesmente a classe `RecursiveDirectoryIterator`.  Essa classe provê a capacidade de listar recursivamente pastas e arquivos de uma determinado diretório.
