@@ -27,7 +27,14 @@ Suponha que você tenha a seguinte estrutura:
 Ao rodar o código abaixo:
 
 ```php
-$directory_iterator = new RecursiveDirectoryIterator(__DIR__ . '/pasta', RecursiveDirectoryIterator::SKIP_DOTS);
+
+$dir = __DIR__ . '/pasta';
+
+$directory_iterator = new RecursiveDirectoryIterator(
+	$dir, 
+    RecursiveDirectoryIterator::SKIP_DOTS
+);
+
 $iterator = new RecursiveIteratorIterator($directory_iterator);
 
 foreach ($iterator as $file) {
