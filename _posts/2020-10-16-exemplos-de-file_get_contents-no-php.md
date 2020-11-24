@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exemplos de file_get_contents no PHP
-date: 2020-10-16 00:00:00 -0300
+date: 2020-10-16T00:00:00.000-03:00
 categories:
 - PHP
 sitemap: true
@@ -10,7 +10,7 @@ excerpt: 'Nesse tutorial,  veremos exemplos práticos de como usar a função fi
   no PHP para abrir arquivos e urls. '
 
 ---
-## Lendo arquivos com `file_get_contents`
+## Lendo arquivos com file_get_contents
 
 O `file_get_contents` tem como finalidade ler o conteúdo de um arquivo e retornar em uma `string`. 
 
@@ -19,11 +19,9 @@ Na sua forma mais simples de uso, basta apenas passar como primeiro argumento o 
 Exemplo:
 
 ```php
-
 // script.php
 
 $caminho = __DIR__ . '/index.html';
-
 $conteudo = file_get_contents($caminho);
 
 echo $conteudo;
