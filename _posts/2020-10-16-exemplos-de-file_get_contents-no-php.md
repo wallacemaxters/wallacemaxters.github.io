@@ -43,7 +43,7 @@ $conteudo = file_get_contents($caminho);
 echo $conteudo;
 ```
 
-## Executando requisições HTTP com `file_get_contents`
+## Executando requisições HTTP com file_get_contents
 
 Com o `file_get_contents` também é possível fazer chamadas `HTTP`. 
 Isso mesmo! Através dessa função podemos abrir o conteúdo remoto de uma url.
