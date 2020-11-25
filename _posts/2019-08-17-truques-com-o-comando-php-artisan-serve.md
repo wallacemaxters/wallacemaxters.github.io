@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Truques com o comando "php artisan serve"
-date: 2019-08-17 20:20:00 -0300
+date: 2019-08-17T20:20:00.000-03:00
 categories:
 - laravel
 - ubuntu
@@ -9,11 +9,10 @@ sitemap: true
 image: "/uploads/laravel-terminal.png"
 
 ---
-
 O comando `php artisan serve` por padrão vem configurado para rodar em `localhost` na porta `8000`. Porém há dois parâmetros opcionais que tem como objetivo permitir modificar esse comportamento padrão: O `--port` e o `--host`. Atráves desses parâmetros, podemos realizar alguns truques na hora de testar nossa aplicações construida no Laravel.
 
 
-#### Mudando a porta do servidor
+## Mudando a porta do servidor no Artisan Serve
 
 Com o parâmetro `--port`, você pode definir que a porta `9000`, como no exemplo abaixo:
 
@@ -24,7 +23,7 @@ php artisan serve --port=9000
 Esse primeiro truque pode ser útil, já que você pode querer rodar a mesma aplicação duas vezes em portas diferentes, ou mesmo rodar ela em outra porta por já ter uma utilizando a porta padrão 8000.
 
 
-#### Expondo a aplicação através do IP da rede
+## Expondo a aplicação através do IP da rede com o Artisan Serve
 
 O parâmetro `--host` você pode definir o `host` que será vinculado ao servidor. Por exemplo, ao invés de vincular ao `localhost` você poderia vincular o servidor ao `ip` da sua conexão na rede.
 
@@ -42,7 +41,7 @@ O artisan estará rodando em `http://192.168.0.102:8000`.
 Esse último exemplo é muito útil caso você queria testar a sua aplicação a partir de outro dispositivo conectado na mesma rede, como um celular, table ou notebook. Ao acessar o endereço IP e a porta, você terá acesso à aplicação.
 
 
-#### Vinculando a um domínio local
+## Vinculando o Artisan Serve a um domínio local
 
 Ainda é possível vincular o `--host` a um host local, como fazemos num Virtual Host do apache.
 
@@ -58,7 +57,7 @@ Tomando por exemplo do Linux, você poderia fazer o seguinte:
 Ao fazer isso, a aplicação está rodando em `http://meusite.local:8000`.
 
 
-#### Utilizando a porta 80
+## Utilizando o Artisan Serve na porta 80
 
 Por padrão, para não definir a porta ao acessar o domínio no Navegador, você precisa que ele esteja rodando na porta 80. Para isso bastaria rodar o Artisan Serve com o parâmetro `--port=80`. Porém, pode acontecer de essa porta já estar ocupada, caso você tenha o Nginx ou Apache instalado na sua máquina, pois esses processos ocupam a porta 80.
 
