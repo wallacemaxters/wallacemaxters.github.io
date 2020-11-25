@@ -66,6 +66,18 @@ Tomando por exemplo do Linux, você poderia fazer o seguinte:
 Ao fazer isso, a aplicação está rodando em `http://meusite.local:8000`.
 
 
+## Deixando o Artisan Serve disponível em todos os Hosts e IPs
+
+Você pode rodar sua aplicação no `artisan serve` e vincular a todos os hosts configurados no seu `/etc/hosts` bem como nos IPs. Basta utlizar a opção `0.0.0.0` na opção `--host`.
+
+Exemplo:
+
+```bash
+php artisan serve --host=0.0.0.0
+```
+
+Sua aplicação estará disponível em `localhost`, no seu ip e nos demais hosts.
+
 ## Utilizando o Artisan Serve na porta 80
 
 Por padrão, para não definir a porta ao acessar o domínio no Navegador, você precisa que ele esteja rodando na porta 80. Para isso bastaria rodar o Artisan Serve com o parâmetro `--port=80`. Porém, pode acontecer de essa porta já estar ocupada, caso você tenha o Nginx ou Apache instalado na sua máquina, pois esses processos ocupam a porta 80.
