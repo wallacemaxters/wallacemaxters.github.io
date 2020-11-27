@@ -5,8 +5,8 @@ date: 2020-11-26 01:00:00 -0200
 categories:
 - apache
 - linux
-sitemap: false
-image: ''
+sitemap: true
+image: "/uploads/mod_rewrite_apache2.png"
 excerpt: Aprenda como habilitar facilmente o mod_rewrite para reescrita de urls do
   Apache2 no Linux.
 
