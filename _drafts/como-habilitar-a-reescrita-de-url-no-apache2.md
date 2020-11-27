@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como habilitar a reescrita de url no Apache2
+title: Como habilitar a reescrita de url no Apache2 no Linux
 date: 2020-11-26 01:00:00 -0200
 categories:
 - apache
@@ -20,7 +20,7 @@ Rode o comando abaixo:
 sudo a2enmod rewrite
 ```
 
-Em seguida, utilize o seu editor de preferência para alterar o arquivo `/etc/apache2/apache2.conf` e procure pelo seguinte trecho:
+Em seguida, edite o arquivo `/etc/apache2/apache2.conf` e procure pelo seguinte trecho:
 
 ```htaccess
 <Directory /var/www/>
@@ -38,4 +38,13 @@ Substitua `None` por `All`, assim:
         AllowOverride All
         Require all granted
 </Directory>
+```
+
+> **Nota**: Você pode alterar facilmente esse arquivo através do comando ```sudo nano /etc/apache2/apache2.conf```. Ao apertar CTRL+W, você poderá realizar uma pesquisa por algum termo neste arquivo.
+
+
+Após fazer isso, você precisa reiniciar o Apache. Rode o seguinte comando:
+
+```bash
+sudo service apache2 restart
 ```
