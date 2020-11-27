@@ -7,13 +7,15 @@ categories:
 - linux
 sitemap: false
 image: ''
-excerpt: ''
+excerpt: Aprenda como habilitar facilmente o mod_rewrite para reescrita de urls do
+  Apache2 no Linux.
 
 ---
-Quando recém instalamos o Apache2, é necessário fazer algumas configurações para que as funcionalidades padrões e mais usadas estejam disponíveis.
+Quando recém instalamos o Apache2, é necessário fazer algumas configurações para que as funcionalidades padrões e mais usadas estejam disponíveis. E, dentre estas funcionalidades, podemos destacar a funcionalidade de reescrita de urls.
 
+## Habilitando a reescrita de urls no Apache2
 
-Primeiro, ative o `mod_rewrite` para que o apache tenha a capacidade de operar com reescrita de url. 
+Primeiro, ative o `mod_rewrite` para que o apache tenha a capacidade de operar com reescrita de url.
 Rode o comando abaixo:
 
 ```bash
@@ -40,8 +42,7 @@ Substitua `None` por `All`, assim:
 </Directory>
 ```
 
-> **Nota**: Você pode alterar facilmente esse arquivo através do comando ```sudo nano /etc/apache2/apache2.conf```. Ao apertar CTRL+W, você poderá realizar uma pesquisa por algum termo neste arquivo.
-
+> **Nota**: Você pode alterar facilmente esse arquivo através do comando `sudo nano /etc/apache2/apache2.conf`. Ao apertar CTRL+W, você poderá realizar uma pesquisa por algum termo neste arquivo.
 
 Após fazer isso, você precisa reiniciar o Apache. Rode o seguinte comando:
 
