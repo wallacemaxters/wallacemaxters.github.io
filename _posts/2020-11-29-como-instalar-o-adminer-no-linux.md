@@ -13,7 +13,7 @@ excerpt: O Adminer é um gerenciador de banco de dados  bem simples escrito em P
   aproveitamento no seu Linux.
 
 ---
-O Adminer é um gerenciador de banco de dados bem simples escrito em PHP. A sua simplicidade chama a atenção, porque ele utiliza apenas um script PHP para fazer isso. Isso, na minha opinião, torna-o bem mais simples que o PHPMyAdmin.
+O Adminer é um gerenciador de banco de dados bem simples escrito em PHP. A sua simplicidade chama a atenção, porque ele utiliza apenas um script PHP para fazer isso. Isso, na minha opinião, torna-o bem mais simples que o PHPMyAdmin, ou outros gerenciadores de banco de dados.
 
 Nesse tutorial, vamos aprendar a configurar o Adminer, rodando-o a partir do Apache2 no Linux.
 
