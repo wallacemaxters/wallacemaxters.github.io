@@ -7,7 +7,7 @@ categories:
 - php
 - linux
 sitemap: true
-image: ''
+image: "/uploads/arte_mysql_adminer.png"
 excerpt: O Adminer é um gerenciador de banco de dados  bem simples escrito em PHP.
   Ele utiliza apenas um script PHP para fazer isso. Aprenda a configurá-lo para melhor
   aproveitamento no seu Linux.
