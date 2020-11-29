@@ -3,7 +3,6 @@ layout: post
 title: Como instalar o adminer no Linux?
 date: 2020-11-29 01:00:00 -0200
 categories:
-- adminer
 - linux
 - PHP
 sitemap: true
