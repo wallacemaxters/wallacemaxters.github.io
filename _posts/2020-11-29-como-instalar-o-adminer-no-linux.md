@@ -18,7 +18,7 @@ Nesse tutorial, vamos aprendar a configurar o Adminer, rodando-o a partir do Apa
 
 ## Configurando o arquivo /etc/hosts
 
-Configure seu `/etc/hosts` para ficar mais fácil acessar o seu adminer através do navegador. Minha sugestão é que você crie um host virtual chamado `adminer`, mas você pode usar outros nomes como `db`, `database.local`, etc...
+Configure seu `/etc/hosts` para ficar mais fácil acessar o seu adminer através do navegador. Minha sugestão é que você crie um host chamado `adminer`, mas você pode usar outros nomes como `db`, `database.local`, etc...
 
 Faça assim:
 
