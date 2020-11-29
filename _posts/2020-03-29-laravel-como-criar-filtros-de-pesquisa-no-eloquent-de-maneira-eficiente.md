@@ -316,6 +316,7 @@ A segunda opção para simplificar nosso filtro  seria usar as [Local Scopes](ht
 
 Resumidamente, uma *Local Query Scope* permite que você escreva um trecho de uma consulta, através do Query Builder do Eloquent. Assim, você poderá utilizar este *Scope* para criar trechos complexos de queries a serem utilizados e reutilizados em sua aplicação.
 
+No caso, vamos aplicar um *Local Scope* para fazer nosso filtro de pesquisa.
 Exemplo:
 
 ```php
