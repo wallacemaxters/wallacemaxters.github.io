@@ -26,6 +26,8 @@ E adicione a seguinte linha:
 127.0.0.1 adminer
 ```
 
+> Ao fazer isso, o host `adminer` deve estar disponível no seu navegador, através de `http://adminer`.
+
 Feche o arquivo e salve as alterações. No `nano`, você aperta <kbd>CTRL + X</kbd> e em seguida aperta `S` (ou `Y`).
 
 ## Configurando o Apache
@@ -42,32 +44,39 @@ Crie a pasta `adminer` dentro de `/var/www`.
 cd /var/www
 sudo mkdir adminer
 ```
+### Baixando o Adminer
 
 A ideia agora é que você coloque o script do Adminer dentro dessa pasta que criamos acima e renomeio-o para `index.php`. O caminho final deve ser `/var/www/adminer/index.php`.
 
-
-Para baixar o Adminer, eu costumo utilizar o `wget` diretamente para já baixar e renomear o arquivo. Dessa forma
+Para baixar o Adminer, eu costumo utilizar o `wget` diretamente para já baixar e renomear o arquivo. Dessa forma:
 
 ```bash
 wget https://github.com/vrana/adminer/releases/download/v4.7.7/adminer-4.7.7.php
 mv adminer-4.7.7.php index.php
 ```
 
-Mas caso tenha baixado via download, você pode simplesmente recortar o arquivo, colar na pasta `/var/www/adminer` e renomear pra `index.php`.
+Ou, se preferir, você pode fazer o download pelo navegador. Após baixar o arquivo, recorte e cole o arquivo na pasta `/var/www/adminer`. Depois, basta renomeá-lo para `index.php`.
 
-Você poderá baixar através do [link das releases mais recentes](https://github.com/vrana/adminer/releases/) ou no link para download na [página do Adminer](https://www.adminer.org/#download)
+Você poderá baixar através do [link das releases mais recentes](https://github.com/vrana/adminer/releases/) ou no link para download na [página do Adminer](https://www.adminer.org/#download).
+
+Feito isso, vamos ao próximo passo.
 
 ### Criando o Virtualhost
 
 Vá para a pasta `/etc/apache2/sites-avaliables`. Nessa pasta fica os arquivo de Virtual Hosts utilizado pelo Apache2. 
 
-Crie um arquivo chamado `adminer.conf`, assim:
+```bash
+cd /etc/apache2/sites-avaliables
+```
+
+Crie um arquivo chamado `adminer.conf` dentro da pasta que navegamos. Assim:
 
 ```bash
 sudo nano adminer.conf
 ```
+Agora, vamos adicionar um conteúdo ao nosso arquivo. 
 
-E coloque o seguinte conteúdo
+Faça assim:
 
 ```
 <VirtualHost *:80>
@@ -75,6 +84,8 @@ E coloque o seguinte conteúdo
   DocumentRoot /var/www/adminer
 </VirtualHost>
 ```
+
+> O `ServerName` é o nome do host criado dentro de `/etc/hosts`. No nosso tutorial, estamos usando o host `adminer`, porém, como dito antes, você pode usar o que desejar. O `DocumentRoot` aponta para a pasta raiz da aplicação, que no nosso caso, é o `adminer`.
 
 Para ativar nosso Virtual Host, é necessário rodar o comando `a2ensite`. Esse comando habilita um arquivo `.conf` para ser utilizado pelo Apache.
 
