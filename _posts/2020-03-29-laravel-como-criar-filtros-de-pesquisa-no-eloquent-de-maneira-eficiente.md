@@ -314,7 +314,7 @@ No exemplo acima, o campo `usuario_id` só será aceito caso seja um valor exist
 
 A segunda opção para simplificar nosso filtro  seria usar as [Local Scopes](https://laravel.com/docs/5.8/eloquent#local-scopes).
 
-Resumidamente, uma Local Query Scope permite você escrever um método que contém dentro dela uma consulta com o Query Builder do Eloquent. Você pode chamar esse método onde desejar para reutilizar um trecho complexo de query.
+Resumidamente, uma *Local Query Scope* permite que você escreva um trecho de uma consulta, através do Query Builder do Eloquent. Assim, você poderá utilizar este *Scope* para criar trechos complexos de queries a serem utilizados e reutilizados em sua aplicação.
 
 Exemplo:
 
