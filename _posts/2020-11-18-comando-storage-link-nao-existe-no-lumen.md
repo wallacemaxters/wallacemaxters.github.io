@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Comando "storage link" não existe no Lumen
-date: 2020-11-18 01:00:00 -0200
+date: 2020-11-18T01:00:00.000-02:00
 categories:
 - lumen
 - PHP
 sitemap: false
 image: "/uploads/lumen-2.png"
-excerpt: ''
+excerpt: O comando "php storage link" não existe no micro framework Lumen? Aprenda
+  a resolver esse problema!
 
 ---
 O Lumen é um microframework baseado no Laravel. E por ser um microframework, ele tem menos recursos, como demonstrei [nesse artigo](blog/2020/11/18/por-que-o-comando-artisan-serve-nao-funciona-no-lumen-framework).
