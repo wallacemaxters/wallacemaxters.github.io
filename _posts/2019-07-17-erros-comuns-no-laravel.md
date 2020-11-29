@@ -86,6 +86,7 @@ O cenário é mais ou menos esse:
 Mas o que pode ser?
 
 **Solução**
+
 Bem, você pode ter esquecido de colocar a nova coluna na propriedade `$fillable` do seu Model.
 
 Com essa propriedade, o Laravel controla quais campos serão "preenchíveis" através de métodos `create`, `update` ou `fill`.
