@@ -409,7 +409,7 @@ As chamadas poderíam ser alteradas para:
 Produto::search()->paginate()
 ```
 
-Assim, seu Local Scope de filtro de pesquisa poderá utiliza tanto a chamada `Request::search()` como `Request::search($outra_request)`.
+Assim, seu Local Scope de filtro de pesquisa poderá utilizar tanto a chamada `Request::search()` como `Request::search($outra_request)`.
 
 ### Como esses utilizar os filtros de pesquisa em outros projetos?
 
