@@ -348,7 +348,7 @@ class Produto extends Model
 }
 ```
 
-> Nota: Uma Local Scope pode ser chamada simplesmente usando o nome que está a frente de `scope` na declaração do método. Deve-se considerar que o primeiro parâmetro `$query` é usado internamente pelo Laravel. Então ao chamarmos, devemos contar o segundo parâmetro como sendo o primeiro, e o terceiro, o segundo.
+> Nota: Uma Local Scope pode ser chamada simplesmente usando o nome que está à frente de `scope` na declaração do método. Deve-se considerar que o primeiro parâmetro `$query` é usado internamente pelo Laravel. Então ao chamarmos, devemos contar o segundo parâmetro como sendo o primeiro, e o terceiro, o segundo, e assim por diante.
 
 O nosso controller poderia ficar assim:
 
