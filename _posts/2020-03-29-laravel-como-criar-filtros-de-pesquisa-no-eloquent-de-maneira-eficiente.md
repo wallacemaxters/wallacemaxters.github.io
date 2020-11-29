@@ -440,3 +440,7 @@ No caso acima, caso queria consultar pela palavra-chave "parafuso", como no prim
 ```
 /produtos?contains[nome]=parafuso
 ```
+
+### Conclusão
+
+Há diversas outras formas que podem ser criadas para aplicação de filtros de pesquisa no Laravel, mas nesse tutorial dei apenas alguns ideias simples de como simplificar, reduzir complexidade e diminuir a repetição de código. Espero que isso ajude! 
