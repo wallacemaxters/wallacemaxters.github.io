@@ -10,7 +10,6 @@ image: ''
 excerpt: Aprenda a configurar o Adminer de maneira simples no seu Linux
 
 ---
-
 ## Configurando o arquivo /etc/hosts
 
 Configure seu `/etc/hosts` para ficar mais fácil acessar o seu adminer através do navegador. Minha sugestão é que você crie um host virtual chamado `adminer`, mas você pode usar outros nomes como `db`, `database.local`, etc...
@@ -27,7 +26,7 @@ E adicione a seguinte linha:
 127.0.0.1 adminer
 ```
 
-Feche o arquivo e salve as alterações.
+Feche o arquivo e salve as alterações. No `nano`, você aperta <kbd>CTRL + X</kbd> e em seguida aperta `S` (ou `Y`).
 
 ## Configurando o Apache
 
