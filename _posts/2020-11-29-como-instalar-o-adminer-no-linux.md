@@ -4,8 +4,8 @@ title: Como instalar o adminer no Linux?
 date: 2020-11-29 01:00:00 -0200
 categories:
 - adminer
-- php
 - linux
+- PHP
 sitemap: true
 image: "/uploads/arte_mysql_adminer.png"
 excerpt: O Adminer é um gerenciador de banco de dados  bem simples escrito em PHP.
