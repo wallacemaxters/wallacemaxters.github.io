@@ -11,7 +11,6 @@ image: "/uploads/laravel_database_search.svg"
 ---
 O Eloquent é um ORM do Laravel que permite facilitar bastante as consultas realizadas no seu banco de dados. Nesse tutorial, estarei ensinado uma maneira simples de filtrar dados no Eloquent de maneira eficiente, evitando repetições e códigos grandes;
 
-
 Geralmente, quando estamos desenvolvendo uma API ou simplesmente uma página no Laravel, o Eloquent nos auxilia bastante na tarefa de realizar operações no banco de dados. Em, em muitos desses casos, quando precisamos realizar uma listagem de dados, precisamos também que os mesmos sejam filtrados.
 
 Podemos tomar como exemplo uma listagem de produtos, que pode ser representada da seguinte forma:
@@ -48,12 +47,11 @@ Esse é o tipo de código mais comum utilizado em filtros de pesquisa.
 
 No caso acima, ao acessar a url `/api/produtos?nome=parafuso`, serão retornados apenas os produtos contendo a palavra "parafuso" no campo `nome`.
 
-Obviamente, se quisermos pesquisar os produtos por outros campos, basta adicionarmos mais `if` e mais `wheres` para isso. Você pode inclusive variar a consulta entre consultas com `LIKE` ou `=`. 
+Obviamente, se quisermos pesquisar os produtos por outros campos, basta adicionarmos mais `if` e mais `wheres` para isso. Você pode inclusive variar a consulta entre consultas com `LIKE` ou `=`.
 
 Por exemplo, suponhamos que queremos filtrar o nome do produto através de um termo e, ao mesmo tempo, por código de barras e o usuário responsável por cadastrar o mesmo.
 
 Podemos fazer assim:
-
 
 ```php
 Route::get('/produtos', function (Request $request) {
@@ -86,7 +84,6 @@ Se continuarmos com a abordagem acima, nosso filtro de pesquisa vai ter um códi
 
 Então, se eu desejar consultar os produtos pelos campos `nome`, `descricao` e `beneficios`, usando termos, eu teria que fazer isso:
 
-
 ```php
 Route::get('/produtos', function (Request $request) {
 
@@ -116,11 +113,7 @@ Minha opinião é que, se você precisou copiar e colar alguma coisa, você prec
 
 Foi exatamente por esse motivo que eu resolvi escrever essa publicação.
 
-
-
 Vejamos como esse código vai ficar mais simples com uma pequena modificação:
-
-
 
 ```php
 Route::get('/produtos', function (Request $request) {
@@ -150,7 +143,6 @@ Por exemplo, se preenchermos a url dessa forma: `api/produtos?nome=parafuso&bene
 ```
 
 Por essa razão é que dentro do `foreach` temos um `if` para evitar uma adição de LIKE sem necessidade, caso o campo seja vazio.
-
 
 Além disso, podemos usar essa mesma abordagem para os campos que queremos pesquisar pela igualdade de valores.
 
@@ -185,7 +177,7 @@ Route::get('/produtos', function (Request $request) {
 
 > **Observação:** Se você preferir, é possível simplificar mais ainda o `foreach`, tirando o `if` e deixando apenas uma expressão booleana `$valor && $query->where('nome', '=', $request->nome);`.
 
-Ainda é possível fazer outro ajuste. 
+Ainda é possível fazer outro ajuste.
 
 ### E se eu quiser executar esse mesmo filtro em outros lugares?
 
@@ -229,8 +221,7 @@ Route::get('/produtos', function (Request $request) {
 
 > **Nota**: Ao construir a sua query dentro de uma `Closure`, esteja ciente que a expressão em SQL referente a essa closure será encapsulada por parêntesis. Exemplo: `select * from produtos where (nome like "%parafuso" and usuario_id = 1)`. Isso pode ser bastante útil se você seja isolar seu filtro, principalmente se estiver usando `OR` ao invés de `AND`.
 
-
-Tendo isso em vista, agora podemos simplesmente isolar a consulta em uma função ou método e usar em qualquer lugar que necessitemos dessa consulta. 
+Tendo isso em vista, agora podemos simplesmente isolar a consulta em uma função ou método e usar em qualquer lugar que necessitemos dessa consulta.
 
 No nosso caso, vamos criar uma `Request` específica para realizar representar a nossa consulta e usar um método nela para retornar essa mesma função anônima acima.
 
@@ -275,10 +266,9 @@ class ProdutoConsultaRequest extends FormRequest
 
 Por padrão, ao criar uma request, os métodos `authorize` e `rules` são criados. Eles são necessários para o funcionamento correto da request.
 
-Nós criamos a função `getSearchCallback`, que retorna a `Closure` que precisamos. Note que trocamos `$request` por `$this`, já que estamos dentro do contexto da classe que herda `Request`. 
+Nós criamos a função `getSearchCallback`, que retorna a `Closure` que precisamos. Note que trocamos `$request` por `$this`, já que estamos dentro do contexto da classe que herda `Request`.
 
-
-Vamos imaginar um cenário onde estejamos usando [SoftDelete](https://laravel.com/docs/5.8/eloquent#soft-deleting) em `Produto`. Queremos que um endpoint retorne os produtos normais e outro, que retorne apenas os excluídos. 
+Vamos imaginar um cenário onde estejamos usando [SoftDelete](https://laravel.com/docs/5.8/eloquent#soft-deleting) em `Produto`. Queremos que um endpoint retorne os produtos normais e outro, que retorne apenas os excluídos.
 
 Podemos usar esse código:
 
@@ -328,7 +318,6 @@ Resumidamente, uma Local Query Scope permite você escrever um método que cont�
 
 Exemplo:
 
-
 ```php
 class Produto extends Model
 {
@@ -360,9 +349,7 @@ class Produto extends Model
 
 > Nota: Uma Local Scope pode ser chamada simplesmente usando o nome que está a frente de `scope` na declaração do método. Deve-se considerar que o primeiro parâmetro `$query` é usado internamente pelo Laravel. Então ao chamarmos, devemos contar o segundo parâmetro como sendo o primeiro, e o terceiro, o segundo.
 
-
 O nosso controller poderia ficar assim:
-
 
 ```php
 class ProdutosController extends Controller
@@ -379,10 +366,10 @@ class ProdutosController extends Controller
 }
 ```
 
-Eu preferi deixar a passagem de `$request` explicitamente, ao invés de chamar a função `request()` dentro da Local Scope. O motivo é que `request` sempre retorna a `Request` padrão do Laravel. Ao usar parâmetro, podemos usar uma request costumizada.
+Eu preferi deixar a passagem de `$request` explicitamente, ao invés de chamar a função `request()` dentro da Local Scope. O motivo é que `request()` sempre retorna a `Illuminate\Http\Request` , que é a classe padrão do Laravel para representar as requisições. 
+Contudo, ao utilizarmos um parâmetro no scope `search`, poderíamos, opcionalmente, utilizar uma request costumizada (por exemplo, aquelas que criamos com `php artisan make:request`).
 
 Porém, caso queira omitir a passagem de `request`, você pode criar alterar a sua Local Scope, da seguinte forma:
-
 
 ```php
 class Produto extends Model
@@ -421,6 +408,8 @@ As chamadas poderíam ser alteradas para:
 ```php
 Produto::search()->paginate()
 ```
+
+Assim, seu Local Scope de filtro de pesquisa poderá utiliza tanto a chamada `Request::search()` como `Request::search($outra_request)`.
 
 ### E seu eu quiser usar isso em outros projetos?
 
