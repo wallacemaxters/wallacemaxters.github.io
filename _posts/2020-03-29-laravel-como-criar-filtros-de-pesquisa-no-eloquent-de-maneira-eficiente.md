@@ -412,11 +412,11 @@ Produto::search()->paginate()
 
 Assim, seu Local Scope de filtro de pesquisa poderá utilizar tanto a chamada `Produto::search()` como `Produto::search($outra_request)`.
 
-### Como esses utilizar os filtros de pesquisa em outros projetos?
+### Como utilizar os filtros de pesquisa em diversos projetos?
 
 Há casos (como o meu) onde você não trabalha com um, mas com vários projetos escritos em cima do Laravel. E praticamente a maioria deles precisam que você escreva esses tipos de filtro.
 
-Para ajudar a tornar esse trabalho menos repetitivo, eu criei uma biblioteca chamada [Eloquent Filter](https://github.com/LaravelLegends/eloquent-filter) no [Laravel Legends](https://github.com/LaravelLegends).
+Para ajudar a tornar esse trabalho menos repetitivo, eu criei **uma biblioteca** chamada [Eloquent Filter](https://github.com/LaravelLegends/eloquent-filter) no [Laravel Legends](https://github.com/LaravelLegends).
 
 A bibliotea Eloquent Filter permite você utilizar parâmetros simples numa requisição `GET`, através de palavras-chaves específicas, para realizar sua pesquisa de acordo com o desejado.
 
