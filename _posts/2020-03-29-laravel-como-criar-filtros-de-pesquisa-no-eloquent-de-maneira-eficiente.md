@@ -310,7 +310,7 @@ No exemplo acima, o campo `usuario_id` só será aceito caso seja um valor exist
 
 > Nota: Utilizei `nullable` porque campos de filtro de pesquisa geralmente são opcionais.
 
-## Usando Query Scopes
+## 2 - Usando Query Scopes
 
 A segunda opção para simplificar nosso filtro  seria usar as [Local Scopes](https://laravel.com/docs/5.8/eloquent#local-scopes).
 
