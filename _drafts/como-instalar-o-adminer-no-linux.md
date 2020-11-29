@@ -5,11 +5,18 @@ date: 2020-11-29 01:00:00 -0200
 categories:
 - adminer
 - php
-sitemap: false
+- linux
+sitemap: true
 image: ''
-excerpt: Aprenda a configurar o Adminer de maneira simples no seu Linux
+excerpt: O Adminer é um gerenciador de banco de dados  bem simples escrito em PHP.
+  Ele utiliza apenas um script PHP para fazer isso. Aprenda a configurá-lo para melhor
+  aproveitamento no seu Linux.
 
 ---
+O Adminer é um gerenciador de banco de dados escrito em PHP. A simplicidade dele chama a atenção, porque ele utiliza apenas um script para fazer isso.
+
+Nesse tutorial, vamos aprendar a configurar o Adminer, rodando-o a partir do Apache2 no Linux.
+
 ## Configurando o arquivo /etc/hosts
 
 Configure seu `/etc/hosts` para ficar mais fácil acessar o seu adminer através do navegador. Minha sugestão é que você crie um host virtual chamado `adminer`, mas você pode usar outros nomes como `db`, `database.local`, etc...
