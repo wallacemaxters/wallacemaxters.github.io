@@ -43,9 +43,10 @@ cd /var/www
 sudo mkdir adminer
 ```
 
-Em seguida, coloque o script do Adminer dentro dessa pasta que criamos acima e renomeio-o para `index.php`. O caminho final deve ser `/var/www/adminer/index.php`.
+A ideia agora é que você coloque o script do Adminer dentro dessa pasta que criamos acima e renomeio-o para `index.php`. O caminho final deve ser `/var/www/adminer/index.php`.
 
-Eu costumo utilizar o `wget` diretamente para já baixar e renomear o arquivo:
+
+Para baixar o Adminer, eu costumo utilizar o `wget` diretamente para já baixar e renomear o arquivo. Dessa forma
 
 ```bash
 wget https://github.com/vrana/adminer/releases/download/v4.7.7/adminer-4.7.7.php
@@ -53,6 +54,8 @@ mv adminer-4.7.7.php index.php
 ```
 
 Mas caso tenha baixado via download, você pode simplesmente recortar o arquivo, colar na pasta `/var/www/adminer` e renomear pra `index.php`.
+
+Você poderá baixar através do [link das releases mais recentes](https://github.com/vrana/adminer/releases/) ou no link para download na [página do Adminer](https://www.adminer.org/#download)
 
 ### Criando o Virtualhost
 
