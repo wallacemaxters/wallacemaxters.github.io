@@ -181,13 +181,13 @@ Ainda é possível fazer outro ajuste.
 
 ### E se eu quiser executar esse mesmo filtro em outros lugares?
 
-Pode haver casos onde você necessite de realizar consultas e filtros em dois ou mais endpoints lugares diferentes.
+Pode haver casos onde você necessite realizar consultas e filtros em dois ou mais rotas diferentes.
 
 A resposta do programador "esperto" para esse problema seria "copiar e colar". Eu detesto essa prática e prefiro sempre recorrer à reutilização do código.
 
 Para resolvermos isso, podemos elaborar duas formas fazermos isso de maneira bem fácil no Laravel.
 
-## Utilizando Request e Closure
+## 1 - Utilizando Request e Closure
 
 Para quem não sabe, o Eloquent aceita uma `Closure` (função anônima) como argumento para o método `where`. As funções anônimas em PHP podem ser retornadas em funções/métodos e/ou armazenadas em váriaveis. Podemos usar desse artifício para implementarmos a nossa reutilização do filtro de pesquisa.
 
