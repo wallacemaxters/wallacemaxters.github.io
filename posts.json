@@ -2,7 +2,7 @@
 ---
 
 [
-    {% for post in site.posts | sort: "date" | reverse %}
+    {%- for post in site.posts -%}
     {
         "title":"{{post.title | escape}}", 
         "image": "{{ post.image | prepend:site.url }}",
@@ -17,5 +17,5 @@
         ]
     }
     {% if site.posts.last != post %},{% endif %}
-    {% endfor %}
+    {%- endfor -%}
 ]
