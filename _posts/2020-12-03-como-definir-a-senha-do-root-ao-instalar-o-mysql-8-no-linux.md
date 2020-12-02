@@ -29,7 +29,7 @@ sudo mysql -u root
 Em seguida, quando o terminal do Mysql tiver aberto, defina a senha para seu usuário `root`, assim:
 
 ```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'sua_senha_aqui'
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'sua_senha_aqui';
 ```
 
 Perfeito! Você já consegue logar no Mysql.
