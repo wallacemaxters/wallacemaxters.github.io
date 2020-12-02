@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Como ignorar mudanças de permissão com o GIT?
-date: 2020-11-16 16:17:13 -0200
+title: Como ignorar mudanças de permissões do chmod no GIT?
+date: 2020-11-16T16:17:13.000-02:00
 categories:
 - linux
 - git
@@ -22,14 +22,14 @@ Para solucionar isso, descobri que existe uma configuração no GIT que faz as m
 Globalmente:
 
 ```bash
-git config --global core.fileMode false
+git config --global core.filemode false
 ```
 
 Localmente:
 
 ```bash
 cd repositorio-desejado
-git config core.fileMode false
+git config core.filemode false
 ```
 
 Após fazer isso, use `git status` para ver se a configuração funcionou corretamente.
