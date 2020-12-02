@@ -5,9 +5,9 @@ date: 2020-12-03 00:29:00 -0200
 categories:
 - mysql
 - linux
-sitemap: false
-image: ''
-excerpt: ''
+sitemap: true
+image: "/uploads/mysql.png"
+excerpt: Veja como definir a senha do usuário root no Mysql recém-instalado no Linux
 
 ---
 Já precisei diversas vezes instalar o MYSQL numa distribuição Linux. E a dúvida que sempre rola é sobre como definir uma senha padrão para o usuário `root`. 
