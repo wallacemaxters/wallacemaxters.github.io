@@ -7,8 +7,10 @@ categories:
 - git
 sitemap: true
 image: "/uploads/covers/git.jpg"
-excerpt: Aprenda a solucionar o problema de permissão de arquivos no Linux que ocorre
-  toda vez que você faz um git pull
+excerpt: O git costuma reconhecer modificações de permissões de escrita, leitura e
+  execução feitas pelo comando "chmod". Porém nem sempre isso é desejável. Aprenda
+  a configurar o git para não reconhecer as mudanças de permissão de arquivos no seu
+  repositório.
 
 ---
 Vez ou outra, sempre tive problemas com alteração de permissões no GIT. Um amigo que trabalhava no mesmo projeto que eu costumava usar o usuário `root` do linux para muitas coisas, inclusive para abrir o Sublime Text e editar os arquivos do projeto.
