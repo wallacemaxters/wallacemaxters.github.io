@@ -6,6 +6,7 @@ date: 2020-12-03 15:14:00 -0200
 categories:
 - laravel
 - apache
+- linux
 sitemap: true
 image: "/uploads/Laravel.jpg"
 excerpt: Aprenda como configurar um Virtual Host no Linux para rodar sua aplicação
