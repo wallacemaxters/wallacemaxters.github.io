@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Como configurar um virtual host para rodar o Laravel no Apache no seu Linux
-date: 2020-12-03 09:04:00 -0200
+title: Como configurar um Virtual Host no Linux para rodar sua aplicação Laravel através
+  do Apache 2
+date: 2020-12-03 15:14:00 -0200
 categories:
 - laravel
 - apache
