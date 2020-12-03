@@ -98,4 +98,4 @@ sudo systemctl reload apache2
 
 Teste a sua aplicação abrindo o url:
 
-\`\`\`\`http://seu-projeto.local\`\`\`
+> http://seu-projeto.local
