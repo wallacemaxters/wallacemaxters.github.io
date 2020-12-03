@@ -59,10 +59,12 @@ sudo nano seu-projeto.conf
 
 Agora, você precisa adicionar o seguinte conteúdo a seu arquivo `seu-projeto.conf`:
 
-    <VirtualHost *:80>
-    	ServerName seu-projeto.local
-        DocumentRoot /var/www/seu-projeto/public
-    </VirtualHost>
+```
+<VirtualHost *:80>
+    ServerName seu-projeto.local
+    DocumentRoot /var/www/seu-projeto/public
+</VirtualHost>
+```
 
 Após criar o arquivo acima, você precisa rodar o comando `a2ensite`. Esse comando é responsável por habilitar um virtual host.
 
