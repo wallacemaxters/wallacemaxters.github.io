@@ -57,7 +57,7 @@ pages:
 - _posts/2020-11-23-como-listar-pastas-e-subpastas-no-php.md
 - _posts/2020-11-26-como-habilitar-a-reescrita-de-url-no-apache2.md
 - _posts/2020-11-29-como-instalar-o-adminer-no-linux.md
-- _posts/2020-12-03-como-configurar-o-laravel-no-apache.md
 - _posts/2020-12-03-como-definir-a-senha-do-root-ao-instalar-o-mysql-8-no-linux.md
+- _posts/como-configurar-um-virtual-host-no-linux-para-rodar-sua-aplicacao-laravel-atraves-do-apache-2.md
 - _posts/como-detectar-se-um-formato-de-video-e-suportado-ou-nao-no-navegador-atraves-do-javascript.md
 - _posts/como-executar-uma-requisição-com-php-sem-esperar-a-resposta.md
