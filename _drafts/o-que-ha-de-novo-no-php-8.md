@@ -10,9 +10,9 @@ excerpt: O  PHP 8 veio cheio de novidades! Ele contém muitos novos recursos e o
   Veja algumas novidades do PHP 8 nesse artigo.
 
 ---
-PHP 8.0 é uma atualização importante da linguagem PHP.
+A versão 8.0 do PHP veio com bastante novidades.Esta versão contém muitos novos recursos e otimizações, incluindo argumentos nomeados, tipos de união, atributos, promoção de propriedade do construtor, expressão de correspondência, operador nullsafe, JIT e melhorias no sistema de tipo, tratamento de erros e consistência.
 
-Ele contém muitos novos recursos e otimizações, incluindo argumentos nomeados, tipos de união, atributos, promoção de propriedade do construtor, expressão de correspondência, operador nullsafe, JIT e melhorias no sistema de tipo, tratamento de erros e consistência.
+Vejamos alguns deles:
 
 ## Named Arguments
 
@@ -43,7 +43,7 @@ De acordo com a documentação (tradução livre):
 
 Veja um exemplo:
 
-```
+```php
 class Number {
     private int|float $number;
 
