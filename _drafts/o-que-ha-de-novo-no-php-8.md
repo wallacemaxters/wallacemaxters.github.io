@@ -10,7 +10,7 @@ excerpt: O  PHP 8 veio cheio de novidades! Ele contém muitos novos recursos e o
   Veja algumas novidades do PHP 8 nesse artigo.
 
 ---
-A versão 8.0 do PHP veio com bastante novidades.Esta versão contém muitos novos recursos e otimizações, incluindo argumentos nomeados, tipos de união, atributos, promoção de propriedade do construtor, expressão de correspondência, operador nullsafe, JIT e melhorias no sistema de tipo, tratamento de erros e consistência.
+A versão 8.0 do PHP veio com bastante novidades.Esta versão contém muitos novos recursos e otimizações.
 
 Vejamos alguns deles:
 
@@ -36,10 +36,10 @@ Isso é muito útil para "pular" a passagem de um parâmetro opcional e já defi
 
 ## Union Types
 
-O PHP8 agora permite definir mais de um tipo para uma propriedade, ou parâmetros e retorno de tipos de funções/métodos. 
+O PHP8 agora permite definir mais de um tipo para uma propriedade, ou parâmetros e retorno de tipos de funções/métodos.
 De acordo com a documentação (tradução livre):
-> Uma declaração de *union types* aceita valores de vários tipos diferentes, em vez de um único.
 
+> Uma declaração de _union types_ aceita valores de vários tipos diferentes, em vez de um único.
 
 Veja um exemplo:
 
@@ -73,7 +73,7 @@ $resultado = match ($n) {
 };
 
 var_dump($resultado); // 'maior ou igual a 5'
-``` 
+```
 
 Caso `match` não tenha um `default` definido e o valor em questão não é compatível com as condições definidas, será lançado um `UnhandledMatchError`.
 
@@ -91,9 +91,10 @@ $resultado = match (true) {
 
 var_dump($resultado); // 'jovem adulto'
 ```
-## Consistência para tipos de erros em funções internas do PHP 
 
-Nas versões anteriores do PHP, geralmente, quando se passava um argumento com valor não esperado para uma função, o mesmo gerava um *"Warning"*. 
+## Consistência para tipos de erros em funções internas do PHP
+
+Nas versões anteriores do PHP, geralmente, quando se passava um argumento com valor não esperado para uma função, o mesmo gerava um _"Warning"_.
 
 Exemplo:
 
@@ -110,7 +111,6 @@ Exemplo:
 strlen([]);
 
 // PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($str) must be of type string, array given in script.php:3
-
 ```
 
 Sendo assim, é possível ainda capturar o `TypeError`, conforme desejado.
@@ -130,7 +130,7 @@ try{
 O PHP 8 introduziu algumas funções novas. Entre elas destaco
 `str_contains`, `str_starts_with`, `str_ends_with`, que são funções para verificação de strings presente em muitas linguagens, como Python e Javascript.
 
-### Exemplo da função `str_contains`
+### Exemplo da função str_contains
 
 ```php
 foreach(['rato', 'barata', 'gato'] as $animal) {
@@ -141,6 +141,4 @@ foreach(['rato', 'barata', 'gato'] as $animal) {
 // bool(true)
 // bool(false)
 // bool(true)
-
 ```
-
