@@ -89,5 +89,38 @@ $resultado = match (true) {
     default => 'criança',
 };
 
-var_dump($resultado);
+var_dump($resultado); // 'jovem adulto'
 ```
+## Consistência para tipos de erros em funções internas do PHP 
+
+Nas versões anteriores do PHP, geralmente, quando se passava um argumento com valor não esperado para uma função, o mesmo gerava um *"Warning"*. 
+
+Exemplo:
+
+```php
+strlen([]);
+// PHP Warning:  strlen() expects parameter 1 to be string, array given in script.php on line 3
+```
+
+Porém, a versão PHP 8.0 introduziu melhorias para esses casos. No exemplo acima, ao executar no PHP 8, receberíamos o lançamento de `TypeError`.
+
+Exemplo:
+
+```php
+strlen([]);
+
+// PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($str) must be of type string, array given in script.php:3
+
+```
+
+Sendo assim, é possível ainda capturar o `TypeError`, conforme desejado.
+
+Exemplo:
+
+```php
+try{
+    strlen([]);
+} catch (\TypeError $e) {
+    var_dump($e);
+}
+``` 
