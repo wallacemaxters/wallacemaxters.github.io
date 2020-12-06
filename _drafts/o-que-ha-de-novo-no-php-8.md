@@ -4,9 +4,10 @@ title: O que há de novo no PHP 8?
 date: 2020-12-06 01:00:00 -0200
 categories:
 - php
-sitemap: false
-image: ''
-excerpt: ''
+sitemap: true
+image: "/uploads/covers/php.png"
+excerpt: O  PHP 8 veio cheio de novidades! Ele contém muitos novos recursos e otimizações.
+  Veja algumas novidades do PHP 8 nesse artigo.
 
 ---
 PHP 8.0 é uma atualização importante da linguagem PHP.
