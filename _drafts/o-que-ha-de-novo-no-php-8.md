@@ -123,4 +123,24 @@ try{
 } catch (\TypeError $e) {
     var_dump($e);
 }
-``` 
+```
+
+## Novas funções
+
+O PHP 8 introduziu algumas funções novas. Entre elas destaco
+`str_contains`, `str_starts_with`, `str_ends_with`, que são funções para verificação de strings presente em muitas linguagens, como Python e Javascript.
+
+### Exemplo da função `str_contains`
+
+```php
+foreach(['rato', 'barata', 'gato'] as $animal) {
+    var_dump(str_contains($animal, 'to'));
+}
+
+// Resultado:
+// bool(true)
+// bool(false)
+// bool(true)
+
+```
+
