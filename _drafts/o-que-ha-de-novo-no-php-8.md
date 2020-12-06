@@ -55,3 +55,38 @@ class Number {
     }
 }
 ```
+
+## Match expression
+
+O PHP 8 introduziu a expressão `match`. Ela lembra um pouco o `switch`, porém a finalidade é diferente. Uma delas é que `match` poderá ter o resultado armazenado em uma variável ou retornado. Além disso, ela pode comparar dois valores, sem a necessidade de incluir o `break` várias vezes.
+
+Veja:
+
+```php
+$n = 5;
+
+$resultado = match ($n) {
+    1, 2 => 'um ou dois',
+    3, 4 => 'três ou quatro',
+    default => 'maior ou igual a 5',
+};
+
+var_dump($resultado); // 'maior ou igual a 5'
+``` 
+
+Caso `match` não tenha um `default` definido e o valor em questão não é compatível com as condições definidas, será lançado um `UnhandledMatchError`.
+
+Ainda assim, há casos onde você não precisa saber exatamente se um valor é igual, mas apenas se ele é verdadeiro ou falso. Nesses casos, você pode usar `match`, passando `true` como parâmetro e analisando a variável dentro do mesmo para tal fim.
+
+```php
+$idade = 23;
+
+$resultado = match (true) {
+    $idade >= 65 => 'idoso',
+    $idade >= 25 => 'adulto',
+    $idade >= 18 => 'jovem adulto',
+    default => 'criança',
+};
+
+var_dump($resultado);
+```
