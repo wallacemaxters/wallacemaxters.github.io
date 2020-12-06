@@ -32,3 +32,26 @@ file_put_contents($hostname, $content, context: $stream);
 Isso é muito útil para "pular" a passagem de um parâmetro opcional e já definir o parâmetro desejado sem ter que considerar a posição do mesmo.
 
 > Os _named arguments_ (argumentos nomeados) devem ser usado apenas após a passagem dos argumentos posicionais (os argumentos obrigatórios da função). No caso de `file_put_contents`, como no exemplo, o primeiro e segundo argumentos sempre são posicionais.
+
+## Union Types
+
+O PHP8 agora permite definir mais de um tipo para uma propriedade, ou parâmetros e retorno de tipos de funções/métodos. 
+De acordo com a documentação (tradução livre):
+> Uma declaração de *union types* aceita valores de vários tipos diferentes, em vez de um único.
+
+
+Veja um exemplo:
+
+```
+class Number {
+    private int|float $number;
+
+    public function setNumber(int|float $number): void {
+        $this->number = $number;
+    }
+
+    public function getNumber(): int|float {
+        return $this->number;
+    }
+}
+```
