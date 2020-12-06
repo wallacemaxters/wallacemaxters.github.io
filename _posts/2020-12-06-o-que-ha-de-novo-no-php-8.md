@@ -26,7 +26,7 @@ file_put_contents($hostname, $content, 0, $stream);
 
 Versão 8:
 
-```php8
+```php
 file_put_contents($hostname, $content, context: $stream);
 ```
 
