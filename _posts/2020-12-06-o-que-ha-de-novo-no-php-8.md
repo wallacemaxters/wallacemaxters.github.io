@@ -132,6 +132,22 @@ O PHP 8 introduziu algumas funções novas. Entre elas destaco
 
 ### Exemplo da função str_contains
 
+Nas versões anteriores do PHP, para verificar se uma string possuia determinada correspondência, utilizávamos a função `strpos`. 
+
+Veja:
+
+```php
+foreach(['rato', 'barata', 'gato'] as $animal) {
+    var_dump(strpos($animal, 'to') !== false);
+}
+```
+
+Note que era necessário verificar se o retorno era diferente de `false`, pois `strpos` retornava o número referente a posição encontrada na string.
+
+Porém, a função `str_contains` simplesmente retornará `boolean` caso a string seja ou não encontrada.
+
+Exemplo:
+
 ```php
 foreach(['rato', 'barata', 'gato'] as $animal) {
     var_dump(str_contains($animal, 'to'));
