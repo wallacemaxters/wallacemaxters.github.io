@@ -158,3 +158,64 @@ foreach(['rato', 'barata', 'gato'] as $animal) {
 // bool(false)
 // bool(true)
 ```
+
+### Exemplo da função str_starts_with
+
+Nas versões anteriores do PHP, para verificar se uma string possuia determinada correspondência no iníco da mesma, também utilizávamos a função `strpos`.
+
+
+```php
+foreach(['rato', 'barata', 'gato'] as $animal) {
+    var_dump(strpos($animal, 'ra') === 0);
+}
+
+// bool(true)
+// bool(false)
+// bool(false)
+```
+Basicamente, teríamos que verificar se a posicão encontrada era igual a `0`, pois como já tiro, essa função retorna um `int`, que representa a posição em que o termo foi encontrado na `string` alvo.
+
+Já na versão 8, ficaria dessa forma:
+
+```php
+foreach(['rato', 'barata', 'gato'] as $animal) {
+    var_dump(str_starts_with($animal, 'ra'));
+}
+
+// bool(true)
+// bool(false)
+// bool(false)
+```
+
+
+### Exemplo da função str_ends_with
+
+Nas versões anteriores do PHP, para verificar se uma string possuia determinada correspondência no final da mesma, poderíamos utilizar a função `substr_compare` combinado com `strlen`.
+
+Exemplo:
+
+```php
+$termo = 'to';
+foreach(['rato', 'barata', 'gato'] as $animal) {
+    var_dump(
+        substr_compare($animal, $termo, -strlen($termo)) === 0
+    );
+}
+
+// bool(true)
+// bool(false)
+// bool(true)
+```
+
+No PHP 8, ficaria assim:
+
+
+```php
+foreach(['rato', 'barata', 'gato'] as $animal) {
+    var_dump(str_ends_with($animal, 'to'));
+}
+
+// bool(true)
+// bool(false)
+// bool(true)
+```
