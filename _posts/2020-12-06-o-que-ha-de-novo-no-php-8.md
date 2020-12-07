@@ -125,10 +125,10 @@ try{
 }
 ```
 
-## Novas funções
+## Novas funções de verificações de string
 
-O PHP 8 introduziu algumas funções novas. Entre elas destaco
-`str_contains`, `str_starts_with`, `str_ends_with`, que são funções para verificação de strings presente em muitas linguagens, como Python e Javascript.
+O PHP 8.0 introduziu algumas funções novas de para verificação de `string`. Elas são
+`str_contains`, `str_starts_with`, `str_ends_with`, as quais são parecidas com as existentes em linguagens como Python e Javascript.
 
 ### Exemplo da função str_contains
 
