@@ -92,6 +92,16 @@ $resultado = match (true) {
 var_dump($resultado); // 'jovem adulto'
 ```
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4119206527475379"
+     data-ad-slot="7774041254"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Consistência para tipos de erros em funções internas do PHP
 
 Nas versões anteriores do PHP, geralmente, quando se passava um argumento com valor não esperado para uma função, o mesmo gerava um _"Warning"_.
