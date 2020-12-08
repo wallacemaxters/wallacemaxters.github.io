@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como criar um usuário através do Artisan
+title: Como criar um usuário através do Artisan?
 date: 2020-04-28T00:00:00.000-03:00
 categories:
 - laravel
@@ -11,11 +11,15 @@ excerpt: Nesse tutorial, estarei ensinando como criar um comando customizado par
   criação de um usuário, através da linha de comando.
 
 ---
+## O que é Artisan?
+
 O Artisan é a interface de linha de comando presente no Laravel. Ele fornece uma série de comandos úteis que podem ajudá-lo enquanto você constrói seu aplicativo.
 
 Nesse tutorial, estarei ensinando como criar um comando customizado para criação de um usuário, através da linha de comando.
 
-Para criar esse comando de uma maneira bem simples, primeiro é necessário navegador até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com ele, podemos definir comandos personalizados.
+## Criando um usuário com artisan
+
+Para criar esse comando de uma maneira bem simples, primeiro é necessário navegar até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com ele, podemos definir comandos personalizados.
 
 Vamos chamar o comando de `make:user` dentro do Artisan. Para isso podemos fazer da seguinte forma:
 
@@ -24,6 +28,7 @@ Artisan::command('make:user', function () {
      echo "Comando para criar usuário";
 });
 ```
+
 Para testar se tudo está correto, rode `php artisan make:user`.
 
 Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao rodar o comando acima.
@@ -63,9 +68,7 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
-
 Após rodar esse comando, o seu usuário será criado com sucesso.
-
 
 Uma dica extra é que você pode modificar o código para que um usuário não seja duplicado caso um e-mail já exista. Você pode trocar `create` por `firstOrNew`.
 
@@ -88,6 +91,5 @@ Artisan::command('make:user', function () {
 ```
 
 Dessa forma, o usuário não será duplicado, mas apenas atualizado caso novos dados sejam inseridos.
-
 
 Além disso, você pode costumizar esse comando para adicionar `api_token` ou outros campos extras em seu usuário, caso seja necessário.
