@@ -86,6 +86,10 @@ main {
 
 .box.post-page-box {
     padding: 3rem;
+
+    @media (max-width: #{$tablet}) {
+        padding: 1.5rem;
+    }
 }
 
 .box.post-author {
