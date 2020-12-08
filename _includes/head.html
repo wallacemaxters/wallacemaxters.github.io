@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Language" content="pt-br">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{%- if page.title -%}
-        {{ page.title | escape }}
+        {{ page.title | escape }} - {{ site.title | escape }}
         {%- else -%}
         {{ site.title | escape }} - Um blog sobre programação
         {%- endif -%}</title>
