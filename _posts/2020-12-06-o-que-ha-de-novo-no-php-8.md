@@ -1,7 +1,7 @@
 ---
 layout: post
 title: O que há de novo no PHP 8?
-date: 2020-12-06 01:00:00 -0200
+date: 2020-12-06T01:00:00.000-02:00
 categories:
 - PHP
 sitemap: true
@@ -10,7 +10,7 @@ excerpt: O  PHP 8 veio cheio de novidades! Ele contém muitos novos recursos e o
   Veja algumas novidades do PHP 8 nesse artigo.
 
 ---
-A versão 8.0 do PHP veio com bastante novidades.Esta versão contém muitos novos recursos e otimizações.
+A versão 8.0 do PHP veio com bastante novidades. Esta versão contém muitos novos recursos e otimizações.
 
 Vejamos alguns deles:
 
@@ -93,13 +93,13 @@ var_dump($resultado); // 'jovem adulto'
 ```
 
 <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4119206527475379"
-     data-ad-slot="7774041254"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+style="display:block"
+data-ad-client="ca-pub-4119206527475379"
+data-ad-slot="7774041254"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
 <script>
-(adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || \[\]).push({});
 </script>
 
 ## Consistência para tipos de erros em funções internas do PHP
@@ -142,7 +142,7 @@ O PHP 8.0 introduziu algumas funções novas de para verificação de `string`. 
 
 ### Exemplo da função str_contains
 
-Nas versões anteriores do PHP, para verificar se uma string possuia determinada correspondência, utilizávamos a função `strpos`. 
+Nas versões anteriores do PHP, para verificar se uma string possuia determinada correspondência, utilizávamos a função `strpos`.
 
 Veja:
 
@@ -173,7 +173,6 @@ foreach(['rato', 'barata', 'gato'] as $animal) {
 
 Nas versões anteriores do PHP, para verificar se uma string possuia determinada correspondência no iníco da mesma, também utilizávamos a função `strpos`.
 
-
 ```php
 foreach(['rato', 'barata', 'gato'] as $animal) {
     var_dump(strpos($animal, 'ra') === 0);
@@ -183,6 +182,7 @@ foreach(['rato', 'barata', 'gato'] as $animal) {
 // bool(false)
 // bool(false)
 ```
+
 Basicamente, teríamos que verificar se a posicão encontrada era igual a `0`, pois como já tiro, essa função retorna um `int`, que representa a posição em que o termo foi encontrado na `string` alvo.
 
 Já na versão 8, ficaria dessa forma:
@@ -196,7 +196,6 @@ foreach(['rato', 'barata', 'gato'] as $animal) {
 // bool(false)
 // bool(false)
 ```
-
 
 ### Exemplo da função str_ends_with
 
@@ -218,7 +217,6 @@ foreach(['rato', 'barata', 'gato'] as $animal) {
 ```
 
 No PHP 8, ficaria assim:
-
 
 ```php
 foreach(['rato', 'barata', 'gato'] as $animal) {
