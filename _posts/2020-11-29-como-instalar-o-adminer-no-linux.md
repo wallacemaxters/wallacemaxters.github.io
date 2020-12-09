@@ -103,7 +103,7 @@ sudo a2ensite adminer.conf
 Após fazer isso, teste se as configurações acima estão corretas, através do comando:
 
 ```bash
-sudo apache2ctl configteste
+sudo apache2ctl configtest
 ```
 
 Se tudo estiver correto, basta recarregar o Apache, para que as configurações tenham efeito.
