@@ -45,12 +45,11 @@ Para adicionar o nosso host no Apache, você precisa seguir os seguintes passos:
 
 ### Preparando a estrutura para rodar pelo Apache
 
-Crie a pasta `adminer` dentro de `/var/www`. 
+Crie a pasta `adminer` dentro de `/var/www`.
 
-```
-cd /var/www
-sudo mkdir adminer
-```
+    cd /var/www
+    sudo mkdir adminer
+
 ### Baixando o Adminer
 
 A ideia agora é que você coloque o script do Adminer dentro dessa pasta que criamos acima e renomeio-o para `index.php`. O caminho final deve ser `/var/www/adminer/index.php`.
@@ -70,10 +69,10 @@ Feito isso, vamos ao próximo passo.
 
 ### Criando o Virtualhost
 
-Vá para a pasta `/etc/apache2/sites-avaliables`. Nessa pasta fica os arquivo de Virtual Hosts utilizado pelo Apache2. 
+Vá para a pasta `/etc/apache2/sites-avaliable`. Nessa pasta fica os arquivo de Virtual Hosts utilizado pelo Apache2.
 
 ```bash
-cd /etc/apache2/sites-avaliables
+cd /etc/apache2/sites-avaliable
 ```
 
 Crie um arquivo chamado `adminer.conf` dentro da pasta que navegamos. Assim:
@@ -81,16 +80,15 @@ Crie um arquivo chamado `adminer.conf` dentro da pasta que navegamos. Assim:
 ```bash
 sudo nano adminer.conf
 ```
-Agora, vamos adicionar um conteúdo ao nosso arquivo. 
+
+Agora, vamos adicionar um conteúdo ao nosso arquivo.
 
 Faça assim:
 
-```
-<VirtualHost *:80>
-  ServerName adminer
-  DocumentRoot /var/www/adminer
-</VirtualHost>
-```
+    <VirtualHost *:80>
+      ServerName adminer
+      DocumentRoot /var/www/adminer
+    </VirtualHost>
 
 > O `ServerName` é o nome do host criado dentro de `/etc/hosts`. No nosso tutorial, estamos usando o host `adminer`, porém, como dito antes, você pode usar o que desejar. O `DocumentRoot` aponta para a pasta raiz da aplicação, que no nosso caso, é o `adminer`.
 
