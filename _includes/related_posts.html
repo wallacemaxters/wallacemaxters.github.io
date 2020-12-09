@@ -1,34 +1,37 @@
-{% assign maxRelated = 4 %}
-{% assign minCommonTags =  2 %}
-{% assign maxRelatedCounter = 0 %}
-{% assign sameTagCount = 0 %}
+{% assign max_posts = 4 %}
+{% assign min_tags_related = 1 %}
+{% assign post_count = 0 %}
+{% assign same_tag_count = 0 %}
 
 <h4 class="title is-5">Artigos relacionados</h4>
-
 <div class="columns is-multiline is-gapless">
     {% for post in site.posts %}
 
-    {% assign sameTagCount = 0 %}
-    {% assign commonTags = '' %}
+        {% assign same_tag_count = 0 %}
+        {% assign commonTags = '' %}
 
-    {% for category in post.categories %}
-        {% if post.url != page.url and page.categories contains category %}
-            {% assign sameTagCount = sameTagCount | plus: 1 %}
-        {% endif %}
-    {% endfor %}
+        {% for category in post.categories %}
+            {% if post.url != page.url and page.categories contains category %}
+                {% assign same_tag_count = same_tag_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
 
-        {% if sameTagCount >= minCommonTags %}
-            <div class="column is-12-mobile is-3-desktop">
-                <a href="{{ post.url }}" class="related-post-card" style='background-image: url("{{ post.image }}");' data-same-tag-count="{{ sameTagCount }}">
+        {% if same_tag_count >= min_tags_related %}
+            <div class="column is-12-mobile is-3-desktop" tag-count="{{ same_tag_count }}">
+                <a href="{{ post.url }}" class="related-post-card" style='background-image: url("{{ post.image }}");'>
                     <div class="overlay">
                         <h5>{{ post.title }}</h5>
                     </div>
                 </a>
             </div>
-            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-            {% if maxRelatedCounter >= maxRelated %}
+            {% assign post_count = post_count | plus: 1 %}
+            {% if post_count >= max_posts %}
                 {% break %}
             {% endif %}
         {% endif %}
     {% endfor %}
 </div>
+
+{% if post_count == 0 %}
+<div class="notification is-primary">Nenhum artigo relacionado encontrado</div>
+{% endif %}
