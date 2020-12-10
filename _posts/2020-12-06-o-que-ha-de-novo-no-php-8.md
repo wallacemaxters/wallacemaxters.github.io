@@ -1,6 +1,6 @@
 ---
 layout: post
-title: O que há de novo no PHP 8?
+title: As novidades do PHP 8
 date: 2020-12-06T01:00:00.000-02:00
 categories:
 - PHP
