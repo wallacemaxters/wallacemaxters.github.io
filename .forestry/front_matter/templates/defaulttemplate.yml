@@ -61,3 +61,4 @@ pages:
 - _posts/2020-12-06-o-que-ha-de-novo-no-php-8.md
 - _posts/2020-12-24-como-definir-a-porta-usada-no-php-artisan-serve.md
 - _posts/como-detectar-se-um-formato-de-video-e-suportado-ou-nao-no-navegador-atraves-do-javascript.md
+- _posts/como-resolver-o-problema-de-permissao-ao-rodar-o-artisan-na-porta-80.md
