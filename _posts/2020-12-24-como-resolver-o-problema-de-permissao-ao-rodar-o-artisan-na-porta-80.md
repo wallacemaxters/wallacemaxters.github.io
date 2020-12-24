@@ -9,7 +9,8 @@ categories:
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: O linux não permite a execução do artisan serve em algumas portas com valores
-  mais baixos, como a porta 80, por exemplo. Aprenda a solucionar
+  abaixo de 1024, como no caso da famosa porta 80, por exemplo. Aprenda a solucionar
+  esse problema.
 
 ---
 ## Introdução
