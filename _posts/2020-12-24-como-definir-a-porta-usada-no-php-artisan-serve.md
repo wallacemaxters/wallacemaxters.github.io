@@ -25,6 +25,20 @@ php artisan serve --port=9000
 
 Ao fazer isso, a sua aplicação estará disponível em `http://localhost:9000`.
 
+### Artisan Serve e a Porta 80
+
+Se você for usuário de uma distribuição Linux e tentar usar a opção `--port`, em portas com valores abaixo de `1024`, você precisa adicionar `sudo` para executar o comando.  
+
+Por exemplo, se rodar o `artisan serve` na porta 80, precisa adicionar o `sudo`.
+
+Veja:
+
+```bash
+sudo php artisan serve --port=80
+```
+
+Se você não utilizar o `sudo`, poderá receber um erro de permissão, conforme explicado no artigo [Como resolver o problema de permissão ao rodar o artisan na porta 80](/blog/2020/12/24/como-resolver-o-problema-de-permissao-ao-rodar-o-artisan-na-porta-80).
+
 ### Outras dicas
 
 Se quer saber outras opções disponíveis no comando `artisan serve`, você pode ler [Truques com o comando PHP ARTISAN SERVE](/blog/2019/08/17/truques-com-o-comando-php-artisan-serve) publicado aqui.
