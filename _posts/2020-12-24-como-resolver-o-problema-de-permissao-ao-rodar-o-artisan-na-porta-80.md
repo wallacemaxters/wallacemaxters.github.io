@@ -5,6 +5,7 @@ date: 2020-12-24 15:05:00 -0200
 categories:
 - laravel
 - linux
+- php
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: O linux não permite a execução do artisan serve em algumas portas com valores
