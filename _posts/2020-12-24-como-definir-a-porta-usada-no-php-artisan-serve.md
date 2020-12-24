@@ -4,6 +4,7 @@ title: Como definir a porta usada no php artisan serve?
 date: 2020-12-24 01:00:00 -0200
 categories:
 - laravel
+- php
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: Aprenda como rodar o php artisan serve em uma porta específica.
