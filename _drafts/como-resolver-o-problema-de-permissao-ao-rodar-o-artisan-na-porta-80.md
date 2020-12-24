@@ -35,4 +35,8 @@ Assim:
 
 ```bash
 sudo php artisan serve --port=80
-``
+```
+
+### Outras dicas
+
+Existem algumas opções disponíveis ao rodar o comando `artisan serve`. Você pode conferir alguns truques [aqui](/blog/2019/08/17/truques-com-o-comando-php-artisan-serve).
