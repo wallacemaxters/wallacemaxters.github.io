@@ -4,21 +4,21 @@ image: /assets/img/bg.jpg
 
 ---
 
-<h4 class="title is-5">Publicações recentes</h4>
+<h3 class="title is-5">Publicações recentes</h3>
 <div class="columns is-multiline">
     {% for post in site.posts %}
         <div class="column is-12-mobile is-6-tablet is-4-desktop">
              <div class="card post-card">
                 <header class="card-header">
                     <p class="card-header-title post-card-title">
-                        <a class="title is-6" href="{{ post.url }}">
+                        <a class="title is-6" href="{{ post.url }}" title="{{ post.title | strip_html | escape }}">
                            {{ post.title }}
                         </a>
                     </p>
                 </header>
                 <a class="card-image" href="{{ post.url }}">
                     <figure class="image is-4by3 post-card-cover">
-                        <img height="280" src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
+                        <img loading="lazy" height="280" src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
                     </figure>
                 </a>
                 <div class="card-content post-card-content">
