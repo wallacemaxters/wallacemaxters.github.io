@@ -6,7 +6,7 @@ categories:
 - laravel
 sitemap: true
 image: "/uploads/problemas-dev-programcao.jpg"
-excerpt: ''
+excerpt: 'Existem vários erros que podem acontecer numa aplicação Laravel, que simplesmente podem se repetir várias vezes, sem você descobrir a causa logo de cara. Descubra aqui a solução para alguns dos erros mais comuns.'
 
 ---
 Eu já vi vários erros acontecerem no Laravel que simplesmente gastariam um bom tempo do desenvolvedor que está iniciando com o framework ao tentar descobrir o motivo. Vou listar abaixo um dos mais comuns e as suas respectivas soluções para poder dar um auxílio a respeito deles.
