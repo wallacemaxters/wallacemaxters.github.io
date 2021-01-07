@@ -50,7 +50,7 @@ O resultado será:
     pasta-raiz/pasta/subpasta/1.jpg
     pasta-raiz/pasta/1.jpg
 
-Note que o `RecursiveDirectoryIterator`, além do caminho da pasta que desejamos listar, passamos no segundo argumento uma flag chamada `FilesystemIterator::SKIP_DOTS`. Essa flag faz com retornos como `.` e `..` não pulem.
+Note que o `RecursiveDirectoryIterator`, além do caminho da pasta que desejamos listar, passamos no segundo argumento uma flag chamada `FilesystemIterator::SKIP_DOTS`. Essa flag faz com retornos como `.` e `..` sejam ignorados, já que por padrão também são listados pelo iterador.
 
 ## Como ordenar os arquivos pelo nome ?
 
