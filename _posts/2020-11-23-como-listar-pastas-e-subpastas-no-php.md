@@ -31,7 +31,7 @@ $dir = __DIR__ . '/pasta';
 
 $directory_iterator = new RecursiveDirectoryIterator(
 	$dir, 
-    RecursiveDirectoryIterator::SKIP_DOTS
+    FilesystemIterator::SKIP_DOTS
 );
 
 $iterator = new RecursiveIteratorIterator($directory_iterator);
@@ -50,6 +50,8 @@ O resultado será:
     pasta-raiz/pasta/subpasta/1.jpg
     pasta-raiz/pasta/1.jpg
 
+Note que o `RecursiveDirectoryIterator`, além do caminho da pasta que desejamos listar, passamos no segundo argumento uma flag chamada `FilesystemIterator::SKIP_DOTS`. Essa flag faz com retornos como `.` e `..` não pulem.
+
 ## Como ordenar os arquivos pelo nome ?
 
 Como pode ser notado acima, os iteradores de sistema de arquivos no PHP não retornam as pastas ordenadas pelo nome. Mas podemos contornar isso. Basta convertermos a nossa instância de `RecursiveIteratorIterator` para um `array` e aplicamos a função `ksort`.
@@ -62,7 +64,7 @@ $dir = __DIR__ . '/pasta';
 $iterator = new RecursiveIteratorIterator(
   new RecursiveDirectoryIterator(
       $dir, 
-      RecursiveDirectoryIterator::SKIP_DOTS
+      FilesystemIterator::SKIP_DOTS
   )
 );
 
@@ -70,7 +72,7 @@ $array = iterator_to_array($iterator);
 
 ksort($array);
 
-foreach ($iterator as $file) {
+foreach ($array as $file) {
   echo $file, "\n";
 }
 ```
