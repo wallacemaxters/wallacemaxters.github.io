@@ -22,7 +22,6 @@ Suponha que você tenha a seguinte estrutura:
           1.jpg
           2.jpg
           3.jpg
-          
 
 Ao rodar o código abaixo:
 
@@ -50,3 +49,31 @@ O resultado será:
     pasta-raiz/pasta/subpasta/2.jpg
     pasta-raiz/pasta/subpasta/1.jpg
     pasta-raiz/pasta/1.jpg
+
+## Como ordenar os arquivos pelo nome ?
+
+Como pode ser notado acima, os iteradores de sistema de arquivos no PHP não retornam as pastas ordenadas pelo nome. Mas podemos contornar isso. Basta convertermos a nossa instância de `RecursiveIteratorIterator` para um `array` e aplicamos a função `ksort`.
+
+Veja:
+
+```php
+$dir = __DIR__ . '/pasta';
+
+$iterator = new RecursiveIteratorIterator(
+  new RecursiveDirectoryIterator(
+      $dir, 
+      RecursiveDirectoryIterator::SKIP_DOTS
+  )
+);
+
+$array = iterator_to_array($iterator);
+
+ksort($array);
+
+foreach ($iterator as $file) {
+  echo $file, "\n";
+}
+```
+
+> **Nota** : Os iteradores em PHP têm o método `key`, que retornam a chave da iteração atual no `foreach`. No nosso exemplo,  por padrão, a chave é o caminho completo do arquivo. Para alterar o comportamento, podemos utilizar as flags `FilesystemIterator::KEY_AS_PATHNAME` ou
+> `FilesystemIterator::KEY_AS_FILENAME` no segundo argumento para `RecursiveDirectoryIterator`.
