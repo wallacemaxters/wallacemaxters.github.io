@@ -9,7 +9,11 @@ image: "/uploads/covers/php_pastas.png"
 excerpt: Aprenda como listar pastas e subpastas no PHP
 
 ---
-Para listar pastas e subpastas no PHP, você pode utilizar simplesmente a classe `RecursiveDirectoryIterator`.  Essa classe provê a capacidade de listar recursivamente pastas e arquivos de uma determinado diretório.
+O PHP possui diversas classes padrões, dentre elas os iteradores, que possuem algumas finalidades muito úteis. Uma dela são os iteradores de diretório de arquivos do PHP. Temos opções como `DirectoryIterator`, `FilesystemIterator` e `RecursiveDirectoryIterator`. 
+
+Neste tutorial, vamos utilizar a classe `RecursiveDirectoryIterator`.  Essa classe fornece uma interface simples para visualização de conteúdo de diretórios de arquivos recursivamente. Isso porque ela provê a habilidade de listar tanto os arquivos de uma pasta tanto das subpastas da mesma.
+
+## Listando os pastas e subpastas com seus arquivos
 
 Suponha que você tenha a seguinte estrutura:
 
@@ -23,7 +27,10 @@ Suponha que você tenha a seguinte estrutura:
           2.jpg
           3.jpg
 
-Ao rodar o código abaixo:
+
+Com esse pequeno código abaixo, podemos listar todos as pastas e subpastas, com seus arquivos.
+
+Veja:
 
 ```php
 
@@ -41,7 +48,7 @@ foreach ($iterator as $file) {
 }
 ```
 
-O resultado será:
+A saída do script acima é a seguinte:
 
     pasta-raiz/pasta/3.jpg
     pasta-raiz/pasta/2.jpg
@@ -49,8 +56,13 @@ O resultado será:
     pasta-raiz/pasta/subpasta/2.jpg
     pasta-raiz/pasta/subpasta/1.jpg
     pasta-raiz/pasta/1.jpg
+    
+### Explicando o código
 
 Note que o `RecursiveDirectoryIterator`, além do caminho da pasta que desejamos listar, passamos no segundo argumento uma flag chamada `FilesystemIterator::SKIP_DOTS`. Essa flag faz com retornos como `.` e `..` sejam ignorados, já que por padrão também são listados pelo iterador.
+
+Além disso, utilizamos a classe `RecursiveIteratorIterator` e passamos para ela a instância de `RecursiveDirectoryIterator`. Isso porque `RecursiveIteratorIterator` precisa ser utilizado para percorrer iteratores recursivos. 
+
 
 ## Como ordenar os arquivos pelo nome ?
 
