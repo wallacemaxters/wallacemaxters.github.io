@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como listar pastas e subpastas no PHP?
+title: Listando arquivos de uma pasta com PHP
 date: 2020-11-23T14:31:00.000-03:00
 categories:
 - PHP
