@@ -138,3 +138,7 @@ var_dump($resultado);
 ```
 
 > **Nota:** a função `http_build_query` transforma um `array` em uma `string` contendo um formato que geralmente é utilizado em *query strings* ou corpo de formulários.
+
+## Outras finalidades de file_get_contents
+
+Além do citado, a função `file_get_contents` pode fazer outras coisas, pois a mesma suporta vários [protocolos e wrappers](https://www.php.net/manual/pt_BR/wrappers.php).
