@@ -86,7 +86,7 @@ Exemplo mínimo:
 
 #### Enviando cabeçalho e corpo em uma requisição
 
-Além disso, podemos enviar cabeçalhos e o corpo na requisição. A opções de contexto para fazer isso são, respectivamente, `header` e `content`. Em `header`, podemos usar um `array` com a lista de cabeçalhos que serão enviados. Em `content` é necessário informar uma `string`.
+Além disso, podemos enviar cabeçalhos e o corpo na requisição. As opções de contexto para fazer isso são, respectivamente, `header` e `content`. Em `header`, podemos usar um `array` com a lista de cabeçalhos que serão enviados. Em `content` é necessário informar uma `string`.
 
 ##### Enviando JSON
 
