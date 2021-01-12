@@ -47,7 +47,6 @@ pages:
 - _posts/2019-07-17-não-confunda-os-métodos-da-collection-com-os-do-eloquent.md
 - _posts/2020-04-28-como-criar-um-usuário-através-do-artisan.md
 - _posts/2020-05-18-como-redimensionar-uma-imagem-com-canvas.md
-- _posts/2020-05-31-como-capturar-imagem-da-webcam-com-canvas.md
 - _posts/2020-08-25-como-visualizar-um-log-do-laravel-em-tempo-real.md
 - _posts/2020-10-16-exemplos-de-file_get_contents-no-php.md
 - _posts/2020-11-09-criando-filtros-de-pesquisa-por-intervalo-de-datas-no-laravel.md
@@ -61,5 +60,6 @@ pages:
 - _posts/2020-12-06-o-que-ha-de-novo-no-php-8.md
 - _posts/2020-12-24-como-definir-a-porta-usada-no-php-artisan-serve.md
 - _posts/2020-12-24-como-resolver-o-problema-de-permissao-ao-rodar-o-artisan-na-porta-80.md
+- _posts/2021-01-12-como-capturar-imagem-da-webcam-com-canvas.md
 - _posts/2021-01-12-como-configurar-a-variavel-path.md
 - _posts/como-detectar-se-um-formato-de-video-e-suportado-ou-nao-no-navegador-atraves-do-javascript.md
