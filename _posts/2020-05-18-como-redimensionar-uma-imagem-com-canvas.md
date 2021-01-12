@@ -11,11 +11,21 @@ image: "/uploads/covers/canvas_html5.png"
 excerpt: 'HTML5: Aprenda a redimensionar uma imagem com Javascript e a tag canvas.'
 
 ---
-Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através da tag `<canvas>`.
+Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através do Javascript. 
 
-Para iniciar, primeiramente, eu preferi criar uma função que retorne uma `Promise`, que retorna a tag `img` com a imagem já carregada. Precisamos que essa operação seja feita, para podermos obter valores como largura e altura da imagem que vamos redimensionar.
+## tag <canvas>
 
-Esse é o código.
+Utilizaremos a tag `<canvas>`, que está disponível no HTML5. De maneira resumida, a tag `<canvas>` permite desenharmos algo nela através do Javascript. Ela também permite você exporte o desenho para o formato de imagem. E é isso que vamos utilizar para redimensionar uma imagem.
+
+Para facilitar as coisas, neste tutorial,  vamos criar algumas funções, separando melhor o código, para entendermos melhor os passos que precisamos para efetuar essa operação.
+
+## Criando a função para carregar a imagem
+
+Para iniciar,  vamos criar uma função que carregue a imagem desejada.  Ela retorna uma `Promise`, que devole uma tag `<img>`  já carregada.  
+
+A imagem precisa estar completamente carregada para que possamos passar ao próximo passo, pois só assim conseguimos obter valores de largura e altura da mesma. Usaremos a altura e largura para redimensionar a imagem posteriormente.
+
+Código da função:
 
 ```javascript
 function loadImage(img, src) {
@@ -29,13 +39,16 @@ function loadImage(img, src) {
 }
 ```
 
-Em seguida, vamos criar a função que redimensionará a imagem. Usamos internamente a função `loadImage` para carregar a imagem que queremos redimensionar. Em seguida, usamos o segundo parâmetro para podemos definir o novo tamanho que queremos para a imagem.
+## Criando a função de redimensionamento da imagem
 
-Eu criei uma lógica que faz com que a imagem seja escalada automaticamente para o novo tamanho, caso seja informado apenas a altura ou apenas a largura.
+Em seguida,  vamos criar a função que redimensionará a imagem. Usamos internamente a função `loadImage` para carregar a imagem que queremos redimensionar. Em seguida, usamos o segundo parâmetro para podemos definir o novo tamanho que queremos para a imagem. Este parâmetro vai ser um `Object`, que recebe `height` e/ou `width`.
+
+Internamente, a função faz com que a imagem seja escalada automaticamente para o novo tamanho, caso seja informado apenas a altura ou apenas a largura para a nova imagem.
 
 Código:
 
 ```javascript
+
 function resizeImage(src, options) {
 
     return loadImage(document.createElement('img'), src).then(function (image) {
@@ -60,6 +73,8 @@ function resizeImage(src, options) {
 ```
 
 Mais uma vez preferi retornar uma `Promise`. Basicamente, quando toda operação for concluída, retornaremos um `Blob`. O `Blob` tornará prático tanto o upload da imagem redimensionada, quanto a exibição da mesma no cliente.
+
+## Redimensionando a imagem
 
 No nosso exemplo, vamos utilizar um `input[type=file]` para carregar uma imagem e, em seguida, exibir tanto a imagem original como a redimensionada.
 
