@@ -5,7 +5,7 @@ date: 2020-11-18T01:00:00.000-02:00
 categories:
 - lumen
 - PHP
-sitemap: false
+sitemap: true
 image: "/uploads/lumen-2.png"
 excerpt: O comando "php storage link" não existe no micro framework Lumen? Aprenda
   a resolver esse problema!
