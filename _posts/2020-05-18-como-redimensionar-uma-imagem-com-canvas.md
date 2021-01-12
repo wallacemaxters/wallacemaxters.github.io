@@ -11,7 +11,7 @@ image: "/uploads/covers/canvas_html5.png"
 excerpt: ''
 
 ---
-Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através do Canvas.
+Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através da tag `<canvas>`
 
 Para iniciar, primeiramente, eu preferi criar uma função que retorne uma `Promise`, que retorna a tag `img` com a imagem já carregada. Precisamos que essa operação seja feita, para podermos obter valores como largura e altura da imagem que vamos redimensionar.
 
