@@ -34,11 +34,11 @@ navigator.mediaDevices.getUserMedia({video: true})
 
 Se tudo ocorrer corretamente acima, teremos acesso à variável `mediaStream`. É através dela que poderemos capturar fotos da webcam. 
 
-## Previsualizando a imagem capturada com Canvas
+## Pré-visualização da webcam
 
-Precisamos agora que o usuário tenha uma pré-visualização da sua imagem. Para isso vamos utilizar uma tag `video`.
+Precisamos agora que o usuário tenha uma pré-visualização da captura da webcam. Para isso, vamos utilizar uma tag `<video>`.
 
-Basta adicionar ao código:
+Código:
 
 ```html
 <video id="video"></video>
@@ -57,11 +57,15 @@ navigator.mediaDevices.getUserMedia({video: true})
 })
 ```
 
-Com isso, já podemos ver a imagem da nossa webcam sendo visualizada na tag `video`.
+Com isso, já podemos ter a pré-visualização da captura nossa webcam.
 
-O próximo passo agora é fazer a captura do frame que precisamos para um `canvas`.
+## Capturando a imagem da webcam com a tag Canvas
 
-Vamos adicionar um canvas e um botão ao nosso código para fazermos isso, da seguinte forma:
+O próximo passo agora é passar a imagem que vemos na webcam e transformá-la em uma imagem.  Para fazer isso,  precisamos capturar um frame da tag `<video>` acima e enviarmos para a tag  `<canvas>`.
+
+No nosso código abaixo, além da tag `canvas`, vamos adicionar também um `button`. Quando clicarmos nesse botão, a imagem da webcam deverá ser enviada para o `canvas`.
+
+Veja:
 
 ```html
 <video id='video'></video>
@@ -69,33 +73,36 @@ Vamos adicionar um canvas e um botão ao nosso código para fazermos isso, da se
 <button id='capture'>Capturar</button>
 ```
 
-Em seguida, vamos atribuir a função do click para `#capture` preencher o nosso Canvas.
-
 ```javascript
-
 document.querySelector('#capture').addEventListener('click', function (e) {
- 
-  var canvas = document.querySelector("#canvas");
-  
+  var canvas = document.querySelector("#canvas");  
   canvas.height = video.videoHeight;
   canvas.width = video.videoWidth;
-  
   var context = canvas.getContext('2d');
-  
   context.drawImage(video, 0, 0)
 })
 ```
 
-No código acima, nós primeiro definimos o tamhanho do canvas para ficar exatamente do mesmo tamanho do vídeo. Em seguida, utilizamos o context para desenhar a imagem capturada do vídeo. Toda vez que `#capture` é clicado, o frame específico será aplicado ao canvas.
+### Explicando o código
 
-Para você ter acesso à imagem do canvas, basta utilizar a função `toBlob` ou `toDataURL`.
+No código acima, primeiro definimos o tamanho do `canvas` para ficar exatamente do mesmo tamanho do vídeo. Em seguida, utilizamos  `context` para desenhar a imagem capturada do vídeo. Toda vez que `button#capture` é clicado, o frame específico da  da webcam será aplicado ao `canvas`
 
-Por exemplo, se quisermos fazer o upload do frame capturado, podemos simplesmente adicionar usar `toBlob` para adicionar o `Blob` a um `FormData`.
+## Convertendo o Canvas para Imagem
+
+Para você ter acesso à imagem do `canvas`, basta utilizar os métodos `Canvas.toBlob` ou `Canvas.toDataURL`.  A primeira converte o desenho do `<canvas>` em um [Blob](https://developer.mozilla.org/pt-BR/docs/Web/API/Blob "BLOB - Documentação do MDN"). Já a segunda, converte para um [Data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs "Data URI - Documentação da MDN").
+
+No nosso caso, vamos usar `toBlob`. Isso porque usaremos o mesmo para fazer o upoad da imagem.
+
+
+### Exemplo de upload
+
+Se quisermos fazer o upload da imagem capturada pela webcam, podemos simplesmente adicionar usar `toBlob` e adicionar o `Blob` retornado em um `FormData`.
+
+O código é bem simples. Vamos adicionar um botão que faça o upload da imagem.
 
 ```html
 <button id="upload">Upload</button>
 ```
-
 ```javascript
 document.querySelector('#upload').addEventListener('click', function (e) {
  
@@ -117,6 +124,6 @@ document.querySelector('#upload').addEventListener('click', function (e) {
 })
 ```
 
-> **NOTA**: Observe que no nosso exemplo, utilizamos no segundo parâmetro de `toBlob` o valor `image/jpeg`. Isso porque preferencialmente preferi converter o resultado do `canvas` para JPEG. Caso queira usar outro formato, é possível informar o MIME desejado, como `image/png` e afins.
+> **NOTA**: Observe que no nosso exemplo, utilizamos no segundo parâmetro de `toBlob` o valor `image/jpeg`. Isso porque preferencialmente preferi converter o resultado do `canvas` para JPEG. Caso queira usar outro formato, é possível informar o MIME desejado, como `image/png` e afins. 
 
 Veja funcionando no [Codepen](https://codepen.io/wallacemaxters/pen/XWmvLXE)
