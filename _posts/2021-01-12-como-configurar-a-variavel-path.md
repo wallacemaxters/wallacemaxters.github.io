@@ -12,7 +12,7 @@ excerpt: Nesse tutorial, vamos aprender a configurar a variável de ambiente PAT
 ---
 Nesse tutorial, vamos aprender a configurar a variável de ambiente `PATH` para adicionar o caminho de seus excetuáveis. Mas primeiro vamos aprender algumas coisas básicas sobre esta variável de ambiente e também sobre executáveis.
 
-## Onde ficam os executáveis ou comandos usados no Terminal?
+## Onde ficam os executáveis usados no Terminal?
 
 Você já deve ter percebido que no Terminal temos vários comandos à disposição. E já deve ter percebido também que alguns deles só ficam disponíveis após instalar determinado pacote. O Linux armazena esses executáveis em alguma pasta específica do sistema operacional. Você pode verificar o diretório de origem de um executável qualquer rodando o comando `which`.
 
@@ -24,7 +24,7 @@ which echo
 ```
 
 No caso acima, vemos que o executável `echo` está localizado na pasta `/usrb/bin/`.
-Sabemos então que os executáveis sempre vêm de algum diretório. 
+Sabemos então que os executáveis sempre vêm de algum diretório.
 
 A questão é:  O que faz com que possamos executá-los usando apenas o nome, ao invés de ter que digitar o caminho completo?
 
