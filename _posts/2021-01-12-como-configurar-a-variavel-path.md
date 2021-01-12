@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como configurar a variável PATH?
-date: 2021-01-12 01:00:00 -0200
+date: 2021-01-12 01:26:00 -0200
 categories:
 - linux
 sitemap: true
