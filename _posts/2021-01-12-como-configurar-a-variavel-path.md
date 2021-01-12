@@ -83,4 +83,4 @@ hello
 
 Se tudo ocorreu bem, significa que a sua pasta foi adicionada com sucesso na variável de ambiente `PATH`.
 
-> **Nota** : Para que seu script seja executável na linha de comando, você precisa dar a permissão de execução para o mesmo. Você pode fazer isso através do comando `chmod +x script`.
+> **Nota** : Para que seu script seja executável na linha de comando, você precisa dar a permissão de execução para o mesmo. Você pode fazer isso através do comando `chmod +x /caminho/para/seu/script`.
