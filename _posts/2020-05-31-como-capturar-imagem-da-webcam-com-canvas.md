@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'HTML5: Como capturar imagem da webcam com Javascript?'
-date: 2020-05-31T14:44:00.000-03:00
+date: 2021-01-12 14:08:00 -0200
 categories:
 - imagem
 - javascript
