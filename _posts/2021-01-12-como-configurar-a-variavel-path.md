@@ -6,13 +6,11 @@ categories:
 - linux
 sitemap: true
 image: "/uploads/linux-terminal.png"
-excerpt: O PATH é uma variável de sistema usada no Linux para localizar executáveis
-  necessários da linha de comandos. Quando precisamos de adicionar um executável ou
-  script presente em uma determinada pasta, precisamos adicionar esse diretório nesta
-  variável.
+excerpt: Nesse tutorial, vamos aprender a configurar a variável de ambiente PATH para
+  adicionar o caminho de seus scripts ou executáveis.
 
 ---
-Nesse tutorial, vamos aprender a configurar a variável de ambiente `PATH` para adicionar o caminho de seus exectuáveis. Mas primeiro vamos aprender algumas coisas básicas sobre esta variável de ambiente e também sobre executáveis.
+Nesse tutorial, vamos aprender a configurar a variável de ambiente `PATH` para adicionar o caminho de seus excetuáveis. Mas primeiro vamos aprender algumas coisas básicas sobre esta variável de ambiente e também sobre executáveis.
 
 ## Onde ficam os executáveis ou comandos usados no Terminal?
 
