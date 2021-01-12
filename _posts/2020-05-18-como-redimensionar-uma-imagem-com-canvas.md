@@ -11,9 +11,9 @@ image: "/uploads/covers/canvas_html5.png"
 excerpt: 'HTML5: Aprenda a redimensionar uma imagem com Javascript e a tag canvas.'
 
 ---
-Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através do Javascript. 
+Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através do Javascript.
 
-## A tag \<canvas\>
+## A tag <canvas/>
 
 Utilizaremos a tag `<canvas>`, que está disponível no HTML5. De maneira resumida, a tag `<canvas>` permite desenharmos algo nela através do Javascript. Ela também permite você exporte o desenho para o formato de imagem. E é isso que vamos utilizar para redimensionar uma imagem.
 
@@ -21,7 +21,7 @@ Para facilitar as coisas, neste tutorial,  vamos criar algumas funções, separa
 
 ## Criando a função para carregar a imagem
 
-Para iniciar,  vamos criar uma função que carregue a imagem desejada.  Ela retorna uma `Promise`, que devole uma tag `<img>`  já carregada.  
+Para iniciar,  vamos criar uma função que carregue a imagem desejada.  Ela retorna uma `Promise`, que devole uma tag `<img>`  já carregada.
 
 A imagem precisa estar completamente carregada para que possamos passar ao próximo passo, pois só assim conseguimos obter valores de largura e altura da mesma. Usaremos a altura e largura para redimensionar a imagem posteriormente.
 
