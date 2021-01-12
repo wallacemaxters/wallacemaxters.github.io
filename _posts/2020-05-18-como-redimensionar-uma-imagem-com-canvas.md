@@ -11,7 +11,7 @@ image: "/uploads/covers/canvas_html5.png"
 excerpt: ''
 
 ---
-Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através da tag `<canvas>`
+Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através da tag `<canvas>`.
 
 Para iniciar, primeiramente, eu preferi criar uma função que retorne uma `Promise`, que retorna a tag `img` com a imagem já carregada. Precisamos que essa operação seja feita, para podermos obter valores como largura e altura da imagem que vamos redimensionar.
 
@@ -29,11 +29,11 @@ function loadImage(img, src) {
 }
 ```
 
-Em seguida, vamos criar a função que redimensionará a imagem. Usamos internamente a função `loadImage` para carregar a imagem que queremos redimensionar em questão. Em seguida, usamos o segundo parâmetro para podemos definir o novo tamanho que queremos para a imagem.
+Em seguida, vamos criar a função que redimensionará a imagem. Usamos internamente a função `loadImage` para carregar a imagem que queremos redimensionar. Em seguida, usamos o segundo parâmetro para podemos definir o novo tamanho que queremos para a imagem.
 
-Eu criei uma lógica que faz com que a imagem seja escalada automaticamente para o novo tamanho, caso seja informado apenas a altura ou apenas a largura, por exemplo.
+Eu criei uma lógica que faz com que a imagem seja escalada automaticamente para o novo tamanho, caso seja informado apenas a altura ou apenas a largura.
 
-O código:
+Código:
 
 ```javascript
 function resizeImage(src, options) {
@@ -66,17 +66,17 @@ No nosso exemplo, vamos utilizar um `input[type=file]` para carregar uma imagem 
 Veja o código:
 
 ```html
-<input type="file" id="file">
+<input type="file" id="file" />
 
 <div>
   <h4>Original</h4>
-  <img id="original" alt="">
+  <img id="original">
 </div>
 
 
 <div>
   <h4>Resized</h4>
-  <img id="resized" alt="">
+  <img id="resized">
 </div>
 ```
 
@@ -101,6 +101,8 @@ window.addEventListener('load', function () {
 
 No exemplo acima, usamos a função `URL.createObjectURL`. Essa função faz com que o `Blob` tenha uma URL temporária, contendo a nossa  imagem carregada na memória.
 
-Ao selecionar a imagem no `input[type=file]`, podemos ver em seguida como ficou o resultado da nossa função:
+Ao selecionar a imagem no `input[type=file]`, podemos ver em seguida a imagem original e a imagem redimensionada.
 
-![](/uploads/captura-de-tela-de-2020-05-30-16-48-13.png)
+Veja:
+
+![Como redimensionar uma imagem com Javascript](/uploads/captura-de-tela-de-2020-05-30-16-48-13.png)
