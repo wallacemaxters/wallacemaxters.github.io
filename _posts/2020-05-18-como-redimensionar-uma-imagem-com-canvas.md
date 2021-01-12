@@ -8,7 +8,7 @@ categories:
 - canvas
 sitemap: true
 image: "/uploads/covers/canvas_html5.png"
-excerpt: Aprenda a redimensionar uma imagem com Javascript e a tag canvas.
+excerpt: 'HTML5: Aprenda a redimensionar uma imagem com Javascript e a tag canvas.'
 
 ---
 Nesse tutorial, estarei ensinando uma maneira de redimensionar a imagem através da tag `<canvas>`.
