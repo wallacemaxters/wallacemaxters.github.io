@@ -9,21 +9,25 @@ image: "/uploads/covers/php.png"
 excerpt: ''
 
 ---
-
-
-No PHP, podemos usar a função `session_set_cookie_params`. Ela define parâmetros do cookie utilizado na sessão. 
+No PHP, podemos usar a função `session_set_cookie_params`. Ela define parâmetros do cookie utilizado na sessão.
 Essa função precisa ser chamada antes que `session_start()` seja chamada.
 
 Por exemplo, se você quiser definir que a sessão dure apenas 10 minutos, você pode fazer da seguinte forma:
 
 ```php
 $lifetime = 10 * 60;
-
 session_set_cookie_params($lifetime);
-
 session_start();
- ```
- 
- Se desejar usar outros valores, sugiro utilizar a função `strtotime`, definindo `0` no segundo argumento. Ela facilita bastante a definição de tempo.
- 
- 
+```
+
+Se desejar usar outros valores, sugiro utilizar a função `strtotime`, definindo `0` no segundo argumento. Ela facilita bastante a definição do tempo da sessão.
+
+Por exemplo, vamos definir que a validade do cookie da sessão abaixo é limitado a 40 minutos.
+
+Podemos fazer assim:
+
+```php
+$lifetime = strtotime('+40 minutes', 0);
+session_set_cookie_params($lifetime);
+session_start();
+```
