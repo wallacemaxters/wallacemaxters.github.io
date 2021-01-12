@@ -1,14 +1,15 @@
 ---
 layout: post
-title: 'HTML5: Como capturar imagem da webcam com Canvas?'
-date: 2020-05-31 14:44:00 -0300
+title: 'HTML5: Como capturar imagem da webcam com Javascript?'
+date: 2020-05-31T14:44:00.000-03:00
 categories:
-- canvas
 - imagem
 - javascript
+- canvas
 sitemap: true
 image: "/uploads/covers/canvas_webcam_html5.png"
-excerpt: "Nesse tutorial estaremos aprendendo como capturar uma imagem de uma webcam, através do Canvas"
+excerpt: Nesse tutorial estaremos aprendendo como capturar uma imagem de uma webcam,
+  através do Javascript.
 
 ---
 Para acessar a webcam, precisamos utilizar a função `navigator.mediaDevices.getUserMedia`. Essa função retorna uma `Promise`, contendo ou `MediaStream`. Com essa função podemos acessar o áudio ou vídeo do computador do usuário.
