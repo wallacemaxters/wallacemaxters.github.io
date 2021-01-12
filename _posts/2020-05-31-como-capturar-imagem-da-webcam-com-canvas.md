@@ -8,8 +8,8 @@ categories:
 - canvas
 sitemap: true
 image: "/uploads/covers/canvas_webcam_html5.png"
-excerpt: Nesse tutorial estaremos aprendendo como capturar uma imagem de uma webcam,
-  através do Javascript.
+excerpt: Nesse tutorial, vamos aprender como usar o Javascript e o canvas para capturar
+  imagem de uma webcam.
 
 ---
 Para acessar a webcam, precisamos utilizar a função `navigator.mediaDevices.getUserMedia`. Essa função retorna uma `Promise`, contendo ou `MediaStream`. Com essa função podemos acessar o áudio ou vídeo do computador do usuário.
@@ -18,7 +18,9 @@ Obviamente, quando chamamos `getUserMedia`, o browser irá exibir um dialogo ped
 
 > **Nota:** É importante deixar claro que `getUserMedia` só pode ser usado em ambientes considerado seguros. Portanto, se quiser utilizar em seu site ou aplicação web, esteja ciente que o mesmo possua SSL configurado para o domínio. Para testes, podemos usar o famoso `localhost` normalmente.
 
-Para acessarmos a webcam, precisamos passar um parâmetro para `getUserMedia`, da seguinte forma:
+Para acessarmos a webcam, precisamos passar um parâmetro em `getUserMedia`, para informar que queremos acessar a câmera. 
+
+Veja:
 
 ```javascript
 navigator.mediaDevices.getUserMedia({video: true})
@@ -30,7 +32,11 @@ navigator.mediaDevices.getUserMedia({video: true})
 })
 ```
 
-Se tudo ocorrer corretamente acima, teremos acesso á `mediaStream`. É através dela que poderemos capturar fotos da webcam. Precisamos agora que o usuário tenha uma pré-visualização da sua imagem. Para isso vamos utilizar uma tag `video`.
+Se tudo ocorrer corretamente acima, teremos acesso à variável `mediaStream`. É através dela que poderemos capturar fotos da webcam. 
+
+## Previsualizando a imagem capturada com Canvas
+
+Precisamos agora que o usuário tenha uma pré-visualização da sua imagem. Para isso vamos utilizar uma tag `video`.
 
 Basta adicionar ao código:
 
@@ -49,7 +55,6 @@ navigator.mediaDevices.getUserMedia({video: true})
 .catch(function (err) {
   console.log('Não há permissões para acessar a webcam')
 })
-
 ```
 
 Com isso, já podemos ver a imagem da nossa webcam sendo visualizada na tag `video`.
@@ -79,7 +84,6 @@ document.querySelector('#capture').addEventListener('click', function (e) {
   
   context.drawImage(video, 0, 0)
 })
-
 ```
 
 No código acima, nós primeiro definimos o tamhanho do canvas para ficar exatamente do mesmo tamanho do vídeo. Em seguida, utilizamos o context para desenhar a imagem capturada do vídeo. Toda vez que `#capture` é clicado, o frame específico será aplicado ao canvas.
@@ -88,10 +92,10 @@ Para você ter acesso à imagem do canvas, basta utilizar a função `toBlob` ou
 
 Por exemplo, se quisermos fazer o upload do frame capturado, podemos simplesmente adicionar usar `toBlob` para adicionar o `Blob` a um `FormData`.
 
-
 ```html
 <button id="upload">Upload</button>
 ```
+
 ```javascript
 document.querySelector('#upload').addEventListener('click', function (e) {
  
