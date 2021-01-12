@@ -4,18 +4,19 @@ title: Como configurar a variável PATH?
 date: 2021-01-12 01:00:00 -0200
 categories:
 - linux
-sitemap: false
+sitemap: true
 image: "/uploads/linux-terminal.png"
-excerpt: 'A variável $PATH é a variável de ambiente '
+excerpt: O PATH é uma variável de sistema usada no Linux para localizar executáveis
+  necessários da linha de comandos. Quando precisamos de adicionar um executável ou
+  script presente em uma determinada pasta, precisamos adicionar esse diretório nesta
+  variável.
 
 ---
-O `PATH` é uma variável de sistema usada no Linux para localizar executáveis necessários da linha de comandos. Quando precisamos de adicionar um executável ou script presente em uma determinada pasta, precisamos adicionar esse diretório nesta variável.
+Nesse tutorial, vamos aprender a configurar a variável de ambiente `PATH` para adicionar o caminho de seus exectuáveis. Mas primeiro vamos aprender algumas coisas básicas sobre esta variável de ambiente e também sobre executáveis.
 
-Vamos aprender a fazer isso nesse tutorial, mas primeiro vamos aprender algumas coisas básicas sobre os executáveis.
+## Onde ficam os executáveis ou comandos usados no Terminal?
 
-## Localizando dos executáveis
-
-Você pode verificar o diretório de origem de um executável rodando o comando `which`.
+Você já deve ter percebido que no Terminal temos vários comandos à disposição. E já deve ter percebido também que alguns deles só ficam disponíveis após instalar determinado pacote. O Linux armazena esses executáveis em alguma pasta específica do sistema operacional. Você pode verificar o diretório de origem de um executável qualquer rodando o comando `which`.
 
 Exemplo:
 
@@ -24,15 +25,16 @@ which echo
 # /usr/bin/echo
 ```
 
-No caso acima, vemos que o executável `echo` está localizado na pasta `/usrb/bin/`. 
-Sabemos então que os executáveis sempre vêm de algum diretório. A questão é: Onde é definido isso?
+No caso acima, vemos que o executável `echo` está localizado na pasta `/usrb/bin/`.
+Sabemos então que os executáveis sempre vêm de algum diretório. 
 
+A questão é:  O que faz com que possamos executá-los usando apenas o nome, ao invés de ter que digitar o caminho completo?
 
 ## O que é a variável PATH?
 
-A variável `PATH` é usada no Linux para localizar executáveis necessários da linha de comandos. Em outras palavras, esta variável possui uma lista de caminhos onde se localizam os executáveis que usamos, por exemplo, no Terminal.
+A variável `PATH` é usada no Linux para localizar executáveis necessários da linha de comandos.  Em outras palavras, esta variável possui uma lista de caminhos onde se localizam os executáveis que usamos, por exemplo, no Terminal.
 
-Você pode conferir o que há na variável `PATH` simplesmente rodando o comando `echo`. 
+Você pode conferir o que há na variável `PATH` simplesmente rodando o comando `echo`.
 
 Exemplo:
 
@@ -45,8 +47,7 @@ Notem que essa variável possui uma lista de caminhos separados por `:`. Cada ca
 
 Sendo assim, se modificarmos o valor de `PATH`, isso também mudará a maneira que o Linux reconhece os executáveis/comandos usados no terminal.
 
-
-## Configurando a variável PATH 
+## Configurando a variável PATH
 
 Se você deseja adicionar os seus próprios scripts ou executáveis no terminal, você precisa adicionar o caminho onde encontra-se os mesmos se encontram à variável `PATH`.
 
@@ -85,4 +86,3 @@ hello
 Se tudo ocorreu bem, significa que a sua pasta foi adicionada com sucesso na variável de ambiente `PATH`.
 
 > **Nota** : Para que seu script seja executável na linha de comando, você precisa dar a permissão d execução para o mesmo. Você pode fazer isso através do comando `chmod +x script`.
-
