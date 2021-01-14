@@ -62,7 +62,7 @@ Note que o `RecursiveDirectoryIterator`, além do caminho da pasta que desejamos
 
 Além disso, utilizamos a classe `RecursiveIteratorIterator` e passamos para ela a instância de `RecursiveDirectoryIterator`. Isso porque `RecursiveIteratorIterator` precisa ser utilizado para percorrer iteratores recursivos.
 
-## Como a listagem de arquivos pelo nome ?
+## Como ordenar a listagem de arquivos pelo nome ?
 
 Como pode ser notado acima, o iterador não retornou as pastas ordenadas pelo nome. Mas podemos contornar isso. Basta convertermos a nossa instância de `RecursiveIteratorIterator` para um `array` e, em seguida, ordenarmos os valores pela chave do array.
 
@@ -87,10 +87,10 @@ foreach ($array as $file) {
 }
 ```
 
-Os iteradores em PHP têm o método `key`, que é responsável por retornar as chaves da iteração atual no `foreach`. No nosso exemplo,  por padrão, a chave é o caminho completo do arquivo. 
+Os iteradores em PHP têm o método `key`, que é responsável por retornar as chaves da iteração atual no `foreach`. No nosso exemplo,  por padrão, a chave é o caminho completo do arquivo.
 
 > **Nota**: Para alterar o comportamento, podemos utilizar as flags `FilesystemIterator::KEY_AS_PATHNAME` ou `FilesystemIterator::KEY_AS_FILENAME` no segundo argumento para `RecursiveDirectoryIterator`.
 
 No código acima, usamos a função [iterator_to_array](https://www.php.net/manual/pt_BR/function.iterator-to-array), que copia o `iterator` para um `array`, incluindo as chaves e respectivo valores. Em seguida, chamamos a função [ksort](https://www.php.net/manual/pt_BR/function.ksort), que ordenará o `array` pelas chaves. Em `ksort`, não precisamos capturar o retorno, já que a mesma funciona internamente com [passagem por referência](https://www.php.net/manual/pt_BR/language.references.pass.php).
 
->**Nota**: Se por algum motivo você precisar ordenar em ordem reversa, você pode usar a função `krsort` no lugar de `ksort`.
+> **Nota**: Se por algum motivo você precisar ordenar em ordem reversa, você pode usar a função `krsort` no lugar de `ksort`.
