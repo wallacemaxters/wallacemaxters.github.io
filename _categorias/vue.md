@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Publicações sobre VUEJS
+title: Publicações sobre VueJS
 subtitle: GIT
 image: "/uploads/covers/vue.jpeg"
 sitemap: true
