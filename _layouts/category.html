@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+{% assign sorted_posts = site.categories[page.label] | sort: 'title' %}
 {% assign count = 0 %}
 {% assign ads_count_show = 3 %}
 
@@ -20,9 +20,9 @@ layout: default
                 {{ content }}
             </div>
         {% endif %} -->
-        <h2 class="title is-5">Publicações</h2>
+        <h2 class="title is-5">Publicações ({{ sorted_posts | size }})</h2>
         <div class="columns is-multiline">
-            {% assign sorted_posts = site.categories[page.label] | sort: 'title' %}
+            
             {% for post in sorted_posts %}
                 {% if count == ads_count_show %}
                     {% assign count = 0 %}
