@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Por que o comando 'artisan serve' não funciona no Lumen Framework?
+title: Por que o comando 'php artisan serve' não funciona no Lumen Framework?
 date: 2020-11-18T15:00:00.000-02:00
 categories:
 - lumen
