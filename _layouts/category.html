@@ -24,7 +24,7 @@ layout: default
                 {% endif%}
                 {% assign count = count | plus: 1 %}
                 <div class="column is-12 is-4-desktop">
-                    {% include related_post_card.html title=post.title url=post.url image=post.image %}
+                    {% include link_card.html title=post.title url=post.url image=post.image %}
                 </div>
             {% endfor %}
         </div>
