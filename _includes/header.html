@@ -4,15 +4,18 @@
 			{%- if page.title -%}
 					<div class="block">
 						<h1 class="title is-2">
-							<a href="/" class="has-text-white">
-									{{ page.title | escape }}
+							<a href="{{ page.url }}" class="has-text-white">
+								{{ page.title | escape }}
 							</a>
 						</h1>
 					</div>
 					{%- if page.categories | size -%}
 					<div class="block has-text-white">
 						{%- for category in page.categories -%}
-							<a href="/categorias#{{ category | slugify }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
+							{% assign category_page = site.categorias | where: "label", category | first %}
+                            {% if category_page %}
+								<a href="{{ category_page.url }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
+							{% endif %}
 						{%- endfor -%}
 					</div>
 					{%- endif -%}

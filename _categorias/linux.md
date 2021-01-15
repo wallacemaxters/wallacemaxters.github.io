@@ -1,7 +1,7 @@
 ---
 layout: category
 title: "Publicações sobre Linux"
-image: /assets/img/sublime-text-code.jpg
+image: /uploads/linux-terminal.png
 sitemap: true
 label: linux
 ---

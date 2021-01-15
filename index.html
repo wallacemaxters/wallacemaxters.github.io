@@ -28,7 +28,13 @@ image: /assets/img/bg.jpg
                             <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y" }}</span>
                         </div>
                         {% for category in post.categories %}
-                            <a class="tag" href="/categorias#{{ category | slugify }}">{{ category }}</a>
+                            {% assign category_page = site.categorias | where: "label", category | first %}
+                            {% if category_page %}
+                                <a class="tag is-danger" href="{{ category_page.url }}">{{ category }}</a>
+                            {% else %}
+                                <div class="tag">{{ category }}</div>
+                            {% endif %}
+                        
                         {% endfor %}
                     </div>
                 </div>

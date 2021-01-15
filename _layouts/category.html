@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 {% assign count = 0 %}
 {% assign ads_count_show = 3 %}
 
@@ -13,6 +14,13 @@ layout: default
                 <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
             </ul>
         </nav>
+        <!-- {% if content %}
+            <div class="box">
+                <h2 class="title is-4">{{ page.subtitle }}</h2>
+                {{ content }}
+            </div>
+        {% endif %} -->
+        <h2 class="title is-5">Publicações</h2>
         <div class="columns is-multiline">
             {% assign sorted_posts = site.categories[page.label] | sort: 'title' %}
             {% for post in sorted_posts %}
@@ -24,7 +32,8 @@ layout: default
                 {% endif%}
                 {% assign count = count | plus: 1 %}
                 <div class="column is-12 is-4-desktop">
-                    {% include link_card.html title=post.title url=post.url image=post.image %}
+                    {% capture post_title %}<h3>{{ post.title }}</h3>{% endcapture %}
+                    {% include link_card.html title=post_title url=post.url image=post.image %}
                 </div>
             {% endfor %}
         </div>
