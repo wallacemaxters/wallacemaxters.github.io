@@ -4,6 +4,13 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: _categorias
+  label: Categorias
+  create: all
+  match: "**/*"
+  templates:
+  - defaulttemplate
 - type: jekyll-posts
   label: Posts
   create: all
