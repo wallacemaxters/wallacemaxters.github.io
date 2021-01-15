@@ -1,16 +1,32 @@
 ---
-label: Categoriasss
-hide_body: false
+label: Categorias
+hide_body: true
 fields:
 - type: text
   name: layout
   label: layout
-- type: file
-  name: image
-  label: image
-- type: text
-  name: permalink
-  label: permalink
+  default: category
 - type: text
   name: title
   label: title
+- type: file
+  name: image
+  label: image
+- name: sitemap
+  type: boolean
+  label: sitemap
+  default: true
+- name: label
+  type: text
+  config:
+    required: false
+  label: label
+- name: excerpt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: excerpt
