@@ -6,7 +6,7 @@ categories:
 - PHP
 sitemap: true
 image: "/uploads/captura-de-pantalla-de-2020-10-16-10-37-48.png"
-excerpt: 'Nesse tutorial,  veremos exemplos práticos de como usar a função file_get_contents
+excerpt: 'Nesse tutorial, veremos exemplos práticos de como usar a função file_get_contents
   no PHP para abrir arquivos e urls. '
 
 ---
@@ -53,6 +53,8 @@ echo $conteudo;
 
 Com o `file_get_contents` também é possível fazer chamadas `HTTP`.
 Isso mesmo! Através dessa função podemos abrir o conteúdo remoto através de uma url.
+
+> Para você fazer requisições HTTP, é necessário habilitar a opção `allow_url_fopen` no php.ini.
 
 Para fazer requisições `GET` simples, basta apenas passar a url que você deseja obter o conteúdo e o mesmo será retornado.
 
@@ -114,8 +116,7 @@ var_dump($resultado);
 
 ##### Enviando um formulário
 
-Você também consegue enviar os dados de forma semelhante a um formulário HTML. Basta informamos em `header` o Content-Type `application/www-form-urlencoded`. Em seguida, também precisamos informar o `content`, usando a função [`http_build_query`](https://www.php.net/manual/pt_BR/function.http-build-query.php). 
-
+Você também consegue enviar os dados de forma semelhante a um formulário HTML. Basta informamos em `header` o Content-Type `application/www-form-urlencoded`. Em seguida, também precisamos informar o `content`, usando a função [`http_build_query`](https://www.php.net/manual/pt_BR/function.http-build-query.php).
 
 Exemplo:
 
@@ -137,7 +138,7 @@ $resultado = file_get_contents('https://httpbin.org/post', false, $context);
 var_dump($resultado);
 ```
 
-> **Nota:** a função `http_build_query` transforma um `array` em uma `string` contendo um formato que geralmente é utilizado em *query strings* ou corpo de formulários.
+> **Nota:** a função `http_build_query` transforma um `array` em uma `string` contendo um formato que geralmente é utilizado em _query strings_ ou corpo de formulários.
 
 ## Outras finalidades de file_get_contents
 
