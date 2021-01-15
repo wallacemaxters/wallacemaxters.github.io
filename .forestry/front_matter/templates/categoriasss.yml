@@ -1,0 +1,16 @@
+---
+label: Categoriasss
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: file
+  name: image
+  label: image
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: title
+  label: title
