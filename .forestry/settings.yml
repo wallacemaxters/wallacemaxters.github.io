@@ -9,6 +9,7 @@ sections:
   label: Categorias
   create: all
   match: "**/*"
+  new_doc_ext: ".md"
   templates:
   - defaulttemplate
 - type: jekyll-posts
