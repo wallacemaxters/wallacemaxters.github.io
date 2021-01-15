@@ -18,11 +18,8 @@
 
         {% if same_tag_count >= min_tags_related %}
             <div class="column is-12-mobile is-3-desktop" tag-count="{{ same_tag_count }}">
-                <a href="{{ post.url }}" class="related-post-card" style='background-image: url("{{ post.image }}");'>
-                    <div class="overlay">
-                        <h5>{{ post.title }}</h5>
-                    </div>
-                </a>
+                {% assign post_title = "<h5>" | append: post.title | append: "</h5>" %}
+                {% include related_post_card.html title=post_title url=post.url image=post.image %}
             </div>
             {% assign post_count = post_count | plus: 1 %}
             {% if post_count >= max_posts %}
