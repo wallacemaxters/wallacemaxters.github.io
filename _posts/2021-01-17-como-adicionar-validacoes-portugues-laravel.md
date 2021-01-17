@@ -53,7 +53,7 @@ class UsuariosController extends Controller
         // ou 
         
         $validator = Validator::make($request, [
-            'pis' => 'required|pis|formato_pis',
+            'pis'     => 'required|pis|formato_pis',
             'celular' => 'nullable|celular_com_codigo'
         ]);
       }
