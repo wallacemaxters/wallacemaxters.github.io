@@ -53,3 +53,9 @@ class UsuariosController extends Controller
 ```
 
 No exemplo acima, quando você tentar cadastrar um usuário, as validações `cpf` e `formato_cpf` serão chamadas.
+
+## Conclusão
+
+Se você quiser conhecer mais sobre a biblioteca LaravelLegends/Pt-Br-Validator, você pode acessar a [página do Github](https://github.com/LaravelLegends/pt-br-validator). 
+
+> Se tiver alguma sugestão, melhoria ou correção de bug, faça o fork e envie um pull request.
