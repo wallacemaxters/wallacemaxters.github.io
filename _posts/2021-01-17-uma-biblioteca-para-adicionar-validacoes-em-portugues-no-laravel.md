@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Pt-Br-Validator: Uma biblioteca para adicionar validações em português no
-  Laravel'
+title: 'Pt-Br-Validator: como validações em português no Laravel'
 date: 2021-01-17 11:46:00 -0200
 categories:
 - laravel
