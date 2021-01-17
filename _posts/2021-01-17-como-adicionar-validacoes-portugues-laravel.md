@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Pt-Br-Validator:  adicionando validações em português no Laravel'
+title: 'Pt-Br-Validator:  Validações em português no Laravel'
 date: 2021-01-17 11:46:00 -0200
 categories:
 - laravel
