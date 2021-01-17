@@ -49,7 +49,14 @@ class UsuariosController extends Controller
      	$dados = $request->validate(
         	'cpf' => 'required|cpf|formato_cpf'
         );
-     }
+        
+        // ou 
+        
+        $validator = Validator::make($request, [
+            'pis' => 'required|pis|formato_pis',
+            'celular' => 'nullable|celular_com_codigo'
+        ]);
+      }
 }
 ```
 
