@@ -5,8 +5,14 @@ permalink: /categorias
 title: "Categorias"
 ---
 
+{% assign categories = site.categories | sort %}
 <div>
-    {% assign categories = site.categories | sort %}
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+        </ul>
+    </nav>
     <div class="columns is-multiline">
         {%- for item in site.categorias -%}
         {% capture category_title %}
