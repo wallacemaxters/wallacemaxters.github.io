@@ -179,7 +179,7 @@ git push -u origin master
 
 Após isso, você precisa submeter a sua biblioteca para o Packagist, através desse formulário:
 
-<img src="https://i.stack.imgur.com/H3hrE.png" >
+![](https://i.stack.imgur.com/H3hrE.png)
 
 Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas configurações do seu repositório do Github.
 
