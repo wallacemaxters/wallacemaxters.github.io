@@ -201,17 +201,23 @@ Depois de fazer tudo isso, você já poderá testar se sua biblioteca está func
 
     composer require vendor_name/library_name
 
-\#Mas e o versionamento?
 
-Você precisa definir uma tag no seu repositório para poder demarcar uma versão "utilizável" da sua biblioteca. Por exemplo, se você já tem certeza que sua biblioteca está pronta para o uso, poderá definir uma versão para ela.
+## Como funciona o versionamento no Composer?
 
-Você pode definir uma tag dessa forma:
+Para você definir uma release (versão de lançamento) para sua biblioteca, você deve usar uma [git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging). Você basicamente usa o comando `git tag` para criar uma tag com o nome da versão. 
 
-    git tag 0.0.1
+Caso você ache que sua biblioteca está pronta para o uso, você pode definir uma tag.
+
+Assim:
+```bash
+git tag 0.0.1
+```
 
 Depois, para enviá-la ao seu repositório, você precisa rodar o comando:
 
-    git push --tags
+```bash
+git push --tags
+```
 
 Note que as tags precisam seguir um padrão. Eu geralmente, sempre uso os três conjuntos de números.
 
