@@ -181,23 +181,23 @@ Após isso, você precisa submeter a sua biblioteca para o Packagist, através [
 
 Você precisa adicionar o caminho da sua biblioteca do Github no formulário abaixo:
 
-![](https://i.stack.imgur.com/H3hrE.png)
+![](/uploads/enviando-biblioteca-para-o-packagist-composer.png)
 
 Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas configurações do seu repositório do Github.
 
 Você deve clicar na opção "settings" e em seguida "integrations and services". Depois disso, na opção "add service" você deve escolher "packagist".
 
-![](https://i.stack.imgur.com/nPzhs.png)
+![](/uploads/integrando-o-packagist-com-github.png)
 
 Depois disso, você deve clicar no serviço "packagist" que foi adicionado, e configurá-lo, colocando seu usuário e o token do Packagist.
 
 Veja:
 
-![](https://i.stack.imgur.com/NKyTU.png)
+![](/uploads/configurar-token-composer-github.png)
 
 O token do packagisto deverá ser adicionado no formulário acima. Ele pode ser encontrado [nesse link,](https://packagist.org/profile/) conforme a imagem abaixo:
 
-![](https://i.stack.imgur.com/DQn93.png)
+![](/uploads/token-da-api-packagist-composer.png)
 
 ### Instalando sua biblioteca
 
