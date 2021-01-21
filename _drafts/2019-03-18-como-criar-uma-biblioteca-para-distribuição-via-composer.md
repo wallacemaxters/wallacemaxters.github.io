@@ -34,7 +34,7 @@ mkdir library_name
 cd libray_name
 ```
 
-Em seguida, inicie o repositório GIT e adicione a origem remota, apontando para o repositório que você criou no Github. 
+Em seguida, inicie o repositório GIT e adicione a origem remota, apontando para o repositório que você criou no Github.
 
 Código:
 
@@ -146,7 +146,7 @@ Em `psr-4`, temos que definir uma chave e um valor. A chave representa o `namesp
 
 #### Testando o autoload
 
-Para testar, primeiro rode o comando `composer dump`. Isso vai gerar uma pasta chamada `vendor` no seu projeto,  com o autoloader das classes do seu projeto.  
+Para testar, primeiro rode o comando `composer dump`. Isso vai gerar uma pasta chamada `vendor` no seu projeto,  com o autoloader das classes do seu projeto.
 
 Em seguida, crie um arquivo chamado `teste.php` na raiz do projeto e cole o seguinte código
 
@@ -163,7 +163,7 @@ Execute-o na linha de comando.
 php teste.php 
 ```
 
-Se você receber a saída _"Hello!"_, isso significa que seu autoload está correto. 
+Se você receber a saída _"Hello!"_, isso significa que seu autoload está correto.
 
 > O arquivo não faz parte do repositório, então você pode removê-lo ou adicioná-lo ao seu`.gitignore`
 
@@ -181,7 +181,7 @@ Após isso, você precisa submeter a sua biblioteca para o Packagist, através d
 
 <img src="https://i.stack.imgur.com/H3hrE.png" >
 
-Depois da submissão, é necessário inserir o seu *TOKEN API* do Packagist nas configurações do seu repositório do Github.
+Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas configurações do seu repositório do Github.
 
 Você deve clicar na opção "settings" e em seguida "integrations and services". Depois disso, na opção "add service" você deve escolher "packagist".
 
@@ -197,18 +197,22 @@ O Token que deverá ser adicionado, pode ser encontrado nessa tela do Packagist:
 
 <img src="https://i.stack.imgur.com/DQn93.png" >
 
-Depois de fazer tudo isso, você já poderá testar se sua biblioteca está funcionando corretamente utilizando o comando:
+### Instalando sua biblioteca
 
-    composer require vendor_name/library_name
+Depois de fazer tudo isso, você já poderá testar se sua biblioteca está funcionando corretamente utilizando o comando `composer require`. 
 
+Exemplo:
+
+    composer require vendorname/libraryname
 
 ## Como funciona o versionamento no Composer?
 
-Para você definir uma release (versão de lançamento) para sua biblioteca, você deve usar uma [git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging). Você basicamente usa o comando `git tag` para criar uma tag com o nome da versão. 
+Para você definir uma release (versão de lançamento) para sua biblioteca, você deve usar uma [git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging). Você basicamente usa o comando `git tag` para criar uma tag com o nome da versão.
 
 Caso você ache que sua biblioteca está pronta para o uso, você pode definir uma tag.
 
 Assim:
+
 ```bash
 git tag 0.0.1
 ```
