@@ -6,7 +6,7 @@ categories:
 - PHP
 - composer
 sitemap: true
-excerpt: Aprenda a publicar a sua biblioteca para utilização no Composer
+excerpt: Aprenda a publicar a sua biblioteca no packagist.org para utilização no Composer
 
 ---
 Nesse tutorial estarei ensinando detalhadamente como criar a estrutura para  distribuição de uma biblioteca para instalação via Composer.
