@@ -184,7 +184,7 @@ git push -u origin master
 
 ## Adicionando o repositório ao Packagist
 
-Após isso, você precisa submeter a sua biblioteca para o Packagist, através [desse link](https://packagist.org/packages/submit)
+Agora que o repositório está atualizado, você precisa submeter a sua biblioteca para o Packagist, através [desse link](https://packagist.org/packages/submit).
 
 Você precisa adicionar o caminho da sua biblioteca do Github no formulário abaixo:
 
