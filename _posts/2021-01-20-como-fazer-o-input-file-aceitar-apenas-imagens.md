@@ -3,7 +3,7 @@ layout: post
 title: Como fazer o input file aceitar apenas imagens?
 date: 2021-01-20 23:47:00 -0200
 categories:
-- html
+- HTML
 sitemap: true
 image: "/uploads/html.jpg"
 excerpt: Aprenda como fazer o input[type=file] aceitar apenas uma ou uma lista de
