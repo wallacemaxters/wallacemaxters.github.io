@@ -28,6 +28,7 @@ O próximo passo é você criar um repositório no Github. Crie o repositório c
 Crie o diretório para sua biblioteca. Como exemplo, vamos criar uma pasta chamada `library_name`.
 
 Exemplo:
+
 ```bash
 mkdir library_name
 cd libray_name
@@ -70,19 +71,25 @@ Exemplo:
 
 #### Escolhendo o namespace da sua biblioteca
 
-No composer, o nome da biblioteca é composto por _Vendor Name_ e _Package Name_. Você deve defini-lo na propriedade `name` do `composer.json`.
+No composer, o nome da biblioteca é composto por _Vendor Name_ e _Package Name_. Você deve defini-lo na propriedade `name` do `composer.json`. Da mesma forma, o `namespace` usado na biblioteca seguirá o mesmo padrão do nome da biblioteca.
 
 **Vendor Name**
 
-Esse é nome do "fornecedor" da biblioteca. É comum nas bibliotecas do Composer utilizar o _Vendor Name_ como primeiro segmento do seu namespace. 
+Esse é nome do "fornecedor" da biblioteca. É comum nas bibliotecas do Composer utilizar o _Vendor Name_ como primeiro segmento do seu namespace.
 
 Por exemplo, como utilizamos o nome `vendorname`, o namespace principal das bibliotecas desenvolvidas deve ser `VendorName`.
 
-
 **Library Name**
-O _Library Name_ é o nome da biblioteca. Esse nome vem depois do *Vendor Namespace*, após a barra. No nosso exemplo, como criamos o nome  `libraryname` para a biblioteca, o namespace utilizado deve ser `VendorName\LibraryName`.
+O _Library Name_ é o nome da biblioteca. Esse nome vem depois do _Vendor Namespace_, após a barra. No nosso exemplo, como criamos o nome  `libraryname` para a biblioteca, o namespace utilizado deve ser `VendorName\LibraryName`.
 
-### Estrutura das pastas 
+Sendo assim, seu namespace será:
+
+```php
+namespace VendorName\LibraryName;
+// restante do código ...
+```
+
+### Estrutura das pastas
 
 Vamos começar a criar os arquivos da biblioteca. Dentro de `library_name`, precisamos criar os seguintes arquivos e pastas:
 
@@ -91,9 +98,9 @@ Vamos começar a criar os arquivos da biblioteca. Dentro de `library_name`, prec
         composer.json
         src/
            Hello.php
-           
 
-Crie a pasta `src` e uma classe chamada `Hello` em `src/Hello.php`. Vamos definir o seguinte conteúdo para nosso arquivo:
+
+Na pasta `src` é o local onde ficarão os scripts da biblioteca. Crie a pasta `src` e crie um script chamado `src/Hello.php`. Vamos definir o seguinte conteúdo para nosso arquivo:
 
 ```php
 namespace VendorName\LibraryName;
@@ -110,32 +117,26 @@ class Hello
 Crie o arquivo `.gitignore`, para configuramos os arquivos que não farão parte do nosso repositório GIT. A pasta `vendor` deve ser adicionada nele.
 
 Exemplo:
-
 ```
 /vendor/
 ```
 
-O arquivo `composer.json` já foi criado anteriormente. Precisamos configurar como vai funcionar o autoload da biblioteca.
+### Configurando o autoloader
 
-Assim, poderíamos configurar o composer.json da seguinte forma:
+O arquivo `composer.json` já foi criado anteriormente. Precisamos definir a configuração do autoload da biblioteca. Vamos utilizar o padrão [PSR-4](https://www.php-fig.org/psr/psr-4/).
 
-     "name" : "vendor_name/library_name",
-    
-     "required" : {
-          "php" : ">=5.4"
-     },
-    
+Adicione a seguinte linha ao seu `composer.json`:
+   
+```json
      "autoload" : {
            "psr-4" : {
                "VendorName\\LibraryName\\" :  "src/"
            }
      }
+```
 
-Sua classe `Hello.php` dentro de `src`, obviamente, deve ficar assim:
+Em `psr-4`, temos que definir uma chave e um valor. A chave representa o `namespace` principal da sua biblioteca. O `valor` é a pasta onde os `scripts` estão localizados.
 
-    namespace VendorName\LibraryName;
-    
-    class Hello {}
 
 **Nota**: Para testar sua biblioteca antes de enviá-la, é necessário rodar o comando `composer dump` para gerar o autoload. Caso possua dependências a outras libraries, você deve usar `composer install`.
 
