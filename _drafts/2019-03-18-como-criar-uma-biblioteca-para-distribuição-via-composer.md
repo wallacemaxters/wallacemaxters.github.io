@@ -4,6 +4,7 @@ title: Como criar uma biblioteca para distribuição via Composer?
 date: 2021-01-21 01:00:00 -0200
 categories:
 - PHP
+- composer
 sitemap: true
 
 ---
