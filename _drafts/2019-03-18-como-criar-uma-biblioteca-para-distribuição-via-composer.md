@@ -185,17 +185,17 @@ Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas 
 
 Você deve clicar na opção "settings" e em seguida "integrations and services". Depois disso, na opção "add service" você deve escolher "packagist".
 
-<img src="https://i.stack.imgur.com/nPzhs.png">
+![](https://i.stack.imgur.com/nPzhs.png")
 
 Depois disso, você deve clicar no serviço "packagist" que foi adicionado, e configurá-lo, colocando seu usuário e o token do Packagist.
 
 Veja:
 
-<img src="https://i.stack.imgur.com/NKyTU.png" >
+![](https://i.stack.imgur.com/NKyTU.png)
 
 O Token que deverá ser adicionado, pode ser encontrado nessa tela do Packagist:
 
-<img src="https://i.stack.imgur.com/DQn93.png" >
+![](https://i.stack.imgur.com/DQn93.png)
 
 ### Instalando sua biblioteca
 
