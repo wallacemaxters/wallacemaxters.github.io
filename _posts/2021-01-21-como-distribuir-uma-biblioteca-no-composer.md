@@ -172,6 +172,10 @@ Se você receber a saída _"Hello!"_, isso significa que seu autoload está corr
 
 ## Enviando as alterações para o repositório remoto
 
+Atualize o repositório remoto com os arquivos da sua biblioteca. 
+
+Faça assim:
+
 ```bash
 git add .
 git commit -m "primeiro commit"
