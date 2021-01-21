@@ -6,7 +6,8 @@ categories:
 - html
 sitemap: true
 image: "/uploads/html.jpg"
-excerpt: ''
+excerpt: Aprenda como fazer o input[type=file] aceitar apenas uma ou uma lista de
+  extensões de imagens específicas.
 
 ---
 Em HTML, para selecionarmos um arquivo, utilizamos o `input` com o `type="file"`. Ele permite que possamos selecionar um ou mais arquivos, independente da extensão do mesmo.
