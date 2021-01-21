@@ -30,3 +30,5 @@ fields:
     schema:
       format: markdown
   label: excerpt
+pages:
+- _categorias/html.md
