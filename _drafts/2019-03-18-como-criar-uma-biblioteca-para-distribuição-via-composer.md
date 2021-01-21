@@ -23,7 +23,7 @@ O próximo passo é você criar um repositório no Github. Crie o repositório c
 
 > **DICA**: Para um pacote chamado `vendor_name/library_name` no Packagist, seria importante que o seu repositório no Github chamasse `library_name`.
 
-## Criando a estrutura da biblioteca
+## Criando a estrutura da biblioteca e iniciando o repositório
 
 Crie o diretório para sua biblioteca. Como exemplo, vamos criar uma pasta chamada `library_name`.
 
@@ -34,7 +34,16 @@ mkdir library_name
 cd libray_name
 ```
 
-O primeiro passo agora é criar o arquivo `composer.json`  dentro dela. Para utilizar sua biblioteca no Composer, é necessário que esse arquivo esteja na raiz do seu projeto. Ele contém as informações relevantes para que sua biblioteca seja processada, como, por exemplo, o nome e a descrição da sua biblioteca.
+Em seguida, inicie o repositório GIT e adicione a origem remota, apontando para o repositório que você criou no Github. 
+
+Código:
+
+```bash
+git init
+git remote add origin https://github.com/vendorname/libraryname.git
+```
+
+Agora é necessário criar o arquivo `composer.json`  dentro dela. Para utilizar sua biblioteca no Composer, é necessário que esse arquivo esteja na raiz do seu projeto. Ele contém as informações relevantes para que sua biblioteca seja processada, como, por exemplo, o nome e a descrição da sua biblioteca.
 
 Podemos criar esse arquivo de duas formas...
 
@@ -99,7 +108,6 @@ Vamos começar a criar os arquivos da biblioteca. Dentro de `library_name`, prec
         src/
            Hello.php
 
-
 Na pasta `src` é o local onde ficarão os scripts da biblioteca. Crie a pasta `src` e crie um script chamado `src/Hello.php`. Vamos definir o seguinte conteúdo para nosso arquivo:
 
 ```php
@@ -117,16 +125,15 @@ class Hello
 Crie o arquivo `.gitignore`, para configuramos os arquivos que não farão parte do nosso repositório GIT. A pasta `vendor` deve ser adicionada nele.
 
 Exemplo:
-```
-/vendor/
-```
+
+    /vendor/
 
 ### Configurando o autoloader
 
 O arquivo `composer.json` já foi criado anteriormente. Precisamos definir a configuração do autoload da biblioteca. Vamos utilizar o padrão [PSR-4](https://www.php-fig.org/psr/psr-4/).
 
 Adicione a seguinte linha ao seu `composer.json`:
-   
+
 ```json
      "autoload" : {
            "psr-4" : {
@@ -137,20 +144,44 @@ Adicione a seguinte linha ao seu `composer.json`:
 
 Em `psr-4`, temos que definir uma chave e um valor. A chave representa o `namespace` principal da sua biblioteca. O `valor` é a pasta onde os `scripts` estão localizados.
 
+#### Testando o autoload
 
-**Nota**: Para testar sua biblioteca antes de enviá-la, é necessário rodar o comando `composer dump` para gerar o autoload. Caso possua dependências a outras libraries, você deve usar `composer install`.
+Para testar, primeiro rode o comando `composer dump`. Isso vai gerar uma pasta chamada `vendor` no seu projeto,  com o autoloader das classes do seu projeto.  
 
-Depois de tudo isso, você pode fazer o commit e o push de suas alterações para o repositório:
+Em seguida, crie um arquivo chamado `teste.php` na raiz do projeto e cole o seguinte código
 
-    >>> cd library_name
-    >>> git commit -am "my first commit"
-    >>> git push
+```php
+require __DIR__ . '/vendor/autoload.php';
+use VendorName\LibraryName;
+$hello = new Hello;
+$hello->say();
+```
+
+Execute-o na linha de comando.
+
+```bash
+php teste.php 
+```
+
+Se você receber a saída _"Hello!"_, isso significa que seu autoload está correto. 
+
+> O arquivo não faz parte do repositório, então você pode removê-lo ou adicioná-lo ao seu`.gitignore`
+
+## Enviando as alterações para o repositório remoto
+
+```bash
+git add .
+git commit -m "primeiro commit"
+git push -u origin master
+```
+
+## Adicionando o repositório ao Packagist
 
 Após isso, você precisa submeter a sua biblioteca para o Packagist, através desse formulário:
 
 <img src="https://i.stack.imgur.com/H3hrE.png" />
 
-Depois da submissão, é necessário inserir o seu TOKEN API do Packagist nas configurações do seu repositório do Github.
+Depois da submissão, é necessário inserir o seu *TOKEN API* do Packagist nas configurações do seu repositório do Github.
 
 Você deve clicar na opção "settings" e em seguida "integrations and services". Depois disso, na opção "add service" você deve escolher "packagist".
 
