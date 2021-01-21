@@ -7,21 +7,52 @@ categories:
 sitemap: true
 
 ---
-Nesse tutorial estarei ensinando detalhadamente como criar a estrutura para  distribuição de uma biblioteca para instalação via Composer;
+Nesse tutorial estarei ensinando detalhadamente como criar a estrutura para  distribuição de uma biblioteca para instalação via Composer.
 
-A primeira coisa que deve ser feita é ter uma conta no [Packagist](https://packagist.org/). 
+## Antes de começar
 
-Após a criação da conta, crie um repositório no Github
+Para continuar se dar bem com esse passo a passo, você precisa ter um considerável conhecimento sobre ferramentas de versionamento [GIT "Git - Ferramenta de Versionamento"](https://git-scm.com/). Além disso, é importante ter instalado na sua máquina o [Composer](https://getcomposer.org/).
 
-Por exemplo: para um pacote chamado `vendor_name/library_name` no Packagist, seria importante que o seu repositório no Github chamasse `library_name`.
+## Crie a conta no Packagist
+
+A primeira coisa que deve ser feita é ter uma conta no [Packagist](https://packagist.org/). Esse passo é necessário, pois é aqui onde o Composer busca as informações da sua biblioteca.
+
+## Github
+
+O próximo passo é você criar um repositório no Github. Crie o repositório como público. Você pode fazer isso clicando [aqui "Criar um repositório no Github"](https://github.com/new).
+
+> **DICA**: Para um pacote chamado `vendor_name/library_name` no Packagist, seria importante que o seu repositório no Github chamasse `library_name`.
+
+## Criando a estrutura da biblioteca
+
+Crie o diretório para sua biblioteca. O primeiro passo agora é criar o arquivo `composer.json`  dentro dela. Você pode criar esse arquivo de duas formas:
+
+### Criando o composer.json através da linha de comando
+
+Você pode criar o `composer.json` através do comando `composer init`.  Esse comando roda interativamente.
+
+![](/uploads/composer_init.png)
+
+```json
+{
+    "name": "vendorname/libraryname",
+    "description": "Minha Biblioteca",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seu e-mail",
+            "email": "seu@email.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
+```
 
 > **Observação**: _Vendor Name_ é o nome do "fornecedor" da biblioteca e _Library Name_ é o nome da biblioteca. O Composer utiliza "vendor name/library name" como padrão de nome para as bibliotecas.
 
-> **Nota**: para continuar esse "tutorial", você deve ter em mente que você precisa ter um considerável conhecimento sobre ferramentas de versionamento (como o GIT, por exemplo).
-
-Depois de criar seu repositório, recomendo seguir alguns padrões para a criação da sua biblioteca.
-
-Por exemplo,  um padrão muito utilizado, é definir o seu namespace a partir da pasta `src` do seu projeto:
+Por exemplo, um padrão muito utilizado, é definir o seu namespace a partir da pasta `src` do seu projeto:
 
     library_name/
         .gitignore
@@ -81,7 +112,7 @@ Depois de fazer tudo isso, você já poderá testar se sua biblioteca está func
 
     composer require vendor_name/library_name
 
-#Mas e o versionamento?
+\#Mas e o versionamento?
 
 Você precisa definir uma tag no seu repositório para poder demarcar uma versão "utilizável" da sua biblioteca. Por exemplo, se você já tem certeza que sua biblioteca está pronta para o uso, poderá definir uma versão para ela.
 
