@@ -225,4 +225,4 @@ Depois, para enviá-la ao seu repositório, você precisa rodar o comando:
 git push --tags
 ```
 
-> **Observação**: As tags precisam seguir o [padrão do Composer](https://getcomposer.org/doc/articles/versions.md). Geralmente, trata-se dos 3 conjuntos de números separados por ponto (`.`).
+> **NOTA**: As tags precisam seguir o [padrão do Composer](https://getcomposer.org/doc/articles/versions.md). Geralmente, trata-se dos 3 conjuntos de números separados por ponto (`.`).
