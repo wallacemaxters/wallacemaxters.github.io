@@ -219,13 +219,4 @@ Depois, para enviá-la ao seu repositório, você precisa rodar o comando:
 git push --tags
 ```
 
-Note que as tags precisam seguir um padrão. Eu geralmente, sempre uso os três conjuntos de números.
-
-As versões no seu Packagist será organizado de acordo com esses números.
-
-Por exemplo;
-
-    1.0.0
-    0.0.3
-    0.0.2
-    0.0.1
+> **Observação**: As tags precisam seguir o [padrão do Composer](https://getcomposer.org/doc/articles/versions.md). Geralmente, trata-se dos 3 conjuntos de números separados por ponto (`.`).
