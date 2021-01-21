@@ -4,8 +4,7 @@ title: Como criar uma biblioteca para distribuição via Composer?
 date: 2019-03-18T03:00:00.000+00:00
 categories:
 - PHP
-- Composer
-sitemap: false
+sitemap: true
 
 ---
 Nesse tutorial estarei ensinando detalhadamente como criar a estrutura para  distribuição de uma biblioteca para instalação via Composer;
