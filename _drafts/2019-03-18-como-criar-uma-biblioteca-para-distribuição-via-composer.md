@@ -25,13 +25,31 @@ O próximo passo é você criar um repositório no Github. Crie o repositório c
 
 ## Criando a estrutura da biblioteca
 
-Crie o diretório para sua biblioteca. O primeiro passo agora é criar o arquivo `composer.json`  dentro dela. Você pode criar esse arquivo de duas formas:
+Crie o diretório para sua biblioteca. Como exemplo, vamos criar uma pasta chamada `library_name`.
 
-### Criando o composer.json através da linha de comando
+Exemplo:
+```bash
+mkdir library_name
+cd libray_name
+```
 
-Você pode criar o `composer.json` através do comando `composer init`.  Esse comando roda interativamente.
+O primeiro passo agora é criar o arquivo `composer.json`  dentro dela. Para utilizar sua biblioteca no Composer, é necessário que esse arquivo esteja na raiz do seu projeto. Ele contém as informações relevantes para que sua biblioteca seja processada, como, por exemplo, o nome e a descrição da sua biblioteca.
 
-![](/uploads/composer_init.png)
+Podemos criar esse arquivo de duas formas...
+
+### Criando o composer.json iterativamente pela linha de comando
+
+Você pode criar o `composer.json` através do comando `composer init`.  Esse comando roda interativamente. Você precisa preencher as informações, conforme a necessidade.
+
+A imagem abaixo ilustra as informações preenchidas.
+
+![Criando o composer.json interativamente](/uploads/composer_init.png)
+
+### Criando o composer.json manualmente
+
+Caso você prefira, você também pode criar seu arquivo `composer.json` manualmente. Abaixo você pode usar esse modelo com as informações essenciais para o funcionamento da sua biblioteca.
+
+Exemplo:
 
 ```json
 {
@@ -50,15 +68,54 @@ Você pode criar o `composer.json` através do comando `composer init`.  Esse co
 }
 ```
 
-> **Observação**: _Vendor Name_ é o nome do "fornecedor" da biblioteca e _Library Name_ é o nome da biblioteca. O Composer utiliza "vendor name/library name" como padrão de nome para as bibliotecas.
+#### Escolhendo o namespace da sua biblioteca
 
-Por exemplo, um padrão muito utilizado, é definir o seu namespace a partir da pasta `src` do seu projeto:
+No composer, o nome da biblioteca é composto por _Vendor Name_ e _Package Name_. Você deve defini-lo na propriedade `name` do `composer.json`.
+
+**Vendor Name**
+
+Esse é nome do "fornecedor" da biblioteca. É comum nas bibliotecas do Composer utilizar o _Vendor Name_ como primeiro segmento do seu namespace. 
+
+Por exemplo, como utilizamos o nome `vendorname`, o namespace principal das bibliotecas desenvolvidas deve ser `VendorName`.
+
+
+**Library Name**
+O _Library Name_ é o nome da biblioteca. Esse nome vem depois do *Vendor Namespace*, após a barra. No nosso exemplo, como criamos o nome  `libraryname` para a biblioteca, o namespace utilizado deve ser `VendorName\LibraryName`.
+
+### Estrutura das pastas 
+
+Vamos começar a criar os arquivos da biblioteca. Dentro de `library_name`, precisamos criar os seguintes arquivos e pastas:
 
     library_name/
         .gitignore
         composer.json
         src/
            Hello.php
+           
+
+Crie a pasta `src` e uma classe chamada `Hello` em `src/Hello.php`. Vamos definir o seguinte conteúdo para nosso arquivo:
+
+```php
+namespace VendorName\LibraryName;
+
+class Hello
+{
+    public function say()
+    {
+        echo "Hello!";
+    }
+}
+```
+
+Crie o arquivo `.gitignore`, para configuramos os arquivos que não farão parte do nosso repositório GIT. A pasta `vendor` deve ser adicionada nele.
+
+Exemplo:
+
+```
+/vendor/
+```
+
+O arquivo `composer.json` já foi criado anteriormente. Precisamos configurar como vai funcionar o autoload da biblioteca.
 
 Assim, poderíamos configurar o composer.json da seguinte forma:
 
