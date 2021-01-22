@@ -56,7 +56,7 @@ Você pode criar o `composer.json` através do comando `composer init`.  Esse co
 
 A imagem abaixo ilustra as informações preenchidas.
 
-![Criando o composer.json interativamente](/uploads/composer_init.png)
+<img loading="lazy" src="/uploads/composer_init.png" title="Criando o composer.json interativamente" alt="Criando o composer.json interativamente">
 
 ### Criando o composer.json manualmente
 
@@ -198,7 +198,7 @@ Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas 
 
 Para fazer isso, acesse a opção **Settings > Webhooks > Add Webhook** do seu repositório, conforme a imagem abaixo.
 
-![Adicionar Webhook no Github](/uploads/adicionar-webhook-github.png "Adicionar Webhook no Github")
+<img src="/uploads/adicionar-webhook-github.png" alt="Adicionar Webhook no Github" title="Adicionar Webhook no Github" loading="lazy">
 
 Em seguida, você terá acesso a um formulário de cadastro do Webhook, conforme a imagem abaixo:
 
