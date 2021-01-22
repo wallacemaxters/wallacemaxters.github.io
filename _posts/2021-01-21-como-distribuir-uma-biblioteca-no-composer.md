@@ -7,7 +7,7 @@ categories:
 - composer
 sitemap: true
 excerpt: Aprenda a publicar a sua biblioteca no packagist.org para utilização no Composer
-image: "/uploads/composer.png"
+image: "/uploads/composer.jpg"
 
 ---
 Nesse tutorial estarei ensinando detalhadamente como criar a estrutura para  distribuição de uma biblioteca para instalação via Composer.
