@@ -105,11 +105,13 @@ namespace VendorName\LibraryName;
 
 Vamos começar a criar os arquivos da biblioteca. Dentro de `library_name`, precisamos criar os seguintes arquivos e pastas:
 
+```
     library_name/
         .gitignore
         composer.json
         src/
            Hello.php
+```
 
 Na pasta `src` é o local onde ficarão os scripts da biblioteca. Crie a pasta `src` e crie um script chamado `src/Hello.php`. Vamos definir o seguinte conteúdo para nosso arquivo:
 
@@ -138,11 +140,11 @@ O arquivo `composer.json` já foi criado anteriormente. Precisamos definir a con
 Adicione a seguinte linha ao seu `composer.json`:
 
 ```json
-     "autoload" : {
-           "psr-4" : {
-               "VendorName\\LibraryName\\" :  "src/"
-           }
-     }
+"autoload" : {
+  "psr-4" : {
+  	"VendorName\\LibraryName\\" :  "src/"
+  }
+}
 ```
 
 Em `psr-4`, temos que definir uma chave e um valor. A chave representa o `namespace` principal da sua biblioteca. O `valor` é a pasta onde os `scripts` estão localizados.
