@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como distribuir uma biblioteca no Composer?
+title: Criando uma biblioteca própria no Composer
 date: 2021-01-21 01:00:00 -0200
 categories:
 - PHP
