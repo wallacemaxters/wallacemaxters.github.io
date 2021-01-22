@@ -190,7 +190,7 @@ Agora, você precisa submeter a sua biblioteca para o Packagist, através [desse
 
 Você precisa adicionar o URL do repositório do Github no campo _Repository URL_, conforme a imagem abaixo.
 
-![](/uploads/enviando-biblioteca-para-o-packagist-composer.png)
+<img src="/uploads/enviando-biblioteca-para-o-packagist-composer.png" alt="Enviando biblioteca para packagist" title="Enviando biblioteca para packagist" loading="lazy">
 
 ### Configurando o TOKEN API no Packagist
 
