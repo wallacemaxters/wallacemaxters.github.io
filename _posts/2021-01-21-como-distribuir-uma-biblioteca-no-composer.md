@@ -216,7 +216,8 @@ Em **SSL verification**,  deixe marcado **Enable SSL verification.**
 
 Em **Secret**, adicione o token do Packagist. Ele pode ser encontrado [nesse link,](https://packagist.org/profile/) conforme a imagem abaixo:
 
-![Token da API Packagist Composer](/uploads/token-da-api-packagist-composer.png)
+
+<img src="/uploads/token-da-api-packagist-composer.png" alt="Token da API Packagist Composer" title="Token da API Packagist Composer" loading="lazy">
 
 Basta clicar em _Show API Token_ para visualizá-lo. Copie e cole no campo **Secret**. Em seguida, clique no botão _Add Webhook_.
 
