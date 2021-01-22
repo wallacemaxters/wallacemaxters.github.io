@@ -192,21 +192,31 @@ Você precisa adicionar o URL do repositório do Github no campo _Repository URL
 
 ### Configurando o TOKEN API no Packagist
 
-Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas configurações do seu repositório do Github. 
+Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas configurações do seu repositório do Github.
 
-Para fazer isso, acesse a opção <kbd>Settings</kbd> > <kbd>Integrations & Services</kbd>  do seu repositório.
+Para fazer isso, acesse a opção **Settings > Webhooks > Add Webhook** do seu repositório, conforme a imagem abaixo.
 
-![](/uploads/integrando-o-packagist-com-github.png)
+![Adicionar Webhook no Github](/uploads/adicionar-webhook-github.png "Adicionar Webhook no Github")
 
-Depois disso, você deve clicar no serviço "packagist" que foi adicionado, e configurá-lo, colocando seu usuário e o token do Packagist.
+Em seguida, você terá acesso a um formulário de cadastro do Webhook, conforme a imagem abaixo:
 
-Veja:
+![](/uploads/adicionando-token-packagist-github.png)
 
-![](/uploads/configurar-token-composer-github.png)
+ No campo **Payload URL**, adicione o endpoint do Packagist. Ela é responsável por receber as informações atualizadas do Github, toda vez que um push for feito no repositório da sua biblioteca.
 
-O token do packagisto deverá ser adicionado no formulário acima. Ele pode ser encontrado [nesse link,](https://packagist.org/profile/) conforme a imagem abaixo:
+Exemplo:
+
+    https://packagist.org/api/github?username=seu_usuario_packagist
+
+No campo **Content Type,** selecione a opção `application/json`.
+
+Em **SSL verification**,  deixe marcado **Enable SSL verification.**
+
+Em **Secret**, adicione o token do Packagist. Ele pode ser encontrado [nesse link,](https://packagist.org/profile/) conforme a imagem abaixo:
 
 ![](/uploads/token-da-api-packagist-composer.png)
+
+Basta clicar em _Show API Token_ para visualizá-lo. Copie e cole no campo **Secret**. Em seguida, clique no botão _Add Webhook._
 
 ### Instalando sua biblioteca
 
