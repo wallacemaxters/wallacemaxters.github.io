@@ -202,7 +202,7 @@ Para fazer isso, acesse a opção **Settings > Webhooks > Add Webhook** do seu r
 
 Em seguida, você terá acesso a um formulário de cadastro do Webhook, conforme a imagem abaixo:
 
-![](/uploads/adicionando-token-packagist-github.png)
+![Adicionando token Packagist Github](/uploads/adicionando-token-packagist-github.png)
 
  No campo **Payload URL**, adicione o endpoint do Packagist. Ela é responsável por receber as informações atualizadas do Github, toda vez que um push for feito no repositório da sua biblioteca.
 
@@ -216,9 +216,9 @@ Em **SSL verification**,  deixe marcado **Enable SSL verification.**
 
 Em **Secret**, adicione o token do Packagist. Ele pode ser encontrado [nesse link,](https://packagist.org/profile/) conforme a imagem abaixo:
 
-![](/uploads/token-da-api-packagist-composer.png)
+![Token da API Packagist Composer](/uploads/token-da-api-packagist-composer.png)
 
-Basta clicar em _Show API Token_ para visualizá-lo. Copie e cole no campo **Secret**. Em seguida, clique no botão _Add Webhook._
+Basta clicar em _Show API Token_ para visualizá-lo. Copie e cole no campo **Secret**. Em seguida, clique no botão _Add Webhook_.
 
 ### Instalando sua biblioteca
 
@@ -226,7 +226,9 @@ Depois de fazer tudo isso, você já poderá testar se sua biblioteca está func
 
 Exemplo:
 
-    composer require vendorname/libraryname
+```bash
+composer require vendorname/libraryname
+```
 
 ## Como funciona o versionamento no Composer?
 
