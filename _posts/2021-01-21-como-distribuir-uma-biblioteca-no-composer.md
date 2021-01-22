@@ -202,7 +202,7 @@ Para fazer isso, acesse a opção **Settings > Webhooks > Add Webhook** do seu r
 
 Em seguida, você terá acesso a um formulário de cadastro do Webhook, conforme a imagem abaixo:
 
-![Adicionando token Packagist Github](/uploads/adicionando-token-packagist-github.png)
+<img src="/uploads/adicionando-token-packagist-github.png" alt="Adicionando token Packagist Github" title="Adicionando token Packagist Github" loading="lazy">
 
  No campo **Payload URL**, adicione o endpoint do Packagist. Ela é responsável por receber as informações atualizadas do Github, toda vez que um push for feito no repositório da sua biblioteca.
 
