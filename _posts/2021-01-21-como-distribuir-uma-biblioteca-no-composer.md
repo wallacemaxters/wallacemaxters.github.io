@@ -172,7 +172,7 @@ Se você receber a saída _"Hello!"_, isso significa que seu autoload está corr
 
 ## Enviando as alterações para o repositório remoto
 
-Atualize o repositório remoto com os arquivos da sua biblioteca. 
+Se você fez todas as confirmações acima, agora você já pode atualizar o repositório remoto com os arquivos da sua biblioteca.
 
 Faça assim:
 
@@ -184,15 +184,17 @@ git push -u origin master
 
 ## Adicionando o repositório ao Packagist
 
-Agora que o repositório está atualizado, você precisa submeter a sua biblioteca para o Packagist, através [desse link](https://packagist.org/packages/submit).
+Agora, você precisa submeter a sua biblioteca para o Packagist, através [desse link](https://packagist.org/packages/submit).
 
-Você precisa adicionar o caminho da sua biblioteca do Github no formulário abaixo:
+Você precisa adicionar o URL do repositório do Github no campo _Repository URL_, conforme a imagem abaixo.
 
 ![](/uploads/enviando-biblioteca-para-o-packagist-composer.png)
 
-Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas configurações do seu repositório do Github.
+### Configurando o TOKEN API no Packagist
 
-Você deve clicar na opção "settings" e em seguida "integrations and services". Depois disso, na opção "add service" você deve escolher "packagist".
+Depois da submissão, é necessário inserir o seu _TOKEN API_ do Packagist nas configurações do seu repositório do Github. 
+
+Para fazer isso, acesse a opção <kbd>Settings</kbd> > <kbd>Integrations & Services</kbd>  do seu repositório.
 
 ![](/uploads/integrando-o-packagist-com-github.png)
 
