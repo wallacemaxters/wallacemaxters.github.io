@@ -11,7 +11,7 @@ sections:
   match: "**/*"
   new_doc_ext: md
   templates:
-  - categoriasss
+  - categorias
   - defaulttemplate
 - type: jekyll-posts
   label: Posts
