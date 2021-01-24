@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como rodar o php artisan tinker no Lumen?
+title: Por que o comando 'php artisan tinker' não funciona no Lumen?
 date: 2021-01-24 02:24:00 -0200
 categories:
 - lumen
