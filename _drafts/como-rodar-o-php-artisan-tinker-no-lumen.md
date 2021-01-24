@@ -6,7 +6,7 @@ categories:
 - lumen
 sitemap: true
 image: "/uploads/lumen.png"
-excerpt: php artisan tinker não funciona no Lumen
+excerpt: Aprenda a resolver o erro 'Command "tinker" is not defined' no Lumen.
 
 ---
 As vezes estamos acostumado a utilizar os comandos do Laravel e, de repente, sentimos falta de algum deles no Lumen.
