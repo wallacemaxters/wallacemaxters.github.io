@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Criando uma biblioteca própria no Composer
+title: Como criar e publicar uma biblioteca própria no Composer
 date: 2021-01-21T01:00:00.000-02:00
 categories:
 - PHP
