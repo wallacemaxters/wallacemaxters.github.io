@@ -6,7 +6,8 @@ categories:
 - PHP
 - composer
 sitemap: true
-excerpt: Aprenda como publicar e disponibilizar a sua própria biblioteca no Composer.
+excerpt: Aprenda como criar, publicar e disponibilizar a sua própria biblioteca no
+  Composer.
 image: "/uploads/composer.jpg"
 
 ---
