@@ -6,8 +6,7 @@ categories:
 - PHP
 - composer
 sitemap: true
-excerpt: Aprenda como publicar a sua própria biblioteca no packagist.org para utilização
-  no Composer.
+excerpt: Aprenda como publicar e disponibilizar a sua própria biblioteca no Composer.
 image: "/uploads/composer.jpg"
 
 ---
