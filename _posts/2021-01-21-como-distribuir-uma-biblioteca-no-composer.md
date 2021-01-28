@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Criando uma biblioteca própria no Composer
-date: 2021-01-21 01:00:00 -0200
+date: 2021-01-21T01:00:00.000-02:00
 categories:
 - PHP
 - composer
 sitemap: true
-excerpt: Aprenda a publicar a sua biblioteca no packagist.org para utilização no Composer
+excerpt: Aprenda como publicar a sua própria biblioteca no packagist.org para utilização
+  no Composer.
 image: "/uploads/composer.jpg"
 
 ---
