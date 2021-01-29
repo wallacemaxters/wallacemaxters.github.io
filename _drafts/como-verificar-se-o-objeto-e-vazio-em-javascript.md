@@ -77,7 +77,7 @@ console.log(Object.keys(nao_vazio).length === 0); // false
 
 #### Utilizando Object.entries
 
-O método `Object.entries` retorna um `Array` contendo a chave e o valor do objeto em um `Array`. 
+O método `Object.entries` retorna um `Array` contendo a chave e o valor do objeto em um `Array`.
 
 Por exemplo:
 
@@ -100,5 +100,46 @@ if (Object.entries(vazio) === 0) {
 
 if (Object.entries(nao_vazio) > 0) {
   console.log('não vazio');
+}
+```
+
+### Versões mais antigas
+
+Nas versões mais antigas dos navegadores, confesso que o código talvez não possa parecer tão elegante.
+
+#### Utilizando JSON.stringify
+
+O método `JSON.sringify` converte um valor em Javascript para `JSON`. Sendo assim, um objeto vazio sempre seria equivalente a string `"{}".`
+
+Então, bastaria comparar:
+
+```javascript
+if (Object.stringify(vazio) === '{}') {
+  console.log('Objeto está vazio');
+}
+
+if (Object.stringify(nao_vazio) !== '{}') {
+   console.log('Objeto não está vazio');
+}
+```
+
+### Utilizando um Loop
+
+Em Javascript, o `Object` pode ser iterado com o laço de repetição `for`.  Basicamente, podemos criar uma função que faça um loop no `Object`, retornando `false` caso entre no `for` e `true` caso não entre.
+
+Basta fazer assim:
+
+```javascript
+function isEmptyObject(object) {
+    for (var name in object) return false;
+    return true;
+}
+
+if (isEmptyObject({})) {
+    console.log('Object vazio');
+}
+
+if (! isEmptyObject({nome: "wallace"}) {
+    console.log('Objeto não está vazio');
 }
 ```
