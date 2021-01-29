@@ -37,7 +37,7 @@ Em navegadores mais atuais, podemos utilizar alguns método presentes em `Object
 O método `Object.values` retorna todos os valores de um objeto em um `Array`.
 
 ```javascript
-console.log(Object.values({"nome": "Wallace", "nick": "Maxters'})); 
+console.log(Object.values({"nome": "Wallace", "nick": "Maxters"})); 
 // ['Wallace', 'Maxters']
 ```
 
