@@ -86,7 +86,7 @@ Por exemplo:
 ```javascript
 var user = {
   "nome": "Wallace",
-  "nick": "Maxters
+  "nick": "Maxters"
 };
 Object.entries(user); // [['nome', 'Wallace'], ['nick', 'Maxters']]
 ```
