@@ -5,7 +5,7 @@ date: 2021-01-29 02:35:00 -0200
 categories:
 - javascript
 sitemap: true
-image: ''
+image: "/uploads/html.jpg"
 excerpt: ''
 
 ---
