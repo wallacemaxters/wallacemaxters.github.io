@@ -104,7 +104,7 @@ if (Object.entries(nao_vazio) > 0) {
   console.log('não vazio');
 }
 ```
-
+-----
 ### Versões mais antigas
 
 Nas versões mais antigas dos navegadores, confesso que o código talvez não possa parecer tão elegante.
