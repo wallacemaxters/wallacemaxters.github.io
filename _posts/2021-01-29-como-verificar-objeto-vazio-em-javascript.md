@@ -64,7 +64,7 @@ Da mesma forma acima, o `Object.keys` retorna um `Array` de chaves de um objeto.
 Exemplo:
 
 ```javascript
-console.log(Object.keys({"nome": "Wallace", "nick": "Maxters'})); 
+console.log(Object.keys({"nome": "Wallace", "nick": "Maxters"})); 
 // ['nome', 'nick']
 ```
 
