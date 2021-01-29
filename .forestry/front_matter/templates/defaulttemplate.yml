@@ -65,5 +65,5 @@ pages:
 - _posts/2021-01-12-como-configurar-a-variavel-path.md
 - _posts/2021-01-20-como-fazer-o-input-file-aceitar-apenas-imagens.md
 - _posts/codigo/2021-01-14-quis-qui-ipsum-sint.md
-- _posts/como-verificar-se-o-objeto-e-vazio-em-javascript.md
+- _posts/como-verificar-objeto-vazio-em-javascript.md
 - _posts/por-que-o-comando-php-artisan-tinker-nao-funciona-no-lumen.md
