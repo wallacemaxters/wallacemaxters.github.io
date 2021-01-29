@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Como verificar se o objeto é vazio em Javascript
-date: 2021-01-29 01:00:00 -0200
-categories: []
-sitemap: false
+title: Como verificar se o objeto é vazio em Javascript?
+date: 2021-01-29 02:35:00 -0200
+categories:
+- javascript
+sitemap: true
 image: ''
 excerpt: ''
 
@@ -143,3 +144,7 @@ if (! isEmptyObject({nome: "wallace"}) {
     console.log('Objeto não está vazio');
 }
 ```
+
+## Conclusão
+
+Em Javascript, não existe nenhuma função/método para verificar se um objeto é vazio, mas há várias maneiras de fazer essa verificação. 
