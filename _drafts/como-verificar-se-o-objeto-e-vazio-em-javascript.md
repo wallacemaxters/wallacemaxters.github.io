@@ -1,0 +1,104 @@
+---
+layout: post
+title: Como verificar se o objeto é vazio em Javascript
+date: 2021-01-29 01:00:00 -0200
+categories: []
+sitemap: false
+image: ''
+excerpt: ''
+
+---
+Em Javascript, sabemos que é possível saber se um `Array` é vazio simplesmente utilizando a propriedade `length`. Se ela for `0`, significa que o `Array` está vazio.
+
+Exemplo:
+
+```javascript
+var arr1 = [1, 2, 3];
+var arr2 = [];
+
+console.log(arr1.length === 0); // false
+console.log(arr2.length === 0); // true
+```
+
+Porém `Object` não possui `length`. Sendo assim, como podemos saber se o mesmo é vazio ou não?
+
+## Verificando se o objeto é vazio
+
+Para fazer isso em Javascript, existem diversas maneiras. Vejamos algumas delas, nas versões mais recentes e nas mais antigas.
+
+### Nas versões de navegadores mais recentes
+
+Em navegadores mais atuais, podemos utilizar alguns método presentes em `Object`. Entre eles, podemos destacar os seguintes:
+
+#### Utilizando Object.values
+
+O método `Object.values` retorna todos os valores de um objeto em um `Array`.
+
+```javascript
+console.log(Object.values({"nome": "Wallace", "nick": "Maxters'})); 
+// ['Wallace', 'Maxters']
+```
+
+Sendo assim, é possível utilizar a mesma abordagem do Array para checar se o mesmo é vazio.
+
+Exemplo:
+
+```javascript
+var vazio = {};
+var nao_vazio = {"nome": "Wallace"};
+if (Object.values(vazio).length === 0) {
+  console.log('objeto está vazio');
+}
+
+if (Object.values(nao_vazio).length > 0) {
+  console.log('objeto não está vazio');
+}
+```
+
+#### Utilizando Object.keys
+
+Da mesma forma acima, o `Object.keys` retorna um `Array` de chaves de um objeto.
+
+Exemplo:
+
+```javascript
+console.log(Object.keys({"nome": "Wallace", "nick": "Maxters'})); 
+// ['nome', 'nick']
+```
+
+Sendo assim, basta usar a mesma abordagem de `Object.values`:
+
+```javascript
+var vazio = {};
+var nao_vazio = {"nome": "Wallace"};
+console.log(Object.keys(vazio).length === 0); // true
+console.log(Object.keys(nao_vazio).length === 0); // false
+```
+
+#### Utilizando Object.entries
+
+O método `Object.entries` retorna um `Array` contendo a chave e o valor do objeto em um `Array`. 
+
+Por exemplo:
+
+```javascript
+var user = {
+  "nome": "Wallace",
+  "nick": "Maxters
+};
+Object.entries(user); // [['nome', 'Wallace'], ['nick', 'Maxters']]
+```
+
+Sendo assim, também podemos usar  `length`.
+
+```javascript
+var nao_vazio = {"valor": 5};
+var vazio = {};
+if (Object.entries(vazio) === 0) {
+  console.log('vazio');
+}
+
+if (Object.entries(nao_vazio) > 0) {
+  console.log('não vazio');
+}
+```
