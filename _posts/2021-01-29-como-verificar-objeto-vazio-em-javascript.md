@@ -104,7 +104,9 @@ if (Object.entries(nao_vazio) > 0) {
   console.log('não vazio');
 }
 ```
------
+
+***
+
 ### Versões mais antigas
 
 Nas versões mais antigas dos navegadores, confesso que o código talvez não possa parecer tão elegante.
@@ -125,7 +127,7 @@ if (Object.stringify(nao_vazio) !== '{}') {
 }
 ```
 
-### Utilizando um Loop
+#### Utilizando um Loop
 
 Em Javascript, o `Object` pode ser iterado com o laço de repetição `for`.  Basicamente, podemos criar uma função que faça um loop no `Object`, retornando `false` caso entre no `for` e `true` caso não entre.
 
