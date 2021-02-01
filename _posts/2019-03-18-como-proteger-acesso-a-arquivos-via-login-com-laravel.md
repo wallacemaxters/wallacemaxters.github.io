@@ -23,7 +23,7 @@ A primeira coisa a ser feita é não armazenar esses arquivos em nenhum lugar qu
 Exemplo:
 
 ```php
-$request->file('arquivo')->store('uploads')
+$request->file('arquivo')->store('uploads');
 ```
 
 Nesse primeiro passo, é importante salvar o caminho do arquivo em algum lugar. Você pode obter esse caminho através do retorno de `store`.
