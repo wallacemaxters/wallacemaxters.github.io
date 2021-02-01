@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Como proteger acesso a arquivos via login com Laravel?
+title: Como restringir acesso de arquivos via login ou nível de acesso no Laravel?
 date: 2019-05-28T00:35:00.000+00:00
 categories:
 - laravel
 - upload
-- "segurança"
+- segurança
 sitemap: true
 image: "/uploads/laravel-seguranca.jpg"
 
@@ -22,14 +22,18 @@ A primeira coisa a ser feita é não armazenar esses arquivos em nenhum lugar qu
 
 Exemplo:
 
-    $request->file('arquivo')->store('uploads')
+```php
+$request->file('arquivo')->store('uploads')
+```
 
 Nesse primeiro passo, é importante salvar o caminho do arquivo em algum lugar. Você pode obter esse caminho através do retorno de `store`.
 
 Assim:
 
-    $path = $request->file('arquivo')->store('uploads')
+```php
+    $path = $request->file('arquivo')->store('uploads');
     ModelUpload::create(['path' => $path]);
+```
 
 > **Nota**: no exemplo acima, podemos imaginar uma tabela que contenha `id` e um campo para armazenar o caminho, que chamei de `path`.
 
@@ -43,15 +47,17 @@ Tomemos como exemplo um arquivo que só pode ser visto caso esteja autenticado.
 
 Veja:
 
-    Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
-    
-    	$path = $model_upload->path;
-        
-         return response(Storage::get($path), 200, [
-         	'content-type' => Storage::mimeType($path)
-         ]);
-    
-    })->middleware('auth');
+```php
+Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
+
+    $path = $model_upload->path;
+
+        return response(Storage::get($path), 200, [
+        'content-type' => Storage::mimeType($path)
+        ]);
+
+})->middleware('auth');
+```
 
 Assim, para ver o arquivo armazenado, bastaria acessar `uploads/1`. 
 
