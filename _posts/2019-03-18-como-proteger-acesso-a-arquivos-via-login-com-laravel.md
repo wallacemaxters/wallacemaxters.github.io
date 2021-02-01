@@ -31,8 +31,8 @@ Nesse primeiro passo, é importante salvar o caminho do arquivo em algum lugar. 
 Assim:
 
 ```php
-    $path = $request->file('arquivo')->store('uploads');
-    ModelUpload::create(['path' => $path]);
+$path = $request->file('arquivo')->store('uploads');
+ModelUpload::create(['path' => $path]);
 ```
 
 > **Nota**: no exemplo acima, podemos imaginar uma tabela que contenha `id` e um campo para armazenar o caminho, que chamei de `path`.
