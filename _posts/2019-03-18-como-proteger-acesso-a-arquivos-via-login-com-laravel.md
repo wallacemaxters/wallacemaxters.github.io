@@ -14,7 +14,7 @@ Quando fazemos uma aplicação que contenha upload, muitas vezes a regra de neg�
 
 Existe uma solução que eu costumo utilizar para isso em Laravel.
 
-**Onde fazer o upload?**
+## Onde fazer o upload?
 
 Geralmente, fazemos o upload para a pasta `public` da aplicação. É verdade que nas versões recentes do Laravel, é utilizada a pasta `storage` com um link simbólico para a pasta `public`, mas o acesso continuaria sendo público.
 
@@ -37,7 +37,8 @@ ModelUpload::create(['path' => $path]);
 
 > **Nota**: no exemplo acima, podemos imaginar uma tabela que contenha `id` e um campo para armazenar o caminho, que chamei de `path`.
 
-**Exibindo o arquivo protegido**
+
+## Exibindo o arquivo protegido
 
 Agora, é que analisamos o problema. Quando você armazena num serviço S3 da Amazon, você poderia facilmente utilizar a url temporária para acessar o arquivo. Mas nem sempre, as aplicações que fazemos usam s3. Além disso, pode ainda de não querermos um link temporário, e sim uma url que só possa ser acessível via login.
 
