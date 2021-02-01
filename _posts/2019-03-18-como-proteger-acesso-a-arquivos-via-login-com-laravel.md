@@ -52,9 +52,9 @@ Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $mo
 
     $path = $model_upload->path;
 
-        return response(Storage::get($path), 200, [
+    return response(Storage::get($path), 200, [
         'content-type' => Storage::mimeType($path)
-        ]);
+    ]);
 
 })->middleware('auth');
 ```
@@ -83,16 +83,18 @@ Mas, tomando como base um pequeno exemplo, poderíamos verificar se determinado 
 
 Veja:
 
-    Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
+ ```php
+  Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
+
+    if (auth()->user()->tipo !== 'admin') {
+        return response('Você não pode acessar esse arquivo', 403);
+    }
     
-       if (auth()->user()->tipo !== 'admin') {
-        	return response('Você não pode acessar esse arquivo', 403);
-       }
-        
-        $path = $model_upload->path;
-        
-        return response(Storage::get($path), 200, [
-         	'content-type' => Storage::mimeType($path)
-        ]);
+    $path = $model_upload->path;
     
-    })->middleware('auth');
+    return response(Storage::get($path), 200, [
+        'content-type' => Storage::mimeType($path)
+    ]);
+
+})->middleware('auth');
+```
