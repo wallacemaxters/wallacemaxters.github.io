@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Criando filtros de pesquisa por intervalo de datas no Laravel
-date: 2020-11-09 14:46:00 -0200
+date: 2020-11-09T14:46:00.000-02:00
 categories:
 - laravel
 sitemap: true
-image: "/uploads/laravel_database_search.svg"
+image: "/uploads/como-criar-filtros-por-data-no-laravel.jpeg"
 excerpt: Aprenda a filtrar resultados de uma consulta no Laravel através de um intervalo
   de datas.
 
