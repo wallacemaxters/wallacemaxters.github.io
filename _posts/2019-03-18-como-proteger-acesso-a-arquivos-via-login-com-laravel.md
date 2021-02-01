@@ -85,7 +85,7 @@ Mas, tomando como base um pequeno exemplo, poderíamos verificar se determinado 
 Veja:
 
  ```php
-  Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
+Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
 
     if (auth()->user()->tipo !== 'admin') {
         return response('Você não pode acessar esse arquivo', 403);
