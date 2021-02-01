@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como restringir acesso de arquivos via login ou nível de acesso no Laravel?
+title: Restringindo acesso aos arquivos com login ou nível de acesso no Laravel?
 date: 2019-05-28T00:35:00.000+00:00
 categories:
 - laravel
