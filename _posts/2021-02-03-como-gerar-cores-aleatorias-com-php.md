@@ -1,7 +1,7 @@
 ---
 layout: post
 title: como gerar cores aleatórias com PHP?
-date: 2021-02-03 01:00:00 -0200
+date: 2021-02-03 13:56:00 -0200
 categories:
 - php
 sitemap: true
