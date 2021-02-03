@@ -41,6 +41,8 @@ O `x` converte o valor para a notação hexadecimal. O `x` converte os caractere
 
 A função  `mt_rand` se encarregará de gerar um  número aleatório desde `0` até `16777215`. O número `16777215` é proveniente da expressão hexadecimal `0xFFFFFF`. Sabemos que no CSS, o valor para uma cor vai de `#000000` (preto) até `#FFFFFF` (branco). Por essa razão, utilizamos o valor `0xFFFFFF`. Uma expressão hexadecimal em PHP pode ser representada através de `0x[0-9a-fA-F]`.
 
+### Limitando as cores geradas
+
 Nossa função possui o parâmetro `$start` e `$end` para o caso de você querer limitar a aleatoriedade das cores geradas. Por exemplo, se quisermos que gerar cores entre `#DDDDDD` e `#FFFFFF`, podemos fazer assim:
 
     random_color (0xDDDDDD, 0xFFFFFF); // #e8bc3d
