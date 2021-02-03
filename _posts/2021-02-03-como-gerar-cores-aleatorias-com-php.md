@@ -5,7 +5,7 @@ date: 2021-02-03 01:00:00 -0200
 categories:
 - php
 sitemap: true
-image: "/uploads/covers/php.png"
+image: "/uploads/php_cores.png"
 excerpt: Aprenda a gerar cores hexadecimais aleatórias através do PHP
 
 ---
