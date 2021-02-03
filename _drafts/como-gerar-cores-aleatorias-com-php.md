@@ -9,9 +9,11 @@ image: "/uploads/covers/php.png"
 excerpt: Aprenda a gerar cores hexadecimais aleatórias através do PHP
 
 ---
-## Criando uma função
+Muitas vezes, precisamos gerar cores aleatoriamente. Nesse tutorial vou ensinar uma maneira de fazer isso em PHP.
 
-Com a função abaixo, é possível gerar cores hexadecimais aleatórias no PHP.
+## Criando a função para gerar cores aleatórias
+
+Não é algo complicado. Podemos simplesmente uma função para gerar cores hexadecimais aleatórias no PHP utilizando as funções `mt_rand` e `sprintf`.
 
 ```php
 function random_color($start = 0x000000, $end = 0xFFFFFF) {
@@ -25,8 +27,9 @@ Utilização:
 echo random_color(); // #add555
 ```
 
-
 ## Explicando a função
+
+A função `sprintf` tem como finalidade formatar uma string. O caractere `%` atua como o formatador da string.
 
 O caractere `#` é utilizado para cores em hexadecimal em HTML ou CSS.
 
@@ -38,9 +41,7 @@ A função  `mt_rand` se encarregará de gerar um  número aleatório desde `0` 
 
 Nossa função possui o parâmetro `$start` e `$end` para o caso de você querer limitar a aleatoriedade das cores geradas. Por exemplo, se quisermos que gerar cores entre `#DDDDDD` e `#FFFFFF`, podemos fazer assim:
 
-```
-random_color (0xDDDDDD, 0xFFFFFF); // #e8bc3d
-```
+    random_color (0xDDDDDD, 0xFFFFFF); // #e8bc3d
 
 ## Usando no HTML
 
