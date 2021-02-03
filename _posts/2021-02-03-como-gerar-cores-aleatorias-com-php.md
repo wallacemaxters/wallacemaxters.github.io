@@ -46,7 +46,7 @@ A função  `mt_rand` se encarregará de gerar um  número aleatório desde `0` 
 Nossa função possui o parâmetro `$start` e `$end` para o caso de você querer limitar a aleatoriedade das cores geradas. Por exemplo, se quisermos que gerar cores entre `#DDDDDD` e `#FFFFFF`, podemos fazer assim:
 
 ```php
-random_color (0xDDDDDD, 0xFFFFFF); // #e8bc3d
+echo random_color(0xDDDDDD, 0xFFFFFF); // #e8bc3d
 ```
 
 ## Usando no HTML

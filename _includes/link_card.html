@@ -1,4 +1,4 @@
-<a href="{{ include.url }}" class="related-post-card" style='background-image: url("{{ include.image }}");'>
+<a href="{{ include.url }}" class="related-post-card" style='background-image: url("{{ include.image }}"); {% if include.height %}height: {{ include.height }}{% endif %}'>
     <div class="overlay">
         {{ include.title }}
     </div>

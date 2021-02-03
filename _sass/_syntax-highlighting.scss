@@ -4,9 +4,11 @@
 pre.highlight {
     background: #fff;
     margin-bottom: $spacing-unit / 2;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 5px;
 
     .highlighter-rouge & {
-      background: #eee;
+      background: #f3f3f3;
     }
 
     .c     { color: #998; font-style: italic } // Comment
@@ -37,7 +39,7 @@ pre.highlight {
     .m     { color: #099 } // Literal.Number
     .s     { color: #d14 } // Literal.String
     .na    { color: #008080 } // Name.Attribute
-    .nb    { color: #0086B3 } // Name.Builtin
+    .nb    { color: #0A86B3 } // Name.Builtin
     .nc    { color: #458; font-weight: bold } // Name.Class
     .no    { color: #008080 } // Name.Constant
     .ni    { color: #800080 } // Name.Entity
@@ -45,7 +47,7 @@ pre.highlight {
     .nf    { color: #900; font-weight: bold } // Name.Function
     .nn    { color: #555 } // Name.Namespace
     .nt    { color: #000080 } // Name.Tag
-    .nv    { color: #008080 } // Name.Variable
+    .nv    { color: #000080 } // Name.Variable
     .ow    { font-weight: bold } // Operator.Word
     .w     { color: #bbb } // Text.Whitespace
     .mf    { color: #099 } // Literal.Number.Float
