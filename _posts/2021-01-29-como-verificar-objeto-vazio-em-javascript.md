@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Como verificar se o objeto é vazio em Javascript?
-date: 2021-01-29 02:35:00 -0200
+date: 2021-01-29T02:35:00.000-02:00
 categories:
 - javascript
 sitemap: true
-image: "/uploads/html.jpg"
+image: "/uploads/javascript-objeto-vazio.jpeg"
 excerpt: Em Javascript, Object não possui a propriedade length. Porém há muitas maneiras
   de se verificar se um objeto é vazio. Aprenda neste tutorial.
 
