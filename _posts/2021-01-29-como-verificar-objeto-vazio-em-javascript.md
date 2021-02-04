@@ -118,11 +118,11 @@ O método `JSON.sringify` converte um valor em Javascript para `JSON`. Sendo ass
 Então, bastaria comparar:
 
 ```javascript
-if (Object.stringify(vazio) === '{}') {
+if (JSON.stringify(vazio) === '{}') {
   console.log('Objeto está vazio');
 }
 
-if (Object.stringify(nao_vazio) !== '{}') {
+if (JSON.stringify(nao_vazio) !== '{}') {
    console.log('Objeto não está vazio');
 }
 ```
