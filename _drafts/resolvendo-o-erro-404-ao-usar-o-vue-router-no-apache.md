@@ -6,8 +6,11 @@ categories:
 - vue
 - apache
 sitemap: true
-image: ''
-excerpt: ''
+image: "/uploads/covers/vue.jpeg"
+excerpt: Ao tentar criar um virtual host para uma aplicação Vue rodar no Apache, é
+  comum ter problemas com as rotas Vue Router, pois ao atualizar a página ou acessar
+  diretamente uma url, costuma retornar 404. Aprenda a configurar o seu .htaccess
+  para resolver esse problema através desse tutorial.
 
 ---
 Após fazer o build de uma aplicação escrita no VueJS e configurá-la para rodar no Apache, é comum ocorrer um erro 404 ao tentar acessar as rotas da mesma.
