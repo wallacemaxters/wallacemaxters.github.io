@@ -1,5 +1,11 @@
 <header class="top-header">
 	<div class="overlay">
+		{%- if page.title -%}
+		<a title="Página Inicial" href="/" class="has-text-light" style="position: absolute; top: 0; left: 0; padding: 1rem 2rem">
+			<!-- futuramente pode ser uma barra de menu -->
+			<i class="fa fa-home fa-1x"></i>
+		</a>
+		{%- endif %}
 		<div class="container">
 			{%- if page.title -%}
 					<div class="block">
