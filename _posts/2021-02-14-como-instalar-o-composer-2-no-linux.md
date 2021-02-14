@@ -5,7 +5,7 @@ date: 2021-02-14 11:14:00 -0200
 categories:
 - linux
 - composer
-- php
+- PHP
 sitemap: true
 image: "/uploads/composer.jpg"
 excerpt: O Composer 2 foi lançado, com várias novidades, principalmente em relação
