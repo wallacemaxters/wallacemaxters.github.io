@@ -53,7 +53,7 @@ Route::get('arquivo/{id}', function (Arquivo $arquivo) {
 
 Assim, caso o usuário esteja autenticado, bastaria acessar `arquivo/1` para visualizar o arquivo protegido. Caso contrário, o mesmo será redirecionado para autenticação (ou receberá uma resposta 401, caso esteja utilizando API).
 
-É importante informar o `Content-Type` na resposta, para que o navegador entenda que a resposta se trata de um arquivo no momento da resposta.
+É importante informar o header `Content-Type` na resposta, para que o navegador entenda que a resposta se trata de um arquivo.
 
 > **Nota**: Se estiver utilizando a autenticação via API, você pode simplesmente usar o middleware `auth:api`.
 
