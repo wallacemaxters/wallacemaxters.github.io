@@ -89,10 +89,49 @@ Route::get('arquivo/{id}', function (Arquivo $arquivo) {
 })->middleware('auth');
 ```
 
-> **DICA** : Você também pode utilizar o [`Policy`](https://laravel.com/docs/5.8/authorization) do Laravel para autorizar um uso de uma rota. Funcionaria perfeitamente para nosso exemplo.
+## Utilizando Policy
+
+Você também pode utilizar o [Policy](https://laravel.com/docs/5.8/authorization) do Laravel para autorizar um uso de uma rota. Funcionaria perfeitamente para nosso exemplo.
+
+Primeiro, rode o comando:
+
+```bash
+php artisan make:policy ArquivoPolicy
+```
+
+Em seguida, adicione o seguinte trecho:
+
+```
+namespace App\Policies;
+
+use App\Models\User;
+use App\Models\Arquivo;
+use Illuminate\Auth\Access\HandlesAuthorization;
+
+class ArquivoPolicy
+{
+    use HandlesAuthorization;
+
+    public function visualizar(User $usuario, Arquivo $arquivo)
+    {
+        if ($usuario->tipo === 'admin') return true;
+        
+        return $this->deny('Somente administradores podem executar essa ação.');
+    }
+}
+```
+
+Altere seu `AuthServiceProvider`, modificando a variável `$policies`, assim:
 
 ```php
+protected $policies = [
+  // ...
+  Arquivo::class => ArquivoPolicy::class,
+];
+```
+E no seu controller, faça assim:
 
+```php
 class ArquivosController extends Controller
 {
 
