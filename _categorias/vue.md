@@ -1,15 +1,10 @@
 ---
 layout: category
-title: Publicações sobre VueJS
+title: "Vue.js"
 subtitle: GIT
 image: "/uploads/covers/vue.jpeg"
 sitemap: true
 label: vue
-excerpt: VueJS é um framework progressivo para a construção de interfaces de usuário.
-  Ao contrário de outros frameworks monolíticos, Vue foi projetado desde sua concepção
-  para ser adotável incrementalmente. A biblioteca principal é focada exclusivamente
-  na camada visual (view layer), sendo fácil adotar e integrar com outras bibliotecas
-  ou projetos existentes.
+excerpt: "O Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única."
 
 ---
-O GIT é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software. O GIT é um software livre.

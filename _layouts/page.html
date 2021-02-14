@@ -2,8 +2,7 @@
 layout: default
 ---
 
+{% include header.html title=page.title excerpt=page.excerpt show_menu=page.show_menu %}
 <section class="section" style="flex: 2">
-    <div class="container">
-        {{ content }}
-    </div>
+    <div class="container">{{ content }}</div>
 </section>

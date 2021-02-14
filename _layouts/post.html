@@ -2,14 +2,10 @@
 layout: default
 ---
 
+{% include header.html title=page.title categories=page.categories show_menu=true %}
+
 <section class="section">
     <div class="container">
-        <!-- <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li class="is-active"><a href="{{ page.url }}" aria-current="page">Publicação</a></li>
-            </ul>
-        </nav> -->
         <div class="columns">    
             <div class="column is-12-mobile is-9-desktop">
                 <div class="box post-page-box">
@@ -18,6 +14,7 @@ layout: default
                         data-href="{{ page.url }}" 
                         data-layout="button"></div>
                 </div>
+
                 {% include author.html %}
                 <div class="block">{% include ads_common.html %}</div>
             </div>

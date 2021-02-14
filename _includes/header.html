@@ -1,43 +1,42 @@
 <header class="top-header">
-	<div class="overlay">
-		{%- if page.title -%}
-		<a title="Página Inicial" href="/" class="has-text-light" style="position: absolute; top: 0; left: 0; padding: 1rem 2rem">
-			<!-- futuramente pode ser uma barra de menu -->
-			<i class="fa fa-home fa-1x"></i>
-		</a>
-		{%- endif %}
-		<div class="container">
-			{%- if page.title -%}
-					<div class="block">
-						<h1 class="title is-2">
-							<a href="{{ page.url }}" class="has-text-white">
-								{{ page.title | escape }}
-							</a>
-						</h1>
-					</div>
-					{%- if page.categories | size -%}
-					<div class="block has-text-white">
-						{%- for category in page.categories -%}
-							{% assign category_page = site.categorias | where: "label", category | first %}
+    <div class="top-header-overlay">
+        {%- if include.show_menu -%}
+            <nav class="top-header-menu">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="/" class="has-text-white">
+                                Início
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/categorias" class="has-text-white">
+                                Categorias
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        {%- endif %}
+        <div class="top-header-content">
+            <div class="container">
+                <div class="block" style="max-width: 800px; margin-left: auto; margin-right: auto; ">
+                    <h1 class="title is-3 has-text-white">{{ include.title | escape }}</h1>
+                    {% if include.excerpt %}
+                        <div class="subtitle has-text-white">{{ include.excerpt }}</div>
+                    {% endif %}
+                </div>
+                {%- if include.categories | size -%}
+                    <div class="block has-text-white">
+                        {%- for category in include.categories -%}
+                            {% assign category_page = site.categorias | where: "label", category | first %}
                             {% if category_page %}
-								<a href="{{ category_page.url }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
-							{% endif %}
-						{%- endfor -%}
-					</div>
-					{%- endif -%}
-				<p>
-					
-				</p>
-			{%- else -%}
-				<h1 class="title is-1">
-					<a href="{{ site.url }}" class="has-text-white">
-						{{ site.title | escape }}
-					</a>
-				</h1>
-			    <h2 class="subtitle has-text-white">
-			    	{{site.description }}
-				</h2>
-		    {%- endif -%}
-		</div>
-	</div>
+                                <a href="{{ category_page.url }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
+                            {% endif %}
+                        {%- endfor -%}
+                    </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
 </header>
