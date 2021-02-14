@@ -69,7 +69,9 @@ data-ad-slot="9977497686"></ins>
 
 ## Protegendo os arquivos por nível de acesso
 
-Tomando como base um pequeno exemplo, poderíamos verificar se determinado usuário é de um tipo. Caso corresponda ao requisitado, respondemos com o arquivo. Se não, respondemos com erro 403 (acesso não autorizado).
+Tomando como base um pequeno exemplo, poderíamos verificar se determinado usuário é de um tipo. Caso corresponda ao requisitado, retornamos o arquivo. Caso contrário, retornamos o erro 403, informando que a ação não é autorizada.
+
+Exemplo:
 
 ```php
 Route::get('arquivo/{id}', function (Arquivo $arquivo) {
