@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Restringindo acesso aos arquivos com login ou nível de acesso no Laravel?
+title: Protegendo upload de usuários com Laravel
 date: 2019-05-28T00:35:00.000+00:00
 categories:
 - laravel
-- upload
-- segurança
 sitemap: true
 image: "/uploads/laravel-seguranca.jpg"
 
@@ -16,55 +14,44 @@ Existe uma solução que eu costumo utilizar para isso em Laravel.
 
 ## Onde fazer o upload?
 
-Geralmente, fazemos o upload para a pasta `public` da aplicação. É verdade que nas versões recentes do Laravel, é utilizada a pasta `storage` com um link simbólico para a pasta `public`, mas o acesso continuaria sendo público.
+Geralmente, fazemos o upload para a pasta `public` da aplicação. É verdade que nas versões recentes do Laravel é utilizada a pasta `storage` com um link simbólico para a pasta `public`, mas o acesso continuaria sendo público.
 
-A primeira coisa a ser feita é não armazenar esses arquivos em nenhum lugar que seja público.
+Porém, podemos utilizar o disco `local`, cuja configuração se encontra no arquivo `config/filesystems.php`.
 
 Exemplo:
 
 ```php
-$request->file('arquivo')->store('uploads');
+$caminho = $request->file('arquivo')->store('uploads', ['disk' => 'local']);
+Arquivo::create(['caminho' => $caminho]);
 ```
 
-Nesse primeiro passo, é importante salvar o caminho do arquivo em algum lugar. Você pode obter esse caminho através do retorno de `store`.
+No exemplo acima, o disco `local` fará o upload do arquivo para a pasta `storage/app/uploads` e, em seguida, salvamos o caminho no banco de dados.
 
-Assim:
+## Visualizando os arquivos protegidos
 
-```php
-$path = $request->file('arquivo')->store('uploads');
-ModelUpload::create(['path' => $path]);
-```
+Agora vamos permitir que um arquivo só possa ser visualizado após o usuário estar autenticado na aplicação Laravel.
 
-> **Nota**: no exemplo acima, podemos imaginar uma tabela que contenha `id` e um campo para armazenar o caminho, que chamei de `path`.
+Nesse caso, uma solução seria criar uma rota, que responda seu upload enviado anteriormente, baseado no `id` da rota. Essa rota também deverá ser protegida pelo middleware `auth`.
 
-
-## Exibindo o arquivo protegido
-
-Agora, é que analisamos o problema. Quando você armazena num serviço S3 da Amazon, você poderia facilmente utilizar a url temporária para acessar o arquivo. Mas nem sempre, as aplicações que fazemos usam s3. Além disso, pode ainda de não querermos um link temporário, e sim uma url que só possa ser acessível via login.
-
-Nesse caso, a solução que proponho é criar uma rota que tenha como resposta o seu arquivo. Essa rota, obviamente, deverá ser protegida, via login e/ou autorização.
-
-Tomemos como exemplo um arquivo que só pode ser visto caso esteja autenticado.
-
-Veja:
+Exemplo:
 
 ```php
-Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
+Route::get('arquivo/{id}', function (Arquivo $arquivo) {
 
-    $path = $model_upload->path;
+    $disco = Storage::disk('local');
 
-    return response(Storage::get($path), 200, [
-        'content-type' => Storage::mimeType($path)
+    return response($disco->get($arquivo->caminho), 200, [
+        'content-type' => $disco->mimeType($arquivo->caminho)
     ]);
 
 })->middleware('auth');
 ```
 
-Assim, para ver o arquivo armazenado, bastaria acessar `uploads/1`. 
+Assim, caso o usuário esteja autenticado, bastaria acessar `arquivo/1` para visualizar o arquivo protegido. Caso contrário, o mesmo será redirecionado para autenticação (ou receberá uma resposta 401, caso esteja utilizando API). 
 
-É importante sempre informar o `Content-Type` na resposta, para que o navegador entenda seu arquivo de forma correta no momento da resposta.
+É importante informar o `Content-Type` na resposta, para que o navegador entenda que a resposta se trata de um arquivo no momento da resposta.
 
-Como utilizei o Middleware `auth`, essa rota só poderá ser acessada mediante autenticação, ou seja, o arquivo só será visualizado se o usuário estiver autenticado.
+> **Nota**: Se estiver utilizando a autenticação via API, você pode simplesmente usar o middleware `auth:api`.
 
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -76,26 +63,44 @@ Como utilizei o Middleware `auth`, essa rota só poderá ser acessada mediante a
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-**Autorização**
+## Protegendo os arquivos por nível de acesso
 
-Além disso, se você deseja adicionar mais restrição, você poderia utilizar o [`Policy`](https://laravel.com/docs/5.8/authorization) do Laravel. Esse rota de arquivo funcionará como uma outra rota qualquer, sendo diferente apenas no tipo de resposta. Sendo assim, você poderá aplicar normalmente restrições através do Gate ou Policy.
-
-Mas, tomando como base um pequeno exemplo, poderíamos verificar se determinado usuário é de um tipo. Caso corresponda ao requisitado, respondemos com o arquivo; Se não, respondemos com erro 403 (acesso não autorizado).
-
-Veja:
+Tomando como base um pequeno exemplo, poderíamos verificar se determinado usuário é de um tipo. Caso corresponda ao requisitado, respondemos com o arquivo. Se não, respondemos com erro 403 (acesso não autorizado).
 
  ```php
-Route::get('uploads/{model_upload}', function (Request $request, ModelUpload $model) {
+Route::get('arquivo/{id}', function (Arquivo $arquivo) {
 
     if (auth()->user()->tipo !== 'admin') {
         return response('Você não pode acessar esse arquivo', 403);
     }
 
-    $path = $model_upload->path;
+    $disco = Storage::disk('local');
 
-    return response(Storage::get($path), 200, [
-        'content-type' => Storage::mimeType($path)
+    return response($disco->get($arquivo->caminho), 200, [
+        'content-type' => $disco->mimeType($arquivo->caminho)
     ]);
 
 })->middleware('auth');
+```
+
+> **DICA** : Você também pode utilizar o [`Policy`](https://laravel.com/docs/5.8/authorization) do Laravel para autorizar um uso de uma rota. Funcionaria perfeitamente para nosso exemplo.
+
+```php
+
+class ArquivosController extends Controller
+{
+
+    public function show($id)
+    {
+        $arquivo = Arquivo::findOrFail($id);
+
+        $this->authorize('visualizar', $arquivo);
+
+        $disco = Storage::disk('local');
+
+        return response($disco->get($arquivo->caminho), 200, [
+            'content-type' => $disco->mimeType($arquivo->caminho)
+        ]);
+    }
+}
 ```
