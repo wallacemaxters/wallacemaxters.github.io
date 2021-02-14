@@ -17,18 +17,19 @@ Existe uma solução simples para proteger o acesso aos arquivos da sua aplicaç
 
 ## Onde fazer o upload?
 
-Geralmente, fazemos o upload para a pasta `public` da aplicação. É verdade que nas versões recentes do Laravel é utilizada a pasta `storage` com um link simbólico para a pasta `public`, mas o acesso continuaria sendo público.
+Geralmente, alguns desenvolvedores Laravel fazem o upload diretamente na pasta `public` da aplicação. Ou mesmo, utilizamos a pasta `storage`, porém com um link simbólico dentro da pasta `public` apontando para `storage/app/public` (esse link é gerado pelo comando `php artisan storage:link`). Isso faz com que o acesso aos arquivos sejam públicos. Porém nem sempre queremos que seja assim.
 
-Porém, podemos utilizar o disco `local`, cuja configuração se encontra no arquivo `config/filesystems.php`.
+Se ainda assim precisamos fazer o upload dos arquivos no mesmo disco onde a aplicação Laravel se encontra, sem que os mesmos estejam públicos, podemos utilizar o Storage `local` para isso. 
+As configurações para a opção `local` se encontra no arquivo `config/filesystems.php`.
 
-Exemplo:
+Veja um exemplo:
 
 ```php
 $caminho = $request->file('arquivo')->store('uploads', ['disk' => 'local']);
-Arquivo::create(['caminho' => $caminho]);
+return Arquivo::create(['caminho' => $caminho]);
 ```
 
-No exemplo acima, o disco `local` fará o upload do arquivo para a pasta `storage/app/uploads` e, em seguida, salvamos o caminho no banco de dados.
+No exemplo acima, a opção `['disk' => 'local']` fará que o upload de arquivos sejam enviados para a pasta `storage/app/uploads`. Além disso, salvamos o caminho relativo do arquivo no banco de dados. Este último passo citado é importante para o próximo passo.
 
 ## Visualizando os arquivos protegidos
 
