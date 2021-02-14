@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Protegendo upload de usuários com Laravel
-date: 2019-05-28T00:35:00.000+00:00
+date: 2021-02-14 13:55:00 -0200
 categories:
 - laravel
 sitemap: true
