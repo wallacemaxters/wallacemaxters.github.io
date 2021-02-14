@@ -149,3 +149,5 @@ class ArquivosController extends Controller
     }
 }
 ```
+
+Caso o usuário não tenha autorização, o Laravel enviará uma resposta 403. Caso tenha, será exibido o arquivo normalmente.
