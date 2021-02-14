@@ -3,7 +3,7 @@ layout: post
 title: Como gerar cores aleatórias com PHP?
 date: 2021-02-03T13:56:00.000-02:00
 categories:
-- php
+- PHP
 sitemap: true
 image: "/uploads/php_cores.png"
 excerpt: Aprenda a gerar cores hexadecimais aleatórias através do PHP.
