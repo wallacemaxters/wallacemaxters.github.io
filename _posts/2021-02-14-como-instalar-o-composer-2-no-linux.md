@@ -7,7 +7,7 @@ categories:
 - composer
 - php
 sitemap: true
-image: "/uploads/composer.png"
+image: "/uploads/composer.jpg"
 excerpt: O Composer 2 foi lançado, com várias novidades, principalmente em relação
   ao desempenho, como melhorias no uso da CPU e uma considerável diminuição no tempo
   de instalação e atualizações dos pacote. Veja como instalar no Linux.
