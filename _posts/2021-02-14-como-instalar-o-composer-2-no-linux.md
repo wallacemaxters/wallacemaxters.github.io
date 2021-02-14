@@ -9,11 +9,11 @@ categories:
 sitemap: true
 image: "/uploads/composer.png"
 excerpt: O Composer 2 foi lançado, com várias novidades, principalmente em relação
-  ao desempenho, como melhorias no uso da CPU e um considerável diminuição no tempo
+  ao desempenho, como melhorias no uso da CPU e uma considerável diminuição no tempo
   de instalação e atualizações dos pacote. Veja como instalar no Linux.
 
 ---
-O [Composer 2](https://getcomposer.org/2/) foi lançado, com várias novidades, principalmente em relação ao desempenho, como melhorias no uso da CPU e um considerável diminuição no tempo de instalação e atualizações dos pacotes.
+O [Composer 2](https://getcomposer.org/2/) foi lançado, com várias novidades, principalmente em relação ao desempenho, como melhorias no uso da CPU e um a considerável diminuição no tempo de instalação e atualizações dos pacotes.
 
 Vejamos como podemos instalar essa incrível versão no seu Linux
 
@@ -56,9 +56,8 @@ composer --version
 
 O resultado será parecido com isso:
 
-```
-Composer version 2.0.9 2021-01-27 16:09:27
-```
+    Composer version 2.0.9 2021-01-27 16:09:27
+
 ### Verificando informações e dependências
 
 Para verificar a integridade da instalação, podemos rodar o comando `composer diagnose`. Esse comando tem como objetivo mostrar algumas informações sobre as dependências utilizadas, bem como verificar se existem erros comuns na instalação.
@@ -71,22 +70,20 @@ composer diagnose
 
 Saída:
 
-```
-Checking platform settings: OK
-Checking git settings: OK
-Checking http connectivity to packagist: OK
-Checking https connectivity to packagist: OK
-Checking github.com oauth access: OK
-Checking disk free space: OK
-
-Checking composer version: OK
-Composer version: 2.0.9
-PHP version: 7.3.27
-PHP binary path: /usr/bin/php7.3
-OpenSSL version: OpenSSL 1.1.1i  8 Dec 2020
-cURL version: 7.68.0 libz 1.2.11 ssl OpenSSL/1.1.1i
-zip: extension present, unzip present
-```
+    Checking platform settings: OK
+    Checking git settings: OK
+    Checking http connectivity to packagist: OK
+    Checking https connectivity to packagist: OK
+    Checking github.com oauth access: OK
+    Checking disk free space: OK
+    
+    Checking composer version: OK
+    Composer version: 2.0.9
+    PHP version: 7.3.27
+    PHP binary path: /usr/bin/php7.3
+    OpenSSL version: OpenSSL 1.1.1i  8 Dec 2020
+    cURL version: 7.68.0 libz 1.2.11 ssl OpenSSL/1.1.1i
+    zip: extension present, unzip present
 
 ## Atualizando o composer
 
