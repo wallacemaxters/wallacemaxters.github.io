@@ -6,11 +6,14 @@ categories:
 - laravel
 sitemap: true
 image: "/uploads/laravel-seguranca.jpg"
+excerpt: Como desenvolvedores web, devemos sempre nos lembrar da importância de proteger
+  os dados do usuário. Aprenda a proteger upload de arquivos através de autenticação
+  ou autorização no Laravel
 
 ---
-Quando fazemos uma aplicação que contenha upload, muitas vezes a regra de negócio exige que esses arquivos só possam ser acessado por meio de autenticação ou autorização.
+Como desenvolvedores web, devemos sempre nos lembrar da importância de proteger os dados do usuário. E muitas vezes é comum precisamos que um determinado upload ou arquivo esteja acessível de maneira restrita para um usuário, dependendo da regra de negócio da aplicação que estamos desenvolvendo.
 
-Existe uma solução que eu costumo utilizar para isso em Laravel.
+Existe uma solução simples para proteger o acesso aos arquivos da sua aplicação escrita em Laravel. Vejamos  abaixo alguns passos para fazermos isso.
 
 ## Onde fazer o upload?
 
@@ -47,38 +50,38 @@ Route::get('arquivo/{id}', function (Arquivo $arquivo) {
 })->middleware('auth');
 ```
 
-Assim, caso o usuário esteja autenticado, bastaria acessar `arquivo/1` para visualizar o arquivo protegido. Caso contrário, o mesmo será redirecionado para autenticação (ou receberá uma resposta 401, caso esteja utilizando API). 
+Assim, caso o usuário esteja autenticado, bastaria acessar `arquivo/1` para visualizar o arquivo protegido. Caso contrário, o mesmo será redirecionado para autenticação (ou receberá uma resposta 401, caso esteja utilizando API).
 
 É importante informar o `Content-Type` na resposta, para que o navegador entenda que a resposta se trata de um arquivo no momento da resposta.
 
 > **Nota**: Se estiver utilizando a autenticação via API, você pode simplesmente usar o middleware `auth:api`.
 
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-4119206527475379"
-     data-ad-slot="9977497686"></ins>
+style="display:block; text-align:center;"
+data-ad-layout="in-article"
+data-ad-format="fluid"
+data-ad-client="ca-pub-4119206527475379"
+data-ad-slot="9977497686"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || \[\]).push({});
 </script>
 
 ## Protegendo os arquivos por nível de acesso
 
 Tomando como base um pequeno exemplo, poderíamos verificar se determinado usuário é de um tipo. Caso corresponda ao requisitado, respondemos com o arquivo. Se não, respondemos com erro 403 (acesso não autorizado).
 
- ```php
+```php
 Route::get('arquivo/{id}', function (Arquivo $arquivo) {
 
-    if (auth()->user()->tipo !== 'admin') {
-        return response('Você não pode acessar esse arquivo', 403);
-    }
+   if (auth()->user()->tipo !== 'admin') {
+       return response('Você não pode acessar esse arquivo', 403);
+   }
 
-    $disco = Storage::disk('local');
+   $disco = Storage::disk('local');
 
-    return response($disco->get($arquivo->caminho), 200, [
-        'content-type' => $disco->mimeType($arquivo->caminho)
-    ]);
+   return response($disco->get($arquivo->caminho), 200, [
+       'content-type' => $disco->mimeType($arquivo->caminho)
+   ]);
 
 })->middleware('auth');
 ```
