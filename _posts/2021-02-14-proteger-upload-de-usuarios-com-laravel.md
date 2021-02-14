@@ -35,7 +35,7 @@ No exemplo acima, a opção `['disk' => 'local']` fará que o upload de arquivos
 
 Agora vamos permitir que um arquivo só possa ser visualizado após o usuário estar autenticado na aplicação Laravel.
 
-Nesse caso, uma solução seria criar uma rota, que responda seu upload enviado anteriormente, baseado no `id` da rota. Essa rota também deverá ser protegida pelo middleware `auth`.
+Nesse caso, vamos criar uma rota, que responda seu upload enviado anteriormente, baseado no `id` que foi salvo em seu banco de dados. Essa rota deve ser protegida pelo middleware `auth`.
 
 Exemplo:
 
