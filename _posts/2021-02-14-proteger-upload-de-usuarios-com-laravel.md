@@ -94,7 +94,7 @@ php artisan make:policy ArquivoPolicy
 
 Em seguida, adicione o seguinte trecho:
 
-```
+```php
 namespace App\Policies;
 
 use App\Models\User;
