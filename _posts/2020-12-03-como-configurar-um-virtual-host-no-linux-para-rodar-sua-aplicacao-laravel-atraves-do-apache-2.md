@@ -93,7 +93,7 @@ Ou:
 sudo systemctl reload apache2
 ```
 
-> **NOTA**: O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você executa o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`.
+> **DICA**: O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você executa o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`. Para desabilitar um virtual host, você deve executar `sudo a2dissite nome_do_site`.
 
 ## Testando a aplicação
 
