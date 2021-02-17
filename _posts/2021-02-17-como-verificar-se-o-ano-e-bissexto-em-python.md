@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como verificar se o ano é bissexto em Python?
-date: 2021-02-17 09:45:00 -0200
+date: 2021-02-17T09:45:00.000-02:00
 categories:
 - python
 sitemap: true
@@ -9,6 +9,8 @@ image: "/uploads/python-ano-verificar-bissexto.jpeg"
 excerpt: ''
 
 ---
+
+
 ```python
 import calendar
 
