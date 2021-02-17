@@ -20,15 +20,15 @@ O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso
 
 O local padrão onde os sites do Apache estão localizados no Linux é no diretório `/var/www/`. Mova a pasta do seu projeto para dentro desta pasta. O caminho deverá ficar parecido com `/var/www/seu-projeto`.
 
-### Criando o projeto do Laravel
-
-**Caso de você ainda não tenha** a aplicação Laravel na sua máquina, você criar uma um projeto do zero, através do comando  `composer create-project`.
+**Caso ainda não tenha** o projeto do Laravel na sua máquina, você poderá criar "do zero", através do comando  `composer create-project`.
 
 Exemplo:
 
 ```bash
 composer create-project laravel/laravel seu-projeto
 ```
+
+<hr />
 
 ## Configurando um host local para sua aplicação
 
