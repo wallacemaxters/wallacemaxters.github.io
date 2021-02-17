@@ -22,7 +22,7 @@ O local padrão onde os sites do Apache estão localizados no Linux é no diret�
 
 ### Criando o projeto do Laravel
 
-No caso de você ainda não ter a aplicação Laravel na sua máquina, você criar uma um projeto do zero, através do comando  `composer create-project`.
+**Caso de você ainda não tenha** a aplicação Laravel na sua máquina, você criar uma um projeto do zero, através do comando  `composer create-project`.
 
 Exemplo:
 
