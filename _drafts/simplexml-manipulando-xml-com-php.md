@@ -9,9 +9,9 @@ image: ''
 excerpt: ''
 
 ---
-Primeiro detalhe: a função `simplexml_load_file` gera uma instância chamada de `SimpleXmlElement`. E já adianto... essa classe é bem chata de mexer.
+Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou `simple_xml_load_string`. Ela retorna uma instância da classe `SimpleXmlElement`.
 
-Você usa o object separator (o ->) apenas para acessar os nós. 
+Você usa o object separator (o ->) apenas para acessar os nós.
 
 Exemplo:
 
@@ -31,18 +31,14 @@ var_dump($xml->a->b->c);
 
 Isso vai gerar:
 
-```
-object(SimpleXMLElement)#2355 (1) {
-  [0]=>
-  string(1) "Eu sou o C"
-}
-```
+    object(SimpleXMLElement)#2355 (1) {
+      [0]=>
+      string(1) "Eu sou o C"
+    }
 
-Para acessar os atributos, você deve acessar como se faz com os índices do `array`, usando ['nome_atributo']
-
+Para acessar os atributos, você deve acessar como se faz com os índices do `array`, usando \['nome_atributo'\]
 
 Exemplo:
-
 
 ```php
 $str = '<root>
@@ -56,7 +52,6 @@ $str = '<root>
 $xml = simplexml_load_string($str);
 
 var_dump($xml->a->b['numero']);
-
 ```
 
 O resultado será:
@@ -66,7 +61,6 @@ O resultado será:
   string(5) "13.55"
 }
 ```
-
 
 Nota: Tudo que é retornado vem como `SimpleXmlElement`. Então, para converter o valor, você precisa fazer um cast, conforme necessário:
 
@@ -80,10 +74,9 @@ Para acessar os valores com namespace, segue a mesma regra:
 echo (float) $xml->a->b['ss:numero'];
 ```
 
-
 ## Exibindo nome e atributos usando foreach
 
-Para exemplificar melhor, criei o seguinte XML. 
+Para exemplificar melhor, criei o seguinte XML.
 
 ```xml
 <root>
