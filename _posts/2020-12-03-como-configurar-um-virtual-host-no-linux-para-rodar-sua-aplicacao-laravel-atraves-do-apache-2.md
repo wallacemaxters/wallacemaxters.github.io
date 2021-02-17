@@ -16,11 +16,11 @@ O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso
 
 > **Nota:** Esse tutorial assume que você já tenha o Apache2 e o PHP instalado no seu Linux.
 
-## Localização do projeto Laravel
+## Onde deve estar meu projeto Laravel?
 
-O local padrão onde os sites do Apache estão localizados no Linux é `/var/www/`.  Mova a pasta do seu projeto para dentro desta pasta. O caminho deverá ficar parecido com `/var/www/seu-projeto`.
+O local padrão onde os sites do Apache estão localizados no Linux é no diretório `/var/www/`. Mova a pasta do seu projeto para dentro desta pasta. O caminho deverá ficar parecido com `/var/www/seu-projeto`.
 
-## Criando o projeto do Laravel
+### Criando o projeto do Laravel
 
 No caso de você ainda não ter a aplicação Laravel na sua máquina, você criar uma um projeto do zero, através do comando  `composer create-project`.
 
@@ -46,11 +46,11 @@ Em seguida, adicione a seguinte linha:
 
     127.0.0.1 seu-projeto.local
 
-Para testar se a configuração funcionou corretamente, você pode acessar `http://seu-projeto.local` no seu navegador, após salvar o arquivo acima.
+Para testar se o novo host está funcionando, você pode acessar `http://seu-projeto.local` no seu navegador, após salvar o arquivo acima.
 
 ## Criando um Virtual Host
 
-Agora, crie um Virtual Host no seu Apache, para apontar para o domínio local criado acima. Execute o seguinte comando:
+Agora, crie um Virtual Host no seu Apache, para apontar para o domínio local criado anteriormente. Execute o seguinte comando:
 
 ```bash
 cd /etc/apache2/sites-avaliable
