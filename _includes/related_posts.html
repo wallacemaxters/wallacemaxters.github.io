@@ -1,23 +1,15 @@
 {% assign max_posts = 4 %}
-{% assign min_tags_related = 1 %}
 {% assign post_count = 0 %}
-{% assign same_tag_count = 0 %}
+{% assign urls = '' | split: ',' %}
 
 <h4 class="title is-5">Artigos relacionados</h4>
 <div class="columns is-multiline is-gapless">
-    {% for post in site.posts %}
 
-        {% assign same_tag_count = 0 %}
-        {% assign commonTags = '' %}
-
-        {% for category in post.categories %}
-            {% if post.url != page.url and page.categories contains category %}
-                {% assign same_tag_count = same_tag_count | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-
-        {% if same_tag_count >= min_tags_related %}
-            <div class="column is-12" tag-count="{{ same_tag_count }}">
+    {% for category in page.categories %}
+        {% for post in site.categories[category] %}
+            {% if post.url == page.url or urls contains post.url %} {% continue %} {% endif %}
+            {% assign urls = urls | push: post.url %}
+            <div class="column is-12">
                 {% capture post_title %}<h5>{{ post.title }}</h5>{% endcapture %}
                 {% include link_card.html title=post_title url=post.url image=post.image height="150px" %}
             </div>
@@ -25,10 +17,6 @@
             {% if post_count >= max_posts %}
                 {% break %}
             {% endif %}
-        {% endif %}
+        {% endfor %}
     {% endfor %}
 </div>
-
-{% if post_count == 0 %}
-<div class="notification is-primary">Nenhum artigo relacionado encontrado</div>
-{% endif %}
