@@ -30,7 +30,7 @@ Exemplo:
 composer create-project laravel/laravel seu-projeto
 ```
 
-## Configurando um host para a aplicação
+## Configurando um host local para sua aplicação
 
 É possível criar um host, diferente do `localhost`, para rodar a sua aplicação Laravel através dela. Eu sempre prefiro configurar um host para aplicação que vou usar, porque costumo trabalhar com vários projetos escritos em Laravel na mesma máquina.
 
@@ -57,14 +57,14 @@ cd /etc/apache2/sites-avaliable
 sudo nano seu-projeto.conf
 ```
 
-Agora, você precisa adicionar o seguinte conteúdo a seu arquivo `seu-projeto.conf`:
+Adicione o seguinte conteúdo em seu arquivo `seu-projeto.conf`:
 
     <VirtualHost *:80>
         ServerName seu-projeto.local
         DocumentRoot /var/www/seu-projeto/public
     </VirtualHost>
 
-Após criar o arquivo acima, você precisa rodar o comando `a2ensite`. Esse comando é responsável por habilitar um virtual host.
+Após salvar o arquivo de configuração acima, você precisa rodar o comando `a2ensite`. Esse comando é responsável por habilitar um virtual host.
 
 Assim:
 
@@ -78,11 +78,10 @@ Esse comando retornará a seguinte saída:
     To activate the new configuration, you need to run:
       systemctl reload apache2
 
-A mensagem acima está sugerindo que você recarregue o apache, para que o novo site esteja disponível. Mas, antes de rodar esse comando, é sempre importante rodar `sudo apache2ctl configtest`. Esse comando verificará se existe algum problema com a sintaxe ou configuração do seu virtual host. Se tudo estiver certo, você receberá a saída `Syntax OK`.
 
-Depois disso, você poderá recarregar o Apache.
+A mensagem acima está sugerindo que você recarregue o Apache, para que o novo site esteja disponível. Mas, antes de rodar esse comando, é sempre importante rodar `sudo apache2ctl configtest`. Esse comando verificará se existe algum problema com a síntaxe ou configuração do seu virtual host. Caso haja falhas, será apresentado os detalhes que você precisa corrigir.
 
-Veja:
+Se tudo estiver certo, você receberá a saída `Syntax OK`. Então, você poderá recarregar o Apache, dessa forma:
 
 ```bash
 sudo service apache2 reload
@@ -94,7 +93,7 @@ Ou:
 sudo systemctl reload apache2
 ```
 
-> O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você roda o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`.
+> **NOTA**: O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você roda o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`.
 
 Teste a sua aplicação abrindo o url:
 
