@@ -48,6 +48,7 @@ Em seguida, adicione a seguinte linha:
 
 Para testar se o novo host está funcionando, você pode acessar `http://seu-projeto.local` no seu navegador, após salvar o arquivo acima.
 
+<hr />
 ## Criando um Virtual Host
 
 Agora, crie um Virtual Host no seu Apache, para apontar para o domínio local criado anteriormente. Execute o seguinte comando:
