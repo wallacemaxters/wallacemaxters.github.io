@@ -95,10 +95,10 @@ sudo systemctl reload apache2
 
 > **NOTA**: O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você roda o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`.
 
-Teste a sua aplicação abrindo o url:
+## Testando a aplicação
 
-> http://seu-projeto.local
+Se tudo estiver correto, você poderá visualizar seu projeto Laravel rodando na url `http://seu-projeto.local`.
 
 ## Reescrita da url
 
-O Laravel internamente utiliza a reescrita de URL do Apache para que as rotas da aplicação funcionem corretamente. Caso seja necessário configurar a reescrita, veja como fazer isso [aqui](https://wallacemaxters.com.br/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2)
+O Laravel internamente utiliza a reescrita de URL do Apache para que as rotas da aplicação funcionem corretamente. Caso seja necessário configurar a reescrita, veja como fazer isso [aqui](https://wallacemaxters.com.br/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2).
