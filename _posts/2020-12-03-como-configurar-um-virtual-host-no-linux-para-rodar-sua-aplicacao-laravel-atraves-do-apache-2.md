@@ -12,7 +12,7 @@ excerpt: Aprenda como configurar um Virtual Host no Linux para rodar sua aplica�
   Laravel através do Apache 2.
 
 ---
-O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso, creio que é importante saber configurá-lo na sua própria máquina, para estar familiazirado com o mesmo. Neste tutorial, vamos aprender como configurar um Virtual Host no Linux para rodar sua aplicação Laravel através do Apache 2.
+O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso, creio que é importante saber configurá-lo na sua própria máquina, para estar familiazirado com o mesmo. Neste tutorial, vamos aprender como configurar um Virtual Host no Linux para executar sua aplicação Laravel através do Apache 2.
 
 > **Nota:** Esse tutorial assume que você já tenha o Apache2 e o PHP instalado no seu Linux.
 
@@ -32,7 +32,7 @@ composer create-project laravel/laravel seu-projeto
 
 ## Configurando um host local para sua aplicação
 
-É possível criar um host, diferente do `localhost`, para rodar a sua aplicação Laravel através dela. Eu sempre prefiro configurar um host para aplicação que vou usar, porque costumo trabalhar com vários projetos escritos em Laravel na mesma máquina.
+É possível criar um host, diferente do `localhost`, para executar a sua aplicação Laravel através dela. Eu sempre prefiro configurar um host para aplicação que vou usar, porque costumo trabalhar com vários projetos escritos em Laravel na mesma máquina.
 
 Para configurar um host, você deve editar o arquivo `/etc/hosts`. Você pode utilizar o comando `sudo nano` para fazer isso.
 
@@ -64,9 +64,9 @@ Adicione o seguinte conteúdo em seu arquivo `seu-projeto.conf`:
         DocumentRoot /var/www/seu-projeto/public
     </VirtualHost>
 
-Após salvar o arquivo de configuração acima, você precisa rodar o comando `a2ensite`. Esse comando é responsável por habilitar um virtual host.
+Após salvar o arquivo de configuração acima, você precisa executar o comando `a2ensite`. Esse comando é responsável por habilitar o virtual host.
 
-Assim:
+Faça assim:
 
 ```bash
 sudo a2ensite seu-projeto.conf
@@ -79,7 +79,7 @@ Esse comando retornará a seguinte saída:
       systemctl reload apache2
 
 
-A mensagem acima está sugerindo que você recarregue o Apache, para que o novo site esteja disponível. Mas, antes de rodar esse comando, é sempre importante rodar `sudo apache2ctl configtest`. Esse comando verificará se existe algum problema com a síntaxe ou configuração do seu virtual host. Caso haja falhas, será apresentado os detalhes que você precisa corrigir.
+A mensagem acima está sugerindo que você recarregue o Apache, para que o novo site esteja disponível. Mas, antes de fazer isso, é sempre importante executar `sudo apache2ctl configtest`. Este comando verificará se existe algum problema com a síntaxe ou configuração do seu virtual host. Caso haja falhas, será apresentado os detalhes para que você precisa corrigir.
 
 Se tudo estiver certo, você receberá a saída `Syntax OK`. Então, você poderá recarregar o Apache, dessa forma:
 
@@ -93,7 +93,7 @@ Ou:
 sudo systemctl reload apache2
 ```
 
-> **NOTA**: O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você roda o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`.
+> **NOTA**: O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você executa o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`.
 
 ## Testando a aplicação
 
