@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Configurando um virtual host para rodar o Laravel no Apache"
-date: 2020-12-03 15:14:00 -0200
+title: Configurando um virtual host para rodar o Laravel no Apache
+date: 2020-12-03T15:14:00.000-02:00
 categories:
 - laravel
 - apache
@@ -27,7 +27,7 @@ No caso de você ainda não ter a aplicação Laravel na sua máquina, você cri
 Exemplo:
 
 ```bash
-composer create-project laravel/laravel seu_projeto
+composer create-project laravel/laravel seu-projeto
 ```
 
 ## Configurando um host para a aplicação
@@ -50,8 +50,7 @@ Para testar se a configuração funcionou corretamente, você pode acessar `http
 
 ## Criando um Virtual Host
 
-Agora, você criar um Virtual Host no seu Apache, para apontar para o domínio local criado acima.
-Execute o seguinte comando:
+Agora, crie um Virtual Host no seu Apache, para apontar para o domínio local criado acima. Execute o seguinte comando:
 
 ```bash
 cd /etc/apache2/sites-avaliable
@@ -60,12 +59,10 @@ sudo nano seu-projeto.conf
 
 Agora, você precisa adicionar o seguinte conteúdo a seu arquivo `seu-projeto.conf`:
 
-```
-<VirtualHost *:80>
-    ServerName seu-projeto.local
-    DocumentRoot /var/www/seu-projeto/public
-</VirtualHost>
-```
+    <VirtualHost *:80>
+        ServerName seu-projeto.local
+        DocumentRoot /var/www/seu-projeto/public
+    </VirtualHost>
 
 Após criar o arquivo acima, você precisa rodar o comando `a2ensite`. Esse comando é responsável por habilitar um virtual host.
 
@@ -81,9 +78,9 @@ Esse comando retornará a seguinte saída:
     To activate the new configuration, you need to run:
       systemctl reload apache2
 
-Mas, antes de rodar esse comando, é sempre importante rodar `sudo apache2ctl configtest`. Esse comando verificará se existe algum problema com a sintaxe ou configuração do seu arquivo. Se tudo estiver certo, você recebará a saída `Syntax OK`.
+A mensagem acima está sugerindo que você recarregue o apache, para que o novo site esteja disponível. Mas, antes de rodar esse comando, é sempre importante rodar `sudo apache2ctl configtest`. Esse comando verificará se existe algum problema com a sintaxe ou configuração do seu virtual host. Se tudo estiver certo, você receberá a saída `Syntax OK`.
 
-Depois desses passos, você pode recarregar o Apache para seu funcionar.
+Depois disso, você poderá recarregar o Apache.
 
 Veja:
 
@@ -102,3 +99,7 @@ sudo systemctl reload apache2
 Teste a sua aplicação abrindo o url:
 
 > http://seu-projeto.local
+
+## Reescrita da url
+
+O Laravel internamente utiliza a reescrita de URL do Apache para que as rotas da aplicação funcionem corretamente. Caso seja necessário configurar a reescrita, veja como fazer isso [aqui](https://wallacemaxters.com.br/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2)
