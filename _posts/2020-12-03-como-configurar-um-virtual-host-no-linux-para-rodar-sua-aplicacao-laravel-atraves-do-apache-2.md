@@ -102,4 +102,4 @@ Se tudo estiver correto, você poderá visualizar seu projeto Laravel rodando na
 
 ## Reescrita da url
 
-O Laravel internamente utiliza a reescrita de URL do Apache para que as rotas da aplicação funcionem corretamente. Caso seja necessário configurar a reescrita, veja como fazer isso [aqui](https://wallacemaxters.com.br/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2).
+O Laravel internamente utiliza o `mod_rewrite`no Apache para que as rotas da aplicação funcionem corretamente. Caso não tenha feito ainda, aprenda a [como habilitar a reescrita de urls no Apache](https://wallacemaxters.com.br/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2).
