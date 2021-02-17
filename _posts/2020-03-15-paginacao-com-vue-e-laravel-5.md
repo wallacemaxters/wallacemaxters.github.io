@@ -13,7 +13,7 @@ Usar Laravel como backend e Vue como frontend tem sido algo bastante comum de um
 
 Nesse tutorial, estarei demonstrando como criar uma paginação com Vue e Laravel.
 
-### Introdução
+## Introdução
 
 O primeiro ponto que gosto de observar é que os frameworks e bibliotecas costumam utilizar padrões para facilitar a nossa vida. Muitas vezes o desenvolvedor acaba criando ou fazendo coisas desnecessárias no momento de obter um dado ou fazer uma operação, sendo que o framework já tem uma solução fácil para isso.
 
@@ -70,17 +70,10 @@ No Laravel 5, o resultado disso será algo parecido com:
 
 Basicamente, os dados que precisamos listar estão em `data`, que é um `array` contendo os dados de cada `User`.
 
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4119206527475379"
-     data-ad-slot="7774041254"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<!-- ads common -->
+{% include ads_common.html %}
 
-### Construindo a visualização no Vue
+## Construindo a visualização no Vue
 
 Tudo que temos que fazer agora é pegar o retorno desses dados pelo Vue e exibí-los na Vue.
 
@@ -165,7 +158,7 @@ Clique nos links e veja se os mesmos modificam os valores retornados pelo endpoi
 
 > **Dica**: Se você não tiver muitos dados para testar, você pode passar um parâmetro para `paginate`, que modifica a quantidade de itens retornados por  página. Quando não tenho muitos dados para testar, uso `paginate(1)` para retornar um item por página.
 
-**Mas por quê guardar todas as informações ao invés de simplesmente a lista?**
+### Mas por quê guardar todas as informações ao invés de simplesmente a lista?
 
 O motivo disso é que vamos usar as outras informações para construir melhor a nossa interface a partir de algumas informações.
 
@@ -215,7 +208,10 @@ Veja:
 
 Então perceba que, além da paginação, o `paginate` do Laravel retorna informações importantes para serem mostradas ao usuário.
 
-# Finalmente, construindo o componente de paginação
+<!-- ads common -->
+{% include ads_common.html %}
+
+## Criando o componente de paginação
 
 Sabendo das informações demonstradas acima, podemos montar o componente de paginação baseado nas informações retornadas pelo Laravel. Podemos utilizar apenas uma propriedade para montar nossos links de paginação.
 
@@ -294,7 +290,7 @@ export default {
 
 Como se vê, utilizamos as informações da propriedade `pagination` para montar os links do nosso componente. Essas informações podem ser passadas exatamente assim toda vez que os dados vierem do resultado da chamada de `paginate` feita na API.
 
-**Detalhando o código**
+### Explicando o código
 
 * Utilizamos o `$emit("input", number)` para indicar qual página está sendo selecionada.
 * Em `previous` definimos o "recuo" de uma página com o valor mínimo de 1 (porque sempre é a primeira página).

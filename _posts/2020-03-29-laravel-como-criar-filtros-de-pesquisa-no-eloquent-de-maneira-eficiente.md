@@ -412,6 +412,9 @@ Produto::search()->paginate()
 
 Assim, seu Local Scope de filtro de pesquisa poderá utilizar tanto a chamada `Produto::search()` como `Produto::search($outra_request)`.
 
+<!-- ads common -->
+{% include ads_common.html %}
+
 ### Como utilizar os filtros de pesquisa em diversos projetos?
 
 Há casos (como o meu) onde você não trabalha com um, mas com vários projetos escritos em cima do Laravel. E praticamente a maioria deles precisam que você escreva esses tipos de filtro.

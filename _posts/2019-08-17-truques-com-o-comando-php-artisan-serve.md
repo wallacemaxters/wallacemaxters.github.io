@@ -39,15 +39,8 @@ O artisan estará rodando em `http://192.168.0.102:8000`.
 
 Esse último exemplo é muito útil caso você queria testar a sua aplicação a partir de outro dispositivo conectado na mesma rede, como um celular, table ou notebook. Ao acessar o endereço IP e a porta, você terá acesso à aplicação.
 
-
-<div>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4119206527475379" data-ad-slot="7774041254"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
+<!-- ads common -->
+{% include ads_common.html %}
 
 ## Vinculando o Artisan Serve a um domínio local
 

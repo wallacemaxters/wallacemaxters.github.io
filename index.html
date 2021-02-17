@@ -19,6 +19,7 @@ excerpt: "Um blog com dicas, tutoriais e informações sobre programação"
                     </p>
                 </header>
                 <a class="card-image" href="{{ post.url }}">
+                
                     <figure class="image is-4by3 post-card-cover">
                         <img loading="lazy" height="280" src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
                     </figure>
@@ -44,3 +45,5 @@ excerpt: "Um blog com dicas, tutoriais e informações sobre programação"
         </div>
     {% endfor %}
 </div>
+<!-- ads common -->
+{% include ads_common.html %}
