@@ -40,7 +40,9 @@ Retorno:
       string(1) "Eu sou o C"
     }
 
-Para acessar os atributos, você deve acessar como se faz com os índices do `array`, usando \['nome_atributo'\]
+## Acessando os atributos de um nó
+
+Para acessar os atributos de um nó, você deve acessar da mesma forma que se faz com os índices do `array` em PHP. usando \['nome_atributo'\]
 
 Exemplo:
 
