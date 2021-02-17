@@ -5,18 +5,22 @@ date: 2021-02-17T09:45:00.000-02:00
 categories:
 - python
 sitemap: true
-image: "/uploads/python-ano-verificar-bissexto.jpeg"
-excerpt: ''
+image: "/uploads/covers/python.png"
+excerpt: 'Para verificar se um ano é bissexto em Python, basta importar calendar. Ele possuí uma função chamada isleap, que retorna True se o ano for bissexto.'
 
 ---
 
+Para verificar se um ano é bissexto em Python, basta importar o módulo `calendar`. Ele possuí uma função chamada `isleap`, que retorna `True` se o ano for bissexto.
+
+Código:
 
 ```python
-import calendar
+from calendar import isleap
 
 ano = 2021
-if calendar.isleap(ano):
-	print('É bissexto')
+
+if isleap(ano):
+    print('É bissexto')
 else:
-	print('Não é bissexto')
+    print('Não é bissexto')
 ```
