@@ -18,21 +18,22 @@ Para acessar os nós do XML processado, você deve usar o *Object Separator* (`-
 
 Exemplo:
 
-```xml
-<root>
+```php
+$xml = '<root>
 <a>
    <b>
      <c>Eu sou o C</c>
    </b>
 </a>
-</root>
+</root>';
+$simple_xml = simple_xml_load_string($xml);
 ```
 
 ```php
-var_dump($xml->a->b->c);
+var_dump($simple_xml->a->b->c);
 ```
 
-Isso vai gerar:
+Retorno:
 
     object(SimpleXMLElement)#2355 (1) {
       [0]=>
