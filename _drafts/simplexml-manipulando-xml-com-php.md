@@ -11,7 +11,10 @@ excerpt: ''
 ---
 Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou `simple_xml_load_string`. Ela retorna uma instância da classe `SimpleXmlElement`.
 
-Você usa o object separator (o ->) apenas para acessar os nós.
+
+## Acessando os nós do XML
+
+Para acessar os nós do XML processado, você deve usar o *Object Separator* (`->`). 
 
 Exemplo:
 
