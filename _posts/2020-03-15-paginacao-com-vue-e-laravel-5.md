@@ -137,7 +137,7 @@ Vamos modificar o método `paginate` da seguinte forma:
       
       const {data: users} = await api.get('users', {
         params: {page}
-      })
+      });
       
       this.users = users;
     }
