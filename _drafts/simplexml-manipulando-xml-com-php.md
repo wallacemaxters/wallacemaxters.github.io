@@ -10,7 +10,7 @@ excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PH
   manipular um arquivo ou string XML de maneira rápida e eficiente.
 
 ---
-Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou `simple_xml_load_string`. Ela retorna uma instância da classe `SimpleXmlElement`.
+Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou`simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`.
 
 ## Acessando os nós do XML
 
@@ -140,31 +140,28 @@ NOME:Maxters
 Número:24.12
 ```
 
-
 ## Atributos que possuem namespace
 
 Para acessar os nós que possuam com namespace, você deve utilizar o método `children`. Você deve informar o `namespace` no primeiro argumento e `true`, no segundo.
 
 Assim:
 
-```
-$xml = 
-'<root>
-	<h:table xmlns:h="teste">
-	  <h:tr>
-	    <h:td>Maçãs</h:td>
-	    <h:td>Bananas</h:td>
-	  </h:tr>
-	</h:table>
-</root>';
-
-$simple_xml = simplexml_load_string($xml);
-
-
-foreach ($simple_xml->children('h', true)->table->tr->td as $item) {
-	var_dump((string) $item);
-}
-```
+    $xml = 
+    '<root>
+    	<h:table xmlns:h="teste">
+    	  <h:tr>
+    	    <h:td>Maçãs</h:td>
+    	    <h:td>Bananas</h:td>
+    	  </h:tr>
+    	</h:table>
+    </root>';
+    
+    $simple_xml = simplexml_load_string($xml);
+    
+    
+    foreach ($simple_xml->children('h', true)->table->tr->td as $item) {
+    	var_dump((string) $item);
+    }
 
 O resultado será
 
