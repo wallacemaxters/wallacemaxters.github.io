@@ -117,7 +117,9 @@ Assim:
 ```
 {% endraw %}
 
-### E a próxima página?
+<hr />
+
+### Selecionando a próxima página da paginação
 
 Nosso objetivo agora é avançar para a "próxima página" da na nossa listagem.
 Não é algo muito difícil. O Laravel precisa apenas que você passe um parâmetro, via query string, chamado `page` para indicar qual é a "página" de dados que vamos retornar do endpoint.
