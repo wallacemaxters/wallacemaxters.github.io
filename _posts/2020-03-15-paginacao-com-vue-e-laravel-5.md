@@ -199,12 +199,14 @@ E no final, ainda, podemos combinar todos os valores para fazer um resumo da pag
 
 Veja:
 
+{% raw %}
 ```html
 <div>
   <div class="left">Exibindo {{ users.data.length }} de {{ users.total }} usuários</div>
   <div class="right">Página {{ users.current_page }} de {{  users.last_page }}</div>
 </div>
 ```
+{% endraw %}
 
 Então perceba que, além da paginação, o `paginate` do Laravel retorna informações importantes para serem mostradas ao usuário.
 
