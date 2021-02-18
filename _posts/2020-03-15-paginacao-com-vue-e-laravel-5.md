@@ -96,7 +96,7 @@ Exemplo:
     },
     
     methods: {
-      asyc paginate() {
+      async paginate() {
         const {data: users} = await api.get('users');
   		this.users = users;
       }
