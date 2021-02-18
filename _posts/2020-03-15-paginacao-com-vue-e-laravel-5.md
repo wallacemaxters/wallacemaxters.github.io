@@ -44,7 +44,7 @@ Route::get('users', function () {
 
 No Laravel 5, o resultado disso será algo parecido com:
 
-```json
+```javascript
 {
   "current_page": 1,
   "last_page": 5,
@@ -165,7 +165,7 @@ O motivo disso é que vamos usar as outras informações para construir melhor a
 
 Vou detalhar cada uma delas:
 
-`total` - Esse valor é referente ao total de itens retornados na paginação. Essa informação é interessante, pois, caso retorne `0`, podemos  exibir a informação que "nenhum usuário foi encontrado".
+`total` - Esse valor é referente ao total de itens retornados na paginação. Essa informação é interessante, pois, caso retorne `0`, podemos  exibir a informação que *"nenhum usuário foi encontrado"*.
 
 Exemplo:
 
