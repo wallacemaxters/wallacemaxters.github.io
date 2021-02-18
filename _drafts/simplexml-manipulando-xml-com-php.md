@@ -76,7 +76,8 @@ Observe que em todas as chamadas, o retorno é sempre `SimpleXmlElement`. Então
 Veja:
 
 ```php
-var_dump((float) $xml->a->b['numero']); // float(13.55)
+var_dump((float) $simple_xml->a->b['numero']); // float(13.55)
+var_dump((string) $simple_xml->a->b['nome'])
 ```
 
 ## Iterando sobre os nós
