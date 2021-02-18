@@ -280,6 +280,7 @@ export default {
   }
 };
 </script>
+
 <style scope lang="scss">
   .active{
     color: red;
