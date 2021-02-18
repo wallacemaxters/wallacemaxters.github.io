@@ -107,7 +107,7 @@ Exemplo:
 
 No caso acima, eu deixei a variável `users` guardando todas as informações retornadas em `api/users`, e não apenas a lista. O motivo de fazer isso é justamente poder usufruir do padrão de retorno do Laravel e explicarei isso melhor mais a frente.
 
-O que vai mudar no nosso código será o momento de aplicar o `v-for`, que, ao invés de ser iterado sobre `users`, será iterado sobre `users.data`.
+O que vai mudar no nosso código será o momento de aplicar o `v-for`, pois, ao invés de ser iterado sobre `users`, será iterado sobre `users.data`.
 
 Assim:
 
