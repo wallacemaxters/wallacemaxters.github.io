@@ -19,6 +19,8 @@ O primeiro ponto que gosto de observar é que os frameworks e bibliotecas costum
 
 Um grande exemplo disso é quando se trata de paginação. Já vi vários desenvolvedores utilizando o `paginate` apenas quando deseja exibir os links da paginação numa Blade View. Porém, quando se trata de retornar os dados paginados numa API, o mesmo acaba escrevendo códigos complexos e desnecessários, já que o `Model::paginate()` também pode ser utilizado em chamadas de Api.
 
+<hr/>
+
 ## Transformando a paginação do Eloquent em JSON
 
 No Laravel, quando chamamos `Model::paginate`, os dados são retornados em uma instância da classe `LengthAwarePaginator`. Esta instância pode ser transformada em *JSON*. Da mesma forma que fazemos a chamada de `response()->json()` com os dados resultantes do `Model::get` ou `Model::find`, também podemos fazer o mesmo com `Model::paginate`. Existe apenas uma diferença no retorno, já que `LengthAwarePaginator` possui um padrão diferente quando transformado em *JSON*.
@@ -71,6 +73,8 @@ Basicamente, os dados que precisamos listar estão em `data`, que é um `array` 
 <!-- ads common -->
 {% include ads_common.html %}
 
+<hr/>
+
 ## Construindo a visualização no Vue
 
 Tudo que temos que fazer agora é armazenar o retorno desses dados e exibí-los no Vue.Js.
@@ -117,7 +121,6 @@ Assim:
 ```
 {% endraw %}
 
-<hr />
 
 ### Selecionando a próxima página da paginação
 
@@ -211,7 +214,8 @@ Então perceba que, além da paginação, o `paginate` do Laravel retorna inform
 <!-- ads common -->
 {% include ads_common.html %}
 
-<hr>
+<hr/>
+
 ## Criando o componente de paginação
 
 Sabendo das informações demonstradas acima, podemos montar o componente de paginação baseado nas informações retornadas pelo Laravel. Podemos utilizar apenas uma propriedade para montar nossos links de paginação.
