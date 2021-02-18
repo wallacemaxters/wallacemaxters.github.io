@@ -252,6 +252,7 @@ export default {
   },
 
   computed: {
+    
     numbers() {
       const links = [];
       const start = Math.floor(this.pagination.current_page / this.limitLinks) * this.limitLinks;
