@@ -29,8 +29,8 @@ Veja esse exemplo para entender melhor. Abaixo estamos retornando um JSON conten
 
 ```php
 Route::get('users', function () {
-	$users = User::where('age', '>', 18)->paginate();
-	return response()->json($users);
+    $users = User::where('age', '>', 18)->paginate();
+    return response()->json($users);
 });
 ```
 
