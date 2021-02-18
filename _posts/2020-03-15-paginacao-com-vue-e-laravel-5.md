@@ -266,7 +266,8 @@ export default {
   },
   
   methods: {
-  	previous() {
+    
+    previous() {
         const page = Math.max(1, this.pagination.current_page - 1);
     	this.$emit('input', page);
     },
