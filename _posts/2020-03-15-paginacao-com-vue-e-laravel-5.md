@@ -38,7 +38,7 @@ Além disso, de maneira mais simples, podemos também retornar a chamada de `pag
 
 ```php
 Route::get('users', function () {
-	return User::where('age', '>', 18)->paginate();
+    return User::where('age', '>', 18)->paginate();
 });
 ```
 
