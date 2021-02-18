@@ -209,6 +209,7 @@ Então perceba que, além da paginação, o `paginate` do Laravel retorna inform
 <!-- ads common -->
 {% include ads_common.html %}
 
+<hr>
 ## Criando o componente de paginação
 
 Sabendo das informações demonstradas acima, podemos montar o componente de paginação baseado nas informações retornadas pelo Laravel. Podemos utilizar apenas uma propriedade para montar nossos links de paginação.
@@ -293,7 +294,7 @@ Como se vê, utilizamos as informações da propriedade `pagination` para montar
 
 ### Explicando o código
 
-* Utilizamos o `$emit("input", number)` para indicar qual página está sendo selecionada.
+ Utilizamos o `$emit("input", number)` para indicar qual página está sendo selecionada.
 * Em `previous` definimos o "recuo" de uma página com o valor mínimo de 1 (porque sempre é a primeira página).
 * Em `next` definimos o avanço de uma página com o valor máximo sendo a última página, para não ultrapassarmos o valor limite da página.
 * Nos demais links, do loop, usamos os números das páginas, limitados a `10`, conforme ensinei em [Como limitar a quantidade de links da paginação com Vue](https://wallacemaxters.com.br/blog/2020/03/14/limitar-links-paginacao-vue).
