@@ -19,11 +19,11 @@ O primeiro ponto que gosto de observar é que os frameworks e bibliotecas costum
 
 Um grande exemplo disso é quando se trata de paginação. Já vi vários desenvolvedores utilizando o `paginate` apenas quando deseja exibir os links da paginação numa Blade View. Porém, quando se trata de retornar os dados paginados numa API, o mesmo acaba escrevendo códigos complexos e desnecessários, já que o `Model::paginate()` também pode ser utilizado em chamadas de Api.
 
-## Utilizando `paginate` do Eloquent
+## Transformando a paginação do Eloquent em JSON
 
-No Laravel, os dados retornados por `Model::paginate` podem ser transformados em *JSON*. Assim como fazemos a chamada de `response()->json()` com dados resultantes do `Model::get` ou `Model::find`, também podemos fazer o mesmo com `Model::paginate`. A diferença está na forma que os dados são retornados, pois mesmo possui um padrão de dados retornados quando transformados em JSON.
+No Laravel, quando chamamos `Model::paginate`, os dados são retornados em uma instância da classe `LengthAwarePaginator`. Esta instância pode ser transformada em *JSON*. Da mesma forma que fazemos a chamada de `response()->json()` com os dados resultantes do `Model::get` ou `Model::find`, também podemos fazer o mesmo com `Model::paginate`. Existe apenas uma diferença no retorno, já que `LengthAwarePaginator` possui um padrão diferente quando transformado em *JSON*.
 
-Por exemplo, se você tiver uma rota `api/users`, você pode simplesmente retornar o `paginate` no `response()->json()`.
+Veja esse exemplo para entender melhor. Abaixo estamos retornando um JSON contendo uma lista paginada de usuários.
 
 ```php
 Route::get('users', function () {
@@ -32,7 +32,7 @@ Route::get('users', function () {
 });
 ```
 
-Ou ainda, de maneira mais simples, você pode retornar `paginate` diretamente:
+Além disso, de maneira mais simples, podemos também retornar a chamada de `paginate` diretamente:
 
 ```php
 Route::get('users', function () {
@@ -60,7 +60,8 @@ No Laravel 5, o resultado disso será algo parecido com:
     {
       "id": 2,
       "name": "Maxters"
-    }
+    },
+    // ...
   ]
 }
 ```
