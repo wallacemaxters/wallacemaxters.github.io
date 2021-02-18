@@ -34,10 +34,11 @@ var_dump($simple_xml->a->b->c);
 
 Retorno:
 
-    object(SimpleXMLElement)#2355 (1) {
-      [0]=>
-      string(1) "Eu sou o C"
-    }
+```php
+object(SimpleXMLElement)#2355 (1) {
+  [0]=> string(1) "Eu sou o C"
+}
+```
 
 ## Acessando os atributos de um nó
 
@@ -63,26 +64,21 @@ O resultado será:
 
 ```php
 object(SimpleXMLElement)#2354 (1) {
-  [0]=>
-  string(5) "13.55"
+  [0]=> string(5) "13.55"
 }
 ```
 
-Nota: Tudo que é retornado vem como `SimpleXmlElement`. Então, para converter o valor, você precisa fazer um cast, conforme necessário:
+Observe que em todas as chamadas, o retorno é sempre `SimpleXmlElement`. Então, para converter os valores, você precisa fazer a conversão dos valores (cast) em cada operação.
+
+Veja:
 
 ```php
 var_dump((float) $xml->a->b['numero']); // float(13.55)
 ```
 
-Para acessar os valores com namespace, segue a mesma regra:
+## Iterando sobre os nós
 
-```php
-echo (float) $xml->a->b['ss:numero'];
-```
-
-## Exibindo nome e atributos usando foreach
-
-Para exemplificar melhor, criei o seguinte XML.
+Acima, fiz uma pequena demonstração de como obter os valores de atributos e nós. Porém há alguns casos onde um nó possui vários nós filhos, como no exemplo abaixo:
 
 ```xml
 <root>
@@ -94,22 +90,37 @@ Para exemplificar melhor, criei o seguinte XML.
         </row>
         <row>
             <cell label="ID">2</cell>
-            <cell label="NOME">Wayne</cell>
-            <cell label="Número">21</cell>
+            <cell label="NOME">Maxters</cell>
+            <cell label="Número">24.12</cell>
         </row>
     </table>
 </root>
 ```
 
-Como percebi que você está confuso também quanto ao uso do `foreach`, criei um exemplo de como acessar os nós filhos através dele.
-
-Veja:
+Para percorrer esses nós filhos, devemos usar o `foreach`.
 
 ```php
-$xml = simplexml_load_file('./dados.xml');
+
+$xml = 
+'<root>
+    <table>
+        <row>
+            <cell label="ID">1</cell>
+            <cell label="NOME">Wallace</cell>
+            <cell label="Número">33.55</cell>
+        </row>
+        <row>
+            <cell label="ID">2</cell>
+            <cell label="NOME">Maxters</cell>
+            <cell label="Número">24.12</cell>
+        </row>
+    </table>
+</root>';
+
+$simple_xml = simplexml_load_string($xml);
 
 
-foreach ($xml->table->row as $row) {
+foreach ($simple_xml->table->row as $row) {
 
     foreach ($row->cell as $cell) {
         echo $cell['label'], ':', $cell, "\n";
@@ -117,13 +128,46 @@ foreach ($xml->table->row as $row) {
 }
 ```
 
-O resultado é
+O resultado do código acima será assim:
 
 ```text
 ID:1
 NOME:Wallace
 Número:33.55
 ID:2
-NOME:Wayne
-Número:20.21
+NOME:Maxters
+Número:24.12
+```
+
+
+## Atributos que possuem namespace
+
+Para acessar os nós que possuam com namespace, você deve utilizar o método `children`. Você deve informar o `namespace` no primeiro argumento e `true`, no segundo.
+
+Assim:
+
+```
+$xml = 
+'<root>
+	<h:table xmlns:h="teste">
+	  <h:tr>
+	    <h:td>Maçãs</h:td>
+	    <h:td>Bananas</h:td>
+	  </h:tr>
+	</h:table>
+</root>';
+
+$simple_xml = simplexml_load_string($xml);
+
+
+foreach ($simple_xml->children('h', true)->table->tr->td as $item) {
+	var_dump((string) $item);
+}
+```
+
+O resultado será
+
+```text
+string(7) "Maçãs"
+string(7) "Bananas"
 ```
