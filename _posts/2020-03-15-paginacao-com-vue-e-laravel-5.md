@@ -9,7 +9,7 @@ sitemap: true
 image: "/uploads/laravel_vue.png"
 
 ---
-Usar Laravel como backend e Vue como frontend tem sido algo bastante comum de um tempo para cá. Em vários projetos vejo a utilização dos mesmos e pessoalmente creio que seja uma combinação poderosa.
+Usar Laravel como backend e Vue como frontend tem sido algo bastante comum de um tempo para cá. Em vários projetos, vejo a utilização dos mesmos e pessoalmente creio que seja uma combinação poderosa.
 
 Nesse tutorial, estarei demonstrando como criar uma paginação com Vue e Laravel.
 
@@ -17,14 +17,11 @@ Nesse tutorial, estarei demonstrando como criar uma paginação com Vue e Larave
 
 O primeiro ponto que gosto de observar é que os frameworks e bibliotecas costumam utilizar padrões para facilitar a nossa vida. Muitas vezes o desenvolvedor acaba criando ou fazendo coisas desnecessárias no momento de obter um dado ou fazer uma operação, sendo que o framework já tem uma solução fácil para isso.
 
-Um grande exemplo disso é o método `paginate` do Eloquent do Laravel. Já vi vários desenvolvedores utilizando o `paginate` apenas quando deseja exibir os links da paginação numa Blade View. Porém quando se trata de retornar os dados numa API, o desenvolvedor cria manualmente toda a operação, usando os métodos `take` e `skip` para fazer a paginação pelo Eloquent.
-
-Há uma maneira mais fácil de fazer isso do que a maneira citada anteriormente.
+Um grande exemplo disso é quando se trata de paginação. Já vi vários desenvolvedores utilizando o `paginate` apenas quando deseja exibir os links da paginação numa Blade View. Porém, quando se trata de retornar os dados paginados numa API, o mesmo acaba escrevendo códigos complexos e desnecessários, já que o `Model::paginate()` também pode ser utilizado em chamadas de Api.
 
 ## Utilizando `paginate` do Eloquent
 
-No Laravel 5 (no 4 também isso funcionava), o método `paginate` pode ser transformado em `JSON`. Ou seja, você pode realizar a  chamada de `response()->json()` e responder uma lista de usuários em formato JSON; porém, ao invés de usar `get`, você vai usar o método `paginate`.
-E aí que vem a parte legal: Ao chamar `paginate`, o mesmo já possui uma padronização quanto ao retorno dos dados.
+No Laravel, os dados retornados por `Model::paginate` podem ser transformados em *JSON*. Assim como fazemos a chamada de `response()->json()` com dados resultantes do `Model::get` ou `Model::find`, também podemos fazer o mesmo com `Model::paginate`. A diferença está na forma que os dados são retornados, pois mesmo possui um padrão de dados retornados quando transformados em JSON.
 
 Por exemplo, se você tiver uma rota `api/users`, você pode simplesmente retornar o `paginate` no `response()->json()`.
 
