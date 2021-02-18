@@ -119,8 +119,8 @@ Assim:
 
 ### E a próxima página?
 
-Nosso objetivo agora é avançar para o próximo offset de dados (_próxima página_, se preferir) na nossa listagem.
-Não é algo muito difícil. O Laravel precisa apenas que você passe um parâmetro na query string chamado `page` para indicar qual é a "página" de dados que vamos retornar do endpoint.
+Nosso objetivo agora é avançar para a "próxima página" da na nossa listagem.
+Não é algo muito difícil. O Laravel precisa apenas que você passe um parâmetro, via query string, chamado `page` para indicar qual é a "página" de dados que vamos retornar do endpoint.
 
 Vamos modificar o método `paginate` da seguinte forma:
 
