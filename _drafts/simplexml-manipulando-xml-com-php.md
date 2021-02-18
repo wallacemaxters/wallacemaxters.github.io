@@ -6,7 +6,8 @@ categories:
 - php
 sitemap: false
 image: ''
-excerpt: ''
+excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PHP para
+  manipular um arquivo ou string XML de maneira rápida e eficiente.
 
 ---
 Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou `simple_xml_load_string`. Ela retorna uma instância da classe `SimpleXmlElement`.
