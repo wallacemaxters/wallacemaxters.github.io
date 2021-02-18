@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'SimpleXML: Manipulando xml com PHP'
-date: 2021-02-17 01:00:00 -0200
+date: 2021-02-17T01:00:00.000-02:00
 categories:
 - php
 sitemap: false
@@ -11,10 +11,9 @@ excerpt: ''
 ---
 Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou `simple_xml_load_string`. Ela retorna uma instância da classe `SimpleXmlElement`.
 
-
 ## Acessando os nós do XML
 
-Para acessar os nós do XML processado, você deve usar o *Object Separator* (`->`). 
+Para acessar os nós do XML processado, você deve usar o _Object Separator_ (`->`).
 
 Exemplo:
 
@@ -42,12 +41,12 @@ Retorno:
 
 ## Acessando os atributos de um nó
 
-Para acessar os atributos de um nó, você deve acessar da mesma forma que se faz com os índices do `array` em PHP. usando \['nome_atributo'\]
+Para acessar os atributos de um nó, você deve acessar da mesma forma que se faz com os índices do `array` em PHP.  Basta usar sando \['nome_atributo'\]
 
 Exemplo:
 
 ```php
-$str = '<root>
+$xml = '<root>
 <a>
    <b nome="valor" numero="13.55">
      <c>Eu sou o C</c>
@@ -55,14 +54,15 @@ $str = '<root>
 </a>
 </root>';
 
-$xml = simplexml_load_string($str);
+$simple_xml = simplexml_load_string($str);
 
-var_dump($xml->a->b['numero']);
+var_dump($simple_xml->a->b['numero']);
 ```
 
 O resultado será:
 
-```object(SimpleXMLElement)#2354 (1) {
+```php
+object(SimpleXMLElement)#2354 (1) {
   [0]=>
   string(5) "13.55"
 }
