@@ -12,6 +12,8 @@ excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PH
 ---
 Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou`simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`.
 
+Vamos ver abaixo alguns detalhes interrssantes a respeito do funcionamento da mesma.
+
 ## Acessando os nós do XML
 
 Para acessar os nós do XML processado, você deve usar o _Object Separator_ (`->`).
