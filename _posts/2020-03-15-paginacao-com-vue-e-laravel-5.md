@@ -73,7 +73,7 @@ Basicamente, os dados que precisamos listar estão em `data`, que é um `array` 
 
 ## Construindo a visualização no Vue
 
-Tudo que temos que fazer agora é armazenar o retorno desses dados pelo Vue e exibí-los na Vue.
+Tudo que temos que fazer agora é armazenar o retorno desses dados e exibí-los na Vue.
 
 Exemplo:
 
