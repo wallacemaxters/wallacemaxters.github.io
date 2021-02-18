@@ -45,7 +45,7 @@ object(SimpleXMLElement)#2355 (1) {
 
 ## Acessando os atributos de um nó
 
-Para acessar os atributos de um nó, você deve acessar da mesma forma que se faz com os índices do `array` em PHP.  Basta usar sando \['nome_atributo'\]
+Para acessar os atributos de um nó, você deve acessar da mesma forma que se faz com os índices do `array` em PHP.  Basta usar \['nome_atributo'\]
 
 Exemplo:
 
