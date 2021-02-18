@@ -77,7 +77,7 @@ Veja:
 
 ```php
 var_dump((float) $simple_xml->a->b['numero']); // float(13.55)
-var_dump((string) $simple_xml->a->b['nome'])
+var_dump((string) $simple_xml->a->b['nome']); // string(valor)
 ```
 
 ## Iterando sobre os nós
