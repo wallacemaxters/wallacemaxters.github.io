@@ -144,7 +144,7 @@ Vamos modificar o método `paginate` da seguinte forma:
 
 Para testar se a paginação funcionou, basta fazer o seguinte:
 
-```vue
+```html
 <a @click="paginate(1)">1</a>
 <a @click="paginate(2)">2</a>
 <a @click="paginate(3)">3</a>
