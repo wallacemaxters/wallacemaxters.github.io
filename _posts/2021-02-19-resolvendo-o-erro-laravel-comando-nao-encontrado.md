@@ -48,6 +48,8 @@ Feito isso, rode o comando `source ~/.bashrc`.
 
 Agora, teste se o comando `laravel` está funcionando corretamente.
 
+{% include ads_common.html %}
+
 ### Solução 2
 
 Alternativamente, ao invés de copiar e colocar o caminho da pasta de instalação dos pacotes do Composer, você pode utilizar deixar mais dinâmico, adcionando `$(composer global config bin-dir --absolute --quiet)` à variável `PATH`.
