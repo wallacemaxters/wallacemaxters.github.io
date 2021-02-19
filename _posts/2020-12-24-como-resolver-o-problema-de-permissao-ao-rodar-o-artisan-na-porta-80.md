@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Como resolver o problema de permissão ao executar o php artisan serve na porta
-  80?
+title: Como resolver o problema de permissão ao executar o "php artisan serve" na
+  porta 80?
 date: 2020-12-24T15:05:00.000-02:00
 categories:
 - laravel
