@@ -1,4 +1,13 @@
-O comando `composer global require` tem como finalidade instalar os [vendor binaries](https://getcomposer.org/doc/articles/vendor-binaries.md). Podemos usar esse comando para instalar algum utilitário da linha de comando, para auxiliar na produtividade. 
+---
+date: 2021-02-19 23:53:00 +0000
+image: "/uploads/php-leader.png"
+title: Adicionar o composer ao Path
+categories:
+- composer
+- linux
+
+---
+O comando `composer global require` tem como finalidade instalar os [vendor binaries](https://getcomposer.org/doc/articles/vendor-binaries.md). Podemos usar esse comando para instalar algum utilitário da linha de comando, para auxiliar na produtividade.
 
 Porém, as vezes, a execução dos mesmos pode falhar. Por exemplo, ao tentar rodar o comando `laravel`, que é fornecido por `composer global require laravel/installer`, você pode receber o seguinte erro:
 
@@ -7,8 +16,10 @@ laravel: comando não encontrado
 ```
 
 ## O que causa o problema?
-  
-Quando você digita um comando na linha de comando, basicamente o shell tentará rodar um executável com o nome fornecido. O Shell procura por esses executáveis em todas as pastas que estão definidas na variável `$PATH`. A variável `$PATH` possui algumas pastas, como `/usr/local/bin` ou `/usr/bin`, definidas por padrão. Elas estão separadas por `:`.
+
+Quando você digita um comando na linha de comando, basicamente o Shell tentará rodar um executável com o nome fornecido. O Shell procura por esses executáveis em todas os diretórios, que estão definidos na variável `$PATH`. A variável `$PATH` possui algumas pastas, como `/usr/local/bin` ou `/usr/bin`, definidas por padrão. Elas estão separadas por `:`. 
+
+> **NOTA**: Para mais detalhes, veja: 
 
 Sendo assim, se você deseja tornar os executáveis instalados via `composer global require` disponíveis no seu Terminal, você precisa adicionar o diretório onde o Composer instala os executáveis na variável `$PATH`.
 
@@ -20,7 +31,7 @@ Para descobrir o local onde o Composer instala os executáveis ([vendor binaries
 composer global config bin-dir --absolute --quiet
 ```
 
-Esse comando vai retornar o caminho absoluto onde os *vendor binaries* são armazenados. 
+Esse comando vai retornar o caminho absoluto onde os _vendor binaries_ são armazenados.
 O retorno poderá ser com isso:
 
 ```text
