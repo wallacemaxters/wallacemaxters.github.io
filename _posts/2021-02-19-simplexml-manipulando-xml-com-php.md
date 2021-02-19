@@ -3,7 +3,7 @@ layout: post
 title: 'SimpleXML: Manipulando xml com PHP'
 date: 2021-02-19 02:50:00 +0000
 categories:
-- php
+- PHP
 sitemap: true
 image: "/uploads/php-simplexml.jpeg"
 excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PHP para
