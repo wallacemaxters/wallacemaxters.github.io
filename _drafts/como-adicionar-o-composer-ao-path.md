@@ -19,7 +19,7 @@ laravel: comando não encontrado
 
 Quando você digita um comando na linha de comando, basicamente o Shell tentará rodar um executável com o nome fornecido. O Shell procura por esses executáveis em todas os diretórios, que estão definidos na variável `$PATH`. A variável `$PATH` possui algumas pastas, como `/usr/local/bin` ou `/usr/bin`, definidas por padrão. Elas estão separadas por `:`. 
 
-> **NOTA**: Para mais detalhes, veja: 
+<sub>Se você não sabe como a variável `$PATH` funciona, recomendo a leitura de [como configurar a variável PATH](https://wallacemaxters.com.br/blog/2021/01/12/como-configurar-a-variavel-path).</sub>
 
 Sendo assim, se você deseja tornar os executáveis instalados via `composer global require` disponíveis no seu Terminal, você precisa adicionar o diretório onde o Composer instala os executáveis na variável `$PATH`.
 
