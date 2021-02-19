@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Como definir a porta usada no php artisan serve?
-date: 2020-12-24 01:00:00 -0200
+title: Como mudar a porta do comando php artisan serve?
+date: 2020-12-24T01:00:00.000-02:00
 categories:
 - laravel
 - php
