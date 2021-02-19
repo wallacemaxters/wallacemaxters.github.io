@@ -23,7 +23,7 @@ As vezes é necessário executar o `php artisan serve` em uma porta específica,
 
 Em distribuições Linux, costuma acontecer um bloqueio ao tentar executar o `php artisan serve` na porta `80`.
 
-Exemplo, ao rodar o comando `php artisan serve --port=80`, recebemos o seguinte erro:
+Exemplo, ao executar o comando `php artisan serve --port=80`, recebemos o seguinte erro:
 
 > \[Thu Dec 24 14:24:07 2020\] Failed to listen on 127.0.0.1:80 (reason: Permission denied).
 
@@ -31,7 +31,7 @@ Isso acontece porque, no Linux, somente o usuário `root` pode abrir conexões d
 
 ## Solução
 
-Para resolver esse problema, basta utilizar o `sudo` ao rodar o comando.
+Para resolver esse problema, basta utilizar o `sudo` ao executar o comando.
 
 Assim:
 
@@ -41,4 +41,4 @@ sudo php artisan serve --port=80
 
 ### Outras dicas
 
-Existem algumas opções disponíveis ao rodar o comando `artisan serve`. Você pode conferir alguns truques [aqui](/blog/2019/08/17/truques-com-o-comando-php-artisan-serve).
+Existem algumas opções disponíveis ao executar o comando `php artisan serve`. Você pode conferir alguns truques [aqui](/blog/2019/08/17/truques-com-o-comando-php-artisan-serve).
