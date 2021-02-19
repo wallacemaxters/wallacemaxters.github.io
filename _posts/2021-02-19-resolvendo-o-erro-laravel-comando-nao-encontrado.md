@@ -6,7 +6,7 @@ categories:
 - composer
 - laravel
 sitemap: true
-image: "/uploads/laravel-comando-nao-encontrado-1.png"
+image: "/uploads/laravel-comando-nao-encontrado.jpeg"
 excerpt: 'Ao tentar instalar o Laravel Installer através do Composer com o comando
   "composer global require laravel/installer", você pode receber o erro "laravel:
   comando não encontrado". Aprenda a solucionar isso nesse tutorial.'
