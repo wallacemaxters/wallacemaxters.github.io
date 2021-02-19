@@ -22,7 +22,7 @@ $ laravel
 laravel: comando não encontrado
 ```
 
-Isso geralmente acontece porque a [você não adicionou o diretório de instalação do Composer na variável PATH]([% link 2021-02-19-como-adicionar-o-composer-ao-path.md %}).
+Isso geralmente acontece porque a [você não adicionou o diretório de instalação do Composer na variável PATH](\[% link 2021-02-19-como-adicionar-o-composer-ao-path.md %}).
 
 ## Corrigindo o erro "laravel: comando não encontrado"
 
@@ -38,15 +38,30 @@ Ele retornará algo parecido com:
 /home/{usuario}/.config/composer/vendor/bin
 ```
 
-Edite seu arquivo `~/.bashrc` através do comando `nano ~/.bashrc` e adicione a seguinte linha:
+Agora, edite seu arquivo `~/.bashrc` através do comando `nano ~/.bashrc` e adicione a seguinte linha:
 
 ```bash
 export PATH=$PATH:/home/{usuario}/.config/composer/vendor/bin
 ```
 
-Feito isso, rode o comando `source ~/.bashrc`. 
+Feito isso, rode o comando `source ~/.bashrc`.
 
-Pronto! Ao rodar o comando `laravel`, tudo deve estar funcionando.
+Agora, teste se o comando `laravel` está funcionando corretamente.
 
+### Solução 2
 
+Alternativamente, ao invés de copiar e colocar o caminho da pasta de instalação dos pacotes do Composer, você pode utilizar deixar mais dinâmico, fazendo dessa forma:
 
+```bash
+nano ~/.bashrc
+```
+
+Adicione na última linha:
+
+```bash
+export PATH=$PATH:$(composer global config bin-dir --absolute --quiet)
+```
+
+```bash
+source ~/.bashrc
+```
