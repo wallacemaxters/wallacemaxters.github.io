@@ -50,7 +50,7 @@ Agora, teste se o comando `laravel` está funcionando corretamente.
 
 ### Solução 2
 
-Alternativamente, ao invés de copiar e colocar o caminho da pasta de instalação dos pacotes do Composer, você pode utilizar deixar mais dinâmico, fazendo dessa forma:
+Alternativamente, ao invés de copiar e colocar o caminho da pasta de instalação dos pacotes do Composer, você pode utilizar deixar mais dinâmico, adcionando `$(composer global config bin-dir --absolute --quiet)` à variável `PATH`.
 
 Edite o arquivo `.bashrc`
 
@@ -58,7 +58,7 @@ Edite o arquivo `.bashrc`
 nano ~/.bashrc
 ```
 
-Adicione na última linha:
+Adicione na última linha desse arquivo:
 
 ```bash
 export PATH=$PATH:$(composer global config bin-dir --absolute --quiet)
