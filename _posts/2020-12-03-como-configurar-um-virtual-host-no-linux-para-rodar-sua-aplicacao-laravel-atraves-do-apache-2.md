@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configurando um virtual host para rodar o Laravel no Apache
+title: Configurando um virtual host para Laravel no Apache
 date: 2020-12-03T15:14:00.000-02:00
 categories:
 - laravel
