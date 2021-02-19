@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'SimpleXML: Manipulando xml com PHP'
-date: 2021-02-17T01:00:00.000-02:00
+date: 2021-02-19 02:50:00 +0000
 categories:
 - php
 sitemap: true
