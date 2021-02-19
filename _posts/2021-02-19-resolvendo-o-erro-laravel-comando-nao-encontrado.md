@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Resolvendo o erro "laravel: comando não encontrado"'
-date: 2021-02-19 12:27:00 +0000
+date: 2021-02-19 12:39:00 +0000
 categories:
 - composer
 - laravel
