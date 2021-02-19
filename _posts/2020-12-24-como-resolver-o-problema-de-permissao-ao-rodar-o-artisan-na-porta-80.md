@@ -15,13 +15,13 @@ excerpt: O linux não permite a execução do "php artisan serve"  em algumas po
 ---
 ## Introdução
 
-O `artisan serve` tem como finalidade rodar o servidor embutido para uma aplicação que utiliza o framework Laravel. Eu já ensinei aqui no blog como [Rodar o artisan serve em uma porta específica](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve).
+O `artisan serve` tem como finalidade rodar o servidor embutido para uma aplicação que utiliza o framework Laravel. Eu já ensinei aqui no blog como [Executar o "php artisan serve" em uma porta específica](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve).
 
-As vezes é necessário executar o `php artisan server` em uma porta específica, como a porta `80` e afins, porém alguns problemas podem surgir.
+As vezes é necessário executar o `php artisan serve` em uma porta específica, como a porta `80` e afins, porém alguns problemas podem surgir.
 
 ## O problema
 
-Em distribuições Linux, costuma acontecer um bloqueio ao tentar rodar o `artisan serve` na porta `80`.
+Em distribuições Linux, costuma acontecer um bloqueio ao tentar executar o `php artisan serve` na porta `80`.
 
 Exemplo, ao rodar o comando `php artisan serve --port=80`, recebemos o seguinte erro:
 
