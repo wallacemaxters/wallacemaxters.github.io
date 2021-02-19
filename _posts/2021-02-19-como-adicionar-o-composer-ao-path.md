@@ -1,5 +1,5 @@
 ---
-date: 2021-02-19 23:53:00 +0000
+date: 2021-02-19 11:53:00 +0000
 image: "/uploads/composer.jpg"
 title: Como adicionar o Composer na variável PATH?
 categories:
