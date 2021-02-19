@@ -1,7 +1,7 @@
 ---
 date: 2021-02-19 23:53:00 +0000
 image: "/uploads/composer.jpg"
-title: Adicionando o Composer  variável PATH
+title: Como adicionar o Composer na variável PATH?
 categories:
 - composer
 - linux
