@@ -17,7 +17,7 @@ Quando executamos o comando `php artisan serve`, ele inicia o servidor embutido 
 
 ## Mudando a porta do artisan serve
 
-O comando `artisan serve` aceita o parâmetro `--port`. Basta adicionar a porta desejada para rodar o comando.
+O comando `artisan serve` aceita o parâmetro `--port`. Basta adicionar a porta desejada para executar o comando.
 
 Exemplo:
 
