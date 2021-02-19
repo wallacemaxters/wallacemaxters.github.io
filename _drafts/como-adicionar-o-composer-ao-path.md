@@ -5,6 +5,7 @@ title: Adicionar o composer ao Path
 categories:
 - composer
 - linux
+- php
 sitemap: true
 excerpt: As vezes, quando instalamos algo com o "composer global require", é comum
   que alguns comandos não estejam disponíveis, retornando o erro "comando não encontrado".
