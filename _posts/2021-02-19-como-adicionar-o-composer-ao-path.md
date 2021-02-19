@@ -1,6 +1,6 @@
 ---
 date: 2021-02-19 23:53:00 +0000
-image: "/uploads/php-leader.png"
+image: "/uploads/composer.jpg"
 title: Adicionando o Composer  variável PATH
 categories:
 - composer
