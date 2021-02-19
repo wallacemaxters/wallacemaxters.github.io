@@ -7,12 +7,13 @@ categories:
 - php
 sitemap: true
 image: "/uploads/laravel-terminal.png"
-excerpt: Aprenda como rodar o php artisan serve em uma porta específica.
+excerpt: Nesse tutorial, você vai aprender como executar o comando php artisan server
+  em uma porta diferente.
 
 ---
 ## Introdução
 
-Quando rodamos o comando `php artisan serve`, ele inicia o servidor embutido do PHP para rodar a aplicação Laravel. Por padrão, o `artisan serve` utiliza a porta `8000`. Porém, as vezes, pelo fato de a porta já estar ocupada ou por simples conveniência, precisamos que o `artisan serve` rode em uma porta específica.
+Quando executamos o comando `php artisan serve`, ele inicia o servidor embutido do PHP para executar a aplicação Laravel. Por padrão, o `artisan serve` utiliza a porta `8000`. Porém, as vezes, pelo fato de a porta já estar ocupada ou por simples conveniência, precisamos que o `artisan serve` seja executado em uma porta específica.
 
 ## Mudando a porta do artisan serve
 
@@ -28,7 +29,7 @@ Ao fazer isso, a sua aplicação estará disponível em `http://localhost:9000`.
 
 ### Como executar o artisan serve na porta 80?
 
-Se você for usuário de uma distribuição Linux e tentar usar a opção `--port`, em portas com valores abaixo de `1024`, você precisa adicionar `sudo` para executar o comando.  
+Se você for usuário de uma distribuição Linux e tentar usar a opção `--port`, em portas com valores abaixo de `1024`, você precisa adicionar `sudo` para executar o comando.
 
 Por exemplo, se rodar o `artisan serve` na porta 80, precisa adicionar o `sudo`.
 
