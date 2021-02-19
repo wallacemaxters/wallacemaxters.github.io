@@ -29,7 +29,7 @@ $xml = '<root>
 </a>
 </root>';
 
-$simple_xml = simple_xml_load_string($xml);
+$simple_xml = simplexml_load_string($xml);
 
 var_dump($simple_xml->a->b->c);
 ```
@@ -57,7 +57,7 @@ $xml = '<root>
 </a>
 </root>';
 
-$simple_xml = simplexml_load_string($str);
+$simple_xml = simplexml_load_string($xml);
 
 var_dump($simple_xml->a->b['numero']);
 ```
