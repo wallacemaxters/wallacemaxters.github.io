@@ -8,8 +8,8 @@ categories:
 - linux
 sitemap: true
 image: "/uploads/Laravel.jpg"
-excerpt: Aprenda como configurar um Virtual Host no Linux para rodar sua aplicação
-  Laravel através do Apache 2.
+excerpt: Aprenda como configurar um Virtual Host no Linux para executar seu site/projeto  Laravel
+  através do Apache 2.
 
 ---
 O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso, creio que é importante saber configurá-lo na sua própria máquina, para estar familiazirado com o mesmo. Neste tutorial, vamos aprender como configurar um Virtual Host no Linux para executar sua aplicação Laravel através do Apache 2.
