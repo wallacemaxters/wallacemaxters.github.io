@@ -11,6 +11,7 @@ excerpt: As vezes, quando instalamos algo com o "composer global require", é co
   que alguns comandos não estejam disponíveis, retornando o erro "comando não encontrado".
   Aprenda a solucionar esse problema configurando a variável $PATH corretamente no
   seu Linux.
+layout: post
 
 ---
 O comando `composer global require` tem como finalidade instalar os [vendor binaries](https://getcomposer.org/doc/articles/vendor-binaries.md). Podemos usar esse comando para instalar algum utilitário da linha de comando, para auxiliar na produtividade.
