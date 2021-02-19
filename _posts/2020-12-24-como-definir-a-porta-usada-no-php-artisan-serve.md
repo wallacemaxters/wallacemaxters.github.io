@@ -31,7 +31,7 @@ Ao fazer isso, a sua aplicação estará disponível em `http://localhost:9000`.
 
 Se você for usuário de uma distribuição Linux e tentar usar a opção `--port`, em portas com valores abaixo de `1024`, você precisa adicionar `sudo` para executar o comando.
 
-Por exemplo, se rodar o `artisan serve` na porta 80, precisa adicionar o `sudo`.
+Por exemplo, se executar o `artisan serve` na porta 80, precisa adicionar o `sudo`.
 
 Veja:
 
