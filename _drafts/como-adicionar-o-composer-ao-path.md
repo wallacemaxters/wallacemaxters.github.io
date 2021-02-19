@@ -6,6 +6,7 @@ title: 'Como corrigir "laravel: comando não encontrado" ao rodar "composer glob
 categories:
 - composer
 - laravel
+- linux
 sitemap: true
 excerpt: As vezes, quando instalamos algo com o "composer global require", é comum
   que alguns comandos não estejam disponíveis, retornando o erro "comando não encontrado".
