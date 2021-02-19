@@ -1,11 +1,9 @@
 ---
 date: 2021-02-19 23:53:00 +0000
 image: "/uploads/php-leader.png"
-title: 'Como corrigir "laravel: comando não encontrado" ao rodar "composer global
-  require"?'
+title: Adicionando o Composer  variável PATH
 categories:
 - composer
-- laravel
 - linux
 sitemap: true
 excerpt: As vezes, quando instalamos algo com o "composer global require", é comum
