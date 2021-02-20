@@ -78,3 +78,37 @@ gerar_cor_hexadecimal(); // #e190ec
 ```
 
 ### Explicando código
+
+O trecho a cor hexadecimal vai de `0` a `0xFFFFFF`. Multiplicamos `Math.random()` (que gera valores float de 0 a 1) para que o limite sempre seja `0xFFFFFF`. A função `parseInt` força o valor sempre ser um inteiro. Em seguida, chamamos `toString(16)`, que convertará o valor númerico para hexadecimal. A função `padStart(6, '0')` preenche o resultado com zeros a esquerda, já que uma cor hexadecimal válida no CSS sempre contém o tamanhode 3 ou 6. E o `'#' +` inicia o valor com `#`, também padrão do CSS.
+
+Caso queira gerar valores com apenas 3 caraceres, poderia ser feito assim:
+
+
+```javascript
+function gerar_cor_hexadecimal()
+{
+  return '#' + parseInt((Math.random() * 0xFFF))
+    .toString(16)
+    .padStart(3, '0');
+}
+```
+
+Ou podemos também permitir que seja parametrizado, da seguinte forma:
+
+```javascript
+function gerar_cor_hexadecimal(curto = false)
+{
+  const max_hex = curto ? 0xFFF : 0xFFFFFF;
+  
+  return '#' + parseInt((Math.random() * max_hex))
+    .toString(16)
+    .padStart(curto ? 3 : 6, '0');
+}
+```
+
+Resultado:
+
+```javascript
+gerar_cor_hexadecimal(true); // #a13
+gerar_cor_hexadecimal(); // #a1b2c3
+gerar_cor_hexadecimal(false); // #c3b2a1
