@@ -5,7 +5,7 @@ date: 2021-02-20 15:59:00 -0200
 categories:
 - javascript
 sitemap: true
-image: ''
+image: "/uploads/javascript-cor-aleatoria.jpeg"
 excerpt: Nesse tutorial, aprenda como gerar cores aleatórias com Javascript, seja
   rgba ou hexadecimal.
 
