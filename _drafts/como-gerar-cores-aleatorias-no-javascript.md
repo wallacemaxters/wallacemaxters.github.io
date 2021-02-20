@@ -6,7 +6,8 @@ categories:
 - javascript
 sitemap: true
 image: ''
-excerpt: ''
+excerpt: Nesse tutorial, aprenda como gerar cores aleatórias com Javascript, seja
+  rgba ou hexadecimal.
 
 ---
 ## Gerando cor RGBA
