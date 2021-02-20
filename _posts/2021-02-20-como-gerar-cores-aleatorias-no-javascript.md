@@ -109,9 +109,7 @@ function gerar_cor_hexadecimal(curto = false)
 Resultado:
 
 ```javascript
-
 gerar_cor_hexadecimal(true); // #a13
 gerar_cor_hexadecimal(); // #a1b2c3
 gerar_cor_hexadecimal(false); // #c3b2a1
-
 ```
