@@ -1,22 +1,7 @@
 <header class="top-header">
     <div class="top-header-overlay">
         {%- if include.show_menu -%}
-            <nav class="top-header-menu">
-                <div class="container">
-                    <ul>
-                        <li>
-                            <a href="/" class="has-text-white">
-                                Início
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/categorias" class="has-text-white">
-                                Categorias
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            {% include menu.html class="is-absolute" %}
         {%- endif %}
         <div class="top-header-content">
             <div class="container">

@@ -53,3 +53,6 @@ collections:
   categorias:
     output: true
     permalink: /:collection/:name
+  ferramentas:
+    output: true
+    permalink: /:collection/:name
