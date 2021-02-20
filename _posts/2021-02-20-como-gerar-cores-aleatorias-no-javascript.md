@@ -10,7 +10,7 @@ excerpt: Nesse tutorial, aprenda como gerar cores aleatórias com Javascript, se
   rgba ou hexadecimal.
 
 ---
-## Gerando cor RGBA
+## Gerando cores RGBA
 
 ```javascript
 function gerar_cor(opacidade = 1) {
@@ -58,8 +58,9 @@ gerar_cor(); //rgba(176, 81, 178, 1)
 gerar_cor(0.3); // rgba(176, 81, 178, 0.3)
 ```
 
-  
-## Gerando cores hexadecimais
+{% include ads_commom.html %}
+<hr />
+## Gerando cores hexadecimais com Javascript
 
 ```javascript
 function gerar_cor_hexadecimal()
@@ -82,7 +83,6 @@ gerar_cor_hexadecimal(); // #e190ec
 O trecho a cor hexadecimal vai de `0` a `0xFFFFFF`. Multiplicamos `Math.random()` (que gera valores float de 0 a 1) para que o limite sempre seja `0xFFFFFF`. A função `parseInt` força o valor sempre ser um inteiro. Em seguida, chamamos `toString(16)`, que convertará o valor númerico para hexadecimal. A função `padStart(6, '0')` preenche o resultado com zeros a esquerda, já que uma cor hexadecimal válida no CSS sempre contém o tamanhode 3 ou 6. E o `'#' +` inicia o valor com `#`, também padrão do CSS.
 
 Caso queira gerar valores com apenas 3 caraceres, poderia ser feito assim:
-
 
 ```javascript
 function gerar_cor_hexadecimal()
