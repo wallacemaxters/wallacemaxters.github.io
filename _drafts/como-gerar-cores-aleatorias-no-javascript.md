@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como gerar cores aleatórias no Javascript?
-date: 2021-02-20 01:00:00 -0200
+date: 2021-02-20 15:59:00 -0200
 categories:
 - javascript
 sitemap: true
