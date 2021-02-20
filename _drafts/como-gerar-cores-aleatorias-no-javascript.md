@@ -34,3 +34,27 @@ Sendo assim, poderíamos fazer:
 gerar_cor(1); // rgba(205.2355, 123.0555, 52.116, 1)
 gerar_cor(0.5); // rgba(123.456, 51.323, 203.123, 0.5) 
 ```
+
+  
+Se quiser não deixar os valores do RGB como `float`, basta apenas executar um `parseInt`.
+
+```javascript
+function gerar_cor(opacidade = 1) {
+
+   let r = parseInt(Math.random() * 255);
+
+   let g = parseInt(Math.random() * 255);
+
+   let b = parseInt(Math.random() * 255);
+
+   return `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+
+}
+```
+
+O resultado seria parecido com isso:
+
+```javascript
+gerar_cor(); //rgba(176, 81, 178, 1)
+gerar_cor(0.3); // rgba(176, 81, 178, 0.3)
+```
