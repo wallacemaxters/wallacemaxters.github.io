@@ -1,11 +1,13 @@
 ---
 layout: post
 title: 'SimpleXML: Manipulando xml com PHP'
-date: 2021-02-17T01:00:00.000-02:00
+date: 2021-02-19T02:50:00.000+00:00
 categories:
-- php
-sitemap: false
-image: ''
+- PHP
+- xml
+- dom
+sitemap: true
+image: "/uploads/php-simple-xml.jpeg"
 excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PHP para
   manipular um arquivo ou string XML de maneira rápida e eficiente.
 
@@ -28,10 +30,9 @@ $xml = '<root>
    </b>
 </a>
 </root>';
-$simple_xml = simple_xml_load_string($xml);
-```
 
-```php
+$simple_xml = simplexml_load_string($xml);
+
 var_dump($simple_xml->a->b->c);
 ```
 
@@ -58,7 +59,7 @@ $xml = '<root>
 </a>
 </root>';
 
-$simple_xml = simplexml_load_string($str);
+$simple_xml = simplexml_load_string($xml);
 
 var_dump($simple_xml->a->b['numero']);
 ```

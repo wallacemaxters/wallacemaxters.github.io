@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configurando um virtual host para rodar o Laravel no Apache
+title: Configurando um virtual host para Laravel no Apache
 date: 2020-12-03T15:14:00.000-02:00
 categories:
 - laravel
@@ -8,8 +8,8 @@ categories:
 - linux
 sitemap: true
 image: "/uploads/Laravel.jpg"
-excerpt: Aprenda como configurar um Virtual Host no Linux para rodar sua aplicação
-  Laravel através do Apache 2.
+excerpt: Aprenda como configurar um Virtual Host no Linux para executar seu site/projeto  Laravel
+  através do Apache 2.
 
 ---
 O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso, creio que é importante saber configurá-lo na sua própria máquina, para estar familiazirado com o mesmo. Neste tutorial, vamos aprender como configurar um Virtual Host no Linux para executar sua aplicação Laravel através do Apache 2.
@@ -49,6 +49,7 @@ Em seguida, adicione a seguinte linha:
 Para testar se o novo host está funcionando, você pode acessar `http://seu-projeto.local` no seu navegador, após salvar o arquivo acima.
 
 <hr />
+
 ## Criando um Virtual Host
 
 Agora, crie um Virtual Host no seu Apache, para apontar para o domínio local criado anteriormente. Execute o seguinte comando:
@@ -79,7 +80,6 @@ Esse comando retornará a seguinte saída:
     To activate the new configuration, you need to run:
       systemctl reload apache2
 
-
 A mensagem acima está sugerindo que você recarregue o Apache, para que o novo site esteja disponível. Mas, antes de fazer isso, é sempre importante executar `sudo apache2ctl configtest`. Este comando verificará se existe algum problema com a síntaxe ou configuração do seu virtual host. Caso haja falhas, será apresentado os detalhes para que você precisa corrigir.
 
 Se tudo estiver certo, você receberá a saída `Syntax OK`. Então, você poderá recarregar o Apache, dessa forma:
@@ -98,7 +98,7 @@ sudo systemctl reload apache2
 
 ## Testando a aplicação
 
-Se tudo estiver correto, você poderá visualizar seu projeto Laravel rodando na url `http://seu-projeto.local`.
+Se tudo estiver correto, você poderá visualizar seu projeto Laravel sendo executado na url `http://seu-projeto.local`.
 
 ## Reescrita da url
 
