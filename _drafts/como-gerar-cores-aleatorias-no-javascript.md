@@ -59,8 +59,22 @@ gerar_cor(0.3); // rgba(176, 81, 178, 0.3)
 ```
 
   
-\## Gerando cores hexadecimais
+## Gerando cores hexadecimais
 
-\`\`\`javascript
+```javascript
+function gerar_cor_hexadecimal()
+{
+  return '#' + parseInt((Math.random() * 0xFFFFFF))
+    .toString(16)
+    .padStart(6, '0');
+}
+```
 
-\`\`\`
+Resultado:
+
+```javascript
+gerar_cor_hexadecimal(); // #a12def
+gerar_cor_hexadecimal(); // #e190ec
+```
+
+### Explicando código
