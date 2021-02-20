@@ -58,7 +58,8 @@ gerar_cor(); //rgba(176, 81, 178, 1)
 gerar_cor(0.3); // rgba(176, 81, 178, 0.3)
 ```
 
-{% include ads_commom.html %}
+{% include ads_common.html %}
+
 <hr />
 ## Gerando cores hexadecimais com Javascript
 
