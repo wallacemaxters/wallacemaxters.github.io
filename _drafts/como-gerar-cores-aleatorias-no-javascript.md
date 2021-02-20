@@ -35,7 +35,6 @@ gerar_cor(1); // rgba(205.2355, 123.0555, 52.116, 1)
 gerar_cor(0.5); // rgba(123.456, 51.323, 203.123, 0.5) 
 ```
 
-  
 Se quiser não deixar os valores do RGB como `float`, basta apenas executar um `parseInt`.
 
 ```javascript
@@ -58,3 +57,10 @@ O resultado seria parecido com isso:
 gerar_cor(); //rgba(176, 81, 178, 1)
 gerar_cor(0.3); // rgba(176, 81, 178, 0.3)
 ```
+
+  
+\## Gerando cores hexadecimais
+
+\`\`\`javascript
+
+\`\`\`
