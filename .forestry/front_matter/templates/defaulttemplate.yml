@@ -72,5 +72,5 @@ pages:
 - _posts/2021-02-19-resolvendo-o-erro-laravel-comando-nao-encontrado.md
 - _posts/2021-02-19-simplexml-manipulando-xml-com-php.md
 - _posts/2021-02-20-como-gerar-cores-aleatorias-no-javascript.md
-- _posts/2021-02-21-corrigir-o-erro-ao-tentar-usar-o-storage-ou-filesystem-no-lumen.md
 - _posts/codigo/2021-01-14-quis-qui-ipsum-sint.md
+- _posts/como-corrigir-o-erro-flysystem-adapter-local-no-lumen.md
