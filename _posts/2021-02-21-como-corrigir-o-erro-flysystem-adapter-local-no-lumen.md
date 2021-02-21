@@ -21,12 +21,12 @@ Isso ocorre porque o `league/flysystem` não está instalado no seu projeto. Ele
 
 ## Instalando o League/flysystem
 
-Como dito, você precisa instalar o `league/flysystem`.
+Como dito, você precisa instalar o `league/flysystem`. Você precisa especificar a versão `^1.1` na instalação.
 
 Código:
+
 ```bash
 composer require league/flysystem ^1.1
 ```
-
 
 > Nota: Esse tutorial foi testado na versão 7.0 do Lumen e só funcionou corretamente ao utilizar a versão ^1.1 do league/flysystem.
