@@ -11,7 +11,7 @@ excerpt: |-
   " ao tentar usar o filesystem no Lumen
 
 ---
-No Lumen, ao tentar chamar `app('filesystem')->disk('public')`ou `app('filesystem')->disk('local')` (ou `Storage:disk('local')` se tiver habilitado os facades), é comum receber o seguinte erro:
+No Lumen, ao tentar chamar `app('filesystem')->disk('public')`, ou `app('filesystem')->disk('local')`, ou `Storage:disk('local')` se tiver habilitado o Facade, é comum receber o seguinte erro:
 
 ```text
 Class League\Flysystem\Adapter\Local' not found in ./vendor/illuminate/filesystem/FilesystemManager.php on line 164
