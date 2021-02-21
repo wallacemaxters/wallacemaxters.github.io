@@ -29,4 +29,4 @@ Código:
 composer require league/flysystem ^1.1
 ```
 
-> Nota: Esse tutorial foi testado na versão 7.0 do Lumen e só funcionou corretamente ao utilizar a versão ^1.1 do league/flysystem.
+> **Nota**: Esse tutorial foi testado na versão 7.0 do Lumen e só funcionou corretamente ao utilizar a versão ^1.1 do league/flysystem.
