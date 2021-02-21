@@ -7,7 +7,7 @@ categories:
 sitemap: true
 image: "/uploads/lumen.png"
 excerpt: |-
-  Aprenda a resolver o erro "Class League\Flysystem\Adapter\Local' not found
+  No Lumen, ao tentar utilizar o  Storage (filesystem), você pode receber o erro "Class League\Flysystem\Adapter\Local' not found
   " ao tentar usar o filesystem no Lumen
 
 ---
@@ -29,4 +29,4 @@ Execute o seguinte comando no projeto.
 composer require league/flysystem ^1.1
 ```
 
-Pronto! problema resolvido.
+> Nota: Esse tutorial foi testado na versão 7.0 do Lumen
