@@ -24,6 +24,9 @@ Isso ocorre porque o `league/flysystem` não está instalado no Lumen.
 Você precisa instalar o `league/flysystem` para que o filesystem funcione corretamente. Os adapters `local` e `public` dependem dele para funcionar corretamente, porém o mesmo não vem instalado por padrão no Lumen, por se tratar de um microframework.
 
 Execute o seguinte comando no projeto.
+
 ```bash
 composer require league/flysystem ^1.1
 ```
+
+Pronto! problema resolvido.
