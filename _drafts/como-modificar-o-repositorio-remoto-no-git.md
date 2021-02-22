@@ -34,6 +34,13 @@ Assim, para checar se a modificação teve efeito, basta rodar o comando:
 git remote -v
 ```
 
+A saída será parecida com isso:
+
+```text
+https://novo.repositorio-remoto.com (fetch)
+https://novo.repositorio-remoto.com (push)
+```
+
 Ou, para ver com mais detalhes:
 
 ```bash
