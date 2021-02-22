@@ -6,10 +6,11 @@ categories:
 - python
 sitemap: true
 image: "/uploads/covers/python.png"
-excerpt: 'Para verificar se um ano é bissexto em Python, basta importar calendar. Ele possuí uma função chamada isleap, que retorna True se o ano for bissexto.'
+excerpt: Para verificar se um ano é bissexto em Python, basta importar calendar. Ele
+  possuí uma função chamada isleap, que retorna True se o ano for bissexto.
+color: "#ACF6E4"
 
 ---
-
 Para verificar se um ano é bissexto em Python, basta importar o módulo `calendar`. Ele possuí uma função chamada `isleap`, que retorna `True` se o ano for bissexto.
 
 Código:
