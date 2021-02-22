@@ -44,7 +44,7 @@
     {% if page.image %}
     <style>
         .top-header {
-            background-color: #fff;
+            background-color: {% if page.color %} {{ page.color }}{% else %}#fff{% endif %};
             background-image: url('{{ page.image }}');
         }
     </style>

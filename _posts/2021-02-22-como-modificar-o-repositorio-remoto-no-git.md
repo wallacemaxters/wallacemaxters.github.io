@@ -6,9 +6,8 @@ categories:
 - git
 sitemap: true
 image: "/uploads/git.png"
-excerpt: Você configurou um repositório remoto GIT através do "git remote add origin"
-  e agora precisa alterar, mas não sabe como fazer? Aprenda neste tutorial!
-Cor: "#58F4A9"
+excerpt: 'Você configurou um repositório remoto GIT através do "git remote add origin"
+  e agora precisa alterar, mas não sabe como fazer? Aprenda neste tutorial!'
 color: "#50E3C2"
 
 ---
