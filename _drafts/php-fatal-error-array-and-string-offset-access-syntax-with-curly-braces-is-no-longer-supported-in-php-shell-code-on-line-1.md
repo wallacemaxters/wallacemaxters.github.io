@@ -12,16 +12,23 @@ excerpt: ''
 ---
 ## Erro
 
+```text
 PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported
+```
+
+## Causa
+A partir da versão 7.4 o PHP tornou *depretacted* o acesso a `string` e `array` via *curly brackets* (colchetes)
 
 ## Solução
 
 Altere:
 
+```php
 $string = 'Teste';
+echo $string{0};
+```
 
-$string{0};
-
-Para 
-
-$string\[0\]
+Para:
+```php
+$string[0]
+```
