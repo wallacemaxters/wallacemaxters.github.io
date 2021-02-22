@@ -23,7 +23,7 @@ Quando queremos trocar o repositório remoto, basta usar a opção `set-url` em 
 Dessa forma:
 
 ```bash
-git remote set-url origin https://repositorio_remoto.com
+git remote set-url origin https://novo.repositorio-remoto.com
 ```
 
 ## Como visualizar o repositório remoto?
