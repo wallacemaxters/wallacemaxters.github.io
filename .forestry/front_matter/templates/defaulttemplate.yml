@@ -6,6 +6,14 @@ fields:
   name: layout
   label: layout
   default: post
+- name: Cor
+  type: color
+  label: color
+  config:
+    required: false
+    color_format: Hex
+  description: Cor de destaque para esse artigo
+  default: "#222222"
 - type: text
   label: title
   name: title
@@ -38,14 +46,6 @@ fields:
       format: markdown
   label: excerpt
   description: Uma descrição curta sobre esse post
-- name: Cor
-  type: color
-  label: color
-  config:
-    required: false
-    color_format: Hex
-  description: Cor de destaque para esse artigo
-  default: "#222222"
 pages:
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
