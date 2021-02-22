@@ -17,11 +17,12 @@ PHP Fatal error:  Array and string offset access syntax with curly braces is no 
 ```
 
 ## Causa
-A partir da versão 7.4 o PHP tornou *depretacted* o acesso a `string` e `array` via *curly brackets* (colchetes)
+
+A partir da versão 7.4 o PHP tornou _depretacted_ o acesso a `string` e `array` via _curly brackets_ (colchetes)
 
 ## Solução
 
-Altere:
+Você precisa atualizar seu código. Atualize:
 
 ```php
 $string = 'Teste';
@@ -29,6 +30,7 @@ echo $string{0};
 ```
 
 Para:
+
 ```php
 $string[0]
 ```
