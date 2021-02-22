@@ -10,4 +10,10 @@ image: ''
 excerpt: ''
 
 ---
-PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in php shell code on line 1
+Altere:
+
+$string = 'Teste';
+
+$string{0};
+
+PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported
