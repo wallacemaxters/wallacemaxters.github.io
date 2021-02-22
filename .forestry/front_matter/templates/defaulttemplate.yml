@@ -6,9 +6,9 @@ fields:
   name: layout
   label: layout
   default: post
-- name: Cor
+- name: color
   type: color
-  label: color
+  label: Cor
   config:
     required: false
     color_format: Hex
