@@ -2,8 +2,9 @@
 layout: post
 title: Como modificar o repositório remoto no GIT?
 date: 2021-02-22 00:00:00 -0300
-categories: []
-sitemap: false
+categories:
+- git
+sitemap: true
 image: ''
 excerpt: ''
 
