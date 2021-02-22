@@ -46,3 +46,19 @@ Ou, para ver com mais detalhes:
 ```bash
 git remote show origin
 ```
+
+Saída:
+
+```text
+* remote origin
+  Fetch URL: https://novo.repositorio-remoto.com
+  Push  URL: https://novo.repositorio-remoto.com
+  HEAD branch: master
+  Remote branches:
+    gh-pages tracked
+    master   tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (local out of date)
+```
