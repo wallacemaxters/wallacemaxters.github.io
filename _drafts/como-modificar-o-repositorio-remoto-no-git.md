@@ -8,8 +8,34 @@ image: ''
 excerpt: ''
 
 ---
-Quando queremos colocar 
+Geralmente, quando iniciamos um repositório GIT vazio e queremos adicionar a origem remota, podemos simplesmente usar o seguinte comando:
+
+    git remote add origin https://repositorio-remoto.com
+
+Mas, por algum motivo, você pode querer modificar o repositório remoto onde enviará suas alterações.
+
+Como fazer isso?
+
+## Alterando a origem remota do repositório
+
+Quando queremos trocar o repositório remoto, basta usar a opção `set-url` em `git remote`.
+
+Dessa forma:
 
 ```bash
 git remote set-url origin https://repositorio_remoto.com
+```
+
+## Como visualizar o repositório remoto?
+
+Assim, para checar se a modificação teve efeito, basta rodar o comando:
+
+```bash
+git remote -v
+```
+
+Ou, para ver com mais detalhes:
+
+```bash
+git remote show origin
 ```
