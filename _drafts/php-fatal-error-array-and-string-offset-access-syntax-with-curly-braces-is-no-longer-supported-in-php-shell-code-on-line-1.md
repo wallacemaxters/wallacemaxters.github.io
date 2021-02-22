@@ -10,10 +10,18 @@ image: ''
 excerpt: ''
 
 ---
+## Erro
+
+PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported
+
+## Solução
+
 Altere:
 
 $string = 'Teste';
 
 $string{0};
 
-PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported
+Para 
+
+$string\[0\]
