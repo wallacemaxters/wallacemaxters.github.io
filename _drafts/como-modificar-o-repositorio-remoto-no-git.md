@@ -5,7 +5,7 @@ date: 2021-02-22 00:00:00 -0300
 categories:
 - git
 sitemap: true
-image: ''
+image: "/uploads/git.png"
 excerpt: Você configurou um repositório remoto GIT através do "git remote add origin"
   e não sabe como modificar? Aprenda a fazer isso neste tutorial!
 
