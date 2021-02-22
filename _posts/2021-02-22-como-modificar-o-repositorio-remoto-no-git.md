@@ -8,6 +8,7 @@ sitemap: true
 image: "/uploads/git.png"
 excerpt: Você configurou um repositório remoto GIT através do "git remote add origin"
   e agora precisa alterar, mas não sabe como fazer? Aprenda neste tutorial!
+Cor: ''
 
 ---
 Geralmente, quando iniciamos um repositório GIT vazio e queremos adicionar a origem remota, podemos simplesmente usar o seguinte comando:
