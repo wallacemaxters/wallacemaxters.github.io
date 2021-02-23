@@ -1,6 +1,6 @@
 ---
 layout: post
-color: "#222222"
+color: "#FF60C9"
 title: Como pesquisar por mês ou ano no Laravel?
 date: 2021-02-23 00:00:00 -0300
 categories:
