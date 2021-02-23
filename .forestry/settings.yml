@@ -5,6 +5,14 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: _ferramentas
+  label: Ferramentas
+  create: all
+  match: "**/*"
+  new_doc_ext: ''
+  templates:
+  - defaulttemplate
+- type: directory
   path: _categorias
   label: Categorias
   create: all
