@@ -42,9 +42,8 @@ class ProdutosController extends Controller
 {
     public function index(Request $request) 
     {
-
          $produtos = Produto::paginate();
-
+         
          return view('produtos.index', compact('produtos'));
     }
 }
