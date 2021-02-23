@@ -11,19 +11,26 @@ excerpt: No Laravel, você pode pesquisar os dados do seu banco facilmente atrav
   do mês ou ano. Aprenda nesse tutorial.
 
 ---
-```php
-function index(Request $request) 
-{
-    $query = Produto::query();
-    
-    if ($request->has('ano')) {
-        $query->whereYear('ano', '=', $request->ano);
-    }
-    
-    if ($request->has('mes')) {
-        $query->whereMonth('mes', '=', $request->mes);
-    }
+No Laravel, você pode fazer uma filtro de pesquisa em um campo do tipo `DATETIME` ou `TIMESTAMP` facilmente. Você precisa apenas chamar o método `whereYear` para filtrar pelo ano ou `whereMonth` para filtrar pelo mês das datas registradas no seu banco de dados.
 
-    return $query->paginate(); // ou $query->get() se quiser retornar tudo
+Veja como é simples:
+
+```php
+class ProdutosController extends Controller
+{
+    function index(Request $request) 
+    {
+        $query = Produto::query();
+
+        if ($request->has('ano')) {
+            $query->whereYear('created_at', '=', $request->ano);
+        }
+
+        if ($request->has('mes')) {
+            $query->whereMonth('created_at', '=', $request->mes);
+        }
+
+        return $query->paginate(); // ou $query->get() se quiser retornar tudo
+    }
 }
 ```
