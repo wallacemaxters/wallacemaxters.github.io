@@ -67,7 +67,7 @@ Acima verificamos se `$data_inicio` e `$data_fim` são `false`, pois `DateTime::
 
 É possível utilizar o `Validator`, se desejar retornar um erro, caso uma data inválida seja passada pelo cliente. Talvez seja o melhor caminho para manter a integridade dos valores utilizados ao realizar a pesquisa.
 
-Exemplo:
+Código com `Validator`:
 
 ```php
 public function index(Request $request) 
@@ -86,6 +86,8 @@ public function index(Request $request)
      }
 }
 ```
+
+## Filtrando os dados da pesquisa por datas
 
 Agora, que temos as datas convertidas, podemos usar os valores para realizar a pesquisa nos registros do banco de acordo com as datas. Vamos então usar a função `whereDate` do Laravel para fazer isso.
 
