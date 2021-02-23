@@ -39,6 +39,11 @@ class ProdutosController extends Controller
 }
 ```
 
+Para pesquisar por mês e ano, bastaria acessar o endpoint de produtos da seguinte forma:
+
+```text
+/produtos?mes=2&ano=2021
+```
 
 ## Explicando o funcionamento de whereYear e WhereMonth no Laravel
 
