@@ -10,7 +10,7 @@ excerpt: Aprenda como pesquisar por datas no Laravel de maneira bem simples!
 color: "#F8E71C"
 
 ---
-A pouco tempo fiz um tutorial ensinando [como criar filtros com Laravel](https://wallacemaxters.com.br/blog/2020/03/29/laravel-como-criar-filtros-de-pesquisa-no-eloquent-de-maneira-eficiente "Como criar filtros de pesquisa no Laravel"). Porém outra dificuldade que vejo entre os desenvolvedores que utilizam este framework é quando se trata de filtro de pesquisas através de datas.
+Há pouco tempo, fiz um tutorial ensinando [como criar filtros de pesquisa no Laravel](https://wallacemaxters.com.br/blog/2020/03/29/laravel-como-criar-filtros-de-pesquisa-no-eloquent-de-maneira-eficiente "Como criar filtros de pesquisa no Laravel"). Porém outra dificuldade que vejo entre os desenvolvedores que utilizam este framework é quando se trata de filtro de pesquisas através de datas.
 
 Tomando como exemplo uma pesquisa de Produtos, vamos utilizar dois inputs para identificar um período inicial e um período final para nossa pesquisa. Utilizaremos como base o campo `created_at`, como exemplo.
 
