@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Como corrigir o erro "Class League\Flysystem\Local" ao usar o Storage no Lumen?
-date: 2021-02-21 00:00:00 -0300
+title: Corrigindo o erro "Class League\Flysystem\Local" ao usar o Storage no Lumen?
+date: 2021-02-21T00:00:00.000-03:00
 categories:
 - lumen
 sitemap: true
