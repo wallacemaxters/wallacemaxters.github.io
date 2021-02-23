@@ -126,3 +126,4 @@ SELECT * FROM produtos WHERE DATE(created_at) >= ? AND DATE(created_at) <= ?
 
 Dessa forma, você consegue pesquisar por um intervalo de dados facilmente no Laravel.
 
+
