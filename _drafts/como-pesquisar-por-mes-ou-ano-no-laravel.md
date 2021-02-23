@@ -37,6 +37,9 @@ class ProdutosController extends Controller
 }
 ```
 
+
+## Explicando o funcionamento de whereYear e WhereMonth no Laravel
+
 O método `whereYear` modifica a SQL query, adicionando `YEAR(created_at)`. Já `whereMonth` adiciona `MONTH(created_at)`. O próprio SGBD cuidará de executar a pesquisa baseada no ano e mês passados.
 
 Para testar como uma SQL é criada ao chamar o Query Builder do Laravel, eu costumo utilizar o `toSql` no Laravel.
