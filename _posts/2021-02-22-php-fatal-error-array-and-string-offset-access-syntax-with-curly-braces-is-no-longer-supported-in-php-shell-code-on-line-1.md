@@ -27,15 +27,17 @@ A partir da versão 7.4, o PHP tornou depreciada o uso da sintaxe de acesso a `s
 
 ## Solução
 
-Você precisa atualizar seu código. Atualize:
+Você precisa atualizar seu código.
+
+Se seu código tiver algo parecido com isso:
 
 ```php
 $string = 'Teste';
 echo $string{0};
 ```
 
-Para:
+Precisa mudar para isso:
 
 ```php
-$string[0]
+echo $string[0];
 ```
