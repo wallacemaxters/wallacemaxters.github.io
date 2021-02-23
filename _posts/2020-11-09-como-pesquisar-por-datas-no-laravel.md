@@ -15,7 +15,7 @@ Há pouco tempo, fiz um tutorial ensinando [como criar filtros de pesquisa no La
 Nesse tutorial vamos ver que pesquisar por datas no Laravel é algo simples.
 <hr/>
 
-## Pesquisando por datas no Laravel
+## Pesquisando datas por intervalo no Laravel
 
 Tomando como exemplo uma pesquisa de Produtos, vamos utilizar dois inputs para identificar um período inicial e um período final para pesquisar os dados no banco. Neste tutorial, utilizaremos como base o campo `created_at`.
 
@@ -50,7 +50,7 @@ class ProdutosController extends Controller
 
 ```
 
-### Validando as datas
+### Validando o formato das datas
 
 Geralmente, aqui no Brasil, usamos o formato `DD/MM/AAAA` para as datas. Nesse caso, precisamos de converter esses valores para `DateTime` ou `Carbon`, que tornará mais fácil nosso trabalho no Laravel. Podemos utilizar o método `DateTime::createFromFormat`, por exemplo:
 
@@ -118,8 +118,11 @@ public function index(Request $request)
 
 Note que no caso acima, diferente do costume dos vários tutoriais, não utilizei o `whereBetween`. Isso porque geralmente, quando se usa o `whereBetween`, é necessário adicionar à data de início o valor `00:00:00` e no fim, `23:59:59`, para não ter problemas com alguma hora registrada que acaba deixando de ser capturada.  Para não termos que adicionar mais essa complexidade ao código, usei o `whereDate`, pois internamente ele adiciona `DATE(created_at)` na cláusula `WHERE` da SQL.
 
-A query gerada será algo parecido com
+A query gerada será algo parecido com isso:
 
 ```sql
 SELECT * FROM produtos WHERE DATE(created_at) >= ? AND DATE(created_at) <= ?
 ```
+
+Dessa forma, você consegue pesquisar por um intervalo de dados facilmente no Laravel.
+
