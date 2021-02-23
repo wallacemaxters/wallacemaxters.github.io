@@ -148,7 +148,7 @@ function gerar(tipo) {
 
 <hr>
 
-<div class="columns v-center">
+<div class="columns is-vcentered is-multiline">
   <div class="column is-12 is-3-desktop">
     <button type="button" class="button is-primary" onclick="gerar('rgba')">RGBA</button></div>
   <div id="cor-gerada-rgba" class="column">
@@ -159,7 +159,7 @@ function gerar(tipo) {
 
 <hr>
 
-<div class="columns v-center">
+<div class="columns is-vcentered is-multiline">
   <div class="column is-12 is-3-desktop">
     <button type="button" class="button is-primary" onclick="gerar('hexadecimal')">Hexadecimal</button></div>
   <div id="cor-gerada-hexadecimal" class="column">
@@ -168,4 +168,5 @@ function gerar(tipo) {
   </div>
 </div>
 
+[Veja mais aqui](/ferramentas/cores-aleatorias)
 <hr>

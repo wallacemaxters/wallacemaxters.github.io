@@ -1,0 +1,77 @@
+---
+layout: page
+image: "/uploads/covers/paleta-cores.jpg"
+show_menu: true
+sitemap: true
+title: "Gerar Cores Aleatórias"
+excerpt: 'Ferramenta oline para geração de cores rgb e hexadecimais aleatórias'
+color: '#45d072'
+---
+
+
+<style>
+    .color-preview {
+        display: inline-flex;
+        height: 200px;
+        width: 200px;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 10px;
+    }
+</style>
+
+
+<hr>
+
+<div class="columns is-vcentered is-multiline">
+    <div class="column has-text-centered">
+        <button type="button" class="button is-primary is-large" onclick="gerar()">
+            Gerar Cor
+        </button>
+    </div>
+    <div class="column">
+
+        <div class='field'>
+            <label class="label">RGB</label>
+            <input class="input" readonly type="text" id="input-rgb" />
+        </div>
+
+        <label class="label">Hexadecimal</label>
+        <input class="input" readonly type="text" id="input-hex" />
+    </div>
+    <div id="cor-gerada" class="column has-text-centered">
+        <span class="color-preview"></span>
+    </div>
+</div>
+
+<hr>
+
+
+<script>
+function gerar_cor_hexadecimal(curto = false) {
+    const max_hex = curto ? 0xFFF : 0xFFFFFF;
+
+    return '#' + parseInt((Math.random() * max_hex))
+        .toString(16)
+        .padStart(curto ? 3 : 6, '0');
+}
+
+function gerar() {
+
+    var el = document.querySelector('#cor-gerada');
+    var box = el.querySelector('.color-preview');
+    var hex = gerar_cor_hexadecimal();
+    var rgb = hex.substr(1).match(/\w{2}/g).map(x => parseInt(x, 16));
+
+    rgb = 'rgb(' + rgb.join(',') + ')';
+
+    document.querySelector('#input-rgb').value = rgb;
+    document.querySelector('#input-hex').value = hex;
+
+    box.style.backgroundColor = hex;
+}
+
+gerar()
+</script>
+
+{% include ads_common.html %}
