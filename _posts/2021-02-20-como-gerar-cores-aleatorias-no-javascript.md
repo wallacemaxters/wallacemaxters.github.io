@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Como gerar cores aleatórias no Javascript?
-date: 2021-02-20 15:59:00 -0200
+date: 2021-02-20T15:59:00.000-02:00
 categories:
 - javascript
 sitemap: true
 image: "/uploads/javascript-cor-aleatoria.jpeg"
 excerpt: Nesse tutorial, aprenda como gerar cores aleatórias com Javascript, seja
   rgba ou hexadecimal.
+color: ''
 
 ---
 ## Gerando cores RGBA
@@ -61,6 +62,7 @@ gerar_cor(0.3); // rgba(176, 81, 178, 0.3)
 {% include ads_common.html %}
 
 <hr />
+
 ## Gerando cores hexadecimais com Javascript
 
 ```javascript
@@ -114,3 +116,47 @@ gerar_cor_hexadecimal(true); // #a13
 gerar_cor_hexadecimal(); // #a1b2c3
 gerar_cor_hexadecimal(false); // #c3b2a1
 ```
+
+## Testando
+
+<script>
+function gerar_cor_rgba(opacidade = 1) {
+   let r = Math.random() * 255;
+   let g = Math.random() * 255;
+   let b = Math.random() * 255;
+   
+   return `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+}
+  
+function gerar_cor_hexadecimal(curto = false)
+{
+  const max_hex = curto ? 0xFFF : 0xFFFFFF;
+  
+  return '#' + parseInt((Math.random() * max_hex))
+    .toString(16)
+    .padStart(curto ? 3 : 6, '0');
+}
+  
+function gerar(tipo) {
+   const id = `cor-gerada-${tipo}`;
+   var el = document.getQuerySelector(id);
+  
+  var cor = window[`gerar_cor_${tipo}`]()
+ 
+   el.getQuerySelector('span').style.backgroundColor = cor;
+  el.getQuerySelector('code').innerHTML = cor;
+}
+</script>
+
+
+<button type="button" class="button is-primary" onclick="gerar('rgba')">RGBA</button>
+<div id="rgba">
+  <span style="display: inline-block; height: 20px; width: 20px;"></span>
+  <code></code>
+</div>
+
+<button type="button" class="button is-primary" onclick="gerar('rgba')">Hexadecimal</button>
+<div id="rgba">
+  <span style="display: inline-block; height: 20px; width: 20px;"></span>
+  <code></code>
+</div>
