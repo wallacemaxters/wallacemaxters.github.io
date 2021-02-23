@@ -19,7 +19,7 @@ Nesse tutorial vamos ver que pesquisar por datas no Laravel é algo simples.
 
 Tomando como exemplo uma pesquisa de Produtos, vamos utilizar dois inputs para identificar um período inicial e um período final para pesquisar os dados no banco. Neste tutorial, utilizaremos como base o campo `created_at`.
 
-Exemplo BLADE:
+Código Blade:
 
 {% raw %}
 
