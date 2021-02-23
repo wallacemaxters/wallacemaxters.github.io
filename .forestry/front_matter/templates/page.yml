@@ -21,3 +21,7 @@ fields:
     required: false
     color_format: Hex
   description: Cor caso não tenha imagem
+- name: sitemap
+  type: boolean
+  label: Sitemap
+  description: Habilita ou não a página no sitemap
