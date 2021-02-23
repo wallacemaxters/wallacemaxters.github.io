@@ -2,7 +2,7 @@
 layout: post
 color: "#FF60C9"
 title: Como pesquisar por mês ou ano no Laravel?
-date: 2021-02-23 00:00:00 -0300
+date: 2021-02-23 13:12:33 -0300
 categories:
 - laravel
 sitemap: true
@@ -11,7 +11,8 @@ excerpt: No Laravel, você pode pesquisar os dados do seu banco facilmente atrav
   do mês ou ano. Aprenda nesse tutorial.
 
 ---
-Eu já ensinei aqui no blog [como criar filtros de pesquisa no Laravel através de um intervalo de datas]({% post_url riando-filtros-de-pesquisa-por-intervalo-de-datas-no-laravel.md %}). Porém há outro caso muito comum, que é quando precisamos pesquisar através apenas do mês e ano de uma coluna.
+Eu já ensinei aqui no blog 
+[como criar filtros de pesquisa no Laravel através de um intervalo de datas]({% post_url 2020-11-09-criando-filtros-de-pesquisa-por-intervalo-de-datas-no-laravel %}). Porém há outro caso muito comum, que é quando precisamos pesquisar através apenas do mês e ano de uma coluna.
 
 ## Pesquisando dados por mês ou ano
 
