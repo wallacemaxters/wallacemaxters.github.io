@@ -11,7 +11,7 @@ sections:
   match: "**/*"
   new_doc_ext: app
   templates:
-  - defaulttemplate
+  - page
 - type: directory
   path: _categorias
   label: Categorias
