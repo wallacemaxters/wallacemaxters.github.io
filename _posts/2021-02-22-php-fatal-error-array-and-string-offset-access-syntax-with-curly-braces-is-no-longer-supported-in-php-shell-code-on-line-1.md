@@ -27,7 +27,7 @@ A partir da versão 7.4, o PHP tornou depreciada o uso da sintaxe de acesso a `s
 
 ## Solução
 
-Você precisa atualizar seu código.
+Você precisa atualizar seu código. Você deve trocar as chaves `{}` por colchetes `[]`. 
 
 Se seu código tiver algo parecido com isso:
 
