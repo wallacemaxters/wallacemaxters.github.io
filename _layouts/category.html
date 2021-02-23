@@ -6,7 +6,8 @@ layout: default
 {% assign ads_count_show = 3 %}
 
 
-{% include header.html title=page.title excerpt=page.excerpt show_menu=true %}
+{% include header.html title=page.title excerpt=page.excerpt show_menu=true color=page.color %}
+
 <div class="section">
     <div class="container">
         <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -35,7 +36,7 @@ layout: default
                 {% assign count = count | plus: 1 %}
                 <div class="column is-12 is-4-desktop">
                     {% capture post_title %}<h3>{{ post.title }}</h3>{% endcapture %}
-                    {% include link_card.html title=post_title url=post.url image=post.image %}
+                    {% include link_card.html title=post_title url=post.url image=post.image color=post.color %}
                 </div>
             {% endfor %}
         </div>

@@ -7,6 +7,7 @@ categories:
 - eloquent
 sitemap: true
 image: "/uploads/laravel_database_search.svg"
+color: "#add555"
 
 ---
 O Eloquent é um ORM do Laravel que permite facilitar bastante as consultas realizadas no seu banco de dados. Nesse tutorial, estarei ensinado uma maneira simples de filtrar dados no Eloquent de maneira eficiente, evitando repetições e códigos grandes;
