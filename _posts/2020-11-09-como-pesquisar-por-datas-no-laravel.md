@@ -77,7 +77,7 @@ public function index(Request $request)
 }
 ```
 
-Agora, que temos as datas convertidas, podemos usar os valores para captuar os registros do banco que contenham o intervalo de datas. Vamos então usar a função `whereDate` do Laravel para fazer isso.
+Agora, que temos as datas convertidas, podemos usar os valores para realizar a pesquisa nos registros do banco de acordo com as datas. Vamos então usar a função `whereDate` do Laravel para fazer isso.
 
 ```php
 public function index(Request $request) 
