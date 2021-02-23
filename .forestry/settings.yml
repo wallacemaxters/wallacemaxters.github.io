@@ -9,7 +9,7 @@ sections:
   label: Ferramentas
   create: documents
   match: "**/*"
-  new_doc_ext: ''
+  new_doc_ext: app
   templates:
   - defaulttemplate
 - type: directory
