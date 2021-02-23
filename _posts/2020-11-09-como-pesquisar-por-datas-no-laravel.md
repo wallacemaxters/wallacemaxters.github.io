@@ -35,16 +35,20 @@ Código Blade:
 
 {% endraw %}
 
-Exemplo Controller:
+Código Controller:
 
 ```php
-public function index(Request $request) 
+class ProdutosController extends Controller 
 {
+    public function index(Request $request) 
+    {
 
-     $produtos = Produto::paginate();
-      
-     return view('produtos.index', compact('produtos'));
+         $produtos = Produto::paginate();
+
+         return view('produtos.index', compact('produtos'));
+    }
 }
+
 ```
 
 Geralmente, aqui no Brasil, usamos o formato `DD/MM/AAAA` para as datas. Nesse caso, precisamos de converter esses valores para `DateTime` ou `Carbon`, que tornará mais fácil nosso trabalho no Laravel. Podemos utilizar o método `DateTime::createFromFormat`, por exemplo:
