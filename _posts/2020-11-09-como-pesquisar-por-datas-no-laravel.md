@@ -50,6 +50,8 @@ class ProdutosController extends Controller
 
 ```
 
+### Validando as datas
+
 Geralmente, aqui no Brasil, usamos o formato `DD/MM/AAAA` para as datas. Nesse caso, precisamos de converter esses valores para `DateTime` ou `Carbon`, que tornará mais fácil nosso trabalho no Laravel. Podemos utilizar o método `DateTime::createFromFormat`, por exemplo:
 
 ```php
@@ -63,7 +65,7 @@ if ($data_inicio && $data_fim) {
 
 Acima verificamos se `$data_inicio` e `$data_fim` são `false`, pois `DateTime::createFromFormat` retornará `false` caso a data seja inválida. Já o `Carbon`, costuma retornar uma exceção caso seja inválido.
 
-É possível utilizar o `Validator`, se desejar retornar um erro, caso uma data inválida seja passada pelo cliente. Talvez seja o melhor caminho para manter a integridade do valor desejado a se buscar.
+É possível utilizar o `Validator`, se desejar retornar um erro, caso uma data inválida seja passada pelo cliente. Talvez seja o melhor caminho para manter a integridade dos valores utilizados ao realizar a pesquisa.
 
 Exemplo:
 
