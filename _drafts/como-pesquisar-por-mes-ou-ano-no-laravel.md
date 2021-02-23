@@ -54,7 +54,7 @@ Para testar como uma SQL é criada ao chamar o Query Builder do Laravel, eu cost
 Veja:
 
 ```php
-echo Produto::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 8)->toSql();
+echo Produto::whereYear('created_at', '=', 2021)->whereMonth('created_at', '=', 2)->toSql();
 ```
 
 Isso irá gerar a saída:
