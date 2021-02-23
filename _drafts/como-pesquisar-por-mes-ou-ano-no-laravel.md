@@ -11,3 +11,19 @@ excerpt: No Laravel, você pode pesquisar os dados do seu banco facilmente atrav
   do mês ou ano. Aprenda nesse tutorial.
 
 ---
+```php
+function index(Request $request) 
+{
+    $query = Produto::query();
+    
+    if ($request->has('ano')) {
+        $query->whereYear('ano', '=', $request->ano);
+    }
+    
+    if ($request->has('mes')) {
+        $query->whereMonth('mes', '=', $request->mes);
+    }
+
+    return $query->paginate(); // ou $query->get() se quiser retornar tudo
+}
+```
