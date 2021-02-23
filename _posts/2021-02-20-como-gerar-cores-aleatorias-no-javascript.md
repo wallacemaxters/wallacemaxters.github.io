@@ -125,7 +125,7 @@ function gerar_cor_rgba(opacidade = 1) {
    let g = Math.random() * 255;
    let b = Math.random() * 255;
    
-   return `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+   return 'rgba(' + r + ',' + g + ',' + b + ',' +  opacidade + ')';
 }
   
 function gerar_cor_hexadecimal(curto = false)
@@ -138,25 +138,34 @@ function gerar_cor_hexadecimal(curto = false)
 }
   
 function gerar(tipo) {
-   const id = `cor-gerada-${tipo}`;
-   var el = document.getQuerySelector(id);
-  
+  var el = document.querySelector('#cor-gerada-' + tipo);
   var cor = window[`gerar_cor_${tipo}`]()
  
-   el.getQuerySelector('span').style.backgroundColor = cor;
-  el.getQuerySelector('code').innerHTML = cor;
+  el.querySelector('span').style.backgroundColor = cor;
+  el.querySelector('code').innerHTML = cor;
 }
 </script>
 
+<hr>
 
-<button type="button" class="button is-primary" onclick="gerar('rgba')">RGBA</button>
-<div id="rgba">
-  <span style="display: inline-block; height: 20px; width: 20px;"></span>
-  <code></code>
+<div class="columns v-center">
+  <div class="column is-12 is-3-desktop">
+    <button type="button" class="button is-primary" onclick="gerar('rgba')">RGBA</button></div>
+  <div id="cor-gerada-rgba" class="column">
+    <span style="display: inline-block; height: 15px; width: 15px;"></span>
+    <code></code>
+  </div>
 </div>
 
-<button type="button" class="button is-primary" onclick="gerar('rgba')">Hexadecimal</button>
-<div id="rgba">
-  <span style="display: inline-block; height: 20px; width: 20px;"></span>
-  <code></code>
+<hr>
+
+<div class="columns v-center">
+  <div class="column is-12 is-3-desktop">
+    <button type="button" class="button is-primary" onclick="gerar('hexadecimal')">Hexadecimal</button></div>
+  <div id="cor-gerada-hexadecimal" class="column">
+    <span style="display: inline-block; height: 15px; width: 15px;"></span>
+    <code></code>
+  </div>
 </div>
+
+<hr>
