@@ -1,8 +1,8 @@
 ---
 layout: post
 color: "#5772D4"
-title: 'Como resolver o erro: "Array and string offset access syntax with curly braces
-  is no longer supported"?'
+title: 'PHP 8: "Array and string offset access syntax with curly braces is no longer
+  supported"'
 date: 2021-02-23 09:15:00 -0300
 categories:
 - php
