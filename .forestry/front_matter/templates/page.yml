@@ -14,3 +14,10 @@ fields:
 - type: text
   name: excerpt
   label: excerpt
+- name: color
+  type: color
+  label: Color
+  config:
+    required: false
+    color_format: Hex
+  description: Cor caso não tenha imagem
