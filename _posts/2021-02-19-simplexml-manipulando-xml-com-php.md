@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'SimpleXML: Manipulando xml com PHP'
+title: Como ler xml com PHP?
 date: 2021-02-19T02:50:00.000+00:00
 categories:
 - PHP
@@ -9,7 +9,8 @@ categories:
 sitemap: true
 image: "/uploads/php-simple-xml.jpeg"
 excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PHP para
-  manipular um arquivo ou string XML de maneira rápida e eficiente.
+  ler um arquivo ou string XML de maneira rápida e eficiente.
+color: ''
 
 ---
 Para manilupar XML em PHP, você pode usar a  função `simplexml_load_file` ou`simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`.
