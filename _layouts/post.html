@@ -1,12 +1,13 @@
 ---
 layout: default
+disqus: true
 ---
 
 {% include header.html title=page.title categories=page.categories show_menu=true color=page.color %}
 
 <section class="section">
     <div class="container">
-        <div class="columns">    
+        <div class="columns is-multiline">    
             <div class="column is-12-mobile is-9-desktop">
                 <div class="box post-page-box">
                     <article class="content">{{ content }}</article>
@@ -23,6 +24,9 @@ layout: default
                     {% include related_posts.html  %}
                     <div class="block">{% include ads_common.html %}</div>
                 </div>
+            </div>
+            <div class="column is-12-mobile is-9-desktop">
+                {% include disqus.html %}
             </div>
         </div>
     </div>
