@@ -15,7 +15,7 @@ color: ''
 ---
 Para ler XML em PHP, você pode usar a  função `simplexml_load_file` ou`simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`. A primeira lê o XML a partir de um arquivo, e a seguida, através de uma string contendo o XML.
 
-Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento da mesma.
+Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessas funções.
 
 ## Acessando os nós do XML
 
