@@ -11,9 +11,22 @@ disqus: true
             <div class="column is-12-mobile is-9-desktop">
                 <div class="box post-page-box">
                     <article class="content">{{ content }}</article>
-                    <div class="fb-share-button" 
-                        data-href="{{ page.url }}" 
-                        data-layout="button"></div>
+
+                    <div style="display: flex; align-items: center;">
+                        
+                        <div class="fb-share-button" data-href="{{ page.url }}" data-layout="button" style="vertical-align: top"></div>
+                        <span style="flex: 1"></span>
+                        <form action="https://www.paypal.com/donate" method="post" target="_top" style="display: inline-block; vertical-align: top">
+                            <input type="hidden" name="business" value="KCAGBVD5TJLUL" />
+                            <input type="hidden" name="item_name" value="Blog Wallace Maxters" />
+                            <input type="hidden" name="currency_code" value="BRL" />
+                            <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /> -->
+                            <input type="submit" name="submit" value="Doar" class="button is-primary">
+                            <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
+                        </form>
+
+                    </div>
+
                 </div>
 
                 {% include author.html %}
