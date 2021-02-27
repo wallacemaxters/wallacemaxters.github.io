@@ -5,6 +5,7 @@ title: Utilizando o atributo loading="lazy" em img e iframe
 date: 2021-02-27 15:20:00 +0000
 categories:
 - html
+- javascript
 sitemap: true
 image: "/uploads/loading_lazy_attribute.png"
 excerpt: O novo atributo loading=lazy tem como finalidade adiar o carregamento de
