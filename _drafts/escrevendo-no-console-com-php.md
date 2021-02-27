@@ -19,7 +19,7 @@ Bem,  diretamente pelo PHP, não tem como, mas há um truque simples que pode se
 
 ## Enviando uma saída do PHP para o Console do Navegador
 
-Podemos utilizar o PHP para escrever no Console através do Javascript. 
+Podemos utilizar o PHP para escrever no Console através do Javascript.
 
 Exemplo:
 
@@ -27,7 +27,11 @@ Exemplo:
 echo '<script>console.log("teste")</script>';
 ```
 
-Isso imprimirá `1` no console do navegador. Mas precisamos de algo mais elaborado. Que tal uma função que envie os dados que você deseja depurar em formato JSON?
+Isso imprimirá `1` no console do navegador. 
+
+### Enviando JSON para o console através do PH
+
+Vamos fazer algo mais elaborado agora. Que tal uma função que envie os dados que você deseja depurar em formato JSON?
 
 Exemplo:
 
@@ -37,3 +41,21 @@ function console_log($dados)
 	printf('<script>console.log(%s);</script>', json_encode($dados));
 }
 ```
+
+A função acima utiliza apenas `printf` e `json_encode`. A função `printf` imprime uma string formatada, onde `%s` representa o argumento que será inserido na string, de acordo com o formato. Já a função jsonencode tem como finalidade serializar os dados PHP para JSON. 
+
+Ao chamarmos essa função, ela produzirá uma saída parecida com isso:
+
+```php
+console_log(array('nome' => 'Wallace'))
+```
+
+Saída:
+
+```html
+<script>console.log({"nome": "Maxters"});</script>
+```
+
+## Enviando o var_dump para o console
+
+A ideia 
