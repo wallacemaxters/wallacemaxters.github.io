@@ -7,7 +7,7 @@ categories:
 - php
 - javascript
 sitemap: false
-image: ''
+image: "/uploads/untitled.jpeg"
 excerpt: ''
 
 ---
@@ -29,7 +29,7 @@ echo '<script>console.log("teste")</script>';
 
 Isso imprimirá `1` no console do navegador. 
 
-### Enviando JSON para o console através do PH
+### Enviando JSON para o console através do PHP
 
 Vamos fazer algo mais elaborado agora. Que tal uma função que envie os dados que você deseja depurar em formato JSON?
 
