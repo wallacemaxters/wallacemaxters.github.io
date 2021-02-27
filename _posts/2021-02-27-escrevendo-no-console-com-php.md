@@ -8,7 +8,8 @@ categories:
 - javascript
 sitemap: false
 image: "/uploads/php_console_log.png"
-excerpt: Veja esse truque do PHP para escrever uma saída no console navegador!
+excerpt: Veja esse truque do PHP para escrever uma saída no console navegador através
+  do console.log.
 
 ---
 No Javascript, podemos usar o `console.log` para enviar alguma informação para a ferramenta de desenvolvedor do seu navegador web.
