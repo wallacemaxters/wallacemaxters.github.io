@@ -56,7 +56,7 @@ Saída:
 <script>console.log({"nome": "Maxters"});</script>
 ```
 
-
+![](/uploads/console-log-json_encode.png)
 
 ### Enviando o var_dump para o console
 
@@ -65,3 +65,4 @@ A função `var_dump` é muito útil para visualizar as informações de uma var
 Mas ainda sim é possível driblar isso. Podemos fazer a mesma coisa que fizemos acima, porém utilizando `ob_start` e `ob_get_clean` para capturar o conteúdo exibido por `var_dump`.
 
 ```php
+```
