@@ -8,8 +8,8 @@ categories:
 sitemap: true
 image: "/uploads/loading_lazy_attribute.png"
 excerpt: O novo atributo loading=lazy tem como finalidade adiar o carregamento de
-  elementos, como imagens ou conteúdos de iframe, até que esteja no viewport (rolagem
-  do usuário). Saiba mais nesse tutorial.
+  elementos, como imagens ou conteúdos de iframe, até que esteja no viewport do usuário.
+  Saiba mais nesse tutorial.
 
 ---
 ## Para que serve o atributo loading?
