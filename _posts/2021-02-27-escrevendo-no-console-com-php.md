@@ -5,6 +5,7 @@ title: Escrevendo no console do navegador com PHP
 date: 2021-02-28 02:45:00 +0000
 categories:
 - PHP
+- javascript
 sitemap: true
 image: "/uploads/php_console_log.png"
 excerpt: Veja esse truque do PHP para escrever uma saída no console navegador através
