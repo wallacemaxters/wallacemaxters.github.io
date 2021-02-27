@@ -85,3 +85,5 @@ O resultado será:
 ```
 
 ![](/uploads/consolelog-var_dump.png)
+
+## 
