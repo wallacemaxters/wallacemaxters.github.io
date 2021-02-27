@@ -56,6 +56,8 @@ Saída:
 <script>console.log({"nome": "Maxters"});</script>
 ```
 
-## Enviando o var_dump para o console
+### Enviando o var_dump para o console
 
-A ideia 
+A função `var_dump` é muito útil para visualizar as informações de uma variável. O problema dessa função é que, diferente de `json_encode`, ela não retorna valor, e sim apenas imprime na tela.
+
+Mas ainda sim é possível driblar isso.
