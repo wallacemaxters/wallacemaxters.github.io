@@ -1,13 +1,13 @@
 ---
 layout: post
 color: "#222222"
-title: Escrevendo no Console com PHP
+title: Escrevendo no console do navegador com PHP
 date: 2021-02-27 03:00:00 +0000
 categories:
 - php
 - javascript
 sitemap: false
-image: "/uploads/covers/code.jpg"
+image: "/uploads/php_console_log.png"
 excerpt: Veja esse truque do PHP para escrever uma saída no console navegador!
 
 ---
