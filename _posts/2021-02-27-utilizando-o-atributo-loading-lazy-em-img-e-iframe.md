@@ -12,13 +12,19 @@ excerpt: O novo atributo loading=lazy tem como finalidade adiar o carregamento d
   Saiba mais nesse tutorial.
 
 ---
-## Para que serve o atributo loading?
+## Como funciona o atributo loading?
+
+O novo atributo `loading` define como o  navegador deve se comportar quanto ao carregamento de um conteúdo, especificamente das tags `<img>` e `<iframe>`. As opções possíveis para esse atributo são  `lazy` ou `eager`. 
+
+Nesse tutorial, vamos falar especificamente da opção `lazy`.
+
+## Como funciona a opção "lazy" no atributo loading?
 
 O atributo `loading` com o valor `lazy` faz com que a imagem (carregada pela tag `<img>`) ou um iframe só seja carregado caso mesma esteja na viewport do usuário.
 
 Em outras palavras, ele especifica para o navegador que o carregamento das tags `<img>` ou `<iframe>` serão adiados até que o usuário faça a rolagem para onde esses elementos se tornam visíveis.
 
-Isso obviamente evita o carregamento desnecessário de recursos para o usuário final, fazendo com que seu site tenha mais performance.
+A intenção é evitar que a imagem seja carregada até que haja uma certeza razoável de que ela será necessária. Isso geralmente melhora o desempenho do conteúdo na maioria dos casos.
 
 ## Como utilizar loading=lazy?
 
@@ -27,7 +33,9 @@ Não tem muito segredo. Basta adicionar `loading="lazy"` na sua tag `<img>` ou `
 ```html
 <img src="minha-imagem.jpg" loading="lazy">
 ```
+
 ou:
+
 ```html
 <iframe src="minha-imagem.jpg" loading="lazy" frameborder="0">
 ```
