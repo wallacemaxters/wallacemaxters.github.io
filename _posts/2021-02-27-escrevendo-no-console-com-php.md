@@ -1,6 +1,6 @@
 ---
 layout: post
-color: "#222222"
+color: "#79D4C0"
 title: Escrevendo no console do navegador com PHP
 date: 2021-02-27 03:00:00 +0000
 categories:
