@@ -2,7 +2,7 @@
 layout: post
 color: "#79D4C0"
 title: Escrevendo no console do navegador com PHP
-date: 2021-02-28 02:45:00 +0000
+date: 2021-02-27 14:50:00 +0000
 categories:
 - PHP
 - javascript
