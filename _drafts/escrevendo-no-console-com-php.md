@@ -58,7 +58,7 @@ Saída:
 
 ![](/uploads/console-log-json_encode.png)
 
-### Enviando o var_dump para o console
+### Enviando o var_dump para o Developer console
 
 A função `var_dump` é muito útil para visualizar as informações de uma variável. O problema dessa função é que, diferente de `json_encode`, ela não retorna valor. Ela exibe a saída ao invés disso.
 
