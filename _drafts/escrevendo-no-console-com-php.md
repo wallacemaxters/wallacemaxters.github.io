@@ -7,8 +7,8 @@ categories:
 - php
 - javascript
 sitemap: false
-image: "/uploads/untitled.jpeg"
-excerpt: ''
+image: "/uploads/covers/code.jpg"
+excerpt: Veja esse truque do PHP para escrever uma saída no console navegador!
 
 ---
 No Javascript, podemos usar o `console.log` para enviar alguma informação para a ferramenta de desenvolvedor do seu navegador web.
