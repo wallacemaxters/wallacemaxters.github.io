@@ -7,8 +7,9 @@ categories:
 - html
 sitemap: true
 image: ''
-excerpt: Aprenda a melhorar a performance e carregamento do seu site com o atributo
-  loading=lazy
+excerpt: O novo atributo loading=lazy tem como finalidade adiar o carregamento de
+  elementos, como imagens ou conteúdos de iframe, até que esteja no viewport (rolagem
+  do usuário). Saiba mais nesse tutorial.
 
 ---
 ## Para que serve o atributo loading?
