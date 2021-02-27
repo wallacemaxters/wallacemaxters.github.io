@@ -16,6 +16,9 @@ excerpt: O novo atributo loading=lazy tem como finalidade adiar o carregamento d
 
 O novo atributo `loading` define como o  navegador deve se comportar quanto ao carregamento de um conteúdo, especificamente das tags `<img>` e `<iframe>`. As opções possíveis para esse atributo são  `lazy` ou `eager`. 
 
+* `eager` define que o conteúdo deve ser carregado imediatamente.
+* `lazy` adia o carregamento da imagem até que atinja uma distância calculada da janela de visualização, conforme definido pelo navegador.
+
 Nesse tutorial, vamos falar especificamente da opção `lazy`.
 
 ## Como funciona a opção "lazy" no atributo loading?
