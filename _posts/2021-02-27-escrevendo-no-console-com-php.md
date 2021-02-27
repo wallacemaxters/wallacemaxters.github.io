@@ -6,7 +6,7 @@ date: 2021-02-27 03:00:00 +0000
 categories:
 - php
 - javascript
-sitemap: false
+sitemap: true
 image: "/uploads/php_console_log.png"
 excerpt: Veja esse truque do PHP para escrever uma saída no console navegador através
   do console.log.
