@@ -1,12 +1,12 @@
 ---
 layout: post
-color: "#222222"
+color: "#4CE0C9"
 title: Utilizando o atributo loading="lazy" em img e iframe
 date: 2021-02-27 15:20:00 +0000
 categories:
 - html
 sitemap: true
-image: ''
+image: "/uploads/loading_lazy_attribute.png"
 excerpt: O novo atributo loading=lazy tem como finalidade adiar o carregamento de
   elementos, como imagens ou conteúdos de iframe, até que esteja no viewport (rolagem
   do usuário). Saiba mais nesse tutorial.
