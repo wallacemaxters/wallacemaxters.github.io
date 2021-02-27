@@ -42,3 +42,25 @@ Exemplo:
 ```
 
 É claro que não há problemas ao utilizar o atributo `loading="lazy"` sem os atributos de dimensão `height` ou `width`, porém é recomendado para que não ocorra comportamentos inesperados no seu layout pelo fato do navegador não saber o tamanho das imagens até que estejam no viewport.
+
+## Retrocompatibilidade
+
+Se a versão do navegador do usuário não possuir ainda suporte ao atributo `loading`, não haverá problemas com compatibilidade, já que esse atributo será simplesmente ignorado e não afetará o comportamento padrão já existemente para as tags `<img>` e `<iframe>`
+
+## Como saber se o navegador tem suporte ao atributo loading?
+
+Você pode utilizar o Javascript para chegar se há suporte ou não ao atributo `loading`. Basta verificar se `HTMLImageElement` ou `HTMLIframeElement` possuem o atributo `loading`.
+
+Veja:
+
+```javascript
+if (HTMLImageElement.prototype.hasOwnProperty('loading')) 
+{
+    console.log('O navegador suporta o atributo "loading" em <img>');
+}
+
+if (! HTMLIFrameElement.prototype.hasOwnProperty('loading')) 
+{
+    console.log('Não há suporte para "loading" em iframes neste navegador');
+}
+```
