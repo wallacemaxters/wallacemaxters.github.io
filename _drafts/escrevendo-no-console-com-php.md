@@ -76,7 +76,6 @@ function console_log($data) {
 }
 
 console_log(['name' => 'Wallace Maxters']);
-
 ```
 
 O resultado será:
@@ -85,3 +84,4 @@ O resultado será:
 <script>console.log("array(1) {\n  [\"name\"]=>\n  string(15) \"Wallace Maxters\"\n}\n");</script>
 ```
 
+![](/uploads/consolelog-var_dump.png)
