@@ -1,7 +1,7 @@
 ---
 layout: post
 color: "#4CE06E"
-title: Utilizando o atributo loading="lazy" em img e iframe
+title: Melhorando o desempenho da sua página com o atributo loading=lazy
 date: 2021-02-27 15:20:00 +0000
 categories:
 - HTML
