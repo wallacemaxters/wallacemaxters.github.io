@@ -1,6 +1,6 @@
 ---
 layout: post
-color: "#4CE0C9"
+color: "#4CE06E"
 title: Utilizando o atributo loading="lazy" em img e iframe
 date: 2021-02-27 15:20:00 +0000
 categories:
