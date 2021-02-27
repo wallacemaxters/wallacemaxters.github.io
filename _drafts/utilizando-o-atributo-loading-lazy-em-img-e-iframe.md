@@ -5,7 +5,7 @@ title: Utilizando o atributo loading="lazy" em img e iframe
 date: 2021-02-27 15:20:00 +0000
 categories:
 - html
-sitemap: false
+sitemap: true
 image: ''
 excerpt: Aprenda a melhorar a performance e carregamento do seu site com o atributo
   loading=lazy
