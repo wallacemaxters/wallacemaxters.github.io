@@ -65,4 +65,23 @@ A função `var_dump` é muito útil para visualizar as informações de uma var
 Mas ainda sim é possível driblar isso. Podemos fazer a mesma coisa que fizemos acima, porém utilizando `ob_start` e `ob_get_clean` para capturar o conteúdo exibido por `var_dump`.
 
 ```php
+<?php
+function console_log($data) {
+
+	ob_start();
+	var_dump($data);
+	$output = ob_get_clean();
+
+    printf('<script>console.log(%s);</script>', json_encode($output));
+}
+
+console_log(['name' => 'Wallace Maxters']);
+
 ```
+
+O resultado será:
+
+```html
+<script>console.log("array(1) {\n  [\"name\"]=>\n  string(15) \"Wallace Maxters\"\n}\n");</script>
+```
+
