@@ -27,7 +27,7 @@ Exemplo:
 echo '<script>console.log("teste")</script>';
 ```
 
-Isso imprimirá `1` no console do navegador. 
+Isso imprimirá `1` no console do navegador.
 
 ### Enviando JSON para o console através do PHP
 
@@ -42,7 +42,7 @@ function console_log($dados)
 }
 ```
 
-A função acima utiliza apenas `printf` e `json_encode`. A função `printf` imprime uma string formatada, onde `%s` representa o argumento que será inserido na string, de acordo com o formato. Já a função jsonencode tem como finalidade serializar os dados PHP para JSON. 
+A função acima utiliza apenas `printf` e `json_encode`. A função `printf` imprime uma string formatada, onde `%s` representa o argumento que será inserido na string, de acordo com o formato. Já a função jsonencode tem como finalidade serializar os dados PHP para JSON.
 
 Ao chamarmos essa função, ela produzirá uma saída parecida com isso:
 
@@ -58,6 +58,8 @@ Saída:
 
 ### Enviando o var_dump para o console
 
-A função `var_dump` é muito útil para visualizar as informações de uma variável. O problema dessa função é que, diferente de `json_encode`, ela não retorna valor, e sim apenas imprime na tela.
+A função `var_dump` é muito útil para visualizar as informações de uma variável. O problema dessa função é que, diferente de `json_encode`, ela não retorna valor. Ela exibe a saída ao invés disso.
 
-Mas ainda sim é possível driblar isso.
+Mas ainda sim é possível driblar isso. Podemos fazer a mesma coisa que fizemos acima, porém utilizando `ob_start` e `ob_get_clean` para capturar o conteúdo exibido por `var_dump`.
+
+```php
