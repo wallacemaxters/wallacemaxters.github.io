@@ -84,5 +84,5 @@ pages:
 - _posts/2021-02-22-php-fatal-error-array-and-string-offset-access-syntax-with-curly-braces-is-no-longer-supported-in-php-shell-code-on-line-1.md
 - _posts/2021-02-23-como-pesquisar-por-mes-ou-ano-no-laravel.md
 - _posts/2021-02-27-escrevendo-no-console-com-php.md
-- _posts/2021-02-27-utilizando-o-atributo-loading-lazy-em-img-e-iframe.md
 - _posts/codigo/2021-01-14-quis-qui-ipsum-sint.md
+- _posts/utilizando-o-atributo-loading-lazy-para-melhorar-o-desempenho.md

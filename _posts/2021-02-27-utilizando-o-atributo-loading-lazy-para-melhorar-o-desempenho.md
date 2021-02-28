@@ -1,10 +1,11 @@
 ---
 layout: post
 color: "#4CE06E"
-title: Utilizando o atributo loading="lazy" em img e iframe
+title: Melhorando o desempenho da sua página com o atributo loading=lazy
 date: 2021-02-27 15:20:00 +0000
 categories:
 - HTML
+- javascript
 sitemap: true
 image: "/uploads/loading_lazy_attribute.png"
 excerpt: O novo atributo loading=lazy tem como finalidade adiar o carregamento de
@@ -16,6 +17,7 @@ Os atributo `loading` introduziu nos navegadores mais modernos a capacidade de a
 
  Vejamos alguns detalhes sobre esse atributo.
 
+<hr>
 ## Como funciona o atributo loading?
 
 O novo atributo `loading` define como o  navegador deve se comportar quanto ao carregamento de um conteúdo, especificamente das tags `<img>` e `<iframe>`. As opções possíveis para esse atributo são  `lazy` ou `eager`.
@@ -25,6 +27,8 @@ O novo atributo `loading` define como o  navegador deve se comportar quanto ao c
 
 Nesse tutorial, vamos falar especificamente da opção `lazy`.
 
+
+<hr>
 ## Como funciona a opção "lazy" no atributo loading?
 
 O atributo `loading` com o valor `lazy` faz com que a imagem (carregada pela tag `<img>`) ou um iframe só seja carregado caso mesma esteja na viewport do usuário.
@@ -33,6 +37,8 @@ Em outras palavras, ele especifica para o navegador que o carregamento das tags 
 
 A intenção é evitar que a imagem seja carregada até que haja uma certeza razoável de que ela será necessária. Isso geralmente melhora o desempenho do conteúdo na maioria dos casos.
 
+
+<hr>
 ## Como utilizar loading=lazy?
 
 Não tem muito segredo. Basta adicionar `loading="lazy"` na sua tag `<img>` ou `<iframe>`.
@@ -47,6 +53,8 @@ ou:
 <iframe src="minha-imagem.jpg" loading="lazy" frameborder="0">
 ```
 
+
+<hr>
 ## Imagens precisam ter atributos de altura e largura
 
 Mesmo que o navegador carregue uma imagem, ele ainda não sabe imediatamente a altura e largura da mesma, a não ser que você as defina. Para permitir que o navegador reserve espaço suficiente em uma página que possua imagens, é recomendável que todas as tags `<img>` possuam os atributos `width` e `height`. Pois, ao usar `loading="lazy"`, o navegador não as terá carregado ainda, e, se você não especificar as mesmas, poderá ocorrer mudanças no layout do seu site.
@@ -59,6 +67,8 @@ Exemplo:
 
 É claro que não há problemas ao utilizar o atributo `loading="lazy"` sem os atributos de dimensão `height` ou `width`, porém é recomendado para que não ocorra comportamentos inesperados no seu layout pelo fato do navegador não saber o tamanho das imagens até que estejam no viewport.
 
+
+<hr>
 ## Quais são os navegadores compatíveis?
 
 Os navegadores mais modernos, como Egde, Chrome, Firefox e Opera, já possuem suporte total ou parcial ao atributo `loading="lazy"`, conforme podemos ver detalhadamente em [caniuse](https://caniuse.com/loading-lazy-attr).

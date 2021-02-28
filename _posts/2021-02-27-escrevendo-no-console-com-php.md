@@ -43,7 +43,8 @@ function console_log($dados)
 }
 ```
 
-A função acima utiliza apenas `printf` e `json_encode`. A função `printf` imprime uma string formatada, onde `%s` representa o argumento que será inserido na string, de acordo com o formato. Já a função jsonencode tem como finalidade serializar os dados PHP para JSON.
+A função acima utiliza apenas `printf` e `json_encode`.
+A função `printf` imprime uma string formatada, onde `%s` representa o argumento que será inserido na string, de acordo com o formato. Já a função `json_encode` tem como finalidade serializar os dados PHP para JSON.
 
 Ao chamarmos essa função, ela produzirá uma saída parecida com isso:
 
@@ -57,7 +58,7 @@ Saída:
 <script>console.log({"nome": "Maxters"});</script>
 ```
 
-![](/uploads/console-log-json_encode.png)
+<img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/console-log-json_encode.png" loading="lazy" width="100%">
 
 ### Enviando o var_dump para o Developer console
 
@@ -85,4 +86,4 @@ O resultado será:
 <script>console.log("array(1) {\n  [\"name\"]=>\n  string(15) \"Wallace Maxters\"\n}\n");</script>
 ```
 
-![](/uploads/consolelog-var_dump.png)
+<img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/consolelog-var_dump.png" loading="lazy" width="100%">
