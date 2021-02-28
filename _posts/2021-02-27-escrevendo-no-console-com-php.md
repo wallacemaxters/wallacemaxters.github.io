@@ -44,7 +44,7 @@ function console_log($dados)
 ```
 
 A função acima utiliza apenas `printf` e `json_encode`. 
-A função `printf` imprime uma string formatada, onde `%s` representa o argumento que será inserido na string, de acordo com o formato. Já a função jsonencode tem como finalidade serializar os dados PHP para JSON.
+A função `printf` imprime uma string formatada, onde `%s` representa o argumento que será inserido na string, de acordo com o formato. Já a função `json_encode` tem como finalidade serializar os dados PHP para JSON.
 
 Ao chamarmos essa função, ela produzirá uma saída parecida com isso:
 
