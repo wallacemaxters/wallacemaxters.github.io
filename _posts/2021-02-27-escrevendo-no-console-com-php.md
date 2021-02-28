@@ -58,7 +58,7 @@ Saída:
 <script>console.log({"nome": "Maxters"});</script>
 ```
 
-![Enviando uma saída PHP para o Console do Javascript](/uploads/console-log-json_encode.png "Enviando uma saída PHP para o Console do Javascript")
+<img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/console-log-json_encode.png">
 
 ### Enviando o var_dump para o Developer console
 
