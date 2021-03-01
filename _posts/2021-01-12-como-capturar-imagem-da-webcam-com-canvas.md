@@ -111,6 +111,50 @@ document.querySelector('#capture').addEventListener('click', function (e) {
 })
 ```
 
+<!-- Exemplo Captura -->
+<hr>
+## Exemplo
+
+<button class="button is-primary is-large" id="button-camera-2">Testar câmera</button>
+
+<div class="columns is-multiline" style="display: none" id="video-teste-2-container">
+    <div class="column is-12 is-6-desktop">
+        <video id="video-teste-2"></video>
+        <button class="button is-danger is-large" id="button-camera-capturar-2">Capturar</button>
+    </div>
+    <div class="column is-12 is-6-desktop">
+        <canvas id="canvas-teste-2" style="max-width: 100%"></canvas>
+    </div>
+</div>
+<sub id="video-mensagem-erro-2"></sub>
+
+<script>
+document.querySelector('#button-camera-2').addEventListener('click', function () {
+  this.style.display = 'none';
+  navigator.mediaDevices.getUserMedia({video: true})
+  .then(function (mediaStream) {
+      var video = document.querySelector('#video-teste-2');
+      document.querySelector('#video-teste-2-container').style.display = '';
+      video.srcObject = mediaStream;
+      video.play();
+  })
+  .catch(function (err) {
+      document.querySelector('#video-mensagem-erro-2').innerText =
+          'Não há permissões para acessar a webcam';
+  })
+});
+document.querySelector('#button-camera-capturar-2').addEventListener('click', function (e) {
+    var canvas = document.querySelector("#canvas-teste-2");
+    var video = document.querySelector('#video-teste-2');
+    canvas.height = video.videoHeight;
+    canvas.width = video.videoWidth;
+    var context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0)
+});
+</script>
+<hr>
+<!-- /Exemplo Captura -->
+
 {% include ads_common.html %}
 
 ### Explicando o código
