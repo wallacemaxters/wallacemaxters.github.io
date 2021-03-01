@@ -66,10 +66,11 @@ Veja:
 
 <!-- Exemplo -->
 <button class="button is-primary is-large" id="button-camera">Testar câmera</button>
-<video id="video-teste" style="display: none"></video>
+<video id="video-teste" style="display: none" controls></video>
 <sub id="video-mensagem-erro"></sub>
 <script>
 document.querySelector('#button-camera').addEventListener('click', function () {
+  this.style.display = 'none';
   navigator.mediaDevices.getUserMedia({video: true})
   .then(function (mediaStream) {
       var video = document.querySelector('#video-teste');
