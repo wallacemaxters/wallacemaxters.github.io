@@ -157,7 +157,7 @@ document.querySelector('#button-camera-capturar-2').addEventListener('click', fu
 <!-- /Exemplo Captura -->
 
 {% include ads_common.html %}
-
+<hr>
 ### Explicando o código
 
 No código acima, primeiro definimos o tamanho do `canvas` para ficar exatamente do mesmo tamanho do vídeo. Em seguida, utilizamos  `context` para desenhar a imagem capturada do vídeo. Toda vez que `button#capture` é clicado, o frame específico da  da webcam será aplicado ao `canvas`
