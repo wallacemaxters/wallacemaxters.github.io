@@ -62,6 +62,29 @@ navigator.mediaDevices.getUserMedia({video: true})
 
 Com isso, já podemos ter a pré-visualização da captura nossa webcam.
 
+Veja:
+
+<!-- Exemplo -->
+<button class="button is-primary is-large" id="button-camera">Testar câmera</button>
+<video id="video-teste" style="display: none"></video>
+<sub id="video-mensagem-erro"></sub>
+<script>
+document.querySelector('#button-camera').addEventListener('click', function () {
+  navigator.mediaDevices.getUserMedia({video: true})
+  .then(function (mediaStream) {
+      var video = document.querySelector('#video-teste');
+      video.style.display = 'block';
+      video.srcObject = mediaStream;
+      video.play();
+  })
+  .catch(function (err) {
+    document.querySelector('#video-mensagem-erro').innerText = 'Não há permissões para acessar a webcam';
+  })
+})
+</script>
+
+<!-- /Exemplo -->
+
 <hr />
 
 ## Capturando a imagem da webcam com a tag Canvas
