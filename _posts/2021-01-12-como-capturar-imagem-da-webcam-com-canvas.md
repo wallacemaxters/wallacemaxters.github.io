@@ -62,6 +62,8 @@ navigator.mediaDevices.getUserMedia({video: true})
 
 Com isso, já podemos ter a pré-visualização da captura nossa webcam.
 
+<hr />
+
 ## Capturando a imagem da webcam com a tag Canvas
 
 O próximo passo agora é passar a imagem que vemos na webcam e transformá-la em uma imagem.  Para fazer isso,  precisamos capturar um frame da tag `<video>` acima e enviarmos para a tag  `<canvas>`.
@@ -86,10 +88,13 @@ document.querySelector('#capture').addEventListener('click', function (e) {
 })
 ```
 
+{% include ads_common.html %}
+
 ### Explicando o código
 
 No código acima, primeiro definimos o tamanho do `canvas` para ficar exatamente do mesmo tamanho do vídeo. Em seguida, utilizamos  `context` para desenhar a imagem capturada do vídeo. Toda vez que `button#capture` é clicado, o frame específico da  da webcam será aplicado ao `canvas`
 
+<hr />
 ## Convertendo o Canvas para Imagem
 
 Para você ter acesso à imagem do `canvas`, basta utilizar os métodos `Canvas.toBlob` ou `Canvas.toDataURL`.  A primeira converte o desenho do `<canvas>` em um [Blob](https://developer.mozilla.org/pt-BR/docs/Web/API/Blob "BLOB - Documentação do MDN"). Já a segunda, converte para um [Data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs "Data URI - Documentação da MDN").
