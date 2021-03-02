@@ -50,7 +50,7 @@ O resultado será parecido com isso
 ./pasta/1/2/3/file.txt
 ```
 
-Caso deseje retornar o caminho completo, você pode utilizar `os.path.realpath`. Essa função retorna o nome completo do diretório, ao invés de utilizar o caminho relativo ( caminho com `.` ou `..`).
+Caso deseje retornar o caminho absoluto, você pode utilizar a função [os.path.realpath](https://docs.python.org/3/library/os.path.html#os.path.realpath). Essa função retorna o nome completo do diretório, ao invés de utilizar o caminho relativo ( caminho com `.` ou `..`).
 
 ```python
 import os
