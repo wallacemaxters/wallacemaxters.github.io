@@ -7,7 +7,7 @@ categories:
 - PHP
 - json
 sitemap: true
-image: "/uploads/escrever-arquivo-json-com-php.png"
+image: "/uploads/criar-arquivo-json-com-php.jpeg"
 excerpt: 'Veja como criar um arquivo JSON através do PHP neste tutorial!
 
 '
