@@ -16,17 +16,17 @@ Para listar os arquivos de um diretório/pasta no Python, basta utilizamos a fun
 Suponhamos que temos a seguinte estrutura de diretório
 
 ```text
-pasta
-    1/
-        file.txt
-        2a/
-            file.txt
-        2/
-            file_2.txt
-            file_3.txt
-            file.txt
-            3/
-                file.txt
+pasta/
+├─ 1/
+│  ├─ file.txt
+│  ├─ 2a/
+│  │  ├─ file.txt
+│  ├─ 2/
+│  │  ├─ file_3.txt
+│  │  ├─ file.txt
+│  │  ├─ file_2.txt
+│  │  ├─ 3/
+│  │  │  ├─ file.txt
 ```
 
 Basta apenas usar o seguinte código:
