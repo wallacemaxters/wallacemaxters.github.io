@@ -35,6 +35,7 @@ $dados = [
 ];
 
 $arquivo = __DIR__ . '/arquivo.json';
+
 file_put_contents($arquivo, json_encode($dados));
 ```
 
