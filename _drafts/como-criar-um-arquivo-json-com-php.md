@@ -9,7 +9,7 @@ image: ''
 excerpt: ''
 
 ---
-## Salvando os dados em JSON
+## Criando um arquivo JSON
 
 ```php
 $dados = [
