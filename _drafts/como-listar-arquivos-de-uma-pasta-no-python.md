@@ -33,7 +33,7 @@ Basta apenas fazer o seguinte:
 ```python
 import os
 
-pasta = '/caminho/da/pasta'
+pasta = './pasta'
 
 for diretorio, subpastas, arquivos in os.walk(pasta):
         for arquivo in arquivos:
@@ -43,10 +43,10 @@ for diretorio, subpastas, arquivos in os.walk(pasta):
 O resultado será parecido com isso
 
 ```text
-/caminho/da/pasta/1/file.txt
-/caminho/da/pasta/1/2a/file.txt
-/caminho/da/pasta/1/2/file_2.txt
-/caminho/da/pasta/1/2/file_3.txt
-/caminho/da/pasta/1/2/file.txt
-/caminho/da/pasta/1/2/3/file.txt
+./pasta/1/file.txt
+./pasta/1/2a/file.txt
+./pasta/1/2/file_2.txt
+./pasta/1/2/file_3.txt
+./pasta/1/2/file.txt
+./pasta/1/2/3/file.txt
 ```
