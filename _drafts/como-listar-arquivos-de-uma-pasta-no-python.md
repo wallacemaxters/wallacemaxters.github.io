@@ -51,3 +51,11 @@ O resultado será parecido com isso
 ./pasta/1/2/file.txt
 ./pasta/1/2/3/file.txt
 ```
+
+## O que faz a função os.walk?
+
+Resumidamente, `os.walk` retorna os nomes dos arquivos em uma árvore de diretórios. Em cada item da iteração, existe uma tupla com três elementos (`dirpath`, `dirnames`, `filenames`).
+
+- `dirpath` é uma string, o caminho para o diretório. 
+- `dirnames` é uma lista dos nomes dos subdiretórios em dirpath (excluindo '.'e '..').
+- `filenames` é uma lista dos nomes dos arquivos.
