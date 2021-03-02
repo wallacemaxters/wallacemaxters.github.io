@@ -11,7 +11,7 @@ image: ''
 excerpt: ''
 
 ---
-A função `json_encode` no PHP permite que possamos converter um conjunto de dados para uma string contendo uma serialização JSON.
+No PHP, a função `json_encode` retorna uma string contendo uma representação JSON de um valor informado.
 
 Mas, as vezes, além de convertermos para JSON, podemos precisar salvá-lo em um arquivo. 
 
