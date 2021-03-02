@@ -19,7 +19,7 @@ Isso é simples de fazer no PHP!
 
 ## Criando um arquivo JSON
 
-Como já dito, a função `json_encode`retorna uma string que  correspondente ao formato JSON de um determinado valor.  Pelo fato de ser retornada uma `string`, é fácil salvá-la em algum arquivo, bastando apenas utilizar a função fileputcontents.
+Como já dito, a função `json_encode`retorna uma string que  correspondente ao formato JSON de um determinado valor. Pelo fato de ser retornada uma `string`, é fácil salvá-la em algum arquivo, bastando apenas utilizar a função fileputcontents.
 
 Veja:
 
