@@ -33,12 +33,10 @@ Basta apenas fazer o seguinte:
 
 ```python
 import os
-
 pasta = './pasta'
-
 for diretorio, subpastas, arquivos in os.walk(pasta):
-        for arquivo in arquivos:
-                print(os.path.join(diretorio, arquivo))
+	for arquivo in arquivos:
+    	print(os.path.join(diretorio, arquivo))
 ```
 
 O resultado será parecido com isso
