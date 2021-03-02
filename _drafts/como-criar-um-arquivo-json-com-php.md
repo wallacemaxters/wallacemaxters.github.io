@@ -49,10 +49,12 @@ $dados = [
     ]
 ];
 
-$arquivo = __DIR__ . '/arquivo.json';
+$arquivo = __DIR__ . '/arquivo_formatado.json';
 $json_formatado = json_encode($dados, JSON_PRETTY_PRINT);
 file_put_contents($arquivo, $json_formatado);
 ```
+
+O arquivo `arquivo_formatado.json` será criado com o seguinte conteúdo:
 
 ```json
 {
