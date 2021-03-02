@@ -29,7 +29,7 @@ pasta
                 file.txt
 ```
 
-Basta apenas fazer o seguinte:
+Basta apenas usar o seguinte código:
 
 ```python
 import os
@@ -48,6 +48,16 @@ O resultado será parecido com isso
 ./pasta/1/2/file_3.txt
 ./pasta/1/2/file.txt
 ./pasta/1/2/3/file.txt
+```
+
+Caso deseje retornar o caminho completo, você pode utilizar `os.path.realpath`. Essa função retorna o nome completo do diretório, ao invés de utilizar o caminho relativo ( caminho com `.` ou `..`).
+
+```python
+import os
+pasta = './pasta'
+for diretorio, subpastas, arquivos in os.walk(pasta):
+	for arquivo in arquivos:
+    	print(os.path.join(os.path.realpath(diretorio), arquivo))
 ```
 
 ## O que faz a função os.walk?
