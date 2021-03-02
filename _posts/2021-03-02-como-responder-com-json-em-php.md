@@ -7,7 +7,7 @@ categories:
 - PHP
 - json
 sitemap: true
-image: "/uploads/covers/php.png"
+image: "/uploads/como-responder-json-com-php.png"
 excerpt: Veja como é fácil enviar uma resposta JSON com PHP!
 
 ---
@@ -29,6 +29,6 @@ Resultado:
 
 ## Explicando o código
 
-A função `header` é utilizada para definir um cabeçalho HTTP na resposta. No caso, para que o navegador entenda a resposta do servidor como JSON, é recomendável utilizar o `Content-Type: application/json`.
+A função `header` é utilizada para definir um cabeçalho HTTP na resposta. No caso, para que o navegador entenda a resposta do servidor como JSON, é recomendável utilizar o `Content-Type: application/json`. Isso porque o PHP por padrão costuma enviar `text/html`. 
 
 A função `json_encode` serializa os dados da variável `$resultado` para o formato `JSON`.  E, por sua vez, `echo` imprime a resposta.
