@@ -17,17 +17,16 @@ Suponhamos que temos a seguinte estrutura de diretório
 
 ```text
 pasta
-    ├── 1
-    │   ├── 2
-    │   │   ├── 3
-    │   │   │   └── file.txt
-    │   │   ├── file_2.txt
-    │   │   ├── file_3.txt
-    │   │   └── file.txt
-    │   ├── 2a
-    │   │   └── file.txt
-    │   └── file.txt
-    └── main.py
+    └── 1
+        ├── 2
+        │   ├── 3
+        │   │   └── file.txt
+        │   ├── file_2.txt
+        │   ├── file_3.txt
+        │   └── file.txt
+        ├── 2a
+        │   └── file.txt
+        └── file.txt
 ```
 
 Basta apenas usar o seguinte código:
