@@ -9,6 +9,8 @@ image: ''
 excerpt: ''
 
 ---
+## Salvando os dados em JSON
+
 ```php
 $dados = [
 	'nome' => 'Wallace',
@@ -28,4 +30,38 @@ Isso vai gerar um arquivo `arquivo.json` na pasta onde o script é executado, co
 
 ```json
 {"nome":"Wallace","linguagens":["PHP","Javascript","Python","C#"]}
+```
+
+## Criando um arquivo JSON formatado
+
+A função `json_encode`, além de converter os dados passados para JSON, também pode receber outros parâmetros, que permitem modificar o comportamento da função. No nosso caso, utilizaremos a constante `JSON_PRETTY_PRINT`. Ao utilizarmos ela no segundo parâmetro de `json_encode`, ela mudará a saída, para que o JSON seja retornado "formatado".
+
+Veja:
+
+```php
+$dados = [
+	'nome' => 'Wallace',
+    'linguagens' => [
+    	'PHP',
+        'Javascript',
+        'Python',
+        'C#'
+    ]
+];
+
+$arquivo = __DIR__ . '/arquivo.json';
+$json_formatado = json_encode($dados, JSON_PRETTY_PRINT);
+file_put_contents($arquivo, $json_formatado);
+```
+
+```json
+{
+    "nome": "Wallace",
+    "linguagens": [
+        "PHP",
+        "Javascript",
+        "Python",
+        "C#"
+    ]
+}
 ```
