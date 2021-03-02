@@ -12,7 +12,6 @@ excerpt: ''
 ---
 Para listar os arquivos de um diretório/pasta no Python, basta utilizamos a função `os.walk`.
 
-
 Suponhamos que temos a seguinte estrutura de diretório
 
 ```text
@@ -27,7 +26,6 @@ pasta
             file.txt
             3/
                 file.txt
-
 ```
 
 Basta apenas fazer o seguinte:
@@ -35,9 +33,20 @@ Basta apenas fazer o seguinte:
 ```python
 import os
 
-pasta = '/caminho/da/pasta/que/vou/listar'
+pasta = '/caminho/da/pasta'
 
 for diretorio, subpastas, arquivos in os.walk(pasta):
         for arquivo in arquivos:
                 print(os.path.join(diretorio, arquivo))
+```
+
+O resultado será parecido com isso
+
+```text
+/caminho/da/pasta/1/file.txt
+/caminho/da/pasta/1/2a/file.txt
+/caminho/da/pasta/1/2/file_2.txt
+/caminho/da/pasta/1/2/file_3.txt
+/caminho/da/pasta/1/2/file.txt
+/caminho/da/pasta/1/2/3/file.txt
 ```
