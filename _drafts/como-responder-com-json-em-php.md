@@ -11,8 +11,10 @@ image: ''
 excerpt: ''
 
 ---
+
+Código
 ```php
-header('content-type: application/json');
+header('Content-Type: application/json');
 $resultado = [
 'nome' => 'Maxters',
 ];
