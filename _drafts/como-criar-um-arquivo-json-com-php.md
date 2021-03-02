@@ -9,6 +9,7 @@ image: ''
 excerpt: ''
 
 ---
+
 ## Criando um arquivo JSON
 
 ```php
