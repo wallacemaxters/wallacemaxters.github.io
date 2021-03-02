@@ -19,4 +19,6 @@ $dados = [
         'C#'
     ]
 ];
+
+file_put_contents('arquivo.json', json_encode($dados));
 ```
