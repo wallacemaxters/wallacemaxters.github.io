@@ -7,7 +7,7 @@ categories:
 - PHP
 - json
 sitemap: false
-image: ''
+image: "/uploads/escrever-json-php.jpeg"
 excerpt: ''
 
 ---
@@ -49,7 +49,7 @@ Isso ajuda a salvar alguns bytes na hora de escrever o seu arquivo pelo PHP. Por
 
 
 <hr/>
-{% include ads_common.html %}
+{% include ads_common.html %}![](/uploads/codeimg-instagram-photo-thumbnail-1.jpeg)![](/uploads/escrever-json-php-1.jpeg)
 <hr/>
 ## Criando um arquivo JSON formatado
 
