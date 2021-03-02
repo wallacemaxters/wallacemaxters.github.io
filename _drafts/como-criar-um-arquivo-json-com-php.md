@@ -20,5 +20,12 @@ $dados = [
     ]
 ];
 
-file_put_contents('arquivo.json', json_encode($dados));
+$arquivo = __DIR__ . '/arquivo.json';
+file_put_contents($arquivo, json_encode($dados));
+```
+
+Isso vai gerar um arquivo `arquivo.json` na pasta onde o script é executado, com o seguinte conteúdo:
+
+```json
+{"nome":"Wallace","linguagens":["PHP","Javascript","Python","C#"]}
 ```
