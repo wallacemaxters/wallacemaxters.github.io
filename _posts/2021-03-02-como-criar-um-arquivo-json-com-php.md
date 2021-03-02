@@ -2,13 +2,15 @@
 layout: post
 color: "#222222"
 title: Como criar um arquivo JSON com PHP?
-date: 2021-03-02 00:00:00 -0300
+date: 2021-03-02 02:21:00 -0300
 categories:
 - PHP
 - json
-sitemap: false
+sitemap: true
 image: "/uploads/escrever-json-php.jpeg"
-excerpt: ''
+excerpt: 'Veja como criar um arquivo JSON através do PHP neste tutorial!
+
+'
 
 ---
 No PHP, a função `json_encode` retorna uma string contendo uma representação JSON de um valor informado.
