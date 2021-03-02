@@ -26,16 +26,16 @@ disqus: true
                         </form>
 
                     </div>
-
                 </div>
 
-                {% include author.html %}
                 <div class="block">{% include ads_common.html %}</div>
             </div>
             <div class="column is-12-mobile is-3-desktop">
-                <div class="box">
-                    {% include related_posts.html  %}
-                </div>
+                {% include author.html %}
+                <nav class="block">
+                    <h4 class="title is-5">Artigos relacionados</h4>
+                    <div class="box">{% include related_posts.html  %}</div>
+                </nav>
                 <div class="block">{% include ads_common.html %}</div>
             </div>
             <div class="column is-12-mobile is-9-desktop">
