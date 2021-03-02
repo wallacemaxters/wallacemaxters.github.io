@@ -47,6 +47,10 @@ Note que o JSON escrito no arquivo, que foi gerado a partir dos valores presente
 
 Isso ajuda a salvar alguns bytes na hora de escrever o seu arquivo pelo PHP. Porém, caso você precise que o seu JSON esteja formatado, você pode fazê-lo tranquilamente!
 
+
+<hr/>
+{% include ads_common.html %}
+<hr/>
 ## Criando um arquivo JSON formatado
 
 A função `json_encode`, além de converter os dados passados para JSON, também pode receber outros parâmetros, que permitem modificar o comportamento da função. No nosso caso, utilizaremos a constante `JSON_PRETTY_PRINT`. Ao utilizarmos ela no segundo parâmetro de `json_encode`, ela mudará a saída, para que o JSON seja retornado em um formato "mais amigável visualmente".
