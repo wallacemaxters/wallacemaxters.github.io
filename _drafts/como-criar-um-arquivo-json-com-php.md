@@ -9,6 +9,7 @@ image: ''
 excerpt: ''
 
 ---
+A função `json_encode` no PHP permite que possamos converter um conjunto de dados para uma string contendo uma serialização JSON.
 
 ## Criando um arquivo JSON
 
