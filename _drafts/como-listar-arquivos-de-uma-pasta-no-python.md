@@ -56,6 +56,8 @@ O resultado será parecido com isso
 
 Resumidamente, `os.walk` retorna os nomes dos arquivos em uma árvore de diretórios. Em cada item da iteração, existe uma tupla com três elementos (`dirpath`, `dirnames`, `filenames`).
 
-- `dirpath` é uma string, o caminho para o diretório. 
-- `dirnames` é uma lista dos nomes dos subdiretórios em dirpath (excluindo '.'e '..').
-- `filenames` é uma lista dos nomes dos arquivos.
+* `dirpath` é uma string, o caminho para o diretório.
+* `dirnames` é uma lista dos nomes dos subdiretórios em dirpath (excluindo '.'e '..').
+* `filenames` é uma lista dos nomes dos arquivos.
+
+Para mais informações, você pode consultar a [documentação do Python](https://docs.python.org/3/library/os.html#os.walk).
