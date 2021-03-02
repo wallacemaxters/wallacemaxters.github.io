@@ -6,8 +6,8 @@ date: 2021-03-02 00:00:00 -0300
 categories:
 - PHP
 - json
-sitemap: false
-image: ''
+sitemap: true
+image: "/uploads/covers/php.png"
 excerpt: Veja como é fácil enviar uma resposta JSON com PHP!
 
 ---
