@@ -11,7 +11,7 @@ image: "/uploads/covers/php.png"
 excerpt: Veja como é fácil enviar uma resposta JSON com PHP!
 
 ---
-Código
+Código:
 
 ```php
 header('Content-Type: application/json');
