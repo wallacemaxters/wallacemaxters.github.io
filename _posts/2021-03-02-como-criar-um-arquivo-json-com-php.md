@@ -1,6 +1,6 @@
 ---
 layout: post
-color: "#222222"
+color: "#4A90E2"
 title: Como criar um arquivo JSON com PHP?
 date: 2021-03-02 02:21:00 -0300
 categories:
