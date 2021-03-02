@@ -13,7 +13,7 @@ excerpt: ''
 ---
 No PHP, a função `json_encode` retorna uma string contendo uma representação JSON de um valor informado.
 
-Mas, as vezes, além de convertermos para JSON, podemos precisar salvá-lo em um arquivo. 
+Mas, as vezes, além de convertermos para JSON,  precisamos salvá-lo em um arquivo.
 
 Isso é simples de fazer no PHP!
 
@@ -45,10 +45,10 @@ Isso vai gerar um arquivo `arquivo.json` na pasta onde o script é executado, co
 {"nome":"Wallace","linguagens":["PHP","Javascript","Python","C#"]}
 ```
 
- Note que o JSON escrito no arquivo, que foi gerado a partir dos valores presentes na variável `$dados`, contém apenas uma linha, sem nenhuma identação. Esse é o comportamento padrão da função `json_encode`
- 
- Isso ajuda a salvar alguns bytes na hora de escrever o seu arquivo pelo PHP. Porém, caso você precise que o seu JSON esteja formatado, você pode fazê-lo tranquilamente!
- 
+Note que o JSON escrito no arquivo, que foi gerado a partir dos valores presentes na variável `$dados`, contém apenas uma linha, sem nenhuma identação. Esse é o comportamento padrão da função `json_encode`
+
+Isso ajuda a salvar alguns bytes na hora de escrever o seu arquivo pelo PHP. Porém, caso você precise que o seu JSON esteja formatado, você pode fazê-lo tranquilamente!
+
 ## Criando um arquivo JSON formatado
 
 A função `json_encode`, além de converter os dados passados para JSON, também pode receber outros parâmetros, que permitem modificar o comportamento da função. No nosso caso, utilizaremos a constante `JSON_PRETTY_PRINT`. Ao utilizarmos ela no segundo parâmetro de `json_encode`, ela mudará a saída, para que o JSON seja retornado em um formato "mais amigável visualmente".
