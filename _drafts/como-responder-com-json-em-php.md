@@ -2,7 +2,7 @@
 layout: post
 color: "#222222"
 title: Como responder com JSON em PHP?
-date: 2021-03-02 00:00:00 -0300
+date: 2021-03-02 01:36:00 -0300
 categories:
 - PHP
 - json
