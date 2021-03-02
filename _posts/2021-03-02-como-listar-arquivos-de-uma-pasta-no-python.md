@@ -1,6 +1,6 @@
 ---
 layout: post
-color: "#222222"
+color: "#FF7575"
 title: Como listar arquivos de uma pasta no Python?
 date: 2021-03-02 13:31:00 -0300
 categories:
