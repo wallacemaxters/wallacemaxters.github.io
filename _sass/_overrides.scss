@@ -92,7 +92,28 @@ main {
 }
 
 
-.box.post-page-box {
+
+.page-post-header{
+    background-color: #222;
+    background-image: linear-gradient(to left, #333, #000);
+
+    > .container{
+        display: flex;
+        align-items: center;
+
+        @media (max-width: #{$tablet}) {
+            padding: 1.5rem;
+            flex-direction: column;
+        }
+
+        > ul {
+            flex: 1;
+        }
+    }
+}
+
+
+.post-page-box {
     padding: 3rem;
 
     @media (max-width: #{$tablet}) {

@@ -1,5 +1,10 @@
 <nav class="top-header-menu {{ include.class }}">
     <div class="container">
+        {% if include.show_logo %}
+            <a href="/">
+                <img src="/assets/img/favicon.png" alt="Wallace maxters" style="width: 40px">
+            </a>
+        {% endif %}
         <ul>
             <li>
                 <a href="/" class="has-text-white">

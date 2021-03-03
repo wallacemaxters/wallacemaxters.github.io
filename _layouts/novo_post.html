@@ -3,25 +3,22 @@ layout: default
 disqus: true
 ---
 
-<div class="hero is-danger">
-    <div class="hero-content">
-        {% include menu.html title=page.title categories=page.categories show_menu=true color=page.color %}
-    </div>
-</div>
+{% include menu.html show_logo=true class="page-post-header" %}
 
 <section class="section">
     <div class="container">
         <div class="columns is-multiline">    
             <div class="column is-12-mobile is-9-desktop">
+                <!-- POST -->
                 <div class="card block">
                     <div class="card-content">
                         <h1 class="title is-3">{{ page.title }}</h1>
                     </div>
                     <div class="card-image">
-                        <img src="{{ page.image }}">
+                        <img src="{{ page.image }}" alt="{{ page.title | escape }}" title='{{ page.title | escape }}'>
                     </div>
                     <div class="card-content">
-                        <div class="block has-text-right">
+                        <div class="block">
                             <span>
                                 <small class="is-size-7">Publicado em:</small>
                                 <time class="tag" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
@@ -46,15 +43,15 @@ disqus: true
 
                     </div>
                 </div>
-                <div class="block">{% include ads_common.html %}</div>
             </div>
             <div class="column is-12-mobile is-3-desktop">
-                {% include author.html %}
+                <div class="block" style="min-height: 300px">{% include ads_common.html %}</div>
+                {% comment %} {% include author.html %} {% endcomment %}
                 <nav class="block">
                     <h4 class="title is-5">Artigos relacionados</h4>
                     <div class="box">{% include related_posts.html  %}</div>
                 </nav>
-                <div class="block">{% include ads_common.html %}</div>
+                <div class="block" style="min-height: 300px">{% include ads_common.html %}</div>
             </div>
             <div class="column is-12-mobile is-9-desktop">
                 {% include disqus.html %}
