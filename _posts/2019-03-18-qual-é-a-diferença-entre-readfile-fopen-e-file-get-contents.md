@@ -6,6 +6,9 @@ categories:
 - PHP
 sitemap: true
 image: "/uploads/php-leader.png"
+excerpt: 'Veja nesse artigo quais as principais diferenças entre as funções de leitura
+  de arquivo readfile e file_get_contents. '
+color: "#BD10E0"
 
 ---
 O PHP é uma linguagem que tem uma grande quantidade de funções que, as vezes, parecem fazer as mesmas coisas. Um bom exemplo disso é funções que manipulam  arquivos.
@@ -36,9 +39,10 @@ Você pode achar que isso é alguma desvantagem, mas em alguns casos você preci
 
 Por exemplo, se quiser imprimir uma imagem através de um script PHP, você poderá fazer assim:
 
-     header('Content-Type: image/png');
-     
-     readfile('/protegido/imagens/arquivo.jpg');
+```php
+header('Content-Type: image/png');     
+readfile('/protegido/imagens/arquivo.jpg');
+```
 
 No caso acima, o `readfile` poderia ser vantajoso em relação ao `file_get_contents`, pois evitaria, por exemplo, sobrecarregar o servidor, no caso de carregar um arquivo muito grande, uma vez que `file_get_contents` armazena o valor para uma string.
 
