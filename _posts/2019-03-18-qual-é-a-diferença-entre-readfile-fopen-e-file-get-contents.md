@@ -10,9 +10,9 @@ image: "/uploads/php-leader.png"
 ---
 O PHP é uma linguagem que tem uma grande quantidade de funções que, as vezes, parecem fazer as mesmas coisas. Um bom exemplo disso é funções que manipulam  arquivos.
 
-Por exemplo, para ler um arquivo, você poderia usar as funções `file_get_contents`, `fopen`, `readfile`, `file` ou a classe `SplFileObject`.
+Por exemplo, para ler um arquivo, você poderia escolher entre as funções `file_get_contents`, `fopen`, `readfile`, `file` ou a classe `SplFileObject`. É claro que cada uma delas é usado em cenários diferentes.
 
-Das funções que citei acima, eu costumo utilizar muito `readfile` e `file_get_contents`. E vamos ver nesse tutorial a diferença entre elas e em que cenários podemos utilizá-las.
+Por exemplo, das funções que citei acima, eu costumo utilizar muito `readfile` e `file_get_contents`. E é importante sabermos a diferença entre delas, para saber melhor em qual centário utilizadas.
 
 ## Como funciona a função file_get_contents?
 
