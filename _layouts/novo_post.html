@@ -1,0 +1,64 @@
+---
+layout: default
+disqus: true
+---
+
+<div class="hero is-danger">
+    <div class="hero-content">
+        {% include menu.html title=page.title categories=page.categories show_menu=true color=page.color %}
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-multiline">    
+            <div class="column is-12-mobile is-9-desktop">
+                <div class="card block">
+                    <div class="card-content">
+                        <h1 class="title is-3">{{ page.title }}</h1>
+                    </div>
+                    <div class="card-image">
+                        <img src="{{ page.image }}">
+                    </div>
+                    <div class="card-content">
+                        <div class="block has-text-right">
+                            <span>
+                                <small class="is-size-7">Publicado em:</small>
+                                <time class="tag" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+                            </span>
+                        </div>
+                        <hr>
+                        <article class="content">{{ content }}</article>
+                    </div>
+                </div>
+                <div class='block'>
+                    <div style="display: flex; align-items: center;">                        
+                        <div class="fb-share-button" data-href="{{ page.url }}" data-layout="button" style="vertical-align: top"></div>
+                        <span style="flex: 1"></span>
+                        <form action="https://www.paypal.com/donate" method="post" target="_top" style="display: inline-block; vertical-align: top">
+                            <input type="hidden" name="business" value="KCAGBVD5TJLUL" />
+                            <input type="hidden" name="item_name" value="Blog Wallace Maxters" />
+                            <input type="hidden" name="currency_code" value="BRL" />
+                            <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /> -->
+                            <input type="submit" name="submit" value="Doar" class="button is-primary">
+                            <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
+                        </form>
+
+                    </div>
+                </div>
+                <div class="block">{% include ads_common.html %}</div>
+            </div>
+            <div class="column is-12-mobile is-3-desktop">
+                {% include author.html %}
+                <nav class="block">
+                    <h4 class="title is-5">Artigos relacionados</h4>
+                    <div class="box">{% include related_posts.html  %}</div>
+                </nav>
+                <div class="block">{% include ads_common.html %}</div>
+            </div>
+            <div class="column is-12-mobile is-9-desktop">
+                {% include disqus.html %}
+            </div>
+        </div>
+    </div>
+</section>
