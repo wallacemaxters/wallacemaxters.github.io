@@ -14,7 +14,7 @@ Por exemplo, para ler um arquivo, você poderia usar as funções `file_get_cont
 
 Das funções que citei acima, eu costumo utilizar muito `readfile` e `file_get_contents`. E vamos ver nesse tutorial a diferença entre elas e em que cenários podemos utilizá-las.
 
-### file_get_contents
+## Como funciona a função file_get_contents?
 
 A função [`file_get_contents`](http://php.net/manual/pt_BR/function.file-get-contents.php) tem como finalidade ler todo o conteúdo de um arquivo para uma `string`, sendo possível, por exemplo, armazenar todo valor de um arquivo de texto em uma variável.
 
@@ -26,7 +26,7 @@ $json_contents = file_get_contents('config.json');
 
 No exemplo acima, ao fazer essa chamada, você obteria toda o valor de `config.json` em uma `string` e tratar conforme desejar.
 
-### readfile
+## Como funciona a função readfile?
 
 Ela lê e exibe todo o conteúdo de um arquivo. Diferentemente do `file_get_contents`, que retorna a `string`, a função `readfile` envia para a saída todo o conteúdo do arquivo. Ela retorna um valor `int`, contendo o número de bytes contido no arquivo lido.
 
