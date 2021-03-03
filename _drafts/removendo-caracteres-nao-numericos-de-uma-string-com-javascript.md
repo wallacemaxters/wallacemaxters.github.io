@@ -15,3 +15,13 @@ function somenteNumeros(string) {
     return string.replace(/\D+/g, '');
 }
 ```
+
+<script>
+function somenteNumeros(string) {
+    return string.replace(/\D+/g, '');
+}
+  
+document.querySelector('#somente-numeros').addEventListener('input', function () {
+     this.value = somenteNumeros(this.value)
+})
+</script>
