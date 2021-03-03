@@ -8,6 +8,7 @@ sitemap: true
 image: "/uploads/captura-de-pantalla-de-2020-10-16-10-37-48.png"
 excerpt: 'Nesse tutorial, veremos exemplos práticos de como usar a função file_get_contents
   no PHP para abrir arquivos e urls. '
+color: ''
 
 ---
 O `file_get_contents` é uma função bastante utilizada no PHP. Ela tem como finalidade ler todo o conteúdo de um arquivo para uma `string`, além de ter a capacidade de fazer outras coisas.
@@ -27,7 +28,6 @@ Exemplo:
 
 $caminho = __DIR__ . '/index.html';
 $conteudo = file_get_contents($caminho);
-
 echo $conteudo;
 ```
 
@@ -43,7 +43,6 @@ $caminho = 'index.html';
 $caminho = './index.html';
 
 $conteudo = file_get_contents($caminho);
-
 echo $conteudo;
 ```
 
@@ -76,15 +75,16 @@ Para criar um _context_, usamos a função [stream_context_create](https://www.p
 
 Exemplo mínimo:
 
-    $context = stream_context_create([
-        'http' => [
-            'method' => 'POST'
-        ]
-    ]);
-    
-    $resultado = file_get_contents('https://httpbin.org/post', false, $context);
-    
-    var_dump($resultado);
+```php
+$context = stream_context_create([
+    'http' => [
+        'method' => 'POST'
+    ]
+]);
+
+$resultado = file_get_contents('https://httpbin.org/post', false, $context);
+var_dump($resultado);
+ ```
 
 #### Enviando cabeçalho e corpo em uma requisição
 
