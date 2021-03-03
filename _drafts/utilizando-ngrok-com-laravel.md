@@ -10,20 +10,37 @@ image: ''
 excerpt: ''
 
 ---
-
 ## Instalando o ngrok
 
-## Configurando as urls do Laravel 
+## Configurando as urls do Laravel
+
+O primeiro passo é iniciar o Laravel.
 
 ```bash
 php artisan serve
 ```
 
+Em seguida, execute o comando `ngrok` apontando para a porta em que o `php artisan serve` está utilizando. Geralmente, ele usa `8000` por padrão.
+
 ```bash
 ngrok http 8000
 ```
 
+O `ngrok` irá exibir o seu subdomínio onde a aplicação será exibida.
+
+Exemplo:
+
+```text
+Account                       Sua Conta (Plan: Free)                                
+Version                       2.3.35                                                      
+Region                        United States (us)                                          
+Web Interface                 http://127.0.0.1:4040                                       
+Forwarding                    http://seu-hash.ngrok.io -> http://localhost:8000
+Forwarding                    https://seu-hash.ngrok.io -> http://localhost:8000 
+```
+
 Edite seu arquivo `.env` e modifique a variável `APP_URL`
+
 ```env
 APP_URL=https://seu-hash.ngrok.io/
 ```
