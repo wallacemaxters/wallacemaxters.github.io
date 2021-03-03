@@ -28,6 +28,12 @@ disqus: true
                     </div>
                 </div>
 
+                <div class="block">
+                    <span>
+                        <small class="is-size-7">Publicado em:</small>
+                        <time class="tag" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+                    </span>
+                </div>
                 <div class="block">{% include ads_common.html %}</div>
             </div>
             <div class="column is-12-mobile is-3-desktop">
