@@ -1,20 +1,18 @@
 ---
 layout: post
 title: Qual é a diferença entre readfile e  file_get_contents em PHP?
-date: 2019-03-18 03:00:00 +0000
+date: 2019-03-18T03:00:00.000+00:00
 categories:
 - PHP
 sitemap: true
 image: "/uploads/php-leader.png"
 
 ---
-O PHP é uma linguagem tem uma grande quantidade de funções que, as vezes, parecem fazer as mesmas coisas.
-
-Um bom exemplo disso é funções que manipulam  arquivos. 
+O PHP é uma linguagem que tem uma grande quantidade de funções que, as vezes, parecem fazer as mesmas coisas. Um bom exemplo disso é funções que manipulam  arquivos.
 
 Por exemplo, para ler um arquivo, você poderia usar as funções `file_get_contents`, `fopen`, `readfile`, `file` ou a classe `SplFileObject`.
 
-No caso acima, eu já utilizei muito `readfile` e `file_get_contents` e, apesar de serem parecidas, é necessário informar algumas variações entre as duas
+Das funções que citei acima, eu costumo utilizar muito `readfile` e `file_get_contents`. E vamos ver nesse tutorial a diferença entre elas e em que cenários podemos utilizá-las.
 
 ### file_get_contents
 
@@ -22,7 +20,9 @@ A função [`file_get_contents`](http://php.net/manual/pt_BR/function.file-get-c
 
 Por exemplo:
 
-     $json_contents = file_get_contents('config.json');
+```php
+$json_contents = file_get_contents('config.json');
+```
 
 No exemplo acima, ao fazer essa chamada, você obteria toda o valor de `config.json` em uma `string` e tratar conforme desejar.
 
@@ -41,8 +41,6 @@ Por exemplo, se quiser imprimir uma imagem através de um script PHP, você pode
      readfile('/protegido/imagens/arquivo.jpg');
 
 No caso acima, o `readfile` poderia ser vantajoso em relação ao `file_get_contents`, pois evitaria, por exemplo, sobrecarregar o servidor, no caso de carregar um arquivo muito grande, uma vez que `file_get_contents` armazena o valor para uma string.
-
- 
 
 ### Conclusão
 
