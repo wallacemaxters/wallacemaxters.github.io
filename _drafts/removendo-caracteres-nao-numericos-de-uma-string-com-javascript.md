@@ -16,13 +16,23 @@ function somenteNumeros(string) {
 }
 ```
 
+## Input que aceita somente números
+
+```javascript
+document
+.querySelector('#somente-numeros')
+.addEventListener('input', function () {
+	this.value = somenteNumeros(this.value)
+})
+```
+
 <script>
 function somenteNumeros(string) {
-    return string.replace(/\D+/g, '');
+return string.replace(/\\D+/g, '');
 }
-  
+
 document.querySelector('#somente-numeros').addEventListener('input', function () {
-     this.value = somenteNumeros(this.value)
+this.value = somenteNumeros(this.value)
 })
 </script>
 
