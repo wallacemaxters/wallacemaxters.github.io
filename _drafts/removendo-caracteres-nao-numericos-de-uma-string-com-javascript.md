@@ -26,6 +26,11 @@ document
 })
 ```
 
+```html
+<input type="text" id="somente-numeros">
+```
+
+Resultado: 
 <script>
 function somenteNumeros(string) {
 return string.replace(/\\D+/g, '');
