@@ -17,7 +17,7 @@ excerpt: ''
 O primeiro passo é iniciar o Laravel.
 
 ```bash
-php artisan serve
+ internas da sua aplicação, é  necessáriophp artisan serve
 ```
 
 Em seguida, execute o comando `ngrok` apontando para a porta em que o `php artisan serve` está utilizando. Geralmente, ele usa `8000` por padrão.
@@ -44,6 +44,8 @@ Edite seu arquivo `.env` e modifique a variável `APP_URL`
 ```env
 APP_URL=https://seu-hash.ngrok.io/
 ```
+
+É necessário forçar a url raiz da sua aplicação, para afetar o funcionamento das funções `url` e `asset` .
 
 ```php
 \URL::forceRootUrl(config('app.url'));
