@@ -32,7 +32,7 @@ Ela lê e exibe todo o conteúdo de um arquivo. Diferentemente do `file_get_cont
 
 É como se o PHP tivesse percorrido cada linha e executado um `echo` em cada uma delas.
 
-Você pode achar que isso é alguma desvantagem, mas em alguns casos você precisará apenas enviar o conteúdo de um arquivo direto para o output, sem guardar esses valores na memória.
+Você pode achar que isso é alguma desvantagem, mas em alguns casos você precisará apenas enviar o conteúdo de um arquivo direto para o output, sem guardar esses valores na memóriaDas funções que citei acima, eu costumo utilizar muito `readfile` e `file_get_contents`. É necessário informar que ess.
 
 Por exemplo, se quiser imprimir uma imagem através de um script PHP, você poderá fazer assim:
 
@@ -44,6 +44,8 @@ No caso acima, o `readfile` poderia ser vantajoso em relação ao `file_get_cont
 
 ### Conclusão
 
-Use `file_get_contents` quando precisar trabalhar com os conteúdo do arquivo diretamente, como por exemplo, realizando substituições, desserializações e verificações.
+Resumindo todo o artigo, a diferença entre `file_get_contents` e `readfile` é que a primeira retorna o conteúdo de um arquivo em uma `string` e a segunda apenas lê o conteúdo de um arquivo.
 
-Se precisar apenas de exibir o conteúdo do arquivo para o cliente, utilize `readfile`.
+Sendo assim, use `file_get_contents` quando precisar trabalhar com os conteúdo do arquivo diretamente. Por exemplo, `file_get_contents` será ideal ser você precisar realizar substituições, desserializações, ou qualquer outra necessidade que seja o conteúdo inteiro do arquivo.
+
+No caso do `readfile`, utilize-o se você precisar de apenas exibir o conteúdo do arquivo para o cliente, ou mesmo escrevê-lo na saída do seu terminal/shell/console.
