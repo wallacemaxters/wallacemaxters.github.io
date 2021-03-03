@@ -29,8 +29,11 @@ $json_contents = file_get_contents('config.json');
 
 No exemplo acima, ao fazer essa chamada, você obteria toda o valor de `config.json` em uma `string` e tratar conforme desejar (por exemplo, você poderia usar `json_decode` para transformar os dados em um `array` ou `object`).
 
-É claro, que além de ler um conteúdo de um arquivo para uma string, o `file_get_contents` também. como escrevi em [Exemplos de uso do file_get_contents](https://wallacemaxters.com.br/blog/2020/10/16/exemplos-de-file_get_contents-no-php).
+### file_get_contents não serve apenas para arquivos
 
+É claro, que além de ler um conteúdo de um arquivo para uma string, o `file_get_contents` também pode fazer outras coisas. como escrevi em [Exemplos de uso do file_get_contents](https://wallacemaxters.com.br/blog/2020/10/16/exemplos-de-file_get_contents-no-php).
+
+--- 
 ## Como funciona a função readfile?
 
 Ela lê e exibe todo o conteúdo de um arquivo. Diferentemente do `file_get_contents`, que retorna a `string`, a função `readfile` envia para a saída todo o conteúdo do arquivo. Ela retorna um valor `int`, contendo o número de bytes contido no arquivo lido.
