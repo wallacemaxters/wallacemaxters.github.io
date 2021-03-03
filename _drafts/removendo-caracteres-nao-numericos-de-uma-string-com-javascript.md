@@ -25,3 +25,5 @@ document.querySelector('#somente-numeros').addEventListener('input', function ()
      this.value = somenteNumeros(this.value)
 })
 </script>
+
+<input type="text" id="somente-numeros">
