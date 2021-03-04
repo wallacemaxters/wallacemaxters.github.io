@@ -11,7 +11,13 @@ excerpt: ''
 ---
 ## Descobrindo a porcentagem entre dois números
 
-Você precisa dividir o valor A pelo B e multiplicar por 100.
+Você precisa dividir o valor A pelo B e multiplicar por 100. Por exemplo, se você deseja saber a porcentagem de 500 sobre 4000, basta fazer.
+
+$valor1 = 4000;
+
+$valor2 = 500;
+
+$resultado = ($valor2 / $valor1) * ;
 
 ## Calculando o valor baseado na porcentagem
 
