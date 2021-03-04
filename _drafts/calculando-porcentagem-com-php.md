@@ -15,10 +15,10 @@ Você precisa dividir o valor A pelo B e multiplicar por 100.
 
 ## Calculando o valor baseado na porcentagem
 
-Basta multiplicar o valor pela porcentagem desejada e dividir por 100
+Basta multiplicar o valor pela porcentagem desejada e dividir por 100. Suponhamos que você deseja saber quanto é 15% de 3000.
 
 $valor = 3000;
 
-$porcentagem = 3;
+$porcentagem = 15;
 
 $resultado = $valor * ($porcentagem / 100);
