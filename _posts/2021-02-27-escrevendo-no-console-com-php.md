@@ -16,7 +16,7 @@ No Javascript, podemos usar o `console.log` para enviar alguma informação para
 
 Seria possível enviar uma saída do PHP diretamente para lá?
 
-Bem,  diretamente pelo PHP, não tem como, mas há um truque simples que pode ser feito.
+Bem, diretamente pelo PHP, não tem como, mas há um truque simples que pode ser feito.
 
 ## Enviando uma saída do PHP para o Console do Navegador
 
@@ -28,7 +28,7 @@ Exemplo:
 echo '<script>console.log("teste")</script>';
 ```
 
-Isso exibirá`""` no console do navegador.
+Isso exibirá`"teste"` no console do navegador.
 
 ### Enviando JSON para o console através do PHP
 
