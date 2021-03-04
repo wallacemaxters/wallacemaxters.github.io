@@ -8,7 +8,7 @@ categories:
 - javascript
 sitemap: true
 image: "/uploads/php_console_log.png"
-excerpt: Seria possível debugar ou enviar uma saída do PHP para o console do navegador?
+excerpt: Seria possível fazer debug ou enviar uma saída do PHP para o console do navegador?
   Veja os truques e as possibilidades de fazer isso neste tutorial!
 
 ---
@@ -61,7 +61,7 @@ Saída:
 Console:
 <img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/console-log-json_encode.png" loading="lazy" width="100%">
 
-### Enviando o var_dump para o Developer console
+### Enviando o var_dump para o developer console
 
 A função `var_dump` é muito útil para visualizar as informações de uma variável, seria interessante se conseguíssemos enviá-la ao console. Porém, diferentemente da função  `json_encode`, que usamos anteriormente, ela não retorna valor. Ao invés disso, ela exibe a saída.
 
