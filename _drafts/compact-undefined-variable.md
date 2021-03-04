@@ -6,7 +6,7 @@ date: 2021-03-04 00:00:00 -0300
 categories:
 - php
 sitemap: true
-image: ''
+image: "/uploads/covers/php.png"
 excerpt: ''
 
 ---
