@@ -57,14 +57,15 @@ Saída:
 ```html
 <script>console.log({"nome": "Maxters"});</script>
 ```
+
 Console:
 <img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/console-log-json_encode.png" loading="lazy" width="100%">
 
 ### Enviando o var_dump para o Developer console
 
-A função `var_dump` é muito útil para visualizar as informações de uma variável. O problema dessa função é que, diferente de `json_encode`, ela não retorna valor. Ela exibe a saída ao invés disso.
+A função `var_dump` é muito útil para visualizar as informações de uma variável, seria interessante se conseguíssemos enviá-la ao console. Porém, diferentemente da função  `json_encode`, que usamos anteriormente, ela não retorna valor. Ao invés disso, ela exibe a saída.
 
-Mas ainda sim é possível driblar isso. Podemos fazer a mesma coisa que fizemos acima, porém utilizando `ob_start` e `ob_get_clean` para capturar o conteúdo exibido por `var_dump`.
+Mas, ainda assim, é possível contornar isso. Basta combinarmos o uso de `ob_start` e `ob_get_clean` para capturar o conteúdo exibido por `var_dump`.
 
 ```php
 <?php
@@ -85,5 +86,6 @@ O resultado será:
 ```html
 <script>console.log("array(1) {\n  [\"name\"]=>\n  string(15) \"Wallace Maxters\"\n}\n");</script>
 ```
+
 Console:
 <img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/consolelog-var_dump.png" loading="lazy" width="100%">
