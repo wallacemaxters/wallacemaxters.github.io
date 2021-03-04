@@ -20,7 +20,9 @@ O primeiro passo é iniciar o Laravel.
  php artisan serve
 ```
 
-Em seguida, execute o comando `ngrok` apontando para a porta em que o `php artisan serve` está utilizando. Geralmente, ele usa `8000` por padrão. Você também pode [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve), caso deseje.
+Em seguida, execute o comando `ngrok` apontando para a porta em que o `php artisan serve` está utilizando. Geralmente, ele usa `8000` por padrão. 
+
+**Nota**: Você também pode [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve), caso deseje.
 
 ```bash
 ngrok http 8000
