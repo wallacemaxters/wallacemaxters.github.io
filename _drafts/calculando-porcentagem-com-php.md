@@ -9,3 +9,10 @@ image: "/uploads/covers/php.png"
 excerpt: ''
 
 ---
+## Descobrindo a porcentagem entre dois números
+
+Você precisa dividir o valor A pelo B e multiplicar por 100.
+
+## Calculando o valor baseado na porcentagem
+
+Basta multiplicar o valor pela porcentagem desejada e dividir por 100
