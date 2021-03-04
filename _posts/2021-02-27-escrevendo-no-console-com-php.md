@@ -2,7 +2,7 @@
 layout: post
 color: "#79D4C0"
 title: Escrevendo no console do navegador com PHP
-date: 2021-02-27 14:50:00 +0000
+date: 2021-02-27T14:50:00.000+00:00
 categories:
 - PHP
 - javascript
@@ -28,7 +28,7 @@ Exemplo:
 echo '<script>console.log("teste")</script>';
 ```
 
-Isso imprimirá `1` no console do navegador.
+Isso exibirá`""` no console do navegador.
 
 ### Enviando JSON para o console através do PHP
 
