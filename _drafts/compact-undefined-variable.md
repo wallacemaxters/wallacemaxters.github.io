@@ -19,7 +19,7 @@ Para reproduzir o erro, adicionar uma variável que não existe como argumento d
 Exemplo:
 ```php
 compact('nao_existe');
-'``
+```
 
 ## Causa
 
