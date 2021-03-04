@@ -1,11 +1,12 @@
 ---
 layout: post
-color: "#222222"
+color: "#4A4A4A"
 title: Como criar máscara para números com Javascript?
-date: 2021-03-03 00:00:00 -0300
-categories: []
+date: 2021-03-03T00:00:00.000-03:00
+categories:
+- javascript
 sitemap: false
-image: ''
+image: "/uploads/javascript.svg"
 excerpt: ''
 
 ---
