@@ -10,23 +10,45 @@ image: "/uploads/covers/php.png"
 excerpt: ''
 
 ---
-## Erro
+## Erro e Causa
+
+O erro em questão é esse:
+
 ```text
-compact(): Undefined variable:
+compact(): Undefined variable
 ```
 
-Para reproduzir o erro, adicionar uma variável que não existe como argumento de `compact`.
+A mensagem na verdade é um `E_NOTICE` (mensagem de erro do PHP) disparado quando você tenta chamar compact em uma variável não existente no escopo atual. **Esse erro ocorre apenas em versões igual ou superiores ao php 7.3**.
 
-Exemplo:
+## Reproduzindo o erro
+
+Para reproduzir o erro, basta adicionar uma variável que não existe como argumento de `compact`.
+
 ```php
-compact('nao_existe');
-```
+$existe = 'exsite';
 
-## Causa
+compact('existe', 'nao_existe');
+```
 
 No PHP 7.3, a função `compact`...
 
 
-## Solução
+## Possíveis soluções
 
-Passar como argumento da função `compact` apenas as variáveis existentes no escopo em que esta função é chamada.
+Para resolver esse problema, podemos utilizar algumas alternativas.
+
+1. Passar como argumento da função `compact` apenas as variáveis existentes no escopo em que esta função é chamada. 
+
+2. Caso esteja utilizando uma biblioteca que não possa ser atualizada, talvez seja melhor fazer o downgrade para a versão 7.2 do PHP.
+
+### Desative o `E_NOTICE`
+
+Alternativamente, você pode desativar o `E_NOTICE` para suprimir a mensagem de erro causada pelo `compact`.
+
+Veja:
+
+```php
+error_reporting(E_ALL ^ E_NOTICE);
+$existe = 'existe';
+compact('nao_existe', 'existe');	// ['existe' => 'existe']
+```
