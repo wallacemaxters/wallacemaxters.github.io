@@ -15,7 +15,7 @@ excerpt: ''
 O erro em questão é esse:
 
 ```text
-compact(): Undefined variable
+compact(): Undefined variable "x" in script.php on line 3
 ```
 
 A mensagem na verdade é um `E_NOTICE` (mensagem de erro do PHP) disparado quando você tenta chamar compact em uma variável não existente no escopo atual. **Esse erro ocorre apenas em versões igual ou superiores ao php 7.3**.
