@@ -91,3 +91,4 @@ O resultado será:
 
 Console:
 <img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/consolelog-var_dump.png" loading="lazy" width="100%">
+
