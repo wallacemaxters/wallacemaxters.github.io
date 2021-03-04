@@ -20,7 +20,7 @@ compact(): Undefined variable "variavel" in script.php on line 3
 
 A mensagem na verdade é um `E_NOTICE` (mensagem de erro do PHP) disparado quando você tenta chamar  a função `compact` em uma variável não existente no escopo atual. **Esse erro ocorre apenas em versões igual ou superiores ao php 7.3**.
 
-## Reproduzindo o erro
+### Reproduzindo o erro
 
 Para reproduzir o erro, basta adicionar uma variável que não existe como argumento de `compact`.
 
@@ -31,8 +31,7 @@ $existe = 'exsite';
 compact('existe', 'nao_existe');
 ```
 
-No PHP 7.3, a função `compact`...
-
+----
 
 ## Possíveis soluções
 
