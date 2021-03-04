@@ -30,9 +30,9 @@ echo '<script>console.log("teste")</script>';
 
 Isso exibirá`"teste"` no console do navegador.
 
-### Enviando JSON para o console através do PHP
+### Enviando JSON para o console do navegador através do PHP
 
-Vamos fazer algo mais elaborado agora. Que tal uma função que envie os dados que você deseja depurar em formato JSON?
+Vamos fazer algo mais elaborado agora. Que tal uma função que envie os dados que você deseja examinar em formato JSON?
 
 Exemplo:
 
@@ -61,7 +61,10 @@ Saída:
 Console:
 <img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/console-log-json_encode.png" loading="lazy" width="100%">
 
-### Enviando o var_dump para o developer console
+
+### Enviando o var_dump para o console do navegador
+
+Apesar do exemplo anterior ser útil, ele possui limitações, já que alguns dados do PHP podem não ser serializados corretamente, o que atrapalharia a exibição correta dos dados que você deseja analisar.
 
 A função `var_dump` é muito útil para visualizar as informações de uma variável, seria interessante se conseguíssemos enviá-la ao console. Porém, diferentemente da função  `json_encode`, que usamos anteriormente, ela não retorna valor. Ao invés disso, ela exibe a saída.
 
