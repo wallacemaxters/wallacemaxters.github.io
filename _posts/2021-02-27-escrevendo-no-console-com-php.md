@@ -64,9 +64,9 @@ Console:
 
 ### Enviando o var_dump para o console do navegador
 
-Apesar do exemplo anterior ser útil, ele possui limitações, já que alguns dados do PHP podem não ser serializados corretamente, o que atrapalharia a exibição correta dos dados que você deseja analisar.
+Apesar do exemplo anterior ser útil, ele possui limitações, já que alguns dados do PHP podem não ser serializados corretamente pela função `json_encode`, o que atrapalharia a exibição correta dos dados que você deseja analisar.
 
-A função `var_dump` é muito útil para visualizar as informações de uma variável, seria interessante se conseguíssemos enviá-la ao console. Porém, diferentemente da função  `json_encode`, que usamos anteriormente, ela não retorna valor. Ao invés disso, ela exibe a saída.
+O ideal seria usar a função `var_dump`. Ela é muito útil para visualizar as informações de uma variável e seria interessante se conseguíssemos enviá-la ao console. Porém, diferentemente da função  `json_encode`, que usamos anteriormente, ela não retorna valor. Ao invés disso, ela exibe a saída.
 
 Mas, ainda assim, é possível contornar isso. Basta combinarmos o uso de `ob_start` e `ob_get_clean` para capturar o conteúdo exibido por `var_dump`.
 
