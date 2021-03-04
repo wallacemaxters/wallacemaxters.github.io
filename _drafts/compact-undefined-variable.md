@@ -1,7 +1,7 @@
 ---
 layout: post
 color: "#222222"
-title: 'Resolvendo o erro "compact(): Undefined variable"'
+title: 'Como resolver o erro "compact(): Undefined variable"'
 date: 2021-03-04 00:00:00 -0300
 categories:
 - php
