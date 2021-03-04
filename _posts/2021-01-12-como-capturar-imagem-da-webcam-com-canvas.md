@@ -37,7 +37,7 @@ Se tudo ocorrer corretamente acima, teremos acesso à variável `mediaStream`. �
 
 <hr />
 
-## Pré-visualização da webcam com a tag <video>
+## Previsualizando a webcam com a tag <video>
 
 Precisamos agora que o usuário tenha uma pré-visualização da captura da webcam. Para isso, vamos utilizar uma tag `<video>`.
 
