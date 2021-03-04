@@ -57,7 +57,7 @@ Saída:
 ```html
 <script>console.log({"nome": "Maxters"});</script>
 ```
-
+Console:
 <img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/console-log-json_encode.png" loading="lazy" width="100%">
 
 ### Enviando o var_dump para o Developer console
@@ -85,5 +85,5 @@ O resultado será:
 ```html
 <script>console.log("array(1) {\n  [\"name\"]=>\n  string(15) \"Wallace Maxters\"\n}\n");</script>
 ```
-
+Console:
 <img alt="Enviando uma saída PHP para o Console do Javascript" title="Enviando uma saída PHP para o Console do Javascript" src="/uploads/consolelog-var_dump.png" loading="lazy" width="100%">
