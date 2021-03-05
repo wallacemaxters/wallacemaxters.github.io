@@ -35,8 +35,8 @@ Basta apenas usar o seguinte código:
 import os
 pasta = './pasta'
 for diretorio, subpastas, arquivos in os.walk(pasta):
-	for arquivo in arquivos:
-    	print(os.path.join(diretorio, arquivo))
+    for arquivo in arquivos:
+        print(os.path.join(diretorio, arquivo))
 ```
 
 O resultado será parecido com isso
@@ -56,8 +56,8 @@ Caso deseje retornar o caminho absoluto, você pode utilizar a função [os.path
 import os
 pasta = './pasta'
 for diretorio, subpastas, arquivos in os.walk(pasta):
-	for arquivo in arquivos:
-    	print(os.path.join(os.path.realpath(diretorio), arquivo))
+    for arquivo in arquivos:
+        print(os.path.join(os.path.realpath(diretorio), arquivo))
 ```
 
 ## O que faz a função os.walk?
