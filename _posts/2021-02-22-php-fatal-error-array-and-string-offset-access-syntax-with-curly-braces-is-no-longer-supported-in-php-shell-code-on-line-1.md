@@ -1,16 +1,13 @@
 ---
 layout: post
 color: "#5772D4"
-title: 'PHP 8: "Array and string offset access syntax with curly braces is no longer
-  supported"'
+title: 'Array and string offset access syntax with curly braces is no longer supported'
 date: 2021-02-23 09:15:00 -0300
 categories:
 - php
 sitemap: true
 image: "/uploads/covers/php.png"
-excerpt: Na versão 8 do PHP, você pode receber o erro "Array and string offset access
-  syntax with curly braces is no longer supported". Isso ocorre porque o suporte a
-  sintaxe de acesso aos índices de arrays ou strings foi removido.
+excerpt: 'Veja porquê o corre e como resolver o erro "Array and string offset access syntax with curly braces is no longer supported" no PHP 8'
 
 ---
 ## O erro

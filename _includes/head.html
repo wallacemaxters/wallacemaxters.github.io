@@ -1,8 +1,9 @@
+{% assign page_title = page.title | strip_html | escape %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Language" content="pt-br">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{% if page.url != '/' %}{{ page.title | strip_html | escape }} - {% endif %}{{ site.title | escape }}</title>
+    <title>{% if page.url != '/' %}{{ page_title }} - {% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{%- if page.excerpt -%}
                    {{ page.excerpt | strip_html | strip_newlines | escape | truncate: 160 }}
                  {%- else -%}
@@ -12,10 +13,10 @@
     
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title  }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
 
 
-    <meta property="og:title" content="{%- if page.title -%} {{ page.title | escape }}{%- else -%}{{ site.title | escape }}{%- endif -%}" />
+    <meta property="og:title" content="{%- if page_title -%} {{ page_title }}{%- else -%}{{ site.title | escape }}{%- endif -%}" />
 
     <meta property="og:description" content="{%- if page.excerpt -%}
                 {{ page.excerpt | strip_html | strip_newlines | escape |  truncate: 160 }}
