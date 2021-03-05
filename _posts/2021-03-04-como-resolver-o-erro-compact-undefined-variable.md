@@ -2,9 +2,9 @@
 layout: post
 color: "#222222"
 title: 'Como resolver o erro "compact(): Undefined variable"'
-date: 2021-03-04 00:00:00 -0300
+date: 2021-03-04T00:00:00.000-03:00
 categories:
-- php
+- PHP
 sitemap: true
 image: "/uploads/covers/php.png"
 excerpt: 'Aprenda como resolver o erro "compact(): Undefined variable ''variavel''
