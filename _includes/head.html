@@ -2,11 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Language" content="pt-br">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{%- if page.title -%}
-        {{ page.title | escape }} - {{ site.title | escape }}
-        {%- else -%}
-        {{ site.title | escape }} - Um blog sobre programação
-        {%- endif -%}</title>
+    <title>{% if page.url != '/' %}{{ page.title | strip_html | escape }} - {% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{%- if page.excerpt -%}
                    {{ page.excerpt | strip_html | strip_newlines | escape | truncate: 160 }}
                  {%- else -%}
