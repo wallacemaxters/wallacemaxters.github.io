@@ -28,7 +28,13 @@
                 {%- endif -%}">
 
     <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
-    <meta property="og:image" content="{{ page.image | prepend: site.url }}" />
+
+    {% assign og_image = page.image %}
+    {% if page.og_image %}
+        {% assign og_image = page.og_image %}
+    {% endif %}
+
+    <meta property="og:image" content="{{ og_image | prepend: site.url }}" />
     {%- if page.layout == 'post' -%}
         <meta property="og:type" content="article">
         <meta property="article:author" content="Wallace Maxters">

@@ -4,12 +4,11 @@ title: Como instalar múltiplas versões do PHP no Kali Linux
 date: 2020-11-16T01:25:00.000-02:00
 categories:
 - linux
-- kali
 - PHP
+- kali
 sitemap: true
-image: "/uploads/kali-linux.png"
-excerpt: 'Aprenda a resolver o erro a o instalar versões anteriores do PHP no Kali
-  Linux. '
+image: "/uploads/kali-linux.jpg"
+excerpt: 'Aprenda a resolver o erro a o instalar versões anteriores do PHP no Kali Linux.'
 
 ---
 ## Problemas ao instalar versões anteriores do PHP no Kali Linux
@@ -38,18 +37,26 @@ Sendo assim, eu fiz o teste de colocar o source do PHP apontando para o "buster"
 
 Crie um arquivo chamado `php.list` dentro da pasta `/etc/apt/source.list.d`, dessa forma:
 
-    sudo nano /etc/apt/source.list.d/php.list
+```bash
+sudo nano /etc/apt/source.list.d/php.list
+```
 
 Adicione a seguinte linha de código:
 
-    deb https://packages.sury.org/php/ buster main
+```bash
+deb https://packages.sury.org/php/ buster main
+```
 
 Após fazer isso e salvar, rode o comando abaixo:
 
-    sudo apt update
+```bash
+sudo apt update
+```
 
 Se tudo deu certo, você poderá instalar as versões anteriores do PHP. No meu caso, tenho acesso a instalação das versões 5.6, 7.0, 7.1, 7.2 e 7.3 do PHP.
 
 Para testar, rode:
 
-    sudo apt install php7.2
+```bash
+sudo apt install php7.2
+```
