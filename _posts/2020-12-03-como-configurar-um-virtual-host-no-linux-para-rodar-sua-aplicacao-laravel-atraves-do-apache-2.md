@@ -16,6 +16,8 @@ O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso
 
 > **Nota:** Esse tutorial assume que você já tenha o Apache2 e o PHP instalado no seu Linux.
 
+***
+
 ## Onde deve estar meu projeto Laravel?
 
 O local padrão onde os sites do Apache estão localizados no Linux é no diretório `/var/www/`. Mova a pasta do seu projeto para dentro desta pasta. O caminho deverá ficar parecido com `/var/www/seu-projeto`.
@@ -28,7 +30,7 @@ Exemplo:
 composer create-project laravel/laravel seu-projeto
 ```
 
-<hr />
+***
 
 ## Configurando um host local para sua aplicação
 
@@ -48,7 +50,7 @@ Em seguida, adicione a seguinte linha:
 
 Para testar se o novo host está funcionando, você pode acessar `http://seu-projeto.local` no seu navegador, após salvar o arquivo acima.
 
-<hr />
+***
 
 ## Criando um Virtual Host
 
