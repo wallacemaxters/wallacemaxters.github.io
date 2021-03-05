@@ -6,7 +6,7 @@ categories:
 - apache
 - linux
 sitemap: true
-image: "/uploads/mod_rewrite_apache2.png"
+image: "/uploads/covers/apache.png"
 excerpt: Aprenda como habilitar facilmente o mod_rewrite para reescrita de urls do
   Apache2 no Linux.
 
