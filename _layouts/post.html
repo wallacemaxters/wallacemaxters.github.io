@@ -3,17 +3,44 @@ layout: default
 disqus: true
 ---
 
-{% include header.html title=page.title categories=page.categories show_menu=true color=page.color %}
+{% include menu.html show_logo=true class="page-post-header" %}
 
-<section class="section">
+<section class="section post-page">
     <div class="container">
         <div class="columns is-multiline">    
             <div class="column is-12-mobile is-9-desktop">
-                <div class="box post-page-box">
-                    <article class="content">{{ content }}</article>
-
-                    <div style="display: flex; align-items: center;">
-                        
+                <!-- POST -->
+                <article class="card block post-page-article">
+                    <header class="card-content">
+                        <h1 class="title has-text-primary">{{ page.title }}</h1>
+                    </header>
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <img src="{{ page.image }}" alt="{{ page.title | escape }}" title='{{ page.title | escape }}'>
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="columns ">
+                            <span class="column">
+                                <small class="is-size-7">
+                                    Publicado em: <time  datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+                                </small>
+                            </span>
+                            <div class="column has-text-right">
+                                {%- for category in page.categories -%}
+                                    {% assign category_page = site.categorias | where: "label", category | first %}
+                                    {% if category_page %}
+                                        <a href="{{ category_page.url }}" class="tag is-primary is-small">{{ category }}</a>&nbsp;
+                                    {% endif %}
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="content post-page-article-content">{{ content }}</div>
+                    </div>
+                </article>
+                <div class='block'>
+                    <div style="display: flex; align-items: center;">                        
                         <div class="fb-share-button" data-href="{{ page.url }}" data-layout="button" style="vertical-align: top"></div>
                         <span style="flex: 1"></span>
                         <form action="https://www.paypal.com/donate" method="post" target="_top" style="display: inline-block; vertical-align: top">
@@ -27,27 +54,20 @@ disqus: true
 
                     </div>
                 </div>
-
-                <div class="block">
-                    <span>
-                        <small class="is-size-7">Publicado em:</small>
-                        <time class="tag" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
-                    </span>
-                </div>
-                <div class="block">{% include ads_common.html %}</div>
             </div>
-            <div class="column is-12-mobile is-3-desktop">
-                {% include author.html %}
+            <aside class="column is-12-mobile is-3-desktop">
+                <div class="block" style="min-height: 200px">{% include ads_common.html %}</div>
+                {% comment %} {% include author.html %} {% endcomment %}
                 <nav class="block">
-                    <h4 class="title is-5">Artigos relacionados</h4>
-                    <div class="box">{% include related_posts.html  %}</div>
+                    <h4 class="title is-5">Você também pode gostar</h4>
+                    <div class="box">{% include related_posts.html max_posts=page.max_posts  %}</div>
                 </nav>
-                <div class="block">{% include ads_common.html %}</div>
-            </div>
-            {% comment %} 
+                <div class="block" style="min-height: 300px">{% include ads_common.html %}</div>
+            </aside>
+            {% comment %}
             <div class="column is-12-mobile is-9-desktop">
                 {% include disqus.html %}
-            </div> 
+            </div>
             {% endcomment %}
         </div>
     </div>

@@ -151,22 +151,22 @@ Para acessar os nós que possuam com namespace, você deve utilizar o método `c
 
 Assim:
 
-    $xml = 
-    '<root>
-    	<h:table xmlns:h="teste">
-    	  <h:tr>
-    	    <h:td>Maçãs</h:td>
-    	    <h:td>Bananas</h:td>
-    	  </h:tr>
-    	</h:table>
-    </root>';
-    
-    $simple_xml = simplexml_load_string($xml);
-    
-    
-    foreach ($simple_xml->children('h', true)->table->tr->td as $item) {
-    	var_dump((string) $item);
-    }
+```php
+$xml = '<root>
+    <h:table xmlns:h="teste">
+      <h:tr>
+        <h:td>Maçãs</h:td>
+        <h:td>Bananas</h:td>
+      </h:tr>
+    </h:table>
+</root>';
+
+$simple_xml = simplexml_load_string($xml);
+
+foreach ($simple_xml->children('h', true)->table->tr->td as $item) {
+    var_dump((string) $item);
+}
+```
 
 O resultado será
 

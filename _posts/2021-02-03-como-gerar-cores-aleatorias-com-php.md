@@ -7,6 +7,7 @@ categories:
 sitemap: true
 image: "/uploads/php_cores.png"
 excerpt: Aprenda a gerar cores hexadecimais aleatórias através do PHP.
+max_posts: 3
 
 ---
 Muitas vezes, precisamos gerar cores aleatoriamente para utilizar no HTML ou CSS. Nesse tutorial vou ensinar uma maneira de fazer isso com o PHP.
