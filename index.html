@@ -13,7 +13,7 @@ excerpt: "Um blog com dicas, tutoriais e informações sobre programação"
              <div class="card post-card">
                 <header class="card-header">
                     <p class="card-header-title post-card-title">
-                        <a class="title is-6" href="{{ post.url }}" title="{{ post.title | strip_html | escape }}">
+                        <a class="title is-6    " href="{{ post.url }}" title="{{ post.title | strip_html | escape }}">
                            {{ post.title }}
                         </a>
                     </p>
@@ -25,7 +25,7 @@ excerpt: "Um blog com dicas, tutoriais e informações sobre programação"
                     </figure>
                 </a>
                 <div class="card-content post-card-content">
-                    <div class="block post-card-description">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</div>
+                    <a class="block post-card-description" href="{{ post.url }}">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</a>
                     <div class="block">
                         <div class="is-pulled-right is-size-7 has-text-grey">
                             <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y" }}</span>
