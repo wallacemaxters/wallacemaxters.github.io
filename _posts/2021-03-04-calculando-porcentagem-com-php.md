@@ -2,7 +2,7 @@
 layout: post
 color: "#222222"
 title: Calculando porcentagem com PHP
-date: 2021-03-04T00:00:00.000-03:00
+date: 2021-03-05 23:26:00 -0300
 categories:
 - PHP
 - matematica
