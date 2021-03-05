@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como habilitar a reescrita de url no Apache2 no Linux
-date: 2020-11-26 01:00:00 -0200
+date: 2020-11-26T01:00:00.000-02:00
 categories:
 - apache
 - linux
@@ -9,6 +9,7 @@ sitemap: true
 image: "/uploads/covers/apache.png"
 excerpt: Aprenda como habilitar facilmente o mod_rewrite para reescrita de urls do
   Apache2 no Linux.
+color: "#C5FFC3"
 
 ---
 Quando recém instalamos o Apache2, é necessário fazer algumas configurações para que as funcionalidades padrões e mais usadas estejam disponíveis. E, dentre estas funcionalidades, podemos destacar a funcionalidade de reescrita de urls.
