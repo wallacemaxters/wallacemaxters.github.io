@@ -70,3 +70,18 @@ function calcular_desconto($valor, $p_desconto): float
 {
     return $valor - ($valor * $p_desconto / 100); 
 }
+```
+
+
+### Observação importante
+O BRL (moeda Real Brasileiro) possui apenas duas casas decimais, para representação dos Centavos. Talvez seja interessante arredondar o resultado para não ocorrer imprevistos.
+
+Basta utilizar a função `round`
+
+```php
+function calcular_desconto($valor, $p_desconto): float 
+{
+    $resultado = $valor - ($valor * $p_desconto / 100);
+    return round($resultado, 2);
+}
+```
