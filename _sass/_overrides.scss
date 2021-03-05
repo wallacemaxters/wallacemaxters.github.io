@@ -90,17 +90,12 @@ main {
 
 
 .page-post-header{
-    background-color: #222;
-    background-image: linear-gradient(to left, #333, #000);
+    background-color: $black;
+    // background-image: linear-gradient(-45deg, lighten($black, 15%), $black);
 
     > .container{
         display: flex;
-        align-items: center;
-
-        @media (max-width: #{$tablet}) {
-            padding: 1.5rem;
-            flex-direction: column;
-        }
+        // align-items: center;
 
         > ul {
             flex: 1;
@@ -150,7 +145,8 @@ main {
 }
 
 .top-header-menu{
-    display: flex;
+    // display: flex;
+
 
     &.is-absolute{
         position: absolute;
@@ -159,8 +155,23 @@ main {
         width: 100%;
     }
 
+
+    .menu-mobile{
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        height: 100%;
+        align-items: center;
+        display: none;
+        color: $white;
+    }
+
     .logo {
         flex: 0 0 auto;
+        margin-left: 1rem;
+        > img {
+            height: 100%;  
+        }
     }
 
     ul{
@@ -168,6 +179,7 @@ main {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
         > li {
             height: 100%;
             display: flex;
@@ -183,5 +195,39 @@ main {
                 transition: all 500ms ease;
             }
         }
+    }
+
+
+    @include until($tablet){
+        &:not(.is-absolute) {
+            .menu-mobile{
+                display: flex;
+            }
+            ul {
+                position: fixed;
+                z-index: 5;
+                width: 100%;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                background-color: $black;
+                align-items: stretch;
+                justify-content: stretch;
+    
+                transform: translateY(-100%);
+                transition: all 500ms ease;
+    
+                &.active{
+                    transform: translateY(75px);
+                }
+    
+               > li {
+                   height: auto;
+                   > a {
+                       padding: 1rem 3rem;
+                   }
+               }
+            }
+        } 
     }
 }

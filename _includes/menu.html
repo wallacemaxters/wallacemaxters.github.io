@@ -1,7 +1,7 @@
 <nav class="top-header-menu {{ include.class }}">
     <div class="container">
         {% if include.show_logo %}
-            <a href="/" title="Início - {{ site.title }}">
+            <a class="logo" href="/" title="Início - {{ site.title }}">
                 <img src="/assets/img/logo.svg" alt="Wallace maxters" width="70">
             </a>
         {% endif %}
@@ -17,5 +17,15 @@
                 </a>
             </li>
         </ul>
+        <a class='menu-mobile'>
+            <i class="fa fa-bars fa-2x fa-fw"></i>
+        </a>
     </div>
 </nav>
+<script>
+document.querySelector('.menu-mobile').addEventListener('click', function () {
+    var menu = document.querySelector('.top-header-menu ul');
+
+    menu.classList[menu.classList.contains('active') ? 'remove' : 'add']('active')
+})
+</script>
