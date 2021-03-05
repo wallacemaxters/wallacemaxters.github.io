@@ -12,7 +12,7 @@ excerpt: Aprenda como fazer fazer as operações mais comuns para o cálculo de 
   com PHP.
 
 ---
-Uma coisa muito comum para qualquer programador é uma hora ter que fazer cálculos. Dentre eles, o mais comum é o cálculo de porcentagens.
+Uma coisa muito comum para qualquer programador é uma hora ter que fazer cálculos matemáticos. Dentre eles, o mais comum é o cálculo de porcentagens.
 
 Nesse tutorial, estarei falando sobre como calcular porcentagem através do PHP.
 
