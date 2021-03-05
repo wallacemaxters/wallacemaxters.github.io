@@ -7,7 +7,8 @@ categories:
 - PHP
 sitemap: true
 image: "/uploads/covers/php.png"
-excerpt: ''
+excerpt: Aprenda como fazer fazer as operações mais comuns para o cálculo de porcentagem
+  com PHP.
 
 ---
 ## Descobrindo a porcentagem entre dois números
