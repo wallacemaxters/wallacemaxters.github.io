@@ -67,7 +67,7 @@ Opcionalmente, você pode até criar uma função para facilitar cálculos futur
 Código:
 
 ```php
-function calcular_desconto($valor, $p_desconto): float 
+function calcular_desconto(float $valor, float $p_desconto): float 
 {
     return $valor - ($valor * $p_desconto / 100); 
 }
@@ -80,7 +80,7 @@ O BRL (moeda Real Brasileiro) possui apenas duas casas decimais, que representam
 Para fazer isso, basta utilizar a função `round`
 
 ```php
-function calcular_desconto($valor, $p_desconto): float 
+function calcular_desconto(float $valor, float $p_desconto): float 
 {
     $resultado = $valor - ($valor * $p_desconto / 100);
     return round($resultado, 2);
