@@ -27,7 +27,7 @@ var_dump($resultado); // int(12.5)
 Podemos criar então uma função que faça esse trabalho:
 
 ```php
-function descobrir_porcentagem($valor_base, $valor): float
+function descobrir_porcentagem(float $valor_base, float $valor): float
 {
      return $valor / $valor_base * 100;
 }
