@@ -5,6 +5,7 @@ title: Calculando porcentagem com PHP
 date: 2021-03-04T00:00:00.000-03:00
 categories:
 - PHP
+- matematica
 sitemap: true
 image: "/uploads/covers/php.png"
 excerpt: Aprenda como fazer fazer as operações mais comuns para o cálculo de porcentagem
