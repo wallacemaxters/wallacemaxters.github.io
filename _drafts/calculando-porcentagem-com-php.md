@@ -41,3 +41,8 @@ $valor = 3000;
 $porcentagem = 15;
 $resultado = $valor * ($porcentagem / 100);
 var_dump($resultado); // float(450)
+```
+
+## Calculando a porcentagem de desconto
+
+Se quisermos subtrair o desconto de uma determinada porcentagem, basta fazer o mesmo cálculo anterior
