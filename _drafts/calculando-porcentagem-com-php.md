@@ -5,7 +5,7 @@ title: Calculando porcentagem com PHP
 date: 2021-03-04T00:00:00.000-03:00
 categories:
 - PHP
-sitemap: false
+sitemap: true
 image: "/uploads/covers/php.png"
 excerpt: ''
 
@@ -48,4 +48,14 @@ var_dump($resultado); // float(450)
 
 Se quisermos subtrair o desconto de uma determinada porcentagem, basta fazer o mesmo cálculo anterior e subtrair pelo valor base.
 
-Por exemplo, um desconto de 15% de 5000
+Por exemplo, um desconto de 15% sobre 1000 será de 150, o que fará com que o valor final seja 850.
+
+Podemos fazer esse cálculo assim:
+
+
+```php
+$valor = 1000;
+$porcentagem = 15;
+$resultado = $valor - ($valor * ($porcentagem / 100));
+var_dump($resultado); // float(450)
+```
