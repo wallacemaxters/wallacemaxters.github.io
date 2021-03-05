@@ -25,7 +25,8 @@ var_dump($resultado); // int(12.5)
 Podemos criar então uma função que faça esse trabalho:
 
 ```php
-function descobrir_porcentagem($a, $b) {
+function descobrir_porcentagem($a, $b): float
+{
      return ($b/$a) * 100;
 }
 
@@ -48,7 +49,7 @@ var_dump($resultado); // float(450)
 
 Se quisermos subtrair o desconto de uma determinada porcentagem, basta fazer o mesmo cálculo anterior e subtrair pelo valor base.
 
-Por exemplo, um desconto de 15% sobre 1000 será de 150, o que fará com que o valor final seja 850.
+Por exemplo, um desconto de 15% sobre 1000 será de 150, o que fará com que o valor final seja 850. Sendo assim, precisamos encontrar a porcentagem do valor base e subtrair o valor base pelo resultado da porcentagem encontrada.
 
 Podemos fazer esse cálculo assim:
 
@@ -56,6 +57,16 @@ Podemos fazer esse cálculo assim:
 ```php
 $valor = 1000;
 $porcentagem = 15;
-$resultado = $valor - ($valor * ($porcentagem / 100));
-var_dump($resultado); // float(450)
+$resultado = $valor - ($valor * $porcentagem / 100);
+var_dump($resultado); // float(850)
 ```
+
+Opcionalmente, você pode até criar uma função para facilitar cálculos futuros.
+
+Código:
+
+```php
+function calcular_desconto($valor, $p_desconto): float 
+{
+    return $valor - ($valor * $p_desconto / 100); 
+}
