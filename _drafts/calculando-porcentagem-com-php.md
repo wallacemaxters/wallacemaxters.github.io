@@ -12,12 +12,12 @@ excerpt: ''
 ---
 ## Descobrindo a porcentagem entre dois números
 
-Você precisa dividir o valor A pelo B e multiplicar por 100. Por exemplo, se você deseja saber a porcentagem de 500 sobre 4000, basta fazer. O resultado esperado é 12.5%.
+Você precisa dividir o valor que deseja descobrir a porcentagem pelo valor base e multiplicar por 100. Por exemplo, se você deseja saber a porcentagem de 500 sobre 4000, basta fazer. O resultado esperado é 12.5%.
 
 ```php
-$valor1 = 4000;
-$valor2 = 500;
-$resultado = ($valor2 / $valor1) * 100;
+$valor_base = 4000;
+$valor = 500;
+$resultado = ($valor / $valor_base) * 100;
 
 var_dump($resultado); // int(12.5)
 ```
@@ -25,9 +25,9 @@ var_dump($resultado); // int(12.5)
 Podemos criar então uma função que faça esse trabalho:
 
 ```php
-function descobrir_porcentagem($a, $b): float
+function descobrir_porcentagem($valor_base, $valor): float
 {
-     return ($b/$a) * 100;
+     return $valor / $valor_base * 100;
 }
 
 var_dump(descobrir_porcentagem (4000, 500)); // float(12.5)
@@ -53,7 +53,6 @@ Por exemplo, um desconto de 15% sobre 1000 será de 150, o que fará com que o v
 
 Podemos fazer esse cálculo assim:
 
-
 ```php
 $valor = 1000;
 $porcentagem = 15;
@@ -72,8 +71,8 @@ function calcular_desconto($valor, $p_desconto): float
 }
 ```
 
-
 ### Observação importante
+
 O BRL (moeda Real Brasileiro) possui apenas duas casas decimais, para representação dos Centavos. Talvez seja interessante arredondar o resultado para não ocorrer imprevistos.
 
 Basta utilizar a função `round`
