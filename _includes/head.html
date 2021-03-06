@@ -26,9 +26,11 @@
 
     <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
 
-    {% assign og_image = page.image %}
+    {% assign og_image = "/assets/img/square_logo.png" %}
     {% if page.og_image %}
         {% assign og_image = page.og_image %}
+    {% elsif page.image %}
+        {% assign og_image = page.image %}
     {% endif %}
 
     <meta property="og:image" content="{{ og_image | prepend: site.url }}" />

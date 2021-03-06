@@ -1,37 +1,48 @@
 ---
-layout: page
-image: "/uploads/covers/code.jpg"
+layout: tools
+image: "/uploads/covers/time_is_money.jpg"
 show_menu: true
 sitemap: false
 title: "Calcular o valor da hora"
-excerpt: ''
+excerpt: 'Se você é freelancer e/ou costuma cobrar pelo valor da hora trabalhada, essa ferramenta poderá ajudar você a calcular o valor das horas.'
 ---
-<div class="container">
-    <div class="">
-        <div class="columns">
-            <div class="column is-12 is-3-desktop">
-                <div class="field">
-                    <label class="label">Valor</label>
-                    <input placeholder="valor da hora" oninput="calcularHoras()" type="number" class="input" id='money' min="0" step="0.01">
-                </div>
-            </div>
-            <div class="column is-12 is-4-desktop">
-                <div class="field">
-                    <label class="label">Hora</label>
-                    <input placeholder="hora" oninput="calcularHoras()" maxlength="8" type="text" class="input" placeholder="Hora" id='time'>
-                </div>
-            </div>
-            <div class="column is-12 is-4-desktop">
-                <label for="" class="label">Resultado</label>
-                <div id='result'></div>
+
+<div class="box">
+    <div class="columns is-multiline">
+        <div class="column is-12 is-3-desktop">
+            <div class="field">
+                <label class="label">Valor</label>
+                <input placeholder="valor da hora" type="number" class="input" id='money' min="0" step="0.01">
             </div>
         </div>
-        {% include ads_common.html %}
+        <div class="column is-12 is-4-desktop">
+            <div class="field">
+                <label class="label">Horas</label>
+                <input placeholder="hora" maxlength="8" type="text" class="input" placeholder="00:00:00" id='time'>
+            </div>
+        </div>
+        <div class="column is-12 is-4-desktop">
+            <label for="" class="label">Resultado</label>
+            <div id='result'></div>
+        </div>
     </div>
+</div>
+<div class="columns">
+    <div class="column">{% include ads_common.html %}</div>
+    <div class="column">{% include ads_common.html %}</div>
 </div>
 
 <script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
 <script>
+
+document.addEventListener('input', function (e) {
+    if (e.target.matches('#money') || e.target.matches('#time')) {
+        setTimeout(calcularHoras)
+    }
+})
+
+console.log('teste')
+
 function calcularHoras() {
 
     var inputTime = document.querySelector('#time')
@@ -46,11 +57,11 @@ function calcularHoras() {
 
     var hour = time[0] + (time[1] / 60) + (time[2] / 3600);
 
-    var totalMoney = parseInt(inputMoney.value) * hour;
+    var totalMoney = parseFloat(inputMoney.value) * hour;
 
     result.innerHTML = 'R$ ' + totalMoney.toFixed(2).replace('.', ',')
 }
 
+
 VMasker(document.querySelector("#time")).maskPattern("99:99:99");
 </script>
-

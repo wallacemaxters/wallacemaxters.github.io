@@ -6,7 +6,7 @@ layout: default
 {% assign ads_count_show = 3 %}
 
 
-{% include header.html title=page.title excerpt=page.excerpt show_menu=true color=page.color %}
+{% include hero.html title=page.title subtitle=page.excerpt image=page.image %}
 
 <div class="section">
     <div class="container">
@@ -17,15 +17,8 @@ layout: default
                 <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
             </ul>
         </nav>
-        <!-- {% if content %}
-            <div class="box">
-                <h2 class="title is-4">{{ page.subtitle }}</h2>
-                {{ content }}
-            </div>
-        {% endif %} -->
         <h2 class="title is-5">Publicações ({{ sorted_posts | size }})</h2>
         <div class="columns is-multiline">
-            
             {% for post in sorted_posts %}
                 {% if count == ads_count_show %}
                     {% assign count = 0 %}

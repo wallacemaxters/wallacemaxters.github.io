@@ -1,31 +1,27 @@
-<nav class="top-header-menu {{ include.class }}">
+<nav class="navbar {{ include.theme }}">
     <div class="container">
-        {% if include.show_logo %}
-            <a class="logo" href="/" title="Início - {{ site.title }}">
-                <img src="/assets/img/logo.svg" alt="Wallace maxters" width="70">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/" title="Wallace Maxters">
+                <img src="{{ site.logo }}" alt="Wallace Maxters" title="Wallace Maxters"> 
             </a>
-        {% endif %}
-        <ul>
-            <li>
-                <a href="/" class="has-text-white">
-                    Início
+            <span class="navbar-burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item is-active" href="/" title="Página inicial">
+                    Home
                 </a>
-            </li>
-            <li>
-                <a href="/categorias" class="has-text-white">
-                    Categorias
+                <a class="navbar-item" href="/categorias" title="Categorias">
+                    <!-- <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span> -->
+                    <span>Categorias</span>
                 </a>
-            </li>
-        </ul>
-        <a class='menu-mobile'>
-            <i class="fa fa-bars fa-2x fa-fw"></i>
-        </a>
+            </div>
+        </div>
     </div>
 </nav>
-<script>
-document.querySelector('.menu-mobile').addEventListener('click', function () {
-    var menu = document.querySelector('.top-header-menu ul');
-
-    menu.classList[menu.classList.contains('active') ? 'remove' : 'add']('active')
-})
-</script>
