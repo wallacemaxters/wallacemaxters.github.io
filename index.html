@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 image: /assets/img/bg.jpg
 title: "Wallace <span class='has-text-primary'>Maxters</span>"
 excerpt: "Um blog com dicas, tutoriais e informações sobre programação e desenvolvimento web"
@@ -7,39 +7,43 @@ og_image: "/assets/img/logo.svg"
 ---
 
 
-<h2 class="title is-5">Publicações recentes ({{ site.posts.size }})</h2>
-<div class="columns is-multiline">
-    {% for post in site.posts %}
-        <article class="column is-12-mobile is-6-tablet is-4-desktop">
-             <div class="card post-card">
-                <a class="card-image" href="{{ post.url }}">
-                    <figure class="image is-4by3 post-card-cover" style="background-color: {{ post.color }}">
-                        <img loading="lazy" height="280" src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
-                    </figure>
-                    <header class="post-card-header-overlay">
-                        <h4 class="title is-6 has-text-white">{{ post.title }}</h4>
-                    </header>
-                </a>
-                <div class="card-content post-card-content">
-                    <a class="block post-card-description" href="{{ post.url }}">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</a>
-                    <div class="block">
-                        <div class="is-pulled-right is-size-7 has-text-grey">
-                            <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y" }}</span>
+{% include header.html title=page.title subtitle=page.excerpt %}
+
+<section class="section" style="flex: 2">
+    <div class="container">
+        <h2 class="title is-5">Publicações recentes ({{ site.posts.size }})</h2>
+        <div class="columns is-multiline">
+            {% for post in site.posts %}
+                <article class="column is-12-mobile is-6-tablet is-4-desktop">
+                     <div class="card post-card">
+                        <a class="card-image" href="{{ post.url }}">
+                            <figure class="image is-4by3 post-card-cover" style="background-color: {{ post.color }}">
+                                <img loading="lazy" height="280" src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
+                            </figure>
+                            <header class="post-card-header-overlay">
+                                <h4 class="title is-6 has-text-white">{{ post.title }}</h4>
+                            </header>
+                        </a>
+                        <div class="card-content post-card-content">
+                            <a class="block post-card-description" href="{{ post.url }}">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</a>
+                            <div class="block">
+                                <div class="is-pulled-right is-size-7 has-text-grey">
+                                    <span class="tag is-primary">{{ post.date | date: "%d/%m/%Y" }}</span>
+                                </div>
+                                {% for category in post.categories %}
+                                    {% assign category_page = site.categorias | where: "label", category | first %}
+                                    {% if category_page %}
+                                        <a class="tag is-danger" href="{{ category_page.url }}">{{ category }}</a>
+                                    {% else %}
+                                        <div class="tag">{{ category }}</div>
+                                    {% endif %}
+                                
+                                {% endfor %}
+                            </div>
                         </div>
-                        {% for category in post.categories %}
-                            {% assign category_page = site.categorias | where: "label", category | first %}
-                            {% if category_page %}
-                                <a class="tag is-danger" href="{{ category_page.url }}">{{ category }}</a>
-                            {% else %}
-                                <div class="tag">{{ category }}</div>
-                            {% endif %}
-                        
-                        {% endfor %}
                     </div>
-                </div>
-            </div>
-        </article>
-    {% endfor %}
-</div>
-<!-- ads common -->
-{% include ads_common.html %}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

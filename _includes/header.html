@@ -6,22 +6,12 @@
         <div class="top-header-content">
             <div class="container">
                 <div class="block" style="max-width: 600px; margin-left: auto; margin-right: auto; ">
-                    <img src="/assets/img/logo.svg" class="image is-inline-flex is-128x128"> 
+                    <img src="{{ site.logo }}" class="image is-inline-flex block" width="128"> 
                     <h1 class="title is-3 has-text-white">{{ include.title }}</h1>
-                    {% if include.excerpt %}
-                        <div class="subtitle has-text-white">{{ include.excerpt }}</div>
+                    {% if include.subtitle %}
+                        <div class="subtitle has-text-white">{{ include.subtitle }}</div>
                     {% endif %}
                 </div>
-                {%- if include.categories | size -%}
-                    <div class="block has-text-white">
-                        {%- for category in include.categories -%}
-                            {% assign category_page = site.categorias | where: "label", category | first %}
-                            {% if category_page %}
-                                <a href="{{ category_page.url }}" class="tag is-primary is-medium">{{ category }}</a>&nbsp;
-                            {% endif %}
-                        {%- endfor -%}
-                    </div>
-                {%- endif -%}
             </div>
         </div>
     </div>
