@@ -5,7 +5,7 @@ date: 2019-03-17 03:00:00 +0000
 categories:
 - HTML
 sitemap: true
-image: "/uploads/covers/html.jpg"
+image: "/uploads/html.jpg"
 
 ---
 Já aconteceu de eu montar um formulário com vários botões, para realizar ações como adição de um arquivo ou liberar a visualização de um campo e, mesmo estes botões não tendo o atributo `type="submit"`, os mesmos agiam como se fossem um botão de submissão formulário.
