@@ -40,7 +40,7 @@ O artisan estará rodando em `http://192.168.0.102:8000`.
 Esse último exemplo é muito útil caso você queria testar a sua aplicação a partir de outro dispositivo conectado na mesma rede, como um celular, table ou notebook. Ao acessar o endereço IP e a porta, você terá acesso à aplicação.
 
 <!-- ads common -->
-{% include ads_common.html %}
+{% include ads_article.html %}
 
 ## Vinculando o Artisan Serve a um domínio local
 
