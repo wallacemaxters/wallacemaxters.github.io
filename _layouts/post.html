@@ -8,12 +8,12 @@ disqus: true
 <section class="section post-page">
     <div class="container">
 
+        <header class="block">
+            <h1 class="title has-text-primary">{{ page.title }}</h1>
+        </header>
         <div class="columns is-multiline">    
             <div class="column is-12-mobile is-9-desktop">
                 <!-- POST -->
-                <header class="block">
-                    <h1 class="title has-text-primary">{{ page.title }}</h1>
-                </header>
                 <article class="card block post-page-article">
                     <div class="card-image">
                         <figure class="image is-4by3">
@@ -57,13 +57,16 @@ disqus: true
                 </div>
             </div>
             <aside class="column is-12-mobile is-3-desktop">
-                <div class="block" style="min-height: 200px">{% include ads_common.html %}</div>
-                {% comment %} {% include author.html %} {% endcomment %}
+                <div class="block">{% include ads_common.html %}</div>
                 <nav class="block">
-                    <h4 class="title is-5">Você também pode gostar</h4>
-                    <div class="box">{% include related_posts.html max_posts=page.max_posts  %}</div>
+                    <h4 class="title is-6 has-text-primary">Veja também</h4>
+                    <div class="box">{% include related_posts.html max_posts=page.max_posts %}</div>
                 </nav>
-                <div class="block" style="min-height: 300px">{% include ads_common.html %}</div>
+                <div class="block">{% include ads_common.html %}</div>
+                {% comment %} <div class="block">
+                    <h4 class="title is-5 has-text-primary">Publicado por</h4>
+                    {% include author.html %}
+                </div> {% endcomment %}
             </aside>
             
             <div class="column is-12-mobile is-9-desktop">
