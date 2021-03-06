@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Wallace Maxters
+logo: /assets/img/logo.svg#default
+white_logo: /assets/img/logo.svg#white
 email: wallacemaxters@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Um blog com dicas, tutoriais e informações sobre programação e desenvolvimento web
