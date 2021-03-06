@@ -108,28 +108,13 @@ main {
             text-align: center;
             flex-direction: column;
 
-            
+            > .container {
+                flex-grow: 0;
+            }    
         }
     }
 }
 
-
-
-
-
-.page-post-header{
-    background-color: $black;
-    // background-image: linear-gradient(-45deg, lighten($black, 15%), $black);
-
-    > .container{
-        display: flex;
-        // align-items: center;
-
-        > ul {
-            flex: 1;
-        }
-    }
-}
 
 
 .post-page {
@@ -172,90 +157,80 @@ main {
     }
 }
 
-.top-header-menu{
-    // display: flex;
+// .top-header-menu{
+
+//     .menu-mobile{
+//         position: absolute;
+//         right: 1rem;
+//         top: 0;
+//         height: 100%;
+//         align-items: center;
+//         display: none;
+//         color: $white;
+//     }
+
+//     .logo {
+//         flex: 0 0 auto;
+//         margin-left: 1rem;
+//         > img {
+//             height: 100%;  
+//         }
+//     }
+
+//     ul{
+
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
+
+//         > li {
+//             height: 100%;
+//             display: flex;
+//             align-items: center;
+//             height: 80px;
+//             &:hover{
+//                 background-color: rgba(0, 0, 0, 0.8);
+//             }
+
+//             > a {
+//                 padding: 1rem;
+//                 display: block;
+//                 transition: all 500ms ease;
+//             }
+//         }
+//     }
 
 
-    &.is-absolute{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-
-
-    .menu-mobile{
-        position: absolute;
-        right: 1rem;
-        top: 0;
-        height: 100%;
-        align-items: center;
-        display: none;
-        color: $white;
-    }
-
-    .logo {
-        flex: 0 0 auto;
-        margin-left: 1rem;
-        > img {
-            height: 100%;  
-        }
-    }
-
-    ul{
-
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        > li {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            height: 80px;
-            &:hover{
-                background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            > a {
-                padding: 1rem;
-                display: block;
-                transition: all 500ms ease;
-            }
-        }
-    }
-
-
-    @include until($tablet){
-        &:not(.is-absolute) {
-            .menu-mobile{
-                display: flex;
-            }
-            ul {
-                position: fixed;
-                z-index: 5;
-                width: 100%;
-                flex-direction: column;
-                top: 0;
-                left: 0;
-                background-color: $black;
-                align-items: stretch;
-                justify-content: stretch;
+//     @include until($tablet){
+//         &:not(.is-absolute) {
+//             .menu-mobile{
+//                 display: flex;
+//             }
+//             ul {
+//                 position: fixed;
+//                 z-index: 5;
+//                 width: 100%;
+//                 flex-direction: column;
+//                 top: 0;
+//                 left: 0;
+//                 background-color: $black;
+//                 align-items: stretch;
+//                 justify-content: stretch;
     
-                transform: translateY(-100%);
-                transition: all 500ms ease;
+//                 transform: translateY(-100%);
+//                 transition: all 500ms ease;
     
-                &.active{
-                    transform: translateY(75px);
-                }
+//                 &.active{
+//                     transform: translateY(75px);
+//                 }
     
-               > li {
-                   height: auto;
-                   > a {
-                       padding: 1rem 3rem;
-                   }
-               }
-            }
-        } 
-    }
-}
+//                > li {
+//                    height: auto;
+//                    > a {
+//                        padding: 1rem 3rem;
+//                    }
+//                }
+//             }
+//         } 
+//     }
+// }
