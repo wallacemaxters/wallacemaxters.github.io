@@ -17,7 +17,7 @@ Nesse tutorial, estarei ensinando como utilizar o [ngrok](https://ngrok.com/down
 Antes de iniciar o `php artisan serve`, você deve executar o comando `ngrok` apontando para a porta em que será usada pelo Laravel. Geralmente, ele usa `8000` por padrão.
 
 ```bash
-ngrok http 8000
+$ ngrok http 8000
 ```
 
 O `ngrok` irá exibir o seu subdomínio onde a aplicação será exibida.
@@ -59,7 +59,7 @@ Agora que, você já pode iniciar o servidor do Laravel.
 Execute:
 
 ```bash
- php artisan serve
+ $ php artisan serve
 ```
 
 O ngork agora fará um tunel para sua aplicação rodada em `localhost:8000`. 
