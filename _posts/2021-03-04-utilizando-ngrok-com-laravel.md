@@ -18,7 +18,7 @@ O [NGROK](https://ngrok.com/download) é um serviço gratuito que permite ao des
 
 Nesse tutorial, estarei ensinando como utilizar o NGROK para expôr sua aplicação Laravel local para Web.
 
-## Iniciando o ngrok
+## Iniciando o NGROK
 
 Antes de iniciar o `php artisan serve`, você deve executar o comando NGROK apontando para a porta em que será usada pelo Laravel. Geralmente, ele usa `8000` por padrão.
 
