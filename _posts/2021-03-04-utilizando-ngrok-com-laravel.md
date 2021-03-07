@@ -7,7 +7,9 @@ categories:
 - laravel
 sitemap: true
 image: "/uploads/laravel_ngrok.png"
-excerpt: Aprenda a configurar o NGROK para expôr uma aplicação Laravel na web
+excerpt: 'NGROK é um serviço gratuito que permite ao desenvolvedor abrir um túnel
+  que exporá os serviços executados localmente para a web. Nesse tutorial, estarei
+  ensinando como usar o ngrok para expôr sua aplicação Laravel para web. '
 
 ---
 ## O que é NGROK?
