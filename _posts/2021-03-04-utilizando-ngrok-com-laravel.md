@@ -10,6 +10,10 @@ image: "/uploads/laravel_ngrok.png"
 excerpt: Aprenda a configurar o NGROK para expôr uma aplicação Laravel na web
 
 ---
+## O que é NGROK?
+
+É um serviço gratuito que permite ao desenvolvedor abrir um túnel que exporá serviços executados localmente em sua máquina para a web.
+
 Nesse tutorial, estarei ensinando como utilizar o [ngrok](https://ngrok.com/download) para expôr sua aplicação Laravel local para Web.
 
 ## Iniciando o ngrok
@@ -62,7 +66,7 @@ Execute:
  $ php artisan serve
 ```
 
-O ngork agora fará um tunel para sua aplicação rodada em `localhost:8000`. 
+O ngork agora fará um tunel para sua aplicação rodada em `localhost:8000`.
 
 **Observação**: Esse passo de inicialização do servidor foi adicionando por último no tutorial, porque, se você editar o arquivo `.env` depois de ter iniciado o `php artisan serve`, você precisará parar e iniciar de novo, para que as configurações sejam carregadas.
 
