@@ -6,8 +6,8 @@ date: 2021-03-04T00:00:00.000-03:00
 categories:
 - laravel
 sitemap: true
-image: '/uploads/laravel_ngrok.png'
-excerpt: 'Aprenda a configurar o NGROK para expôr uma aplicação Laravel na web'
+image: "/uploads/laravel_ngrok.png"
+excerpt: Aprenda a configurar o NGROK para expôr uma aplicação Laravel na web
 
 ---
 Nesse tutorial, estarei ensinando como utilizar o [ngrok](https://ngrok.com/download) para expôr sua aplicação Laravel local para Web.
