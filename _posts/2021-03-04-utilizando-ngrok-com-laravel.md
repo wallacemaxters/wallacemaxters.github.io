@@ -68,7 +68,7 @@ Execute:
  $ php artisan serve
 ```
 
-O ngork agora fará um tunel para sua aplicação rodada em `localhost:8000`.
+O NGROK agora fará um tunel para sua aplicação rodada em `localhost:8000`.
 
 **Observação**: Esse passo de inicialização do servidor foi adicionando por último no tutorial, porque, se você editar o arquivo `.env` depois de ter iniciado o `php artisan serve`, você precisará parar e iniciar de novo, para que as configurações sejam carregadas.
 
