@@ -51,8 +51,11 @@ Edite seu arquivo `.env` e modifique a variável `APP_URL`
 APP_URL=https://seu-hash.ngrok.io/
 ```
 
-E no seu arquivo `AppServiceProvider` e adicione a seguinte linha 
+E no seu arquivo `AppServiceProvider` e adicione a seguinte linha dentro do método `boot`
 
 ```php
-\URL::forceRootUrl(config('app.url'));
+public function boot()
+{
+	\URL::forceRootUrl(config('app.url'));
+}
 ```
