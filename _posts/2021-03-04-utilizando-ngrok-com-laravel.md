@@ -14,7 +14,7 @@ excerpt: 'NGROK é um serviço gratuito que permite ao desenvolvedor abrir um t�
 ---
 ## O que é NGROK?
 
-É um serviço gratuito que permite ao desenvolvedor abrir um túnel que exporá serviços executados localmente em sua máquina para a web.
+É um serviço gratuito que permite ao desenvolvedor abrir um túnel que tornará exposto na web os serviços executados localmente.
 
 Nesse tutorial, estarei ensinando como utilizar o [ngrok](https://ngrok.com/download) para expôr sua aplicação Laravel local para Web.
 
