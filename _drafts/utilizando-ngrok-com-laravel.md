@@ -12,7 +12,7 @@ excerpt: ''
 ---
 Nesse tutorial, estarei ensinando como utilizar o [ngrok](https://ngrok.com/download) para expôr sua aplicação Laravel local para Web.
 
-## Configurando as urls do Laravel
+## Iniciando a aplicação e o ngrok
 
 O primeiro passo é iniciar o Laravel.
 
