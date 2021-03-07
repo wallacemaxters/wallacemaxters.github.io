@@ -5,7 +5,7 @@ title: Utilizando ngrok com Laravel
 date: 2021-03-04T00:00:00.000-03:00
 categories:
 - laravel
-sitemap: false
+sitemap: true
 image: ''
 excerpt: ''
 
@@ -43,13 +43,15 @@ Forwarding                    https://seu-hash.ngrok.io -> http://localhost:8000
 
 ## Configurando a URL base da aplicação
 
+É necessário forçar a url raiz da sua aplicação, para afetar o funcionamento das funções `url` e `asset`, pois por padrão o apontamento não será feito para a url do ngrok;
+
 Edite seu arquivo `.env` e modifique a variável `APP_URL`
 
 ```env
 APP_URL=https://seu-hash.ngrok.io/
 ```
 
-É necessário forçar a url raiz da sua aplicação, para afetar o funcionamento das funções `url` e `asset` .
+E no seu arquivo `AppServiceProvider` e adicione a seguinte linha 
 
 ```php
 \URL::forceRootUrl(config('app.url'));
