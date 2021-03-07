@@ -12,20 +12,13 @@ excerpt: Aprenda a configurar o NGROK para expôr uma aplicação Laravel na web
 ---
 Nesse tutorial, estarei ensinando como utilizar o [ngrok](https://ngrok.com/download) para expôr sua aplicação Laravel local para Web.
 
-## Iniciando a aplicação e o ngrok
+## Iniciando o ngrok
 
-O primeiro passo é iniciar o Laravel.
-
-```bash
- php artisan serve
-```
-
-Em seguida, execute o comando `ngrok` apontando para a porta em que o `php artisan serve` está utilizando. Geralmente, ele usa `8000` por padrão.
+Antes de iniciar o `php artisan serve`, você deve executar o comando `ngrok` apontando para a porta em que será usada pelo Laravel. Geralmente, ele usa `8000` por padrão.
 
 ```bash
 ngrok http 8000
 ```
-> **Nota**: Você também pode [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve), caso deseje.
 
 O `ngrok` irá exibir o seu subdomínio onde a aplicação será exibida.
 
@@ -58,3 +51,15 @@ public function boot()
 	\URL::forceRootUrl(config('app.url'));
 }
 ```
+
+## Iniciando o servidor do Laravel
+
+Agora, você já pode iniciar o servidor do Laravel.
+
+Execute:
+
+```bash
+ php artisan serve
+```
+
+> **Nota**: Você também pode [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve), caso deseje.
