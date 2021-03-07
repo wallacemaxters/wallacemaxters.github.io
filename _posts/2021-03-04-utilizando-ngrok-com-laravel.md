@@ -41,7 +41,7 @@ Forwarding                    https://seu-hash.ngrok.io -> http://localhost:8000
 
 ## Configurando a URL base da aplicação
 
-É necessário forçar a url raiz da sua aplicação, para afetar o funcionamento das funções `url` e `asset`, pois por padrão o apontamento não será feito para a url do ngrok;
+É necessário forçar a url raiz da sua aplicação, para afetar o funcionamento das funções `url` e `asset`, pois por padrão o apontamento não será feito para a url do NGROK.
 
 Edite seu arquivo `.env` e modifique a variável `APP_URL`
 
