@@ -26,7 +26,7 @@ Antes de iniciar o `php artisan serve`, você deve executar o comando NGROK apon
 $ ngrok http 8000
 ```
 
-O `ngrok` irá exibir o seu subdomínio onde a aplicação será exibida.
+O NGROK irá exibir o seu subdomínio onde a aplicação será exibida.
 
 Exemplo:
 
