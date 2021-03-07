@@ -74,4 +74,4 @@ O NGROK agora fará um tunel para sua aplicação rodada em `localhost:8000`.
 
 ### Outras dicas
 
-Se por algum motivo você precisar iniciar o `ngrok` e o `artisan serve` em outra porta, é possível [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve).
+Se por algum motivo você precisar iniciar o NGROK e o `artisan serve` em outra porta, é possível [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve).
