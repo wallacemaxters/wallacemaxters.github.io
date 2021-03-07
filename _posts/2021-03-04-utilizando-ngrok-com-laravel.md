@@ -2,7 +2,7 @@
 layout: post
 color: "#222222"
 title: Utilizando ngrok com Laravel
-date: 2021-03-04T00:00:00.000-03:00
+date: 2021-03-07 04:45:00 -0300
 categories:
 - laravel
 sitemap: true
