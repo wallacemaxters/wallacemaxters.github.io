@@ -39,16 +39,7 @@ function clearHtml() {
         // remove all attributes
         [].slice.call(child.attributes).map(function (attr) {
             child.removeAttribute(attr.name);
-        })
-
-        // beautify
-        /**
-        child.innerHTML = child.innerHTML.trim()
-        console.log(child.innerHTML)
-        var tabs = new Array(deep).join('    ');
-        child.insertAdjacentHTML('beforebegin', '\n' + tabs);
-        child.insertAdjacentHTML('afterend', tabs);
-        **/
+        });
     })
 
     document.querySelector('#html-result').value = div.innerHTML;
