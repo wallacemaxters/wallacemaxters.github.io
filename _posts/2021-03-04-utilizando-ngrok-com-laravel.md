@@ -1,6 +1,6 @@
 ---
 layout: post
-color: "#222222"
+color: "#7ED321"
 title: Utilizando ngrok com Laravel
 date: 2021-03-07 04:45:00 -0300
 categories:
