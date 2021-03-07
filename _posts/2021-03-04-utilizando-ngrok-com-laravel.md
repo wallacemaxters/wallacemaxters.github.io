@@ -39,7 +39,7 @@ Forwarding                    https://seu-hash.ngrok.io -> http://localhost:8000
 
 Edite seu arquivo `.env` e modifique a variável `APP_URL`
 
-```env
+```config
 APP_URL=https://seu-hash.ngrok.io/
 ```
 
