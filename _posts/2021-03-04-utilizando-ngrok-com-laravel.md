@@ -54,7 +54,7 @@ public function boot()
 
 ## Iniciando o servidor do Laravel
 
-Agora, você já pode iniciar o servidor do Laravel.
+Agora que, você já pode iniciar o servidor do Laravel.
 
 Execute:
 
@@ -62,4 +62,10 @@ Execute:
  php artisan serve
 ```
 
-> **Nota**: Você também pode [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve), caso deseje.
+O ngork agora fará um tunel para sua aplicação rodada em `localhost:8000`. 
+
+**Observação**: Esse passo de inicialização do servidor foi adicionando por último no tutorial, porque, se você editar o arquivo `.env` depois de ter iniciado o `php artisan serve`, você precisará parar e iniciar de novo, para que as configurações sejam carregadas.
+
+### Outras dicas
+
+Se por algum motivo você precisar iniciar o `ngrok` e o `artisan serve` em outra porta, é possível [especificar a porta do artisan serve](/blog/2020/12/24/como-definir-a-porta-usada-no-php-artisan-serve).
