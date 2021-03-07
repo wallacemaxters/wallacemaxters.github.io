@@ -8,7 +8,7 @@ categories:
 sitemap: true
 image: "/uploads/laravel_ngrok.png"
 excerpt: 'NGROK é um serviço gratuito que permite ao desenvolvedor abrir um túnel
-  que exporá os serviços executados localmente para a web. Nesse tutorial, estarei
+  que tornará exposto na web os serviços executados localmente. Nesse tutorial, estarei
   ensinando como usar o ngrok para expôr sua aplicação Laravel para web. '
 
 ---
