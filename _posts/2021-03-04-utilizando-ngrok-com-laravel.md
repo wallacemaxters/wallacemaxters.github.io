@@ -48,7 +48,7 @@ E no seu arquivo `AppServiceProvider` e adicione a seguinte linha dentro do mét
 ```php
 public function boot()
 {
-	\URL::forceRootUrl(config('app.url'));
+     \URL::forceRootUrl(config('app.url'));
 }
 ```
 
