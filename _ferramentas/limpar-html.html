@@ -1,0 +1,66 @@
+---
+layout: tools
+image: "/uploads/covers/time_is_money.jpg"
+show_menu: true
+sitemap: false
+title: "Limpar HTML On-line"
+excerpt: 'Ferramenta para limpar o seu código HTML, removendo todos os atributos das tags'
+---
+
+
+<div class="columns">
+    <div class="column is-12 is-6-desktop">
+        <div class="box">
+            <h2 class='title'>Cole o HTML</h2>
+            <textarea rows="20" class="textarea" id="input-html"></textarea>
+        </div>
+    </div>
+    <div class="column">
+        <div class="box">
+            <h3 class='title'>Resultado</h3>
+            <textarea rows="20" class="textarea" readonly id="html-result"></textarea>
+        </div>
+    </div>
+</div>
+
+
+<script>
+function clearHtml() {
+
+    var div = document.createElement('div');
+    div.innerHTML = document.querySelector('#input-html').value.trim()
+
+    recursiveChidren(div, function (child, deep) {
+        // remove all attributes
+        [].slice.call(child.attributes).map(function (attr) {
+            child.removeAttribute(attr.name);
+        })
+
+        // beautify
+        /**
+        child.innerHTML = child.innerHTML.trim()
+        console.log(child.innerHTML)
+        var tabs = new Array(deep).join('    ');
+        child.insertAdjacentHTML('beforebegin', '\n' + tabs);
+        child.insertAdjacentHTML('afterend', tabs);
+        **/
+    })
+
+    document.querySelector('#html-result').value = div.innerHTML;
+}
+
+function recursiveChidren(element, callback, deep)
+{
+    deep = deep || 1;
+    
+    [].slice.call(element.children).map(function (child) {
+        callback(child, deep);
+        child.children.length && recursiveChidren(child, callback, deep + 1);
+    })
+}
+
+document.querySelector('#input-html').addEventListener('input', clearHtml)
+document.querySelector('#html-result').addEventListener('click', function () {
+    document.execCommand('selectall', null, false);
+})
+</script>
