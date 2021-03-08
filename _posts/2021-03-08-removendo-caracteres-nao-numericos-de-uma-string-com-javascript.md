@@ -59,6 +59,7 @@ document
 ```
 
 Resultado:
+
 <script>
 function somenteNumeros(string) {
 return string.replace(/\\D+/g, '');
