@@ -18,7 +18,7 @@ Veja:
 'A1B2C3'.replace(/\D+/g, ''); // 123
 ```
 
-Acima utilizamos a função String.replace. Essa função substitui o que é passar no primeiro argumento pelo segundo. O primeiro argumento aceita uma expressão regular. A expressão regular que utilizamos possui o valor `\D+`, que é a captura de qualquer valor não numérico. Substituimos tudo por uma string vazia.
+Acima utilizamos a função `String.replace`. Essa função substitui o que é passar no primeiro argumento pelo segundo. O primeiro argumento aceita uma expressão regular. A expressão regular que utilizamos possui o valor `\D+`, que é a captura de qualquer valor não numérico. Substituimos tudo por uma string vazia.
 
 Para facilitar as coisas, podemos criar uma função:
 
