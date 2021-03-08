@@ -17,7 +17,7 @@ Para remover caracteres não numéricos de uma String em javascript, você só p
 Veja:
 
 ```javascript
-
+'A1B2C3'.replace(/\D+/g, ''); // 123
 ```
 
 Para facilitar as coisas, podemos criar uma função:
