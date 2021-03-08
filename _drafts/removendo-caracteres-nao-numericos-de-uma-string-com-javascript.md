@@ -2,10 +2,10 @@
 layout: post
 color: "#222222"
 title: Removendo caracteres não numéricos de uma string com Javascript?
-date: 2021-03-03T00:00:00.000-03:00
+date: 2021-03-08 07:46:00 -0300
 categories:
 - javascript
-sitemap: false
+sitemap: true
 image: ''
 excerpt: ''
 
