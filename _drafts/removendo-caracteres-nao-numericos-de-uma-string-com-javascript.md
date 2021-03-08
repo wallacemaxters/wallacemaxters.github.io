@@ -10,6 +10,18 @@ image: ''
 excerpt: ''
 
 ---
+Para remover caracteres não numéricos de uma String em javascript, você só precisa de uma linha de código.
+
+
+
+Veja:
+
+```javascript
+
+```
+
+Para facilitar as coisas, podemos criar uma função:
+
 ```javascript
 function somenteNumeros(string) {
     return string.replace(/\D+/g, '');
