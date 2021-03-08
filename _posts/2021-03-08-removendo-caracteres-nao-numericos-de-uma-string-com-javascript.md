@@ -39,7 +39,7 @@ somenteNumeros('z3x2y1'); // 321
 
 ```javascript
 var string = 'X13AB';
-parseInt(string.replace(/\D+/g, ''));
+parseInt(string.replace(/\D+/g, '')); // 13
 ```
 
 ## Input que aceita somente números
