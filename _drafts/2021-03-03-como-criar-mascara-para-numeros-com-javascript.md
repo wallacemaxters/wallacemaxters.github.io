@@ -13,7 +13,7 @@ excerpt: ''
 ```javascript
 function mask ( value, placeholder, character = '#') {
    
-   var result = '';
+   let result = '';
    
    for (var i = 0, j = 0; i < placeholder.length; i++) {
       if (placeholder[i] === character) {
