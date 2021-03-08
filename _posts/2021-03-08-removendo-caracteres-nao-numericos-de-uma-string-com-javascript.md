@@ -1,6 +1,6 @@
 ---
 layout: post
-color: "#222222"
+color: "#F5A623"
 title: Removendo caracteres não numéricos de uma string com Javascript?
 date: 2021-03-08 07:46:00 -0300
 categories:
