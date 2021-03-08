@@ -35,7 +35,12 @@ somenteNumeros('z3x2y1'); // 321
 
 ### Convertendo para inteiro
 
-É importante lembrar que, apesar de estarmos deixando apenas os caracteres uméricos da String, o valor retornando continua sendo uma String. Mas, em Javascript, você pode converter esse valor através da função `parseInt`.
+É importante lembrar que, apesar de estarmos deixando apenas os caracteres numéricos, o valor retornando continua sendo uma String. Mas, em Javascript, você pode converter esse valor para inteiro através da função `parseInt`.
+
+```javascript
+var string = 'X13AB';
+parseInt(string.replace(/\D+/g, ''));
+```
 
 ## Input que aceita somente números
 
