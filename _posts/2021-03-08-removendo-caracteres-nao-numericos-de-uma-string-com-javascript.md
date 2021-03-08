@@ -33,6 +33,10 @@ function somenteNumeros(string) {
 somenteNumeros('z3x2y1'); // 321
 ```
 
+### Convertendo para inteiro
+
+É importante lembrar que, apesar de estarmos deixando apenas os caracteres uméricos da String, o valor retornando continua sendo uma String. Mas, em Javascript, você pode converter esse valor através da função `parseInt`.
+
 ## Input que aceita somente números
 
 Hoje em dia não é muito usado, pois o HTML5 introduziu o input type number. Mas caso queria que seu input text remova apenas caracteres não numéricos quando digitados, você pode fazer assim:
