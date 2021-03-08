@@ -7,12 +7,11 @@ categories:
 - linux
 sitemap: true
 image: "/uploads/covers/apache.png"
-excerpt: Seu apache não está reconhecendo o .htaccess? Saiba como habilitar o mod_rewrite
-  para reescrita de urls do Apache2 no Linux.
+excerpt: Saiba como habilitar o mod_rewrite para reescrita de urls do Apache2 no Linux.
 color: "#C5FFC3"
 
 ---
-Quando recém instalamos o Apache2, é necessário fazer algumas configurações para que as funcionalidades padrões e mais usadas estejam disponíveis. E, dentre estas funcionalidades, podemos destacar a funcionalidade de reescrita de urls.
+Quando recém instalamos o Apache2, é necessário fazer algumas configurações para que as funcionalidades padrões e mais usadas estejam disponíveis. E, dentre estas funcionalidades, podemos destacar a funcionalidade de reescrita de urls. 
 
 ## Habilitando a reescrita de urls no Apache2
 
