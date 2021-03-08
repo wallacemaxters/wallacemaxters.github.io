@@ -6,8 +6,8 @@ date: 2021-03-08 07:46:00 -0300
 categories:
 - javascript
 sitemap: true
-image: ''
-excerpt: ''
+image: "/uploads/covers/code.jpg"
+excerpt: Veja como remover caracteres não numéricos de uma string em Javascript.
 
 ---
 Para remover caracteres não numéricos de uma `String` em Javascript, você só precisa de uma linha de código.
