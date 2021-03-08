@@ -7,8 +7,8 @@ categories:
 - linux
 sitemap: true
 image: "/uploads/covers/apache.png"
-excerpt: Aprenda como habilitar facilmente o mod_rewrite para reescrita de urls do
-  Apache2 no Linux.
+excerpt: Seu apache não está reconhecendo o .htaccess? Saiba como habilitar o mod_rewrite
+  para reescrita de urls do Apache2 no Linux.
 color: "#C5FFC3"
 
 ---
