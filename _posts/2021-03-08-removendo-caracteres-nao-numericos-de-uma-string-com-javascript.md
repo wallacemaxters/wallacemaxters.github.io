@@ -15,7 +15,7 @@ Para remover caracteres não numéricos de uma `String` em Javascript, você só
 Veja:
 
 ```javascript
-'A1B2C3'.replace(/\D+/g, ''); // 123
+'A1B2C3'.replace(/\D+/g, ''); // '123'
 ```
 
 ## Explicando o código
@@ -30,7 +30,7 @@ Código:
 function somenteNumeros(string) {
     return string.replace(/\D+/g, '');
 }
-somenteNumeros('z3x2y1'); // 321
+somenteNumeros('z3x2y1'); // '321'
 ```
 
 ### Convertendo para inteiro
