@@ -31,6 +31,8 @@ function somenteNumeros(string) {
 
 ## Input que aceita somente números
 
+Hoje em dia não é muito usado, pois o HTML5 introduziu o input type number. Mas caso queria que seu input text remova apenas caracteres não numéricos quando digitados, você pode fazer assim:
+
 ```javascript
 document
 .querySelector('#somente-numeros')
