@@ -65,7 +65,7 @@ Resultado:
 
 <script>
 function somenteNumeros(string) {
-    return string.replace(/\\D+/g, '');
+    return string.replace(/\D+/g, '');
 }
 
 document.querySelector('#somente-numeros').addEventListener('input', function () {
