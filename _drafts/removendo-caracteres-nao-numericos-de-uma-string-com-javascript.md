@@ -10,7 +10,7 @@ image: ''
 excerpt: ''
 
 ---
-Para remover caracteres não numéricos de uma `String` em JavaScript, você só precisa de uma linha de código.
+Para remover caracteres não numéricos de uma `String` em Javascript, você só precisa de uma linha de código.
 
 Veja:
 
