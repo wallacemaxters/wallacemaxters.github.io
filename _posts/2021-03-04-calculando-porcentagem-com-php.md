@@ -41,8 +41,7 @@ var_dump(descobrir_porcentagem (4000, 500)); // float(12.5)
 
 ## Calculando o valor baseado na porcentagem
 
-Para obtermos um valor com base na porcentagem, basta multiplicar o valor pela porcentagem desejada e dividir por 100.
-Suponhamos que você deseja saber quanto é 15% de 3000.
+Para obtermos um valor com base na porcentagem, basta multiplicar o valor pela porcentagem desejada e dividir por `100`. Suponhamos que você deseja saber quanto é `15%` de `3000`
 
 ```php
 $valor = 3000;
