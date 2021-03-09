@@ -11,6 +11,7 @@ image: "/uploads/covers/php.png"
 excerpt: ''
 
 ---
+## Como funciona array_is_list?
 No PHP 8.1,  teremos uma nova função,  chamada `array_is_list`. Esta função retorna `boolean`, checando se determinado `array` contém chaves inteiras sequenciais começando do número 0.
 
 Em outras palavras, esta função retorna `true` se o `array`  testado for uma lista de valores. Ou seja,  um `array` cuja todas as chaves são `int` ,  que comecem do número `0` e sem "pulos" entre eles.
