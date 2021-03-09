@@ -37,17 +37,22 @@ array_is_list([1 => 'limão', 0 => 'pêra']); // false
 
 ## Polyfill
 
-    function array_is_list(array $array): bool {
-        if (empty($array)) {
-            return true;
-        }
+Para versões anteriores ao PHP 8.1, podemos utilizar um polyfill para suprir a falta da mesma.
+
+Veja:
+
+```php
+function array_is_list(array $array): bool 
+{
+    if (empty($array)) return true;
+
+    $current = 0;
+
+    foreach ($array as $key => $_) {
+        if ($key !== $current) return false;
+        ++$current;
+    }
     
-        $current_key = 0;
-        foreach ($array as $key => $noop) {
-            if ($key !== $current_key) {
-                return false;
-            }
-            ++$current_key;
-        }
-    
-        return true;
+    return true;
+}
+```
