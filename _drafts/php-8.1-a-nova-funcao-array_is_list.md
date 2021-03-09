@@ -37,10 +37,6 @@ array_is_list([1 => 'limão', 0 => 'pêra']); // false
 
 Se você tentar passar outro tipo de argumento, que não seja um `array`, como parâmetro de `array_is_list`, será lançado um `TypeError`. Mesmo os tipos `iterable` não são aceitos como argumento dessa função.
 
-Exemplo:
-
-
-
 
 ## Polyfill
 
