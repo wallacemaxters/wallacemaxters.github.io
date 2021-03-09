@@ -30,6 +30,7 @@ Veja:
 
 ```php
 array_is_list([1 => 'maçã', 'uva']); // false
-array_is_list([0 => 'um', 'nome' => 'Maxters']); // false
+array_is_list([0 => 'zero', 2 => 'dois']); // false
+array_is_list([0 => 'zero', 'nome' => 'Maxters']); // false
 array_is_list([1 => 'limão', 0 => 'pêra']); // false
 ```
