@@ -54,9 +54,9 @@ var_dump($resultado); // float(450.0)
 
 ## Calculando a porcentagem de desconto
 
-Se quisermos subtrair o desconto de uma determinada porcentagem, basta fazer o mesmo cálculo anterior e subtrair pelo valor base.
+Se quisermos subtrair o desconto de uma determinada porcentagem, basta subtrair o valor base pela porcentagem encontrada no exemplo anterior.
 
-Por exemplo, um desconto de 15% sobre 1000 será de 150, o que fará com que o valor final seja 850. Sendo assim, precisamos encontrar a porcentagem do valor base e subtrair o valor base pelo resultado da porcentagem encontrada.
+Por exemplo, um desconto de `15%` sobre `1000` será de `150`, o que fará com que o valor final seja `850`. Sendo assim, precisamos encontrar a porcentagem do valor base e subtrair o valor base pelo resultado da porcentagem encontrada.
 
 Podemos fazer esse cálculo assim:
 
@@ -92,4 +92,14 @@ function calcular_desconto(float $valor, float $p_desconto): float
 }
 
 var_dump(calcular_desconto(1000, 5.4321)); // float(945.68)
+```
+
+### Dica
+
+No cálculo onde já temos os valores de porcentagem, usamos o a divisão por `100`. Opcionalmente, você pode multiplicar por `0.01`.
+
+Por exemplo,  `4%` de `200` é `8`. Podemos encontrar esse valor assim:
+
+```php
+200 * 4 * 0.01
 ```
