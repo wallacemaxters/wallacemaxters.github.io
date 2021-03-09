@@ -96,7 +96,7 @@ var_dump(calcular_desconto(1000, 5.4321)); // float(945.68)
 
 ### Dica
 
-No cálculo onde já temos os valores de porcentagem, usamos a divisão por `100`. Opcionalmente, você pode multiplicar por `0.01`.
+No cálculo onde já temos os valores de porcentagem, usamos a divisão por `100`. Opcionalmente, você pode multiplicar por `0.01`, que gera o mesmo efeito.
 
 Por exemplo,  `4%` de `200` é `8`. Podemos encontrar esse valor assim:
 
