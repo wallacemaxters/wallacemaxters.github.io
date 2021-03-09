@@ -18,7 +18,7 @@ Nesse tutorial, estarei falando sobre como calcular porcentagem através do PHP.
 
 ## Descobrindo a porcentagem entre dois números
 
-Você precisa dividir o valor que deseja descobrir a porcentagem pelo valor base e multiplicar por 100. Por exemplo, se você deseja saber a porcentagem de 500 sobre 4000, basta dividir `500` por `4000` e multiplicar o resultado por `100`. O resultado esperado é 12.5%.
+Você precisa dividir o valor que deseja descobrir a porcentagem pelo valor base e multiplicar por `100`. Por exemplo, se você deseja saber a porcentagem de `500` sobre `4000`, basta dividir `500` por `4000` e multiplicar o resultado por `100`. O resultado esperado é 12.5%.
 
 ```php
 $valor_base = 4000;
