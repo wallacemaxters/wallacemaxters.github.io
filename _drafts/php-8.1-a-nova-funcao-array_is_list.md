@@ -23,3 +23,13 @@ array_is_list(['banana', 'maçã']); // true
 array_is_list([0 => 'morango', 'pêra']); // true
 array_is_list([0 => 'limão', 1 => 'maracujá']); // true
 ```
+
+Qualquer `array` com chaves, não começando de zero ou qualquer matriz  que não possua todas as chaves como inteiros em ordem sequencial,  serão avaliados como `false`.
+
+Veja:
+
+```php
+array_is_list([1 => 'maçã', 'uva']); // false
+array_is_list([0 => 'um', 'nome' => 'Maxters']); // false
+array_is_list([1 => 'limão', 0 => 'pêra']); // false
+```
