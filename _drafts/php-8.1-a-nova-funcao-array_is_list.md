@@ -35,6 +35,13 @@ array_is_list([0 => 'zero', 'nome' => 'Maxters']); // false
 array_is_list([1 => 'limão', 0 => 'pêra']); // false
 ```
 
+Se você tentar passar outro tipo de argumento, que não seja um `array`, como parâmetro de `array_is_list`, será lançado um `TypeError`. Mesmo os tipos `iterable` não são aceitos como argumento dessa função.
+
+Exemplo:
+
+
+
+
 ## Polyfill
 
 Para versões anteriores ao PHP 8.1, podemos utilizar um polyfill para suprir a falta da mesma.
@@ -44,15 +51,11 @@ Veja:
 ```php
 function array_is_list(array $array): bool 
 {
-    if (empty($array)) return true;
-
-    $current = 0;
-
-    foreach ($array as $key => $_) {
-        if ($key !== $current) return false;
-        ++$current;
+    $expectedKey = 0;
+    foreach ($array as $i => $_) {
+        if ($i !== $expectedKey) { return false; }
+        $expectedKey++;
     }
-    
     return true;
 }
 ```
