@@ -11,7 +11,7 @@ image: "/uploads/covers/php.png"
 excerpt: ''
 
 ---
-O PHP 8.1 traz uma nova função `array_is_list`, que retorna se um determinado array contém chaves inteiras sequenciais começando em 0.
+No PHP 8.1,  teremos uma nova função,  chamada `array_is_list`. Esta função retorna `boolean`, checando se determinado `array` contém chaves inteiras sequenciais começando do número 0.
 
 Em outras palavras, esta função retorna `true` se o `array`  testado for uma lista de valores. Ou seja,  um `array` cuja todas as chaves são `int` ,  que comecem do número `0` e sem "pulos" entre eles.
 
@@ -34,3 +34,20 @@ array_is_list([0 => 'zero', 2 => 'dois']); // false
 array_is_list([0 => 'zero', 'nome' => 'Maxters']); // false
 array_is_list([1 => 'limão', 0 => 'pêra']); // false
 ```
+
+## Polyfill
+
+    function array_is_list(array $array): bool {
+        if (empty($array)) {
+            return true;
+        }
+    
+        $current_key = 0;
+        foreach ($array as $key => $noop) {
+            if ($key !== $current_key) {
+                return false;
+            }
+            ++$current_key;
+        }
+    
+        return true;
