@@ -321,7 +321,7 @@ No exemplo acima, o campo `usuario_id` só será aceito caso seja um valor exist
 > Nota: Utilizei `nullable` porque campos de filtro de pesquisa geralmente são opcionais.
 
 <!-- ads common -->
-{% include ads_common.html %}
+{% include ads_article.html %}
 
 ----
 ## 2 - Usando Query Scopes
