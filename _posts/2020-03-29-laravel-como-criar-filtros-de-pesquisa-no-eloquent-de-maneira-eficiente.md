@@ -79,6 +79,10 @@ Route::get('/produtos', function (Request $request) {
 
 Nesse caso, a requisição `/api/produtos?nome=parafuso&usuario_id=1&codigo_barra=XXX` se encarregará de executar a nossa consulta.
 
+<!-- ads common -->
+{% include ads_common.html %}
+
+----
 ### Mas e se eu precisar de consultar por vários campos diferente?
 
 Se continuarmos com a abordagem acima, nosso filtro de pesquisa vai ter um código imenso. Além do mais, é possível perceber que existem repetições nesse código. Note que o `if`, a verificação se o campo foi preenchido com `has` e até mesmo a execução do `where` são repetições, onde apenas o nome do campo é mudado.
@@ -187,6 +191,11 @@ Pode haver casos onde você necessite realizar consultas e filtros em dois ou ma
 A resposta do programador "esperto" para esse problema seria "copiar e colar". Eu detesto essa prática e prefiro sempre recorrer à reutilização do código.
 
 Para resolvermos isso, podemos elaborar duas formas fazermos isso de maneira bem fácil no Laravel.
+
+<!-- ads common -->
+{% include ads_common.html %}
+
+----
 
 ## 1 - Utilizando Request e Closure
 
@@ -311,6 +320,10 @@ No exemplo acima, o campo `usuario_id` só será aceito caso seja um valor exist
 
 > Nota: Utilizei `nullable` porque campos de filtro de pesquisa geralmente são opcionais.
 
+<!-- ads common -->
+{% include ads_common.html %}
+
+----
 ## 2 - Usando Query Scopes
 
 A segunda opção para simplificar nosso filtro  seria usar as [Local Scopes](https://laravel.com/docs/5.8/eloquent#local-scopes).
@@ -416,6 +429,7 @@ Assim, seu Local Scope de filtro de pesquisa poderá utilizar tanto a chamada `P
 <!-- ads common -->
 {% include ads_common.html %}
 
+----
 ### Como utilizar os filtros de pesquisa em diversos projetos?
 
 Há casos (como o meu) onde você não trabalha com um, mas com vários projetos escritos em cima do Laravel. E praticamente a maioria deles precisam que você escreva esses tipos de filtro.
@@ -447,4 +461,4 @@ No caso acima, caso queria consultar pela palavra-chave "parafuso", como no prim
 
 ### Conclusão
 
-Há diversas outras formas que podem ser criadas para aplicação de filtros de pesquisa no Laravel, mas nesse tutorial dei apenas alguns ideias simples de como simplificar, reduzir complexidade e diminuir a repetição de código. Espero que isso ajude! 
+Há diversas outras formas que podem ser criadas para aplicação de filtros de pesquisa no Laravel, mas nesse tutorial dei apenas alguns ideias simples de como simplificar, reduzir complexidade e diminuir a repetição de código. Espero que isso ajude!
