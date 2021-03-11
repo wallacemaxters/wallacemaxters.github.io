@@ -193,7 +193,7 @@ A resposta do programador "esperto" para esse problema seria "copiar e colar". E
 Para resolvermos isso, podemos elaborar duas formas fazermos isso de maneira bem fácil no Laravel.
 
 <!-- ads common -->
-{% include ads_common.html %}
+{% include ads_article.html %}
 
 ----
 
