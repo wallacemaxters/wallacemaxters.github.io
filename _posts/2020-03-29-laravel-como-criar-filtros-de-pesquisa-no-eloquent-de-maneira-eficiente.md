@@ -80,7 +80,7 @@ Route::get('/produtos', function (Request $request) {
 Nesse caso, a requisição `/api/produtos?nome=parafuso&usuario_id=1&codigo_barra=XXX` se encarregará de executar a nossa consulta.
 
 <!-- ads common -->
-{% include ads_common.html %}
+{% include ads_article.html %}
 
 ----
 ### Mas e se eu precisar de consultar por vários campos diferente?
