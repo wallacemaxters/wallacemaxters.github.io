@@ -10,7 +10,7 @@ image: "/uploads/laravel_database_search.svg"
 color: "#add555"
 
 ---
-O Eloquent é um ORM do Laravel que permite facilitar bastante as consultas realizadas no seu banco de dados. Nesse tutorial, estarei ensinado uma maneira simples de filtrar dados no Eloquent de maneira eficiente, evitando repetições e códigos grandes;
+O Eloquent é um ORM do Laravel, que permite facilitar bastante as consultas realizadas no seu banco de dados. Nesse tutorial, estarei ensinado uma maneira simples de filtrar dados no Eloquent de maneira eficiente, evitando repetições e códigos grandes;
 
 Geralmente, quando estamos desenvolvendo uma API ou simplesmente uma página no Laravel, o Eloquent nos auxilia bastante na tarefa de realizar operações no banco de dados. Em, em muitos desses casos, quando precisamos realizar uma listagem de dados, precisamos também que os mesmos sejam filtrados.
 
