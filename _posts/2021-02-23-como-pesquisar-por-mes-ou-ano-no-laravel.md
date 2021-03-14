@@ -14,12 +14,11 @@ excerpt: Aprenda como filtrar suas pesquisas no Laravel através de um ano e mê
 Eu já ensinei aqui no blog
 [como criar filtros de pesquisa no Laravel através de um intervalo de datas]({% post_url 2020-11-09-criando-filtros-de-pesquisa-por-intervalo-de-datas-no-laravel %}). Porém há outro caso muito comum, que é quando precisamos pesquisar através apenas do mês e ano de uma coluna.
 
-----
+***
 
 ## Pesquisando dados por mês ou ano
 
 No Laravel, você pode fazer um filtro de pesquisa em um campo do tipo `DATETIME` ou `TIMESTAMP` facilmente. Por exemplo, ao utilizar o Eloquent, você precisaria apenas chamar os métodos `whereYear` ou `whereMonth` para filtrar pelo ano ou mês (respectivamente) da data registrada em uma coluna de uma tabela.
-
 
 No exemplo abaixo, temos um controller que retorna uma lista de produtos. Iremos criar um filtro de pesquisa, que devolva um resultado baseado no ano e mês em que esses produtos foram criados. Utilizaremos o campo `created_at` para fazer isso.
 
@@ -55,7 +54,7 @@ Veja:
 /produtos?mes=2&ano=2021
 ```
 
-----
+***
 
 ## Explicando o funcionamento de whereYear e WhereMonth no Laravel
 
@@ -64,7 +63,7 @@ O método `whereYear` modifica a SQL internamente, adicionando `YEAR(created_at)
 Exemplificando melhor, suponhamos que você tenha o valor `2015-02-12 12:03:00` registrado na sua coluna `created_at`. Os valores retornados seriam os seguintes:
 
 ```sql
-SELECT YEAR('2015-02-12 12:03:00'); /* 2015 */
+SELECT  YEAR('2015-02-12 12:03:00'); /* 2015 */
 SELECT MONTH('2015-02-12 12:03:00'); /* 2 */
 ```
 
