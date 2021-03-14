@@ -18,7 +18,7 @@ Eu já ensinei aqui no blog
 
 ## Pesquisando dados por mês ou ano
 
-No Laravel, você pode fazer um filtro de pesquisa em um campo do tipo `DATETIME` ou `TIMESTAMP` facilmente. Por exemplo, ao utilizar o Eloquent, você precisaria apenas chamar os métodos `whereYear` ou `whereMonth` para filtrar pelo ano ou mês da data registrada em uma coluna de uma tabela do seu banco de dados.
+No Laravel, você pode fazer um filtro de pesquisa em um campo do tipo `DATETIME` ou `TIMESTAMP` facilmente. Por exemplo, ao utilizar o Eloquent, você precisaria apenas chamar os métodos `whereYear` ou `whereMonth` para filtrar pelo ano ou mês (respectivamente) da data registrada em uma coluna de uma tabela do seu banco de dados.
 
 
 Veja como é simples:
