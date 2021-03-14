@@ -49,7 +49,7 @@ Para filtrar o resultado dessa pesquisa por mês e ano, bastaria acessar o endpo
 /produtos?mes=2&ano=2021
 ```
 
-***
+----
 
 ## Explicando o funcionamento de whereYear e WhereMonth no Laravel
 
