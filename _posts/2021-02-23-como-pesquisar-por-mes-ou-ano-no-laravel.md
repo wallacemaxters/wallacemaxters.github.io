@@ -2,7 +2,7 @@
 layout: post
 color: "#FF60C9"
 title: Como pesquisar por mês ou ano no Laravel?
-date: 2021-02-23 13:12:33 -0300
+date: 2021-02-23T13:12:33.000-03:00
 categories:
 - laravel
 sitemap: true
@@ -11,13 +11,14 @@ excerpt: No Laravel, você pode pesquisar os dados do seu banco facilmente atrav
   do mês ou ano. Aprenda nesse tutorial.
 
 ---
-Eu já ensinei aqui no blog 
+Eu já ensinei aqui no blog
 [como criar filtros de pesquisa no Laravel através de um intervalo de datas]({% post_url 2020-11-09-criando-filtros-de-pesquisa-por-intervalo-de-datas-no-laravel %}). Porém há outro caso muito comum, que é quando precisamos pesquisar através apenas do mês e ano de uma coluna.
 
----
+***
+
 ## Pesquisando dados por mês ou ano
 
-No Laravel, você pode fazer uma filtro de pesquisa em um campo do tipo `DATETIME` ou `TIMESTAMP` facilmente. Você precisa apenas chamar o método `whereYear` para filtrar pelo ano ou `whereMonth` para filtrar pelo mês das datas registradas no seu banco de dados.
+No Laravel, você pode fazer um filtro de pesquisa em um campo do tipo `DATETIME` ou `TIMESTAMP` facilmente. Você precisa apenas chamar o método `whereYear` para filtrar pelo ano ou `whereMonth` para filtrar pelo mês das datas registradas em uma coluna de uma tabela do seu banco de dados.
 
 Veja como é simples:
 
@@ -47,7 +48,8 @@ Para pesquisar por mês e ano, bastaria acessar o endpoint de produtos da seguin
 /produtos?mes=2&ano=2021
 ```
 
----
+***
+
 ## Explicando o funcionamento de whereYear e WhereMonth no Laravel
 
 O método `whereYear` modifica a SQL query, adicionando `YEAR(created_at)`. Já `whereMonth` adiciona `MONTH(created_at)`. O próprio SGBD cuidará de executar a pesquisa baseada no ano e mês passados.
@@ -61,7 +63,6 @@ echo Produto::whereYear('created_at', '=', 2021)->whereMonth('created_at', '=', 
 ```
 
 Isso irá gerar a saída:
-
 
 ```sql
 select * from `produto` where year(`created_at`) = ? and month(`created_at`) = ?
