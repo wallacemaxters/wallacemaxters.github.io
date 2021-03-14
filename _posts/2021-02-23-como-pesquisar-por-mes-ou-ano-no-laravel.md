@@ -43,6 +43,10 @@ class ProdutosController extends Controller
 }
 ```
 
+```php
+Route::get('/produtos', 'ProdutosController@index');
+```
+
 Para filtrar o resultado dessa pesquisa por mês e ano, bastaria acessar o endpoint de produtos da seguinte forma:
 
 ```text
