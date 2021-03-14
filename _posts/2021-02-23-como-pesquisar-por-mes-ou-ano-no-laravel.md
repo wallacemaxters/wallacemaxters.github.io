@@ -54,6 +54,14 @@ Veja:
 /produtos?mes=2&ano=2021
 ```
 
+O `$request->has()` aplicado aos campos `mes`e `ano` faz com que a pesquisa seja opcional. Caso um desses campos não sejam informados, não será adicionado a condição ao seu resultado.
+
+Exemplo:
+
+```text
+/produtos?ano=2021 
+```
+
 ***
 
 ## Explicando o funcionamento de whereYear e WhereMonth no Laravel
