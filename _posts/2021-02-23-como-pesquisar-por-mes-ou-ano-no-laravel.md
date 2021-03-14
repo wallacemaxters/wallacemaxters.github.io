@@ -7,8 +7,8 @@ categories:
 - laravel
 sitemap: true
 image: "/uploads/laravel_database_search.svg"
-excerpt: No Laravel, você pode pesquisar os dados do seu banco facilmente através
-  do mês ou ano. Aprenda nesse tutorial.
+excerpt: Aprenda como filtrar suas pesquisas no Laravel através de um ano e mês informado
+  de maneira simples e eficiente!
 
 ---
 Eu já ensinei aqui no blog
