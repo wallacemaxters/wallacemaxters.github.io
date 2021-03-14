@@ -14,7 +14,7 @@ excerpt: No Laravel, você pode pesquisar os dados do seu banco facilmente atrav
 Eu já ensinei aqui no blog
 [como criar filtros de pesquisa no Laravel através de um intervalo de datas]({% post_url 2020-11-09-criando-filtros-de-pesquisa-por-intervalo-de-datas-no-laravel %}). Porém há outro caso muito comum, que é quando precisamos pesquisar através apenas do mês e ano de uma coluna.
 
-***
+----
 
 ## Pesquisando dados por mês ou ano
 
