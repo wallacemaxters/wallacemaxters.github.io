@@ -6,7 +6,7 @@ date: 2021-02-23T13:12:33.000-03:00
 categories:
 - laravel
 sitemap: true
-image: "/uploads/laravel-pesquisar-por-mes-e-ano.png"
+image: "/uploads/laravel-filtro-pesquisa-mes-ano.png"
 excerpt: Aprenda como filtrar suas pesquisas no Laravel através de um ano e mês informado
   de maneira simples e eficiente!
 
