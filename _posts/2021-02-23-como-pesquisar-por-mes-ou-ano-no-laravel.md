@@ -54,7 +54,9 @@ Para pesquisar por mês e ano, bastaria acessar o endpoint de produtos da seguin
 
 O método `whereYear` modifica a SQL query, adicionando `YEAR(created_at)`. Esta função faz com que seja capturado apenas o ano da coluna informado. Já `whereMonth` adiciona `MONTH(created_at)`. O próprio SGBD cuidará de executar a pesquisa baseada no ano e mês informados.
 
-Para testar como uma SQL é criada ao chamar o Query Builder do Laravel, eu costumo utilizar o `toSql`.
+### Testando a formação da sua SQL Query
+
+Para testar como uma SQL é criada ao chamar o Query Builder do Laravel, você pode utilizar o `toSql`.
 
 Veja:
 
