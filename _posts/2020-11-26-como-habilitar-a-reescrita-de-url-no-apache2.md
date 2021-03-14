@@ -24,21 +24,21 @@ sudo a2enmod rewrite
 
 Em seguida, edite o arquivo `/etc/apache2/apache2.conf` e procure pelo seguinte trecho:
 
-```htaccess
+```apache
 <Directory /var/www/>
-        Options Indexes FollowSymLinks
-        AllowOverride None
-        Require all granted
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
 </Directory>
 ```
 
 Substitua `None` por `All`, assim:
 
-```htaccess
+```apache
 <Directory /var/www/>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
 </Directory>
 ```
 
