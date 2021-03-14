@@ -43,7 +43,7 @@ class ProdutosController extends Controller
 }
 ```
 
-Para filtrar o resultado por mês e ano, bastaria acessar o endpoint de produtos da seguinte forma:
+Para filtrar o resultado dessa pesquisa por mês e ano, bastaria acessar o endpoint de produtos da seguinte forma:
 
 ```text
 /produtos?mes=2&ano=2021
