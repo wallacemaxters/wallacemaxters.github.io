@@ -47,7 +47,9 @@ class ProdutosController extends Controller
 Route::get('/produtos', 'ProdutosController@index');
 ```
 
-Para filtrar o resultado dessa pesquisa por mês e ano, bastaria acessar o endpoint de produtos da seguinte forma:
+No nosso exemplo acima, para realizar a pesquisa, bastaria informar o mês e o ano na query string para obter os resultados filtrados.
+
+Veja:
 
 ```text
 /produtos?mes=2&ano=2021
@@ -57,7 +59,14 @@ Para filtrar o resultado dessa pesquisa por mês e ano, bastaria acessar o endpo
 
 ## Explicando o funcionamento de whereYear e WhereMonth no Laravel
 
-O método `whereYear` modifica a SQL query, adicionando `YEAR(created_at)`. Esta função faz com que seja capturado apenas o ano da coluna informado. Já `whereMonth` adiciona `MONTH(created_at)`. O próprio SGBD cuidará de executar a pesquisa baseada no ano e mês informados.
+O método `whereYear` modifica a SQL internamente, adicionando `YEAR(created_at)`. Esta função do SGBD específico (Mysql, Sqlite e afins) faz com que seja capturado apenas o ano da coluna informada. Já `whereMonth` adiciona `MONTH(created_at)`. O próprio SGBD cuidará de executar a pesquisa baseada no ano e mês informados.
+
+Exemplificando melhor, suponhamos que você tenha o valor `2015-02-12 12:03:00` registrado na sua coluna `created_at`. Os valores retornados seriam os seguintes:
+
+```sql
+SELECT YEAR('2015-02-12 12:03:00'); /* 2015 */
+SELECT MONTH('2015-02-12 12:03:00'); /* 2 */
+```
 
 ### Testando a formação da sua SQL Query
 
