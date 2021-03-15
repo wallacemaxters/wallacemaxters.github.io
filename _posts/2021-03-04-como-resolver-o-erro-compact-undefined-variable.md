@@ -26,9 +26,7 @@ A mensagem na verdade é um `E_NOTICE` (mensagem de erro do PHP) disparado quand
 Para reproduzir o erro, basta adicionar uma variável que não existe como argumento de `compact`.
 
 ```php
-
-$existe = 'exsite';
-
+$existe = 'existe';
 compact('existe', 'nao_existe');
 ```
 
