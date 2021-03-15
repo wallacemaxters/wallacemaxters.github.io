@@ -7,8 +7,8 @@ categories:
 - PHP
 sitemap: true
 image: "/uploads/covers/php.png"
-excerpt: 'Aprenda como resolver o erro "compact(): Undefined variable ''variavel''
-  "'
+excerpt: 'Veja a causa e a solução para o erro "compact (): Undefined variable ''variavel''
+  " na versão 7.3 do PHP'
 
 ---
 ## Erro e Causa
