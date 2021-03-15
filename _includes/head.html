@@ -34,17 +34,26 @@
     {% endif %}
 
     <meta property="og:image" content="{{ og_image | prepend: site.url }}" />
+
     {%- if page.layout == 'post' -%}
+    
         <meta property="og:type" content="article">
+
         <meta property="article:author" content="Wallace Maxters">
+
         <meta property="article:tag" content="{{ page.categories }}">
+
         <meta property="article:published_time" content="{{ page.date }}">
+
     {%- else -%}
         <meta property="og:type" content="website" />
     {%- endif -%}
 
     <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
-    <meta name="theme-color" content="#444444">
+
+    <link rel="apple-touch-icon" href="{{ '/assets/img/logo.png' | prepend: site.baseurl | prepend: site.url }}">
+
+    <meta name="theme-color" content="#41b6b0">
 
     {% if page.image %}
     <style>

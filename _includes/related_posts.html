@@ -14,8 +14,7 @@
             {% if post.url == page.url or urls contains post.url %} {% continue %} {% endif %}
             {% assign urls = urls | push: post.url %}
             <div class="column is-12">
-                {% capture post_title %}<h5>{{ post.title }}</h5>{% endcapture %}
-                {% include link_card.html title=post_title url=post.url image=post.image height="150px" %}
+                {% include link_card.html title=post.title url=post.url image=post.image height="150px" %}
             </div>
             {% assign post_count = post_count | plus: 1 %}
             {% if post_count >= max_posts %}
