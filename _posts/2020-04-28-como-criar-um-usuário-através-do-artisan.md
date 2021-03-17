@@ -163,9 +163,9 @@ Artisan::command('make:user', function () {
     $user = App\User::firstOrNew(['email' => $email]);
     
     $user->fill([
-        'name' 		=> $name, 
-        'password' 	=> bcrypt($password),
-        'api_token' => str_random(80)
+        'name'      => $name, 
+        'password'  => bcrypt($password),
+        'api_token' => str_random(80),
     ])->save();
     
     $this->info('Usuário criado/atualizado com sucesso');
