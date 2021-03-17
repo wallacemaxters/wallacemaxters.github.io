@@ -149,7 +149,7 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
-### Campos extras
+### Preenchendo campos extras
 
 Você é livre para adicionar outros campos caso seja necessário! Por exemplo, há muitos casos onde se usa o campo `api_token` para autenticação via API.
 
