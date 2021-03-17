@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como criar um usuário através do Artisan?
+title: Como criar um usuário através do artisan?
 date: 2020-04-28T00:00:00.000-03:00
 categories:
 - laravel
@@ -30,11 +30,11 @@ Artisan::command('make:user', function () {
 });
 ```
 
-Para testar se tudo está correto, execute `php artisan make:user`.
+Para testar se tudo está correto, rode `php artisan make:user`.
 
 Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao rodar o comando acima.
 
-Para continuarmos, vamos aprender o método `$this->ask()`. Dentro da função anônima do nosso comando, podemos chamar alguns métodos presente em `$this`. O método `ask` quando chamado exibe uma saída e aguarda a entrada de dados. Nesse caso, vamos usar essa ideia para pedir ao usuário que preencha os dados específicos, como email, nome e senha.
+Para continuarmos, vamos aprender o método `$this->ask()`. Dentro da função anônima do nosso comando, chamar alguns métodos presente em `$this`. O método `ask` quando chamado exibe uma saída e aguarda a entrada de dados. Nesse caso, vamos usar essa ideia para pedir ao usuário que preencha os dados específicos, como email, nome e senha.
 
 Veja:
 
@@ -71,8 +71,6 @@ Artisan::command('make:user', function () {
 
 Após rodar esse comando, o seu usuário será criado com sucesso.
 
-### Evitando a duplicação de usuários
-
 Uma dica extra é que você pode modificar o código para que um usuário não seja duplicado caso um e-mail já exista. Você pode trocar `create` por `firstOrNew`.
 
 ```php
@@ -93,6 +91,6 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
-Dessa forma, o usuário não será duplicado, caso já seja registrado com aquele e-mail, mas apenas atualizado caso novos dados sejam inseridos.
+Dessa forma, o usuário não será duplicado, mas apenas atualizado caso novos dados sejam inseridos.
 
 Além disso, você pode costumizar esse comando para adicionar `api_token` ou outros campos extras em seu usuário, caso seja necessário.
