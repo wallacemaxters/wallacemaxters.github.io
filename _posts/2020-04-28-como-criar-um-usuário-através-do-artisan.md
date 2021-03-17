@@ -71,6 +71,8 @@ Note que `ask` faz com que a linha de comando aguarde o preenchimendo dos dados.
 O nome do usuário é Wallce Maxters
 ```
 
+{% include ads_article.html %}
+
 ### Obtendo a senha interativamente
 
 O próximo passo é utilizar o método interativo `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, ele é perfeito para o preenchimento de um campo sensível, como por exemplo a senha de um usuário.
@@ -83,6 +85,7 @@ Artisan::command('make:user', function () {
     echo "A senha é $password";
 });
 ```
+
 
 ## Criando o usuário interativamente através do Artisan
 
