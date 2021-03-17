@@ -106,7 +106,7 @@ Artisan::command('make:user', function () {
 Ao rodar o comando `php artisan make:user`, você receberá a seguinte saída:
 
 ```bash
-$ php artisan make:user --env=wallace
+$ php artisan make:user
 
 Digite um e-mail:
 > wallacemaxters@teste.com
