@@ -93,6 +93,6 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
-Dessa forma, o usuário não será duplicado, mas apenas atualizado caso novos dados sejam inseridos.
+Dessa forma, o usuário não será duplicado, caso já seja registrado com aquele e-mail, mas apenas atualizado caso novos dados sejam inseridos.
 
 Além disso, você pode costumizar esse comando para adicionar `api_token` ou outros campos extras em seu usuário, caso seja necessário.
