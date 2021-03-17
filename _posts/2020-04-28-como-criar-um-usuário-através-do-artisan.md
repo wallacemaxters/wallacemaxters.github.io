@@ -23,19 +23,21 @@ Nesse tutorial,  você vai aprender a criar um comando personalizado e interativ
 
 Para criar esse comando, primeiro é necessário navegar até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com ele, podemos definir comandos personalizados para a linha de comando do Artisan. 
 
-`Artisan::command` recebe dois argumentos. O primeiro trata-se do nome do comando e o segundo é o callback executado ao executarmos o comando através do `php artisan`
+`Artisan::command` recebe dois argumentos. O primeiro trata-se do nome do comando e o segundo é o callback executado ao executarmos o comando através do `php artisanNo`
 
-Vamos nomear o nosso comando para `make:user`. 
+No nosso caso, vamos dar o nome de `make:user` para o nosso comando.
 
-Para isso podemos fazer da seguinte forma:
+Faça um pequeno teste para ver como funciona a personalização de comandos.
+
+Adicione o seguinte código ao seu `routes/console.php`:
 
 ```php
 Artisan::command('make:user', function () {
      echo "Comando para criar usuário";
-});
+})->describe('Comando de teste');
 ```
 
-Para testar se tudo está correto,  execute `php artisan make:user` na linha de comando.
+Agora, execute `php artisan make:user` na linha de comando.
 
 Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao rodar o comando acima.
 
