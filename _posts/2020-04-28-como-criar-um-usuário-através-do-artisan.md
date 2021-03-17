@@ -99,7 +99,6 @@ Artisan::command('make:user', function () {
     App\User::create(['email' => $email, 'name' => $name, 'password' => $password]);
     
     $this->info('Usuário criado com sucesso!');
-
 })->describe('Cria um usuário pela linha de comando');
 ```
 
