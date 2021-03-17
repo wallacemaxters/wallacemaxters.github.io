@@ -19,9 +19,9 @@ O Artisan é a interface de linha de comando presente no Laravel. Ele fornece um
 
 Nesse tutorial,  você vai aprender a criar um comando personalizado e interativo no Artisan para criar usuários de maneira bem simples no Laravel.
 
-## Criando um usuário com artisan
+## Um pouco sobre comandos personalizados no artisan
 
-Para criar esse comando, primeiro é necessário navegar até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com este método, podemos definir comandos personalizados para a linha de comando do Artisan. 
+Para criar um comando, primeiro é necessário navegar até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com este método, podemos definir comandos personalizados para a linha de comando do Artisan. 
 
 `Artisan::command` recebe dois argumentos. O primeiro trata-se do nome do comando e o segundo é o callback executado ao executarmos o comando através do `php artisan`.
 
@@ -43,7 +43,7 @@ Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao
 
 > Dica: Se você executar, `php artisan make:user --help`,  ou simplesmente `php artisan`, você poderá algumas instruções do seu comando, além da descrição inserida através de `describe`.
 
-## Preenchendo os valores do usuário interativamente
+## Preenchendo os valores interativamente pela linha de comando
 
 Dentro da função anônima do nosso comando, podemos chamar alguns métodos através de `$this`. Existe alguns métodos que permitem exibir saídas formatadas, bem como receber informações de maneira interativa. Um destes métodos interativos é o `$this->ask()`. 
 Quando chamado, o método `ask` exibe uma saída e aguarda a entrada de dados na linha de comando.
@@ -74,9 +74,9 @@ O nome do usuário é Wallce Maxters
 ```
 
 
-### Configurando a senha do usuário
+### Obtendo a senha interativamente
 
-O próximo passo é utilizar o método interativo `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, ele é perfeito para o preenchimento de um campo sensível, como no caso da senha do usuário.
+O próximo passo é utilizar o método interativo `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, ele é perfeito para o preenchimento de um campo sensível, como por exemplo a senha de um usuário.
 
 Exemplo:
 
@@ -86,6 +86,8 @@ Artisan::command('make:user', function () {
     echo "A senha é $password";
 });
 ```
+
+## Criando o usuário
 
 **Nota**: Temos que chamar a função `bcrypt` para encriptar a senha para o formato do Laravel.
 
