@@ -118,25 +118,32 @@ Digite o nome:
 
 Digite a senha:
 > 
+
+Usuário criado com sucesso!
 ```
 
-Uma dica extra é que você pode modificar o código para que um usuário não seja duplicado caso um e-mail já exista. Você pode trocar `create` por `firstOrNew`.
+### Evitando a duplicação de usuários
+
+Uma dica extra é que você pode modificar o código para evitar que um usuário seja duplicado caso um e-mail já exista.  Podemos fazer uma modificação para  que, caso um email seja informado, o usuário existente seja atualizado. Você pode fazer isso simplesmente trocando `create` por `firstOrNew`.
+
+Veja:
 
 ```php
 Artisan::command('make:user', function () {
+
+    $email    = $this->ask('Digite um e-mail');
+    $name     = $this->ask('Digite o nome');
+    $password = $this->secret('Digite a senha');
     
-    $email = $this->ask('Digite um e-mail');
-
-    $name = $this->ask('Digite o nome');
-
-    $password = bcrypt($this->secret('Digite a senha'));
+    $user = App\User::firstOrNew(['email' => $email]);
     
-    $user = \App\User::firstOrNew(compact('email'));
-
-    $user->fill(compact('name', 'password'))->save();
+    $user->fill([
+        'name' 		=> $name, 
+        'password' 	=> bcrypt($password)
+    ])->save();
     
-    $this->info('Usuário criado com sucesso!');
-
+    $this->info('Usuário criado/atualizado com sucesso');
+    
 })->describe('Cria um usuário pela linha de comando');
 ```
 
