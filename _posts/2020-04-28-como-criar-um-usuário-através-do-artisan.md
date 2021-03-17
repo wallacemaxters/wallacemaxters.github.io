@@ -71,7 +71,7 @@ Artisan::command('make:user', function () {
 
 Após rodar esse comando, o seu usuário será criado com sucesso.
 
-## Evitando a duplicação de usuários
+### Evitando a duplicação de usuários
 
 Uma dica extra é que você pode modificar o código para que um usuário não seja duplicado caso um e-mail já exista. Você pode trocar `create` por `firstOrNew`.
 
