@@ -124,7 +124,9 @@ Usuário criado com sucesso!
 
 ### Evitando a duplicação de usuários
 
-Uma dica extra é que você pode modificar o código para evitar que um usuário seja duplicado caso um e-mail já exista.  Podemos fazer uma modificação para  que, caso um email seja informado, o usuário existente seja atualizado. Você pode fazer isso simplesmente trocando `create` por `firstOrNew`.
+Uma dica extra é que você pode modificar o código para evitar que um usuário seja duplicado caso um e-mail já exista.  Podemos fazer uma modificação para  que, caso o email informado já exista, o usuário existente seja atualizado. 
+
+Você pode fazer isso simplesmente trocando `create` por `firstOrNew`.
 
 Veja:
 
@@ -147,6 +149,28 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
-Dessa forma, o usuário não será duplicado, mas apenas atualizado caso novos dados sejam inseridos.
+### Campos extras
 
-Além disso, você pode costumizar esse comando para adicionar `api_token` ou outros campos extras em seu usuário, caso seja necessário.
+Você é livre para adicionar outros campos caso seja necessário! Por exemplo, há muitos casos onde se usa o campo `api_token` para autenticação via API.
+
+Você poderia adicionar isso junto à criação do usuário
+
+```php
+Artisan::command('make:user', function () {
+
+    $email    = $this->ask('Digite um e-mail');
+    $name     = $this->ask('Digite o nome');
+    $password = $this->secret('Digite a senha');
+    
+    $user = App\User::firstOrNew(['email' => $email]);
+    
+    $user->fill([
+        'name' 		=> $name, 
+        'password' 	=> bcrypt($password),
+        'api_token' => str_random(80)
+    ])->save();
+    
+    $this->info('Usuário criado/atualizado com sucesso');
+    
+})->describe('Cria um usuário pela linha de comando');
+```
