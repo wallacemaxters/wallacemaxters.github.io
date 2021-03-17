@@ -92,11 +92,12 @@ Agora que apredemos alguns métodos para receber os dados interativamente, já p
 
 ```php
 Artisan::command('make:user', function () {
+
     $email    = $this->ask('Digite um e-mail');
     $name     = $this->ask('Digite o nome');
-    $password = bcrypt($this->secret('Digite a senha'));
+    $password = $this->secret('Digite a senha');
     
-    App\User::create(['email' => $email, 'name' => $name, 'password' => $password]);
+    App\User::create(['email' => $email, 'name' => $name, 'password' => bcrypt($password)]);
     
     $this->info('Usuário criado com sucesso!');
 })->describe('Cria um usuário pela linha de comando');
