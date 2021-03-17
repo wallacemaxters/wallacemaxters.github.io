@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como criar um usuário através do artisan?
+title: Como criar um usuário através do artisan interativamente?
 date: 2020-04-28T00:00:00.000-03:00
 categories:
 - laravel
@@ -45,7 +45,9 @@ Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao
 
 ## Preenchendo os valores do usuário interativamente
 
-Para continuarmos, vamos aprender o método `$this->ask()`. Dentro da função anônima do nosso comando, podemos chamar alguns métodos presente em `$this`. O método `ask` quando chamado exibe uma saída e aguarda a entrada de dados. Nesse caso, vamos usar essa ideia para pedir ao usuário que preencha os dados específicos, como email, nome e senha.
+Dentro da função anônima do nosso comando, podemos chamar alguns métodos através de `$this`. Existe alguns métodos que permitem exibir saídas formatadas, bem como receber informações de maneira interativa. Um destes métodos interativos é o `$this->ask()`. 
+Quando chamado, o método `ask` exibe uma saída e aguarda a entrada de dados na linha de comando.
+Sendo assim, para a criação do usuário de maneira interativa, vamos usar esse recurso para solicitar o preenchimento dos dados específicos, como email, nome e senha.
 
 Veja:
 
@@ -56,6 +58,15 @@ Artisan::command('make:user', function () {
     
     echo "O nome do usuário é $name";
 });
+```
+
+Ao executarmos `php artisan make:user`, agora teremos a seguinte saída:
+
+```bash
+$ php artisan make:user
+
+Qual é o nome do usuário?
+> 
 ```
 
 O próximo passo é utilizar o método `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, utilizaremos o mesmo para configurar nossa senha.
