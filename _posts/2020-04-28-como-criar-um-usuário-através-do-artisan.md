@@ -19,6 +19,7 @@ O Artisan é a interface de linha de comando presente no Laravel. Ele fornece um
 
 Nesse tutorial,  você vai aprender a criar um comando personalizado e interativo no Artisan para criar usuários de maneira bem simples no Laravel.
 
+---
 ## Um pouco sobre comandos personalizados no artisan
 
 Para criar um comando, primeiro é necessário navegar até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com este método, podemos definir comandos personalizados para a linha de comando do Artisan.
@@ -40,6 +41,8 @@ Agora, execute `php artisan make:user` na linha de comando.
 Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao rodar o comando acima.
 
 > Dica: Se você executar, `php artisan make:user --help`,  ou simplesmente `php artisan`, você poderá algumas instruções do seu comando, além da descrição inserida através de `describe`.
+
+----
 
 ## Preenchendo os valores interativamente pela linha de comando
 
@@ -86,6 +89,7 @@ Artisan::command('make:user', function () {
 });
 ```
 
+----
 
 ## Criando o usuário interativamente através do Artisan
 
@@ -152,6 +156,8 @@ Artisan::command('make:user', function () {
 ```
 
 O `firstOrNew` buscará um usuário com o `email` informado. Caso exista algum registro no banco de dados, será retornado os dados do usuário com aquele `email`. Caso não exista, uma instância de `User` será retornada. Dessa forma, com poucas linhas, podemos usar o mesmo código para atualizar e criar um usuário, de maneira que o `email` seja sempre único.
+
+{% include ads_article.html %}
 
 ### Preenchendo campos extras
 
