@@ -69,7 +69,16 @@ Qual é o nome do usuário?
 > 
 ```
 
-O próximo passo é utilizar o método `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, utilizaremos o mesmo para configurar nossa senha.
+Note que `ask` faz com que a linha de comando aguarde o preenchimendo dos dados. Se você escrever `"Wallace Maxters"` e teclar <kbd>ENTER</kbd>, você receberá a seguinte saída:
+
+```text
+O nome do usuário é Wallce Maxters
+```
+
+
+### Configurando a senha do usuário
+
+O próximo passo é utilizar o método interativo `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, utilizaremos o mesmo para configurar nossa senha.
 
 **Nota**: Temos que chamar a função `bcrypt` para encriptar a senha para o formato do Laravel.
 
