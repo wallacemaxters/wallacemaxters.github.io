@@ -7,8 +7,9 @@ categories:
 - artisan
 sitemap: true
 image: "/uploads/laravel-terminal.png"
-excerpt: Nesse tutorial, estarei ensinando como criar um comando customizado no Laravel
-  para criação de um usuário, através do php artisan.
+excerpt: Aprenda a criar um comando personalizado e interativo no Artisan para criar
+  usuários e maneira rápida, simples e eficiente, através da linha de comando, no
+  Laravel.
 color: ''
 
 ---
@@ -37,6 +38,8 @@ Artisan::command('make:user', function () {
 Para testar se tudo está correto,  execute `php artisan make:user` na linha de comando.
 
 Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao rodar o comando acima.
+
+## Recebendo os valores iterativamente
 
 Para continuarmos, vamos aprender o método `$this->ask()`. Dentro da função anônima do nosso comando, chamar alguns métodos presente em `$this`. O método `ask` quando chamado exibe uma saída e aguarda a entrada de dados. Nesse caso, vamos usar essa ideia para pedir ao usuário que preencha os dados específicos, como email, nome e senha.
 
