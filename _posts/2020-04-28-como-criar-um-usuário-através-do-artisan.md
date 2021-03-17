@@ -7,8 +7,8 @@ categories:
 - artisan
 sitemap: true
 image: "/uploads/laravel-terminal.png"
-excerpt: Nesse tutorial, estarei ensinando como criar um comando customizado para
-  criação de um usuário, através da linha de comando.
+excerpt: Nesse tutorial, estarei ensinando como criar um comando customizado no Laravel
+  para criação de um usuário, através do php artisan.
 color: ''
 
 ---
