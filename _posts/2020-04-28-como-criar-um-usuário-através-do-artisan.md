@@ -86,7 +86,7 @@ Artisan::command('make:user', function () {
 
 ## Criando o usuário interativamente através do Artisan
 
-Agora que aprendemos alguns métodos para receber os dados interativamente, já podemos criar nosso comando para criação do usuário. Supondo que temos o model `User` com os campos `email`, `name` e `password`, podemos fazer nosso código do nosso comando da seguinte forma:
+Agora que aprendemos alguns métodos para receber os dados interativamente, já podemos criar nosso comando para criação do usuário. Supondo que temos um model `User` com os campos `email`, `name` e `password`, podemos fazer nosso código do nosso comando da seguinte forma:
 
 ```php
 Artisan::command('make:user', function () {
@@ -101,8 +101,6 @@ Artisan::command('make:user', function () {
     
 })->describe('Cria um usuário pela linha de comando');
 ```
-
-> **Observação**: No Laravel, temos que chamar a função `bcrypt` para encriptar a senha para o formato utilizado internamente.
 
 Ao rodar o comando `php artisan make:user`, você receberá a seguinte saída:
 
@@ -120,6 +118,8 @@ Digite a senha:
 
 Usuário criado com sucesso!
 ```
+
+> **Observação**: No Laravel, temos que chamar a função `bcrypt` para encriptar a senha para o formato utilizado internamente.
 
 ### Evitando a duplicação de usuários
 
