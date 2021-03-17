@@ -34,7 +34,7 @@ Artisan::command('make:user', function () {
 });
 ```
 
-Para testar se tudo está correto, rode `php artisan make:user`.
+Para testar se tudo está correto,  execute `php artisan make:user` na linha de comando.
 
 Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao rodar o comando acima.
 
