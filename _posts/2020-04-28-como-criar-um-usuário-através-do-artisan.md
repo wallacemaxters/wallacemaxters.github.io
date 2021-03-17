@@ -45,7 +45,7 @@ Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao
 
 ## Preenchendo os valores do usuário interativamente
 
-Para continuarmos, vamos aprender o método `$this->ask()`. Dentro da função anônima do nosso comando, chamar alguns métodos presente em `$this`. O método `ask` quando chamado exibe uma saída e aguarda a entrada de dados. Nesse caso, vamos usar essa ideia para pedir ao usuário que preencha os dados específicos, como email, nome e senha.
+Para continuarmos, vamos aprender o método `$this->ask()`. Dentro da função anônima do nosso comando, podemos chamar alguns métodos presente em `$this`. O método `ask` quando chamado exibe uma saída e aguarda a entrada de dados. Nesse caso, vamos usar essa ideia para pedir ao usuário que preencha os dados específicos, como email, nome e senha.
 
 Veja:
 
