@@ -8,7 +8,7 @@ categories:
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: Aprenda a criar um comando personalizado e interativo no Artisan para criar
-  usuários e maneira rápida, simples e eficiente, através da linha de comando, no
+  usuários de maneira rápida, simples e eficiente, através da linha de comando, no
   Laravel.
 color: ''
 
