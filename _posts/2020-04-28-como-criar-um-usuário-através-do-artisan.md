@@ -148,7 +148,7 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
-O `firstOrNew` buscará um usuário com o e-mail informado. Caso exista algum registro no banco de dados, será retornado os dados do usuário com aquele `email`. Caso não exista, uma instância de `User` será retornada
+O `firstOrNew` buscará um usuário com o `email` informado. Caso exista algum registro no banco de dados, será retornado os dados do usuário com aquele `email`. Caso não exista, uma instância de `User` será retornada. Dessa forma, com poucas linhas, podemos usar o mesmo código para atualizar e criar um usuário, de maneira que o `email` seja sempre único.
 
 ### Preenchendo campos extras
 
