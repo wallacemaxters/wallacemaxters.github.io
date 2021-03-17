@@ -123,9 +123,9 @@ Usuário criado com sucesso!
 
 ### Evitando a duplicação de usuários
 
-Uma dica extra é que você pode modificar o código para evitar que um usuário seja duplicado caso um e-mail já exista.  Podemos fazer uma modificação para  que, caso o email informado já exista, o usuário existente seja atualizado. 
+No Laravel, o campo `email` é geralmente utilizado para identificação do usuário no momento no login. Obviamente, é desejável que esse campo seja único. Uma dica para evitar a duplicação é fazer com que o usuário seja criado  caso o  e-mail informado ainda não exista e que seja apenas atualizado caso o e-mail já esteja em uso.
 
-Você pode fazer isso simplesmente trocando `create` por `firstOrNew`.
+Você pode fazer isso simplesmente trocando a chamada de `create` por `firstOrNew`.
 
 Veja:
 
