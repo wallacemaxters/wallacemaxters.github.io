@@ -9,6 +9,7 @@ sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: Nesse tutorial, estarei ensinando como criar um comando customizado para
   criação de um usuário, através da linha de comando.
+color: ''
 
 ---
 ## O que é Artisan?
@@ -29,7 +30,7 @@ Artisan::command('make:user', function () {
 });
 ```
 
-Para testar se tudo está correto, rode `php artisan make:user`.
+Para testar se tudo está correto, execute `php artisan make:user`.
 
 Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao rodar o comando acima.
 
