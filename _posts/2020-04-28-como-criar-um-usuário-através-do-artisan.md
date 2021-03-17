@@ -14,9 +14,9 @@ color: ''
 ---
 ## O que é Artisan?
 
-O Artisan é a interface de linha de comando presente no Laravel. Ele fornece uma série de comandos úteis que podem ajudá-lo enquanto você constrói seu aplicativo.
+O Artisan é a interface de linha de comando presente no Laravel. Ele fornece uma série de comandos úteis que podem ajudá-lo enquanto você constrói sua aplicação. 
 
-Nesse tutorial, estarei ensinando como criar um comando customizado para criação de um usuário, através da linha de comando.
+Nesse tutorial, estarei ensinando como criar um comando customizado para criação de um usuário, através do Artisan.
 
 ## Criando um usuário com artisan
 
