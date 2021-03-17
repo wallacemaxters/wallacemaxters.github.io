@@ -71,7 +71,7 @@ Qual é o nome do usuário?
 Note que `ask` faz com que a linha de comando aguarde o preenchimendo dos dados. Se você escrever `"Wallace Maxters"` e teclar <kbd>ENTER</kbd>, você receberá a seguinte saída:
 
 ```text
-O nome do usuário é Wallce Maxters
+O nome do usuário é Wallace Maxters
 ```
 
 {% include ads_article.html %}
