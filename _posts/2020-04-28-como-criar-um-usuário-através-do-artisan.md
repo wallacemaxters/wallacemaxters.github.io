@@ -148,6 +148,8 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
+O `firstOrNew` buscará um usuário com o e-mail informado. Caso exista algum registro no banco de dados, será retornado os dados do usuário com aquele `email`. Caso não exista, uma instância de `User` será retornada
+
 ### Preenchendo campos extras
 
 Você é livre para adicionar outros campos caso seja necessário! Por exemplo, há muitos casos onde se usa o campo `api_token` para autenticação via API.
