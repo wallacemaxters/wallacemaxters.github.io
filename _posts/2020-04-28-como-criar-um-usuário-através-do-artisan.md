@@ -78,7 +78,7 @@ O nome do usuário é Wallce Maxters
 
 O próximo passo é utilizar o método interativo `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, ele é perfeito para o preenchimento de um campo sensível, como por exemplo a senha de um usuário.
 
-Exemplo:
+Veja:
 
 ```php
 Artisan::command('make:user', function () {
