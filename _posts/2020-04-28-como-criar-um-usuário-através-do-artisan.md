@@ -43,7 +43,7 @@ Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao
 
 > Dica: Se você executar, `php artisan make:user --help`,  ou simplesmente `php artisan`, você poderá algumas instruções do seu comando, além da descrição inserida através de `describe`.
 
-## Recebendo os valores iterativamente
+## Preenchendo os valores do usuário interativamente
 
 Para continuarmos, vamos aprender o método `$this->ask()`. Dentro da função anônima do nosso comando, chamar alguns métodos presente em `$this`. O método `ask` quando chamado exibe uma saída e aguarda a entrada de dados. Nesse caso, vamos usar essa ideia para pedir ao usuário que preencha os dados específicos, como email, nome e senha.
 
