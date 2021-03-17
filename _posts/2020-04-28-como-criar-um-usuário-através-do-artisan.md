@@ -15,13 +15,13 @@ color: ''
 ---
 ## O que é Artisan?
 
-O Artisan é a interface de linha de comando presente no Laravel. Ele fornece uma série de comandos úteis que podem ajudá-lo enquanto você constrói sua aplicação. 
+O Artisan é a interface de linha de comando presente no Laravel. Ele fornece uma série de comandos úteis que podem ajudá-lo enquanto você constrói sua aplicação.
 
 Nesse tutorial,  você vai aprender a criar um comando personalizado e interativo no Artisan para criar usuários de maneira bem simples no Laravel.
 
 ## Um pouco sobre comandos personalizados no artisan
 
-Para criar um comando, primeiro é necessário navegar até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com este método, podemos definir comandos personalizados para a linha de comando do Artisan. 
+Para criar um comando, primeiro é necessário navegar até a pasta `routes/console.php` e adicionar a chamada do método `Artisan:command`. Com este método, podemos definir comandos personalizados para a linha de comando do Artisan.
 
 `Artisan::command` recebe dois argumentos. O primeiro trata-se do nome do comando e o segundo é o callback executado ao executarmos o comando através do `php artisan`.
 
@@ -45,7 +45,7 @@ Se tudo funcionou corretamente, você receberá "Comando para criar usuário" ao
 
 ## Preenchendo os valores interativamente pela linha de comando
 
-Dentro da função anônima do nosso comando, podemos chamar alguns métodos através de `$this`. Existe alguns métodos que permitem exibir saídas formatadas, bem como receber informações de maneira interativa. Um destes métodos interativos é o `$this->ask()`. 
+Dentro da função anônima do nosso comando, podemos chamar alguns métodos através de `$this`. Existe alguns métodos que permitem exibir saídas formatadas, bem como receber informações de maneira interativa. Um destes métodos interativos é o `$this->ask()`.
 Quando chamado, o método `ask` exibe uma saída e aguarda a entrada de dados na linha de comando.
 Sendo assim, para a criação do usuário de maneira interativa, vamos usar esse recurso para solicitar o preenchimento dos dados específicos, como email, nome e senha.
 
@@ -73,7 +73,6 @@ Note que `ask` faz com que a linha de comando aguarde o preenchimendo dos dados.
 O nome do usuário é Wallce Maxters
 ```
 
-
 ### Obtendo a senha interativamente
 
 O próximo passo é utilizar o método interativo `secret`. Ele funciona da mesma maneira que o `ask`, porém `secret` ocultará os caracteres digitados ao esperar a entrada de dados. Nesse caso, ele é perfeito para o preenchimento de um campo sensível, como por exemplo a senha de um usuário.
@@ -87,19 +86,14 @@ Artisan::command('make:user', function () {
 });
 ```
 
-## Criando o usuário
+## Criando o usuário interativamente através do Artisan
 
-**Nota**: Temos que chamar a função `bcrypt` para encriptar a senha para o formato do Laravel.
-
-Veja:
+Agora que apredemos alguns métodos para receber os dados interativamente, já podemos criar nosso comando para criação do usuário. Supondo que temos o model `User` com os campos `email`, `name` e `password`, podemos fazer nosso código do nosso comando da seguinte forma:
 
 ```php
 Artisan::command('make:user', function () {
-    
-    $email = $this->ask('Digite um e-mail');
-
-    $name = $this->ask('Digite o nome');
-
+    $email    = $this->ask('Digite um e-mail');
+    $name     = $this->ask('Digite o nome');
     $password = bcrypt($this->secret('Digite a senha'));
     
     App\User::create(['email' => $email, 'name' => $name, 'password' => $password]);
@@ -109,7 +103,22 @@ Artisan::command('make:user', function () {
 })->describe('Cria um usuário pela linha de comando');
 ```
 
-Após rodar esse comando, o seu usuário será criado com sucesso.
+> **Observação**: No Laravel, temos que chamar a função `bcrypt` para encriptar a senha para o formato utilizado internamente.
+
+Ao rodar o comando `php artisan make:user`, você receberá a seguinte saída:
+
+```bash
+$ php artisan make:user --env=wallace
+
+Digite um e-mail:
+> wallacemaxters@teste.com
+
+Digite o nome:
+> Wallace Maxters
+
+Digite a senha:
+> 
+```
 
 Uma dica extra é que você pode modificar o código para que um usuário não seja duplicado caso um e-mail já exista. Você pode trocar `create` por `firstOrNew`.
 
