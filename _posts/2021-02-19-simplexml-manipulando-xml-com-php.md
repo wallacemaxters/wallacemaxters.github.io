@@ -145,9 +145,9 @@ NOME:Maxters
 Número:24.12
 ```
 
-## Atributos que possuem namespace
+## Acessando nós que possuem namespace
 
-Para acessar os nós que possuam com namespace, você deve utilizar o método `children`. Você deve informar o `namespace` no primeiro argumento e `true`, no segundo.
+Para acessar os nós que possuam namespace, você deve utilizar o método `children`. Deve ser informado o _namespace_ no primeiro argumento e `true`, no segundo.
 
 Assim:
 
@@ -174,3 +174,90 @@ O resultado será
 string(7) "Maçãs"
 string(7) "Bananas"
 ```
+
+## Como tratar erros de carregamento do XML?
+
+As funções da extensão SimpleXML por padrão emitem uma mensagem `E_WARNING` caso haja erro durante o processo de carregamento do XML.
+
+Por exemplo, ao executar o seguinte código:
+
+```php
+simplexml_load_string('inválido');
+```
+
+Você receberá o seguinte erro:
+
+```text
+PHP Warning:  simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '<' not found
+```
+
+Mas, na maioria dos caso, essas mensagens de erro são indesejáveis, precisando de uma validação melhor para esses casos.
+
+Existem duas formas de fazermos isso.
+
+### Usando o operador de supressão de erro
+
+Você pode tratar essa mensagem `E_WARNING` utilizando o operador de supressão de mensagens de erro (o famoso `@` no PHP). Apesar da mensagem ser suprimida, o `simplexml_load_string` retornará `false` caso ocorra algum erro de leitura.
+
+```php
+$xml = @simplexml_load_string('inválido');
+
+if ($xml === false) {
+    throw new \RuntimeException('Ocorreu um erro ao processar o XML');
+}
+```
+
+### Tratando os erros com a função libxml_use_internal_errors
+
+Outra maneira de tratar os erros de carregamento do XML é utilizando a função `libxml_use_internal_errors`. Esta função desabilita as mensagens de erro caso seja passado `true` como parâmetro e faz com que as informações dos erros sejam internamente armazenados. É possível recuperar cada erro ocorrido, através da função `libxml_get_errors` ou `libxml_get_last_error`.
+
+Sendo assim, podemos verificar se o carregamento do SimpleXML retornou `false` e, em seguida, exibir as informações do erro.
+
+Veja:
+
+```php
+libxml_use_internal_errors(true);
+
+$xml = simplexml_load_string('inválido');
+
+if ($xml === false) {
+    $error = libxml_get_last_error();
+    var_dump($error);
+    exit($error->message);
+}
+
+// processa seu XML
+```
+
+O resultado será:
+
+```text
+object(LibXMLError)#2358 (6) {
+  ["level"]=> int(3)
+  ["code"]=> int(4)
+  ["column"]=> int(1)
+  ["message"]=> string(34) "Start tag expected, '<' not found"
+  ["file"]=> string(0) ""
+  ["line"]=> int(1)
+}
+
+""Start tag expected, '<' not found"
+```
+
+
+```php
+libxml_use_internal_errors(true);
+
+$xml = simplexml_load_string('inválido');
+
+if ($xml === false) {
+    foreach (libxml_get_last_error() as $error) {
+         echo $error->message, "\n";
+    }
+    exit;
+}
+
+// processa seu XML
+```
+
+**Nota**: Após o tratamento dos erros, em alguns cenários você pode querer chamar `libxml_clear_errors` para limpar a listagem de erros reportados ao chamar as funções da Simple XML.
