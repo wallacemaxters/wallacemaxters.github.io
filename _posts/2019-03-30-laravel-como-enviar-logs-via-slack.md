@@ -135,6 +135,8 @@ public function boot()
 
 Feito isso, agora você já poderá ir para a próxima etapa: o envio do log.
 
+---
+
 ## Configurando o `Handler` para enviar os erros para o Slack
 
 O arquivo `App\Exceptions\Handler.php` do Laravel tem duas finalidades:
