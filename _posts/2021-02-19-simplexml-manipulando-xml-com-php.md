@@ -18,6 +18,7 @@ Para ler XML em PHP, você pode usar a  função `simplexml_load_file` ou `simpl
 Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessas funções. Utilizarei a função `simplexml_load_string` na maioria dos exemplos, mas mesmas operações podem ser aplicadas também ao chamar `simplexml_load_file`.
 
 
+
 ## Acessando os nós de um XML
 
 Quando você carrega um XML através das funções da SimpleXML, elas retornam um objeto `SimpleXmlElement`. Cada propriedade deste objeto, corresponderá a um nó (tag) do seu XML. Sendo assim, você pode acessá-los, conforme o exemplo abaixo.
@@ -74,8 +75,11 @@ object(SimpleXMLElement)#2545 (1) {
 }
 ```
 
+{% include ads_article.html %}
 
-## Acessando os atributos de um nó
+----
+
+## Acessando os atributos dos nós do XML
 
 Você pode acessar os atributos dos nós (tags) de duas formas. 
 
@@ -130,7 +134,11 @@ var_dump((float) $simple_xml->a->b['numero']); // float(13.55)
 var_dump((string) $simple_xml->a->b['nome']); // string(5) valor)
 ```
 
----
+
+{% include ads_article.html %}
+
+----
+
 
 ## Iterando sobre os nós
 
@@ -208,6 +216,7 @@ var_dump($simple_xml->table->row->cell->count()); // int(3)
 var_dump(count($simple_xml->table->row->cell)); // int(3)
 ```
 
+---
 
 ## Acessando nós que possuem namespace
 
