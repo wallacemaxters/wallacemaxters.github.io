@@ -344,4 +344,4 @@ object(LibXMLError)#2358 (6) {
 ""Start tag expected, '<' not found"
 ```
 
-**Nota**: Após o tratamento de erro, em alguns cenários, você pode desejar chamar `libxml_clear_errors` para limpar os últimos erros reportados ao tentar chamar alguma função da extensão Simple XML.
+**Nota**: Após o tratamento de erro, em alguns cenários, você pode desejar chamar `libxml_clear_errors` para limpar os últimos erros reportados pela extensão Simple XML.
