@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como ler xml com PHP?
+title: "SimpleXML: Como ler xml com PHP?"
 date: 2021-02-19T02:50:00.000+00:00
 categories:
 - PHP
