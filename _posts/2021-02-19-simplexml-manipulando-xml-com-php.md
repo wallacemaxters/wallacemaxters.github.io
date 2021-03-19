@@ -127,7 +127,7 @@ object(SimpleXMLElement)#2354 (1) {
 
 ### Convertendo os valores de atributos e nós
 
-Como dito anteriormente, que em todas as chamadas das propriedades do objeto SimpleXMLElement, o retorno é sempre um novo `SimpleXmlElement`. E isso é válido tanto para os nós (tags) como para os atributos. Porém, na maioria dos casos, você pode desejar que esses valores estejam disponíveis em um tipo específico do PHP, como `int`, `float` ou `string`. Felizmente, é perfeitamente possível e simples fazer a conversão desses valores. Basta fazer um `cast` na propriedade ou nó que você deseja converter para determinado tipo.
+Como dito anteriormente, em todas as chamadas das propriedades do objeto SimpleXMLElement, o retorno é sempre um novo `SimpleXmlElement`. E isso é ocorre tanto para os nós (tags) como para os atributos. Porém, na maioria dos casos, você pode desejar que esses valores estejam disponíveis em um tipo específico do PHP, como `int`, `float` ou `string`. Felizmente, é perfeitamente possível e simples fazer a conversão desses valores. Basta fazer um `cast` na propriedade ou nó que você deseja converter para determinado tipo.
 
 Exemplo:
 
