@@ -103,7 +103,7 @@ public function boot()
 
 No caso acima, o método `bind` vai criar um `factory` para a criação da instância do cliente da nossa aplicação Slack. Ela poderá ser acessada futuramente através da chamada de `app('slack')`.
 
-## Criando uma configuração para o Slack no Laravel
+### Criando uma configuração para a biblioteca makzn/slack
 
 Agora o próximo passo é passar as configurações para o nosso `bind`, substituindo as variáveis `$webhook` e `$settings` com o valor que precisamos.
 
