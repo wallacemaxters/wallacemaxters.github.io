@@ -75,8 +75,6 @@ object(SimpleXMLElement)#2545 (1) {
 }
 ```
 
-{% include ads_article.html %}
-
 ----
 
 ## Acessando os atributos dos nós do XML
@@ -135,7 +133,6 @@ var_dump((string) $simple_xml->a->b['nome']); // string(5) valor)
 ```
 
 
-{% include ads_article.html %}
 
 ----
 
