@@ -19,7 +19,7 @@ Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessa
 
 ## Acessando os nós do XML
 
-Para acessar os nós do XML processado, você deve usar o _Object Separator_ (`->`).
+Para acessar os nós do XML carregado, você deve usar o _Object Separator_ (`->`).
 
 Exemplo:
 
@@ -174,6 +174,8 @@ O resultado será
 string(7) "Maçãs"
 string(7) "Bananas"
 ```
+
+----
 
 ## Como tratar erros de carregamento do XML?
 
