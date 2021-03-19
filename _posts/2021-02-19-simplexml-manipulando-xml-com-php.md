@@ -40,13 +40,13 @@ var_dump($simple_xml->a->b->c);
 
 Retorno:
 
-```php
+```text
 object(SimpleXMLElement)#2355 (1) {
   [0]=> string(1) "Eu sou o C"
 }
 ```
 
-Como você deve ter notado, cada vez que você chama uma propriedade do objeto retornado, uma nova instância de `SimpleXmlElement` é retornada. Com isso, é sempre possível abrir o nó filho através de uma chamada encadeada. Isso porque cada instância de `SimpleXMLElement` representará cada nó do seu documento.
+Como você deve ter notado, cada vez que você chama uma propriedade do objeto retornado, uma nova instância de `SimpleXmlElement` é retornada. Com isso, é sempre possível abrir o nó filho através de uma chamada encadeada. Isso porque cada instância de `SimpleXMLElement` é a representação de cada nó presente em seu documento XML.
 
 Veja:
 
