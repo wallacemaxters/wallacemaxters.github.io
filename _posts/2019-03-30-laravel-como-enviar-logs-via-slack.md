@@ -88,22 +88,22 @@ Nesse caso, como a biblioteca não é específica para Laravel, não temos nenhu
 
 ## Configurando a biblioteca makzn/slack
 
-Como dito anteriomente, não temos um service provider específico para essa biblioteca. A ideia do service provider do Laravel é facilitar o acesso ao serviço e definir configurações em um local só, evitando repetições. E é exatamente o que vamos fazer.
+Como dito anteriomente, não temos um service provider específico para essa biblioteca. A ideia do Service Provider do Laravel é facilitar o acesso ao serviço e definir configurações em um local só, evitando repetições. E é exatamente o que vamos fazer.
 
 Abra o arquivo `AppServiceProvider` do seu projeto e no método `boot` crie a seguinte configuração:
 
 ``` php
 public function boot()
 {
-	$this->app->bind('slack', static function () {
-         return new \Maknz\Slack\Client($webhook, $settings);
+    $this->app->bind('slack', static function () {
+        return new \Maknz\Slack\Client($webhook, $settings);
     });
 }
 ```
 
 No caso acima, o método `bind` vai criar um `factory` para a criação da instância do cliente da nossa aplicação Slack. Ela poderá ser acessada futuramente através da chamada de `app('slack')`.
 
-### criando uma configuração para o Slack no Laravel
+## Criando uma configuração para o Slack no Laravel
 
 Agora o próximo passo é passar as configurações para o nosso `bind`, substituindo as variáveis `$webhook` e `$settings` com o valor que precisamos.
 
@@ -112,7 +112,6 @@ Eu tenho preferência, nesta etapa, de usar a função `config` do Laravel para 
 Para fazer isso, abra a pasta `config` do seu projeto e crie um arquivo chamado `slack.php` lá dentro. Coloque as seguintes informações nele:
 
 ```php
-<?php
 return [
 	'webhook' => 'caminho_do_webhook_copiado_no_slack',
     'settings' => [
@@ -126,7 +125,7 @@ No `AppServiceProvider`, você vai configurar os valores do `bind` da seguinte f
 ``` php
 public function boot()
 {
-	$this->app->bind('slack', static function () {
+    $this->app->bind('slack', static function () {
          return new \Maknz\Slack\Client(config('slack.webhook'), config('slack.settings'));
     });
 }
