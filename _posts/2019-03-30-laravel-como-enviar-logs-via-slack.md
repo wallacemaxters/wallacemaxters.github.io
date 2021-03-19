@@ -22,15 +22,15 @@ Primeiro, você deve acessar a sua conta no Slack e acessar página de [api](htt
 
 Clique no botão **Create an App** para começar, conforme a imagem abaixo:
 
-![](/uploads/criar-uma-aplicacao-no-slack-para-integrar-com-laravel.png)
+![Criando uma aplicação no slack para enviar os log de erros com Laravel](/uploads/criar-uma-aplicacao-no-slack-para-integrar-com-laravel.png)
 
 Preencha as informações da sua aplicação e confirme a criação da sua aplicação:
 
-![](/uploads/criar-uma-aplicacao-slack.png)
+![Criando uma aplicação no slack para enviar os log de erros com Laravel](/uploads/criar-uma-aplicacao-slack.png)
 
 Após a confirmação, você será redirecionado para a tela da sua aplicação, com as seguintes informações abaixo:
 
-![](/uploads/slack-criar-webhook.png)
+![Criando uma aplicação no slack para enviar os log de erros com Laravel](/uploads/slack-criar-webhook.png)
 
 Você deve clicar na opção _incoming webhooks_.
 
