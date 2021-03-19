@@ -137,12 +137,12 @@ var_dump((string) $simple_xml->a->b['nome']); // string(5) valor)
 ```
 
 
-
 ----
 
 ## Iterando sobre os nós
 
-Acima, fiz uma pequena demonstração de como obter os valores de atributos e nós. Porém há alguns casos onde um nó possui vários nós filhos, como no exemplo abaixo:
+Um nó pode não conter apenas um filho, mas vários, como no exemplo abaixo:
+
 
 ```xml
 <root>
@@ -161,7 +161,9 @@ Acima, fiz uma pequena demonstração de como obter os valores de atributos e n�
 </root>
 ```
 
-Para iterar sobre os nós filhos, basta utilizar o `foreach`.
+O objeto `SimpleXmlElement` também permite que acessemos esses filhos através de índices numéricos, como se fosse um `array`. 
+
+Exemplo:
 
 ```php
 
@@ -183,7 +185,24 @@ $xml =
 
 $simple_xml = simplexml_load_string($xml);
 
+var_dump($simple_xml->table->row[1]); // Acessa o segundo nó "table > row"
+```
+Resultado:
 
+```text
+object(SimpleXMLElement)#2591 (1) {
+  ["cell"]=> array(3) {
+    [0]=> string(1) "2"
+    [1]=> string(7) "Maxters"
+    [2]=> string(5) "24.12"
+  }
+}
+
+```
+
+Também podemos iterar sobre eles através do `foreach`.
+
+```php
 foreach ($simple_xml->table->row as $row) {
 
     foreach ($row->cell as $cell) {
@@ -192,9 +211,8 @@ foreach ($simple_xml->table->row as $row) {
 }
 ```
 
-O resultado do código acima será assim:
-
 ```text
+
 ID:1
 NOME:Wallace
 Número:33.55
@@ -215,6 +233,8 @@ var_dump($simple_xml->table->row->count()); // int(2)
 var_dump($simple_xml->table->row->cell->count()); // int(3)
 var_dump(count($simple_xml->table->row->cell)); // int(3)
 ```
+
+> **Nota**: Embora pareça óbvio que as operações de iteração e acesso a nós filhos devam ocorrer, o SimpleXMLElement **não se comporta** exatamente como um `array` nesses aspectos, por isso achei importante destacar bem esse trecho.
 
 ---
 
