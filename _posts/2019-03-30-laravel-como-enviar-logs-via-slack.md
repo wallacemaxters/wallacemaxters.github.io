@@ -8,11 +8,10 @@ categories:
 sitemap: true
 image: "/uploads/banner-laravel-slack.jpeg"
 color: ''
-excerpt: Veja como enviar os logs de erro da sua aplicação Laravel para um canal do
-  Slack.
+excerpt: Veja como receber os logs de erro da sua aplicação Laravel através do Slack.
 
 ---
-Nesse tutorial, vou ensinar a enviar os logs da sua aplicação pelo o Slack. Isso é algo que pode ser interessante, já que você poderá ser notificado em tempo real, caso alguma erro ocorra na sua aplicação.
+Log são muito úteis para não deixar o desenvolvedor perdido no momento que uma aplicação passa por algum erro ou coisas do tipo. Nesse tutorial, vamos aprender como receber logs de erro da sua aplicação Laravel através Slack.
 
 ***
 
