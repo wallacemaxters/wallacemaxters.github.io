@@ -1,19 +1,22 @@
 ---
 layout: post
-title: Laravel - Como enviar logs via Slack
-date: 2019-03-30 00:00:00 -0300
+title: Como enviar log de erro do Laravel pelo Slack?
+date: 2019-03-30T00:00:00.000-03:00
 categories:
 - laravel
 - slack
 sitemap: true
 image: "/uploads/banner-laravel-slack.jpeg"
+color: ''
+excerpt: ''
 
 ---
 Nesse tutorial, vou ensinar a enviar os logs da sua aplicação pelo o Slack. Isso é algo que pode ser interessante, já que você poderá ser notificado em tempo real, caso alguma anomalía ocorra na sua aplicação.
 
 Vamos ao tutoral
 
-### Criando uma aplicação no Slack
+--- 
+## Criando uma aplicação no Slack
 
 Primeiro, você deve acessar a sua conta no Slack e acessar página de [api](https://api.slack.com/apps). Nessa primeira etapa, é necessário criar uma aplicação para prosseguir.
 
@@ -61,7 +64,8 @@ A url pode ser obtida conforme a imagem abaixo:
 
 ![copiando o url do webhook do Slack para configurar no Laravel](/uploads/laravel-log-slack-copiando-o-webhook.png)
 
-### Configurando o Slack no Laravel
+--- 
+## Configurando o Slack no Laravel
 
 Nessa etapa, vamos aprender a configurar o Slack para enviar mensagem pelo Laravel.
 
@@ -71,11 +75,18 @@ Vamos usar uma biblioteca para fazer isso, para tornar mais fácil o nosso traba
 
 Na página da biblioteca, contém as instruções de instalação, mas resumidamente, você pode instalá-la via Composer, assim:
 
-    composer require maknz/slack
+```bash
+composer require maknz/slack
+```
 
 Nesse caso, como a biblioteca não é específica para Laravel, não temos nenhum _Service Provider_ costumizado da biblioteca. Teremos que configurá-lo manualmente. Mas não se preocupe, isso é bem fácil de fazer.
 
-### configurando o makzn/slack
+
+{% include ads_article.html %}
+
+--- 
+
+## Configurando a biblioteca makzn/slack
 
 Como dito anteriomente, não temos um service provider específico para essa biblioteca. A ideia do service provider do Laravel é facilitar o acesso ao serviço e definir configurações em um local só, evitando repetições. E é exatamente o que vamos fazer.
 
