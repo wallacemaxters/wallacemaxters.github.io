@@ -20,7 +20,7 @@ Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessa
 
 ## Acessando os nós de um XML
 
-Quando você carrega um XML através das funções da SimpleXML, elas retornam um objeto `SimpleXmlElement`. Cada propriedade deste objeto, corresponderá a um nó (tag) do seu XML. Sendo assim acessá-los, conforme o exemplo abaixo.
+Quando você carrega um XML através das funções da SimpleXML, elas retornam um objeto `SimpleXmlElement`. Cada propriedade deste objeto, corresponderá a um nó (tag) do seu XML. Sendo assim, você pode acessá-los, conforme o exemplo abaixo.
 
 Código:
 
