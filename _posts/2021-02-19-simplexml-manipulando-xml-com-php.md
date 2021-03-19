@@ -75,9 +75,6 @@ object(SimpleXMLElement)#2545 (1) {
 }
 ```
 
-{% include ads_article.html %}
-
-----
 
 ## Acessando os atributos dos nós do XML
 
@@ -103,7 +100,7 @@ var_dump($simple_xml->a->b['numero']);
 
 O resultado será:
 
-```php
+```text
 object(SimpleXMLElement)#2354 (1) {
   [0]=> string(5) "13.55"
 }
@@ -117,7 +114,7 @@ var_dump($simple_xml->a->b->attributes()->numero);
 
 O resultado será:
 
-```php
+```text
 object(SimpleXMLElement)#2354 (1) {
   [0]=> string(5) "13.55"
 }
@@ -138,7 +135,6 @@ var_dump((string) $simple_xml->a->b['nome']); // string(5) valor)
 {% include ads_article.html %}
 
 ----
-
 
 ## Iterando sobre os nós
 
@@ -204,7 +200,7 @@ Número:24.12
 ```
 
 
-Além disso, é possível contar a quantidade de nós filhos do seu documento XML, através da função ou método `count`.
+Além disso, é possível retornar a quantidade de nós filhos do seu documento XML, através da função ou método `count`.
 
 Veja:
 
@@ -217,6 +213,11 @@ var_dump(count($simple_xml->table->row->cell)); // int(3)
 ```
 
 ---
+
+{% include ads_article.html %}
+
+---
+
 
 ## Acessando nós que possuem namespace
 
