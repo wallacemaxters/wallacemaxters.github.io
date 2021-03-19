@@ -135,24 +135,27 @@ public function boot()
 
 Feito isso, agora você já poderá ir para a próxima etapa: o envio do log.
 
-### Configurando o `Handler` para enviar os erros para o Slack
+## Configurando o `Handler` para enviar os erros para o Slack
 
-O arquivo `Handler` do Laravel tem duas funções:
+O arquivo `App\Exceptions\Handler.php` do Laravel tem duas finalidades:
 
 * Determinar o comportamento da sua aplicação quando a renderização do erro. Ou seja, você pode costumizar a página de erro, caso ocorra alguma.
 * Determinar como a aplicação registrará os logs quando ocorrer um erro.
 
-Este último caso é o que vamos alterar. O método que vamos mexer é no `report.`
+Este último caso é o que vamos alterar. O método que vamos mexer é no `report`.
+
+Código:
 
 ```php
 public function report(Exception $exception)
 {
-   parent::report($exception);
+
+    parent::report($exception);
    
-   app('slack')->attach([
-      'text' => (string) $exception,
-      'color' => 'danger',
-   ])->send($exception->getMessage());
+    app('slack')->attach([
+       'text' => (string) $exception,
+       'color' => 'danger',
+    ])->send($exception->getMessage());
 }
 ```
 
