@@ -13,13 +13,14 @@ excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PH
 color: "#D43939"
 
 ---
-Para ler XML em PHP, você pode usar a  função `simplexml_load_file` ou`simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`. A primeira lê o XML a partir de um arquivo, e a seguida, através de uma string contendo o XML.
+Para ler XML em PHP, você pode usar a  função `simplexml_load_file` ou`simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`. A primeira carrega o XML a partir de um arquivo, e a segunda, através de uma string contendo o XML.
 
-Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessas funções.
+Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessas funções. Utilizarei a função `simplexml_load_string` na maioria dos exemplos, mas mesmas operações podem ser aplicadas também ao chamar `simplexml_load_file`.
 
-## Acessando os nós do XML
 
-Para acessar os nós do XML carregado, você deve usar o _Object Separator_ (`->`).
+## Acessando os nós de um XML
+
+Para acessar os nós do XML carregado, você deve usar o _Object Separator_ (`->`). 
 
 Exemplo:
 
@@ -44,6 +45,35 @@ object(SimpleXMLElement)#2355 (1) {
   [0]=> string(1) "Eu sou o C"
 }
 ```
+
+Como você deve ter notado, cada vez que você chama uma propriedade referente a um nó (tag) do seu XML, uma nova instância de `SimpleXmlElement` é retornado. Com isso, é possível abrir o nó (tag) filho através de uma chamada encadeada.
+
+Veja:
+
+```php
+var_dump(
+	$simple_xml->a,
+    $simple_xml->a->b,
+    $simple_xml->a->b->c
+);
+```
+
+Resultado:
+
+```text
+object(SimpleXMLElement)#2580 (1) {
+  ["b"]=> object(SimpleXMLElement)#2563 (1) {
+    ["c"]=> string(10) "Eu sou o C"
+  }
+}
+object(SimpleXMLElement)#2565 (1) {
+  ["c"]=> string(10) "Eu sou o C"
+}
+object(SimpleXMLElement)#2545 (1) {
+  [0]=> string(10) "Eu sou o C"
+}
+```
+
 
 ## Acessando os atributos de um nó
 
