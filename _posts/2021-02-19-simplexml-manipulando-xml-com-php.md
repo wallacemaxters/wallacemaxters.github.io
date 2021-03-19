@@ -209,7 +209,7 @@ if ($xml === false) {
 
 ### Tratando os erros com a função libxml_use_internal_errors
 
-Outra maneira de tratar os erros de carregamento do XML é utilizando a função `libxml_use_internal_errors`. Esta função desabilita as mensagens de erro caso seja passado `true` como parâmetro e faz com que as informações dos erros sejam internamente armazenados. É possível recuperar cada erro ocorrido, através da função `libxml_get_errors` ou `libxml_get_last_error`.
+Outra maneira de tratar os erros de carregamento do XML é utilizando a função `libxml_use_internal_errors`. Esta função desabilita as mensagens de erro caso seja passado `true` como parâmetro e faz com que as informações dos erros sejam internamente armazenados. É possível recuperar cada erro ocorrido, `libxml_get_last_error`.
 
 Sendo assim, podemos verificar se o carregamento do SimpleXML retornou `false` e, em seguida, exibir as informações do erro.
 
@@ -244,20 +244,4 @@ object(LibXMLError)#2358 (6) {
 ""Start tag expected, '<' not found"
 ```
 
-
-```php
-libxml_use_internal_errors(true);
-
-$xml = simplexml_load_string('inválido');
-
-if ($xml === false) {
-    foreach (libxml_get_last_error() as $error) {
-         echo $error->message, "\n";
-    }
-    exit;
-}
-
-// processa seu XML
-```
-
-**Nota**: Após o tratamento dos erros, em alguns cenários você pode querer chamar `libxml_clear_errors` para limpar a listagem de erros reportados ao chamar as funções da Simple XML.
+**Nota**: Após o tratamento de erro, em alguns cenários, você pode desejar chamar `libxml_clear_errors` para limpar os últimos erros reportados ao tentar chamar alguma função da extensão Simple XML.
