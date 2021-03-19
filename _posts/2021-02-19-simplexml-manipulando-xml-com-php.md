@@ -130,6 +130,8 @@ var_dump((float) $simple_xml->a->b['numero']); // float(13.55)
 var_dump((string) $simple_xml->a->b['nome']); // string(5) valor)
 ```
 
+---
+
 ## Iterando sobre os nós
 
 Acima, fiz uma pequena demonstração de como obter os valores de atributos e nós. Porém há alguns casos onde um nó possui vários nós filhos, como no exemplo abaixo:
@@ -151,7 +153,7 @@ Acima, fiz uma pequena demonstração de como obter os valores de atributos e n�
 </root>
 ```
 
-Para percorrer esses nós filhos, devemos usar o `foreach`.
+Para iterar sobre os nós filhos, basta utilizar o `foreach`.
 
 ```php
 
@@ -192,6 +194,20 @@ ID:2
 NOME:Maxters
 Número:24.12
 ```
+
+
+Além disso, é possível contar a quantidade de nós filhos do seu documento XML, através da função ou método `count`.
+
+Veja:
+
+```php
+var_dump(count($simple_xml->table->row)); // int(2)
+var_dump($simple_xml->table->row->count()); // int(2)
+
+var_dump($simple_xml->table->row->cell->count()); // int(3)
+var_dump(count($simple_xml->table->row->cell)); // int(3)
+```
+
 
 ## Acessando nós que possuem namespace
 
