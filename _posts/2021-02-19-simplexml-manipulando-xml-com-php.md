@@ -309,7 +309,7 @@ if ($xml === false) {
 
 ### Tratando os erros com a função libxml_use_internal_errors
 
-Outra maneira de tratar os erros de carregamento do XML é utilizando a função `libxml_use_internal_errors`. Esta função desabilita as mensagens de erro caso seja passado `true` como parâmetro e faz com que as informações dos erros sejam internamente armazenados. É possível recuperar cada erro ocorrido, `libxml_get_last_error`.
+Outra maneira de tratar os erros de carregamento do XML é utilizando a função `libxml_use_internal_errors`. Esta função desabilita as mensagens de erro caso seja passado `true` como argumento e faz com que as informações dos erros sejam internamente armazenados. É possível recuperar o erro ocorrido na última tentativa de carregar um documento XML através da função `libxml_get_last_error`.
 
 Sendo assim, podemos verificar se o carregamento do SimpleXML retornou `false` e, em seguida, exibir as informações do erro.
 
