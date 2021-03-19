@@ -13,16 +13,16 @@ excerpt: Esse tutorial mostra como podemos utilizar a extensão Simple XML do PH
 color: "#D43939"
 
 ---
-Para ler XML em PHP, você pode usar a  função `simplexml_load_file` ou`simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`. A primeira carrega o XML a partir de um arquivo, e a segunda, através de uma string contendo o XML.
+Para ler XML em PHP, você pode usar a  função `simplexml_load_file` ou `simple_xml_load_string`. Elas retornam uma instância da classe `SimpleXmlElement`. A primeira carrega o XML a partir de um arquivo, e a segunda, através de uma string contendo o XML.
 
 Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessas funções. Utilizarei a função `simplexml_load_string` na maioria dos exemplos, mas mesmas operações podem ser aplicadas também ao chamar `simplexml_load_file`.
 
 
 ## Acessando os nós de um XML
 
-Para acessar os nós do XML carregado, você deve usar o _Object Separator_ (`->`). 
+Quando você carrega um XML através das funções da SimpleXML, elas retornam um objeto `SimpleXmlElement`. Cada propriedade deste objeto, corresponderá a um nó (tag) do seu XML. Sendo assim acessá-los, conforme o exemplo abaixo.
 
-Exemplo:
+Código:
 
 ```php
 $xml = '<root>
@@ -46,7 +46,7 @@ object(SimpleXMLElement)#2355 (1) {
 }
 ```
 
-Como você deve ter notado, cada vez que você chama uma propriedade referente a um nó (tag) do seu XML, uma nova instância de `SimpleXmlElement` é retornado. Com isso, é possível abrir o nó (tag) filho através de uma chamada encadeada.
+Como você deve ter notado, cada vez que você chama uma propriedade do objeto retornado, uma nova instância de `SimpleXmlElement` é retornada. Com isso, é sempre possível abrir o nó filho através de uma chamada encadeada. Isso porque cada instância de `SimpleXMLElement` representará cada nó do seu documento.
 
 Veja:
 
@@ -77,7 +77,9 @@ object(SimpleXMLElement)#2545 (1) {
 
 ## Acessando os atributos de um nó
 
-Para acessar os atributos de um nó, você deve acessar da mesma forma que se faz com os índices do `array` em PHP.  Basta usar \['nome_atributo'\]
+Você pode acessar os atributos dos nós (tags) de duas formas. 
+
+Na primeira delas, você pode acessar como se fossem índices de um `array`. 
 
 Exemplo:
 
@@ -103,9 +105,25 @@ object(SimpleXMLElement)#2354 (1) {
 }
 ```
 
-Observe que em todas as chamadas, o retorno é sempre `SimpleXmlElement`. Então, para converter os valores, você precisa fazer a conversão dos valores (cast) em cada operação.
+A segunda forma, você pode utilizar o método `attributes`, que permite você acessar os atributos de um nó do seu documento através de propriedades.
 
-Veja:
+```php
+var_dump($simple_xml->a->b->attributes()->numero);
+```
+
+O resultado será:
+
+```php
+object(SimpleXMLElement)#2354 (1) {
+  [0]=> string(5) "13.55"
+}
+```
+
+### Convertendo os valores de atributos e nós
+
+Como dito anteriormente, que em todas as chamadas das propriedades do objeto SimpleXMLElement, o retorno é sempre um novo `SimpleXmlElement`. E isso é válido tanto para os nós (tags) como para os atributos. Porém, na maioria dos casos, você pode desejar que esses valores estejam disponíveis em um tipo específico do PHP, como `int`, `float` ou `string`. Felizmente, é perfeitamente possível e simples fazer a conversão desses valores. Basta fazer um `cast` na propriedade ou nó que você deseja converter para determinado tipo.
+
+Exemplo:
 
 ```php
 var_dump((float) $simple_xml->a->b['numero']); // float(13.55)
