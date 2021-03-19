@@ -52,7 +52,7 @@ Veja:
 
 ```php
 var_dump(
-	$simple_xml->a,
+    $simple_xml->a,
     $simple_xml->a->b,
     $simple_xml->a->b->c
 );
