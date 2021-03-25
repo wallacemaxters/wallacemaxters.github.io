@@ -10,3 +10,17 @@ image: "/uploads/covers/php.png"
 excerpt: Aprenda a formatar as horas com PHP
 
 ---
+Para exibir a hora atual no PHP ou formatar uma data específica, basta utilizar a seguinte chamada:
+
+## Exibindo a hora atual formatada pelo PHP
+
+```php
+date('H:i:s')
+```
+
+ou 
+
+```php
+$date = new Datetime();
+echo $date->format('H:i:s')
+```
