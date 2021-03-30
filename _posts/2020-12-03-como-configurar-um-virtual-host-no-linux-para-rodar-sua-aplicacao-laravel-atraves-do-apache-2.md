@@ -68,7 +68,7 @@ Observe que `DocumentRoot` está apontando para a pasta `public` da sua aplicaç
 
 ## Habilitando o Virtual Host
 
-Após salvar o Virtual Host, você precisa executar o comando `a2ensite`. Esse comando é responsável por habilitar o virtual host.
+Apenas criar o arquivo `.conf` dentro de `/etc/apache2/sites-avaliable`, não faz com que o Apache reconheça o seu Virtual host. É preciso habilitá-lo no Apache. Você pode fazer isso através do comando `a2ensite`.
 
 Faça assim:
 
