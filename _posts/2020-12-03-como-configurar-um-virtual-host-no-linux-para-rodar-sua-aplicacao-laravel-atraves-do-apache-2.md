@@ -55,12 +55,16 @@ sudo nano seu-projeto.conf
 
 Em seguida, adicione o seguinte conteúdo em seu arquivo `seu-projeto.conf`:
 
-    <VirtualHost *:80>
-        ServerName seu-projeto.local
-        DocumentRoot /var/www/seu-projeto/public
-    </VirtualHost>
+```apache
+<VirtualHost *:80>
+    ServerName seu-projeto.local
+    DocumentRoot /var/www/seu-projeto/public
+</VirtualHost>
+```
 
-### Habilitando o Virtual Host
+---
+
+## Habilitando o Virtual Host
 
 Após salvar o arquivo do Virtual Host, você precisa executar o comando `a2ensite`. Esse comando é responsável por habilitar o virtual host.
 
@@ -82,6 +86,8 @@ Com isso, o seu virtual host foi habilitado e está pronto para funcionar, poré
 
 A mensagem acima está sugerindo que você já pode recarregar o Apache,  para que o novo site esteja disponível. Mas, antes de fazer isso, **é sempre importante** executar o comando `sudo apache2ctl configtest`. Este comando verificará se existe algum problema com a sintaxe e afins em seu Virtual Host. Caso haja falhas, será apresentado os detalhes dos erros que precisarão ser corrigidos. Se tudo estiver certo, você receberá a saída `Syntax OK`.
 
+---
+
 ## Recarregando o Apache
 
 Toda vez que você habilita um virtual host novo, você precisa recarregar o Apache, para que as mudanças entrem em vigor.
@@ -98,10 +104,15 @@ Ou:
 sudo systemctl reload apache2
 ```
 
-É importante informar que o Apache cria um link simbólico dos virtual hosts ativos. Ele os cria dentro da pasta `/etc/apache2/sites-enabled`. Quando você executa o comando `a2ensite`,  o arquivo alvo em `/etc/apache2/sites-avaliable`  passa a ter um link em `/etc/apache2/sites-enabled`. 
+> É importante informar que o Apache cria um link simbólico dos virtual hosts ativos. Ele os cria dentro da pasta `/etc/apache2/sites-enabled`. Quando você executa o comando `a2ensite`,  o arquivo alvo em `/etc/apache2/sites-avaliable`  passa a ter um link em `/etc/apache2/sites-enabled`. 
 
-***
+--- 
+## Testando a aplicação
+
+Agora, você já pode acessar a url `seu-projeto.local` em seu navegador para conferir se está tudo certo. Se as demais configurações do seu projeto ou dependências já estiverem definidas, sua aplicação está funcionando agora pelo Apache!
+
+---
 
 ## Reescrita de URL no Laravel
 
-O Laravel internamente utiliza o `mod_rewrite` para que as rotas da aplicação funcionem como esperado. Caso não tenha feito ainda, aprenda a [como habilitar a reescrita de urls no Apache](/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2).
+O Laravel internamente utiliza o `mod_rewrite` para que as rotas da aplicação funcionem como esperado. Caso não tenha ainda configurado o seu Apache, ou sua aplicação no Apache apresentar problemas com a URL, recomendo a leitura de [como habilitar a reescrita de urls no Apache](/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2).
