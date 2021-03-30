@@ -70,7 +70,7 @@ Observe que `DocumentRoot` está apontando para a pasta `public` da sua aplicaç
 
 Apenas criar o arquivo `.conf` dentro de `/etc/apache2/sites-avaliable`, não faz com que o Apache reconheça o seu Virtual host. É preciso habilitá-lo no Apache. Você pode fazer isso através do comando `a2ensite`.
 
-Faça assim:
+Veja:
 
 ```bash
 sudo a2ensite seu-projeto.conf
