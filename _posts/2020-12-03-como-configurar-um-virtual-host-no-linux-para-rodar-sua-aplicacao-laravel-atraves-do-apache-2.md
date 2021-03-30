@@ -62,13 +62,13 @@ Em seguida, adicione o seguinte conteúdo em seu arquivo `seu-projeto.conf`:
 </VirtualHost>
 ```
 
-Observe que `DocumentRoot` está apontando para a pasta `public` da sua aplicação Laravel. Isso deve ser feito para que a aplicação funcione corretamente, pois no Laravel essa pasta é tratada como a raiz da sua aplicação web.
+Observe que `DocumentRoot` está apontando para a pasta `public` da sua aplicação Laravel. Isso deve ser feito para que a aplicação funcione corretamente, pois, no Laravel, essa pasta é tratada como a raiz da sua aplicação web.
 
 ---
 
 ## Habilitando o Virtual Host
 
-Após salvar o arquivo do Virtual Host, você precisa executar o comando `a2ensite`. Esse comando é responsável por habilitar o virtual host.
+Após salvar o Virtual Host, você precisa executar o comando `a2ensite`. Esse comando é responsável por habilitar o virtual host.
 
 Faça assim:
 
