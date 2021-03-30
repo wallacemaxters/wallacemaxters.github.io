@@ -82,9 +82,17 @@ Esse comando retornará a seguinte saída:
     To activate the new configuration, you need to run:
       systemctl reload apache2
 
-A mensagem acima está sugerindo que você recarregue o Apache, para que o novo site esteja disponível. Mas, antes de fazer isso, é sempre importante executar `sudo apache2ctl configtest`. Este comando verificará se existe algum problema com a síntaxe ou configuração do seu virtual host. Caso haja falhas, será apresentado os detalhes para que você precisa corrigir.
+### Teste o Apache após habilitar um Virtual Host
 
-Se tudo estiver certo, você receberá a saída `Syntax OK`. Então, você poderá recarregar o Apache, dessa forma:
+A mensagem acima está sugerindo que você recarregue o Apache,  para que o novo site esteja disponível. Mas, antes de fazer isso, **é sempre importante** executar o comando `sudo apache2ctl configtest`. Este comando verificará se existe algum problema com a síntaxe ou configuração do seu Virtual Host. Caso haja falhas, será apresentado os detalhes para que você precisa corrigir.
+
+Se tudo estiver certo, você receberá a saída `Syntax OK`.
+
+## Recarregando o Apache
+
+Após realizar o passo acima, você poderá recarregar o Apache. 
+
+Execute o comando abaixo:
 
 ```bash
 sudo service apache2 reload
