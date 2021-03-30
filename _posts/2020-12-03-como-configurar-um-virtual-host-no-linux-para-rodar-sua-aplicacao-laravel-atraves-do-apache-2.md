@@ -12,33 +12,23 @@ excerpt: Aprenda como configurar um Virtual Host no Linux para executar seu site
   através do Apache 2.
 
 ---
-O Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso, creio que é importante saber configurá-lo na sua própria máquina, para estar familiazirado com o mesmo. Neste tutorial, vamos aprender como configurar um Virtual Host no Linux para executar sua aplicação Laravel através do Apache 2.
+O servidor Apache e Linux são muito utilizados em diversas hospedagens de site. Por isso, creio que é importante saber configurá-lo na sua própria máquina, para estar familiarizado com o mesmo. Neste tutorial, vamos aprender como configurar um Virtual Host no Linux para executar sua aplicação Laravel através do Apache 2.
 
 > **Nota:** Esse tutorial assume que você já tenha o Apache2 e o PHP instalado no seu Linux.
 
 ***
 
-## Onde deve estar meu projeto Laravel?
+## Em qual diretório deve estar meu projeto Laravel?
 
-O local padrão onde os sites do Apache estão localizados no Linux é no diretório `/var/www/`. Mova a pasta do seu projeto para dentro desta pasta. O caminho deverá ficar parecido com `/var/www/seu-projeto`.
-
-**Caso ainda não tenha** o projeto do Laravel na sua máquina, você poderá criar "do zero", através do comando  `composer create-project`.
-
-Exemplo:
-
-```bash
-composer create-project laravel/laravel seu-projeto
-```
+Por padrão, no Linux, os sites do Apache estão localizados no diretório `/var/www/`. A sugestão é que você mova a pasta do seu projeto para dentro desta pasta. O caminho deverá ficar parecido com `/var/www/seu-projeto`.
 
 ***
 
 ## Configurando um host local para sua aplicação
 
-É possível criar um host, diferente do `localhost`, para executar a sua aplicação Laravel através dela. Eu sempre prefiro configurar um host para aplicação que vou usar, porque costumo trabalhar com vários projetos escritos em Laravel na mesma máquina.
+É possível criar um host na sua máquina, diferente do `localhost`, para executar a sua aplicação Laravel localmente. Para isto,  basta deve editar o arquivo `/etc/hosts` e adicionar uma nova linha de configuração. É necessário permissão de `root` para editar este arquivo. 
 
-Para configurar um host, você deve editar o arquivo `/etc/hosts`. Você pode utilizar o comando `sudo nano` para fazer isso.
-
-Exemplo:
+No exemplo abaixo, vamos usar o `nano` para editar o arquivo. Veja: 
 
 ```bash
 sudo nano /etc/hosts
@@ -54,21 +44,25 @@ Para testar se o novo host está funcionando, você pode acessar `http://seu-pro
 
 ## Criando um Virtual Host
 
-Agora, crie um Virtual Host no seu Apache, para apontar para o domínio local criado anteriormente. Execute o seguinte comando:
+Agora, precisamos criar um arquivo de Virtual Host no seu Apache, para apontar para o domínio local criado anteriormente.  Os arquivos de virtual hosts devem ser armazenados na pasta `/etc/apache2/sites-avaliable` e possuir a extensão `.conf`.
+
+Faça o seguinte:
 
 ```bash
 cd /etc/apache2/sites-avaliable
 sudo nano seu-projeto.conf
 ```
 
-Adicione o seguinte conteúdo em seu arquivo `seu-projeto.conf`:
+Em seguida, adicione o seguinte conteúdo em seu arquivo `seu-projeto.conf`:
 
     <VirtualHost *:80>
         ServerName seu-projeto.local
         DocumentRoot /var/www/seu-projeto/public
     </VirtualHost>
 
-Após salvar o arquivo de configuração acima, você precisa executar o comando `a2ensite`. Esse comando é responsável por habilitar o virtual host.
+### Habilitando o Virtual Host
+
+Após salvar o arquivo do Virtual Host, você precisa executar o comando `a2ensite`. Esse comando é responsável por habilitar o virtual host.
 
 Faça assim:
 
@@ -82,17 +76,17 @@ Esse comando retornará a seguinte saída:
     To activate the new configuration, you need to run:
       systemctl reload apache2
 
+Com isso, o seu virtual host foi habilitado e está pronto para funcionar, porém é recomendável fazer uma coisa antes...
+
 ### Teste o Apache após habilitar um Virtual Host
 
-A mensagem acima está sugerindo que você recarregue o Apache,  para que o novo site esteja disponível. Mas, antes de fazer isso, **é sempre importante** executar o comando `sudo apache2ctl configtest`. Este comando verificará se existe algum problema com a síntaxe ou configuração do seu Virtual Host. Caso haja falhas, será apresentado os detalhes para que você precisa corrigir.
-
-Se tudo estiver certo, você receberá a saída `Syntax OK`.
+A mensagem acima está sugerindo que você já pode recarregar o Apache,  para que o novo site esteja disponível. Mas, antes de fazer isso, **é sempre importante** executar o comando `sudo apache2ctl configtest`. Este comando verificará se existe algum problema com a sintaxe e afins em seu Virtual Host. Caso haja falhas, será apresentado os detalhes dos erros que precisarão ser corrigidos. Se tudo estiver certo, você receberá a saída `Syntax OK`.
 
 ## Recarregando o Apache
 
-Após realizar o passo acima, você poderá recarregar o Apache. 
+Toda vez que você habilita um virtual host novo, você precisa recarregar o Apache, para que as mudanças entrem em vigor.
 
-Execute o comando abaixo:
+Utilize o seguinte comando:
 
 ```bash
 sudo service apache2 reload
@@ -104,12 +98,10 @@ Ou:
 sudo systemctl reload apache2
 ```
 
-> **DICA**: O Apache deixa os virtual hosts ativos dentro da pasta `/etc/apache2/sites-enabled`. Quando você executa o comando `a2ensite`, é criado um link simbólico do seu arquivo presente em `/etc/apache2/sites-avaliable` dentro de `/etc/apache2/sites-enabled`. Para desabilitar um virtual host, você deve executar `sudo a2dissite nome_do_site`.
+É importante informar que o Apache cria um link simbólico dos virtual hosts ativos. Ele os cria dentro da pasta `/etc/apache2/sites-enabled`. Quando você executa o comando `a2ensite`,  o arquivo alvo em `/etc/apache2/sites-avaliable`  passa a ter um link em `/etc/apache2/sites-enabled`. 
 
-## Testando a aplicação
+***
 
-Se tudo estiver correto, você poderá visualizar seu projeto Laravel sendo executado na url `http://seu-projeto.local`.
+## Reescrita de URL no Laravel
 
-## Reescrita da url
-
-O Laravel internamente utiliza o `mod_rewrite`no Apache para que as rotas da aplicação funcionem corretamente. Caso não tenha feito ainda, aprenda a [como habilitar a reescrita de urls no Apache](https://wallacemaxters.com.br/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2).
+O Laravel internamente utiliza o `mod_rewrite` para que as rotas da aplicação funcionem como esperado. Caso não tenha feito ainda, aprenda a [como habilitar a reescrita de urls no Apache](/blog/2020/11/26/como-habilitar-a-reescrita-de-url-no-apache2).
