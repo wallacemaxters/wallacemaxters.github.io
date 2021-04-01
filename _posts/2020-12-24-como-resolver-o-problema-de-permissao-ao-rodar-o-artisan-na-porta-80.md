@@ -3,14 +3,16 @@ layout: post
 title: Problemas de permissão ao executar o "php artisan serve" na porta 80
 date: 2020-12-24T15:05:00.000-02:00
 categories:
+- artisan
 - laravel
+- PHP
 - linux
-- php
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: O linux não permite a execução do "php artisan serve"  em algumas portas
   com valores abaixo de 1024, como no caso da famosa porta 80, por exemplo. Aprenda
   a solucionar esse problema.
+color: ''
 
 ---
 ## Introdução
