@@ -3,12 +3,14 @@ layout: post
 title: Por que o comando 'php artisan serve' não funciona no Lumen Framework?
 date: 2020-11-18T15:00:00.000-02:00
 categories:
+- artisan
 - lumen
 - PHP
 sitemap: true
 image: "/uploads/lumen-2.png"
 excerpt: Nesse tutorial vamos entender por que o comando "php artisan serve" não funciona
   no Lumen e qual é a solução para esse problema.
+color: ''
 
 ---
 O comando [artisan serve](blog/2019/08/17/truques-com-o-comando-php-artisan-serve) provavelmente é um dos mais utilizados no desenvolvimento com Laravel, e é muito comum que os desenvolvedores que utilizam o Lumen também tente rodá-lo para iniciar o servidor de testes.
