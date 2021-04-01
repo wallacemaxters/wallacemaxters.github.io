@@ -3,8 +3,8 @@ layout: post
 title: Criando um usuário através do artisan interativamente
 date: 2020-04-28T00:00:00.000-03:00
 categories:
-- laravel
 - artisan
+- laravel
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: Aprenda a criar um comando personalizado e interativo no Artisan para criar
