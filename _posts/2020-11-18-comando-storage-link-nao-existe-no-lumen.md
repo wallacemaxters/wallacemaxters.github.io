@@ -3,6 +3,7 @@ layout: post
 title: Comando "storage link" não existe no Lumen
 date: 2020-11-18T01:00:00.000-02:00
 categories:
+- artisan
 - lumen
 - PHP
 sitemap: true

@@ -3,6 +3,7 @@ layout: post
 title: Por que o comando 'php artisan tinker' não funciona no Lumen?
 date: 2021-01-24 02:24:00 -0200
 categories:
+- artisan
 - lumen
 sitemap: true
 image: "/uploads/lumen.png"

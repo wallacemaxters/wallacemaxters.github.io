@@ -26,10 +26,10 @@ Veja:
 ```javascript
 navigator.mediaDevices.getUserMedia({video: true})
 .then(function (mediaStream) {
-  // nosso código aqui
+    // nosso código aqui
 })
 .catch(function (err) {
-  console.log('Não há permissões para acessar a webcam')
+    console.log('Não há permissões para acessar a webcam')
 })
 ```
 
@@ -50,7 +50,7 @@ Código:
 ```javascript
 navigator.mediaDevices.getUserMedia({video: true})
 .then(function (mediaStream) {
-	var video = document.querySelector('#video');
+  var video = document.querySelector('#video');
   
      video.srcObject = mediaStream;
      video.play();
@@ -172,31 +172,32 @@ No nosso caso, vamos usar `toBlob`. Isso porque usaremos o mesmo para fazer o up
 
 ### Exemplo de upload
 
-Se quisermos fazer o upload da imagem capturada pela webcam, podemos simplesmente adicionar usar `toBlob` e adicionar o `Blob` retornado em um `FormData`.
+Se quisermos fazer o upload da imagem capturada pela webcam, podemos simplesmente usar a função `toBlob` e adicionar o `Blob` retornado em um `FormData`.
 
-O código é bem simples. Vamos adicionar um botão que faça o upload da imagem.
+O código é bem simples.
 
 ```html
 <button id="upload">Upload</button>
 ```
 ```javascript
 document.querySelector('#upload').addEventListener('click', function (e) {
- 
-  var canvas = document.querySelector("#canvas");
-  
-  canvas.toBlob(function (blob) {
-  	var form = new FormData();
-    form.append('image', blob, 'webcam.jpg');
-    
-  	var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/upload', true);
-    xhr.onload = function(e) {
-    	// upload concluído  
-    };
-    
-    xhr.send(form);  
-                              
-  }, 'image/jpeg');
+
+    var canvas = document.querySelector("#canvas");
+
+    canvas.toBlob(function (blob) {
+        
+        var form = new FormData();
+        form.append('image', blob, 'webcam.jpg');
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/upload', true);
+        xhr.onload = function(e) {
+            // upload concluído  
+        };
+
+        xhr.send(form);  
+                                
+    }, 'image/jpeg');
 })
 ```
 

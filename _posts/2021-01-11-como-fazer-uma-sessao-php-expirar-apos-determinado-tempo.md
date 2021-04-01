@@ -3,7 +3,7 @@ layout: post
 title: Como fazer uma sessão PHP expirar após determinado tempo?
 date: 2021-01-11 17:59:00 -0200
 categories:
-- php
+- PHP
 sitemap: true
 image: "/uploads/covers/php.png"
 excerpt: Veja como é fácil definir o tempo de expiração de uma sessão no PHP.
