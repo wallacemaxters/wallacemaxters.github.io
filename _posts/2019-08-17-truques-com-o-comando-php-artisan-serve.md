@@ -5,6 +5,7 @@ date: 2019-08-17T20:20:00.000-03:00
 categories:
 - artisan
 - laravel
+- PHP
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 
