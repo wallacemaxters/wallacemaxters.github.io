@@ -1,0 +1,29 @@
+{% assign page_title = page.title | strip_html | escape %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    {% seo %}
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
+
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" href="{{ '/assets/img/logo.png' | prepend: site.baseurl | prepend: site.url }}">
+
+    <meta name="theme-color" content="#41b6b0">
+
+    {% if page.image %}
+    <style>
+        .top-header {
+            background-color: {% if page.color %} {{ page.color }}{% else %}#fff{% endif %};
+            background-image: url('{{ page.image }}');
+        }
+    </style>
+    {% endif %}
+
+    <script src="{{ '/assets/js/dropdown.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="//www.googleoptimize.com/optimize.js?id=OPT-P8HBLLJ"></script>
+    
+</head>

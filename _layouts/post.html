@@ -16,14 +16,16 @@ disqus: true
             <div class="column is-12-mobile is-9-desktop">
                 <!-- POST -->
                 <article class="card block post-page-article">
+                    {% if page.image %}
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <img loading="eager" src="{{ page.image }}" alt="{{ page.title | escape }}"
-                                 title='{{ page.title | escape }}'>
+                                 title='{{ page.title | escape }}' >
                         </figure>
                     </div>
+                    {% endif %}
                     <div class="card-content">
-                        <div class="columns ">
+                        <div class="columns">
                             <span class="column">
                                 <small class="is-size-7">
                                     Publicado em: <time

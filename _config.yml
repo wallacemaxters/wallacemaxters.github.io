@@ -1,18 +1,5 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+
 title: Wallace Maxters
 logo: /assets/img/logo.svg#default
 white_logo: /assets/img/logo.svg#white
@@ -29,6 +16,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 github: https://github.com/wallacemaxters
 stackoverflow: https://pt.stackoverflow.com/users/4995/wallace-maxters
@@ -51,6 +39,8 @@ permalink: /blog/:year/:month/:day/:title
 
 safe: false
 
+locale: pt-br
+
 collections:
   categorias:
     output: true
@@ -58,3 +48,7 @@ collections:
   ferramentas:
     output: true
     permalink: /:collection/:name
+
+
+
+# author: wallacemaxters
