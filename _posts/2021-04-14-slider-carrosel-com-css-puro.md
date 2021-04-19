@@ -1,21 +1,22 @@
 ---
 layout: post
 color: "#222222"
-title: 'Carrosel com CSS puro'
+title: 'Como fazer um carrossel com CSS puro?'
 date: 2021-04-15 00:00:00 -0300
 categories:
 - CSS
 - HTML
 sitemap: false
-excerpt: Carrosel com CSS Puro
+excerpt: Aprenda a fazer um carrossel/slider com CSS Puro.
+image: '/uploads/covers/css.jpg'
 
 ---
 
-Nesse tutorial estarei ensinando como fazer um slider/carrosel com CSS puro.
+Nesse tutorial estarei ensinando como fazer um slider/carrossel com CSS puro. Isso mesmo! Não vamos utilizar Javascript para iterar com os itens do nosso carrossel.
 
 --- 
 
-## Código do carrosel
+## Código do carrossel
 
 HTML:
 ```html
@@ -97,11 +98,11 @@ Resultado:
 
 ## Explicando o código do carrossel com CSS puro
 
-Definimos uma classe `.slider` principal, que será o contêiner do nosso carrosel. Em seguida, definimos um `.slider-content`, que possui um as definições `display: flex`, `flex-wrap: nowrap`. Essa definição é importante, pois, como cada `.slider-item` possui o tamanho de 100%, teremos então a `div.slider-content` com o tamanho de 400%, uma vez que temos 4 elementos no nosso exemplo. Foi por esse motivo que definimos o `div.slider` como `overflow: hidden`, para que apenas um `.slider-item` seja exibido. O `flex-wrap: nowrap` não deixará que os elementos filhos de `.slider-content` quebrem para uma nova linha caso o espaço total deste elemento esteja ocupado. 
+Definimos uma classe `.slider` principal, que será o contêiner do nosso carrossel. Em seguida, definimos um `.slider-content`, que possui um as definições `display: flex`, `flex-wrap: nowrap`. Essa definição é importante, pois, como cada `.slider-item` possui o tamanho de 100%, teremos então a `div.slider-content` com o tamanho de 400%, uma vez que temos 4 elementos no nosso exemplo. Foi por esse motivo que definimos o `div.slider` como `overflow: hidden`, para que apenas um `.slider-item` seja exibido. O `flex-wrap: nowrap` não deixará que os elementos filhos de `.slider-content` quebrem para uma nova linha caso o espaço total deste elemento esteja ocupado. 
 
 Depois disso, temos `input[type=radio]`. Utilizamos a posição de cada um deles para representar um `.slider-item`. O seletor `:checked` é utilizado no CSS para aplicar um estilo em um `[type=radio]` que está selecionado atualmente. Cada `:nth-child()` representa a posição em que o elemento está disposto no DOM. Utilizamos isso para aplicar um `transform: translateX()`, para fazer com que nosso `.slider-content` "ande" até o elemento desejado. Note que incrementamos de `100%` em `100%`, para que seja exibido o `.slider-item` dentro de `.slider-content` de acordo com sua posição.
 
-### Personalizando o carrosel
+### Personalizando o carrossel
 
 Observe que, dentro de `.slider-item`, podemos definir o elemento que quisermos, com a estilização desejada. Abaixo utilizar uma listagem de posts do blog como exemplo.
 
