@@ -19,3 +19,10 @@ Para os casos de ícones ou imagens, alguns podem pensar em usar algum editor pa
        transform: scaleX(-1);
     }
     
+    
+```css
+.inverter{
+   transform: rotateX(180deg);
+
+}
+```
