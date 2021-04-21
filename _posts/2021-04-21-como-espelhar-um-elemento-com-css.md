@@ -8,7 +8,8 @@ categories:
 - HTML
 sitemap: true
 image: "/uploads/covers/css.jpg"
-excerpt: Veja como espelhar/inverter horizontalmente e verticalmente um elemento com CSS puro.
+excerpt: Veja como espelhar/inverter horizontalmente e verticalmente um elemento com
+  CSS puro.
 
 ---
 Muitas vezes, precisamos de um ícone, ou uma imagem, ou um elemento invertido, quer seja horizontal ou verticalmente.
