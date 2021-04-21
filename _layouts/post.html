@@ -27,10 +27,15 @@ disqus: true
                     <div class="card-content">
                         <div class="columns">
                             <span class="column">
+                                {% if page.last_modified_at %}
+                                <small class="is-size-7">Atualizado em: <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%d/%m/%Y" }}</time></small>
+                                {% else %}
                                 <small class="is-size-7">
                                     Publicado em: <time
                                           datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
                                 </small>
+                                {% endif %}
+                                
                             </span>
                             <div class="column has-text-right">
                                 {%- for category in page.categories -%}
