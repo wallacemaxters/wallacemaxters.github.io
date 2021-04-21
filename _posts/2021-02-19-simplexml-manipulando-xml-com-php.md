@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SimpleXML: Como ler xml com PHP?"
+title: 'SimpleXML: Como ler xml com PHP?'
 date: 2021-02-19T02:50:00.000+00:00
 categories:
 - PHP
@@ -8,12 +8,13 @@ categories:
 - dom
 sitemap: true
 image: "/uploads/php-simple-xml.jpeg"
-excerpt: "A extensão SimpleXML permite o carregamento/leitura de um documento ou uma string contendo um XML. Aprenda a utilizar todo o poder dessa extensão neste tutorial completo sobre esta extensão"
+excerpt: A extensão SimpleXML permite o carregamento/leitura de um documento ou uma
+  string contendo um XML. Aprenda a utilizar todo o poder dessa extensão neste tutorial
+  completo sobre esta extensão
 color: "#D43939"
+last_modified_at: 2021-03-19 00:00:00 -0300
 
 ---
-
-
 A extensão SimpleXML permite que você leia um documento ou uma string contendo um XML. Você pode utilizar as funções `simplexml_load_file` ou `simple_xml_load_string` para fazer isso. Elas retornam uma instância da classe `SimpleXmlElement`. A primeira carrega o XML a partir de um arquivo, e a segunda, através de uma string contendo o XML.
 
 Vamos ver abaixo alguns detalhes interessantes a respeito do funcionamento dessas funções. Utilizarei a função `simplexml_load_string` na maioria dos exemplos, mas mesmas operações podem ser aplicadas também ao chamar `simplexml_load_file`.
