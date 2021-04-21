@@ -39,6 +39,8 @@ permalink: /blog/:year/:month/:day/:title
 
 safe: false
 
+future: false
+
 locale: pt-br
 
 collections:
