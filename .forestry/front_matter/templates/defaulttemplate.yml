@@ -1,5 +1,5 @@
 ---
-label: DefaultTemplate
+label: Post
 hide_body: false
 fields:
 - type: text
@@ -46,6 +46,16 @@ fields:
       format: markdown
   label: excerpt
   description: Uma descrição curta sobre esse post
+- name: last_modified_at
+  type: datetime
+  description: Data de atualização do post
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Última modificação
+  default: now
 pages:
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
