@@ -4,7 +4,7 @@ title: Como mudar a porta do comando php artisan serve?
 date: 2020-12-24T01:00:00.000-02:00
 categories:
 - laravel
-- php
+- PHP
 sitemap: true
 image: "/uploads/laravel-terminal.png"
 excerpt: Nesse tutorial, você vai aprender como executar o comando php artisan server
