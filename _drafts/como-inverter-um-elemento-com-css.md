@@ -11,3 +11,4 @@ image: "/uploads/covers/css.jpg"
 excerpt: Veja como inverter horizontalmente e verticalmente um elemento com CSS
 
 ---
+Muitas vezes, precisamos de um ícone, ou uma imagem, ou um elemento invertido, quer seja  ou verticalmente. Para os casos de ícones ou imagens, alguns podem pensar em usar algum editor para fazer o espelhamento, mas isso não é necessário. Há uma maneira de resolver isso apenas com CSS.
