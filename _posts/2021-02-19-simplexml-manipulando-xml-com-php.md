@@ -12,7 +12,7 @@ excerpt: A extensão SimpleXML permite o carregamento/leitura de um documento ou
   string contendo um XML. Aprenda a utilizar todo o poder dessa extensão neste tutorial
   completo sobre esta extensão
 color: "#D43939"
-last_modified_at: 2021-03-19 00:00:00 -0300
+last_modified_at: 2021-03-19 10:57:00 -0300
 
 ---
 A extensão SimpleXML permite que você leia um documento ou uma string contendo um XML. Você pode utilizar as funções `simplexml_load_file` ou `simple_xml_load_string` para fazer isso. Elas retornam uma instância da classe `SimpleXmlElement`. A primeira carrega o XML a partir de um arquivo, e a segunda, através de uma string contendo o XML.
