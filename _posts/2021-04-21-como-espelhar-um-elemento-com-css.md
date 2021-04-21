@@ -2,7 +2,7 @@
 layout: post
 color: "#222222"
 title: Como espelhar um elemento com CSS?
-date: 2021-04-21T12:15:00.000-03:00
+date: 2021-04-21 12:15:00 -0300
 categories:
 - css
 - HTML
