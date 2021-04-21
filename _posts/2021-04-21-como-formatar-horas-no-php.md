@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Como formatar horas no PHP?
-date: 2021-04-21 15:00:00 -0300
+date: 2021-04-21T15:00:00.000-03:00
 categories:
 - PHP
 sitemap: true
 image: "/uploads/covers/php.png"
 excerpt: Aprenda como formatar horas com PHP através da função date e da classe DateTime.
+color: "#000000"
 
 ---
-
 O formato para horas em PHP é representado pelos caracteres `H:i:s`. Onde:
 
 - `H` retorna a hora de 0 a 23
@@ -91,5 +91,3 @@ Pode ser que você precise utilizar o mesmo formato em vários lugares no seu pr
 define('TIME_FORMAT', 'h:i:s A');
 echo date(TIME_FORMAT); // 03:18:41 PM
 ```
-
-
