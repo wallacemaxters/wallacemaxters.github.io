@@ -4,7 +4,7 @@ color: "#222222"
 title: Como espelhar um elemento com CSS?
 date: 2021-04-21 12:15:00 -0300
 categories:
-- css
+- CSS
 - HTML
 sitemap: true
 image: "/uploads/covers/css.jpg"
@@ -176,9 +176,9 @@ Veja:
 Resultado:
 
 
-<img src="{{ site.logo | escape }}" title="Imagem original">
-<img src="{{ site.logo | escape }}" style="transform: scaleX(-1)" title="Imagem espelhada horizontalmente com CSS">
-<img src="{{ site.logo | escape }}" style="transform: scaleY(-1)" title="Imagem espelhada verticalmente com CSS">
+<img loading="lazy" src="{{ site.logo | escape }}" title="Imagem original" alt="{{ site.title }}">
+<img loading="lazy" src="{{ site.logo | escape }}" style="transform: scaleX(-1)" title="Imagem espelhada horizontalmente com CSS" alt="Imagem espelhada horizontalmente com CSS">
+<img loading="lazy" src="{{ site.logo | escape }}" style="transform: scaleY(-1)" title="Imagem espelhada verticalmente com CSS" alt="Imagem espelhada verticalmente com CSS">
 
 <style>
 .caixa{
