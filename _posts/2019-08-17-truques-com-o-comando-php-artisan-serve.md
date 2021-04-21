@@ -2,6 +2,7 @@
 layout: post
 title: Truques com o comando "php artisan serve"
 date: 2019-08-17T20:20:00.000-03:00
+last_modified_at: 2021-01-04T18:54:52.000-03:00
 categories:
 - artisan
 - laravel
