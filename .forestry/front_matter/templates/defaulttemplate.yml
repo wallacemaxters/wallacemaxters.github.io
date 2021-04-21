@@ -6,46 +6,23 @@ fields:
   name: layout
   label: layout
   default: post
-- name: color
-  type: color
-  label: Cor
-  config:
-    required: false
-    color_format: Hex
-  description: Cor de destaque para esse artigo
-  default: "#222222"
+  hidden: true
 - type: text
   label: title
   name: title
   config:
     required: true
-- type: datetime
-  label: date
-  name: date
-  config:
-    required: true
-- type: tag_list
-  label: categories
-  name: categories
-- type: boolean
-  name: sitemap
-  label: sitemap
 - type: file
   name: image
   label: image
   description: Imagem de capa do post
   config:
     maxSize: '1'
-- name: excerpt
-  type: textarea
-  default: ''
+- type: datetime
+  label: date
+  name: date
   config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: excerpt
-  description: Uma descrição curta sobre esse post
+    required: true
 - name: last_modified_at
   type: datetime
   description: Data de atualização do post
@@ -56,6 +33,30 @@ fields:
     display_utc: false
   label: Última modificação
   default: now
+- name: excerpt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: excerpt
+  description: Uma descrição curta sobre esse post
+- type: tag_list
+  label: categories
+  name: categories
+- name: color
+  type: color
+  label: Cor
+  config:
+    required: false
+    color_format: Hex
+  description: Cor de destaque para esse artigo
+  default: "#222222"
+- type: boolean
+  name: sitemap
+  label: sitemap
 pages:
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
