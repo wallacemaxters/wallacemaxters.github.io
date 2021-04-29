@@ -11,8 +11,13 @@ color: ''
 excerpt: Log são muito úteis para não deixar o desenvolvedor perdido no momento que
   uma aplicação passa por algum erro ou coisas do tipo. Nesse tutorial, vamos aprender
   como receber logs de erro da sua aplicação Laravel através Slack.
+last_modified_at: 2021-04-29 23:00:00 -0300
 
 ---
+**Aviso:** Esse tutorial é útil em versões anteriores a 5.5 do Laravel, que não possuía suporte nativo ao logging via Slack. Para as versões novas, você deve consultar a [documentação do Laravel](https://laravel.com/docs/8.x/logging#building-log-stacks) para configurar sua aplicação para enviar logs para o Slack.
+
+***
+
 Log são muito úteis para não deixar o desenvolvedor perdido no momento que uma aplicação passa por algum erro ou coisas do tipo. Nesse tutorial, vamos aprender como receber logs de erro da sua aplicação Laravel através Slack.
 
 ***
