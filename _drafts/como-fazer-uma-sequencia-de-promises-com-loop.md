@@ -8,7 +8,8 @@ date: 2021-04-30 22:59:00 -0300
 excerpt: Já precisou de processar um loop com  várias operações assíncronas, que precisam
   ser processadas em sequência? Neste tutorial vamos aprender isso de um jeito bem
   simples.
-categories: []
+categories:
+- javascript
 sitemap: false
 
 ---
@@ -20,6 +21,8 @@ async function asyncFunction ( num ) {
            resolve(num);
         }, num * 100)
 }
+
+let promise = Promise.resolve();
 
 for (let i = 0; i < 10; i++) {
   promise = promise.then(() => asyncFunction (i));
