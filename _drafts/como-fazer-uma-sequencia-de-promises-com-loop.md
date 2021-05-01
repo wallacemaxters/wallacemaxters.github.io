@@ -13,7 +13,7 @@ categories:
 sitemap: false
 
 ---
-```js
+```javascript
 async function asyncFunction ( num ) {
 	return new Promise((resolve, reject) => {
     	setTimeout(() => {
