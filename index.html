@@ -18,7 +18,7 @@ og_image: "/assets/img/logo.svg"
                      <div class="card post-card">
                         <a class="card-image" href="{{ post.url }}">
                             <figure class="image is-4by3 post-card-cover" style="background-color: {{ post.color }}">
-                                <img loading="lazy" height="280" src="{{ post.image }}" alt="{{ post.title | strip_html }}" title="{{ post.title | strip_html }}">
+                                <img loading="lazy" height="280" src="{{ post.image }}" alt="{{ post.title | strip_html | escape }}" title="{{ post.title | strip_html | escape }}">
                             </figure>
                             <header class="post-card-header-overlay">
                                 <h4 class="title is-6 has-text-white">{{ post.title }}</h4>
