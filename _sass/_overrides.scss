@@ -234,3 +234,29 @@ main {
 //         } 
 //     }
 // }
+.particle{
+    --particle-shadow-size: 10px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    color: $primary;
+    background-color: $white;
+    // animation: particle-animation 1s infinite ease alternate;
+    z-index: 0;
+    box-shadow: 0 0 10px 2px,
+            -5px 0 15px 2px, 
+            -25px 0 30px 2px;
+    
+    &.invert-x{
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes particle-animation {
+    100%{
+        box-shadow: 0 0 10px 3px,
+                    -10px 0 20px 3px, 
+                    -15px 0 40px 3px;
+    }
+}
