@@ -7,6 +7,8 @@ categories:
 sitemap: true
 image: "/uploads/covers/git.jpg"
 last_modified_at: 2021-03-06 11:00:00 +0000
+excerpt: Veja as possíveis maneiras de se copiar um arquivo de um branch específico
+  para o atual.
 
 ---
 Se você trabalha com o GIT, pode já ter surgido a necessidade de copiar apenas um ou alguns arquivos que estavam em outro branch. As vezes não é viável fazer um `git checkout` ou `git merge`, só por causa de dois ou três modificações de arquivos que estejam em outro branch, pois isso poderia acarretar mudanças não esperadas no branch atual de trabalho.
