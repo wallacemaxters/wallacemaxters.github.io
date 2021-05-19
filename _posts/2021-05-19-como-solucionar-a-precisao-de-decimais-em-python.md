@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Como solucionar a precisão de decimais em Python
-image: '/uploads/covers/python.svg'
-date: 2021-05-19 13:49:00 -0300
-excerpt: Aprenda a solucionar o problema da precisão ao realizar operações aritiméticas com números decimais (float) em Python.
+image: "/uploads/covers/python.svg"
+date: 2021-05-19T13:49:00.000-03:00
+excerpt: Aprenda a solucionar o problema da precisão ao realizar operações aritiméticas
+  com números decimais (float) em Python.
 categories:
 - python
 - matemática
 sitemap: true
 
 ---
-
 É comum o programador que está iniciando em Python ter problemas ao realizar operações aritiméticas entre números decimais. 
 
 Por exemplo, ao somar `0.1` com `0.2`, esperamos o resultado como `0.3`, porém não é o que ocorre.
