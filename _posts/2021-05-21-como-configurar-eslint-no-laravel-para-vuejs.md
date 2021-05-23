@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 
+last_modified_at: 2021-05-23 03:00:00 +0000
 color: "#222222"
 title: Como configurar o ESLint no Laravel Mix para Vue.js?
 image: "/uploads/laravel_mix_vue_eslint.png"
@@ -8,8 +8,9 @@ date: 2021-05-21T09:22:00.000-03:00
 excerpt: Nesse tutorial, vamos aprender a configurar o ESLint no Laravel Mix para
   garantir padrões de formatação e codificação em projetos que utilizam o Vue.js.
 categories:
-- laravel
 - vue
+- javascript
+- laravel
 sitemap: true
 
 ---
