@@ -5,14 +5,14 @@ categories:
 - apache
 - python
 image: "/uploads/covers/python.png"
-excerpt: Aprenda a instalar o WSGI no Apache2 para Python 3
+excerpt: Veja como instalar o WSGI no Apache2 para Python 3
 date: 2021-05-26 18:59:00 +0000
 sitemap: true
 
 ---
-Nesse tutorial, vamos aprender executar o Python 3 no Apache 2 a partir do WSGI. 
+Você pensou em utilizar o Python através do Apache? Bem, é perfeitamente possível fazer isso! Basta instalarmos um módulo chamado `mod_wsgi` e tudo pronto!
 
-Para fazermos isso, vamos precisar instalar um módulo no Apache chamado `mod_wsgi`.
+Nesse tutorial, vamos aprender como instalar e configurar o `mod_wsgi` para executar o _Python 3_ no _Apache 2_ a partir do _WSGI_. 
 
 Mas o que seria WSGI e MOD_WSGI?
 
