@@ -10,13 +10,13 @@ date: 2021-05-26 18:59:00 +0000
 sitemap: true
 
 ---
-Nesse tutorial, vamos aprender executar o Python 3 no Apache2 a partir do WSGI no Apache2. Para fazermos isso, precisamos instalar um módulo no Apache chamado `mod_wsgi`. 
+Nesse tutorial, vamos aprender executar o Python 3 no Apache2 a partir do WSGI. Para fazermos isso, precisamos instalar um módulo no Apache chamado `mod_wsgi`.
 
 Mas o que seria WSGI e MOD_WSGI?
 
 ## O que é WSGI?
 
-Resumidamente, o WSGI é uma sigla para *Web Server Gateway Interface*. Trata-se de uma especificação para uma interface simples e universal entre servidores web e aplicações web ou frameworks para a linguagem de programação Python. 
+Resumidamente, o WSGI é uma sigla para _Web Server Gateway Interface_. Trata-se de uma especificação para uma interface simples e universal entre servidores web e aplicações web ou frameworks para a linguagem de programação Python.
 
 Fonte: [Wikipédia](https://pt.wikipedia.org/wiki/Web_Server_Gateway_Interface).
 
@@ -28,11 +28,11 @@ Fonte: [Wikipédia](https://en.wikipedia.org/wiki/Mod_wsgi)
 
 {% include ads_article.html %}
 
-----
+***
 
 ## Instalando o WSGI no Apache 2
 
-Como dito, para executar um script Python no Apache, é necessário instalar e configurar o módulo `mod_wsgi`. 
+Como dito, para executar um script Python no Apache, é necessário instalar e configurar o módulo `mod_wsgi`.
 
 Instale o módulo WSGI no Apache, através do seguinte comando:
 
@@ -54,12 +54,11 @@ sudo service apache2 restart
 
 Feito isso, podemos seguir com as configurações...
 
-
 ## Configurando o WSGI no Apache
 
 Agora, vamos criar um Virtual Host para executarmos um script Python através do Apache.
 
-Vá até a pasta `/etc/apache2/sites-avaliable` e crie um arquivo `wsgi.conf`. 
+Vá até a pasta `/etc/apache2/sites-avaliable` e crie um arquivo `wsgi.conf`.
 Você pode fazer assim:
 
 ```bash
@@ -108,8 +107,6 @@ def application(environ, restart_response):
     headers = [('Content-type', 'text/html; charset=utf-8')]
     restart_response(status, headers)
     return [bytes(html, 'utf-8')]
-
 ```
-
 
 Pronto! Agora, basta acessar o caminho `http://localhost/python` para ver o seu script `.py` rodar com o WSGI.
