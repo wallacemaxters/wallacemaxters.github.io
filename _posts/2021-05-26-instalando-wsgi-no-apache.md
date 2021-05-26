@@ -5,7 +5,8 @@ categories:
 - apache
 - python
 image: "/uploads/covers/python.png"
-excerpt: Veja como instalar o WSGI no Apache2 para Python 3
+excerpt: Você pensou em executar o Python em seu servidor Apache? Nesse tutorial,
+  vamos aprender a instalar e configurar o MOD_WSGI no seu Apache para Python 3!
 date: 2021-05-26 18:59:00 +0000
 sitemap: true
 
