@@ -3,12 +3,14 @@ layout: post
 title: Como gerar cores aleatórias no Javascript?
 date: 2021-02-20T15:59:00.000-02:00
 categories:
-- javascript
+- cores
+- " javascript"
 sitemap: true
 image: "/uploads/javascript-cor-aleatoria.jpeg"
 excerpt: Nesse tutorial, aprenda como gerar cores aleatórias com Javascript, seja
   rgba ou hexadecimal.
 color: ''
+last_modified_at: 
 
 ---
 ## Gerando cores RGBA
