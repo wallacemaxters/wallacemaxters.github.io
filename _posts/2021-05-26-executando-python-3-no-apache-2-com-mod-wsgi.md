@@ -104,11 +104,11 @@ touch /var/www/python/index.py
 Agora, adicione o seguinte conteúdo ao seu arquivo `index.py`
 
 ```python
-def application(environ, restart_response):
+def application(environ, start_response):
     status = '200 OK'
     html = "Olá, WSGI"
     headers = [('Content-type', 'text/html; charset=utf-8')]
-    restart_response(status, headers)
+    start_response(status, headers)
     return [bytes(html, 'utf-8')]
 ```
 
