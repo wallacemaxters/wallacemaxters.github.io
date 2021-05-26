@@ -8,7 +8,7 @@ image: '/uploads/covers/python.png'
 excerpt: 'Aprenda a instalar o WSGI no Apache2 para Python 3'
 ---
 
-Nesse tutorial, vamos aprender executar o Python 3 no Apache2 a partir do WSGI no Apache2. Para fazermos isso, precisamos instalar um módulo no Apache chamado `mod_wsgi`. 
+Nesse tutorial, vamos aprender executar o Python 3 no Apache2 a partir do WSGI. Para fazermos isso, precisamos instalar um módulo no Apache chamado `mod_wsgi`. 
 
 Mas o que seria WSGI e MOD_WSGI?
 
