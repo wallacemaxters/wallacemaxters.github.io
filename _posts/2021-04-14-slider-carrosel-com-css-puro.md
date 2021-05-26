@@ -1,17 +1,16 @@
 ---
 layout: post
 color: "#222222"
-title: 'Como fazer um carrossel com CSS puro?'
-date: 2021-04-15 00:00:00 -0300
+title: Como fazer um carrossel com CSS puro?
+date: 2021-04-15T00:00:00.000-03:00
 categories:
 - CSS
 - HTML
-sitemap: false
+sitemap: true
 excerpt: Aprenda a fazer um carrossel/slider com CSS Puro.
-image: '/uploads/covers/css.jpg'
+image: "/uploads/covers/css.jpg"
 
 ---
-
 Nesse tutorial estarei ensinando como fazer um slider/carrossel com CSS puro. Isso mesmo! Não vamos utilizar Javascript para iterar com os itens do nosso carrossel.
 
 --- 
