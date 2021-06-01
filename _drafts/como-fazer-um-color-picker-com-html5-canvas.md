@@ -2,18 +2,18 @@
 layout: post
 color: "#222222"
 title: Capturando a cor do pixel de uma imagem com HTML5 Canvas
-image: '/uploads/covers/canvas_html5.png'
-date: 2021-05-31 03:00:00 +0000
-excerpt: 'Veja como capturar a cor de um píxel de uma imagem através do HTML5 canvas e Javascript'
-categories: 
+image: "/uploads/covers/canvas_html5.png"
+date: 2021-05-31T03:00:00.000+00:00
+excerpt: Veja como capturar a cor de um píxel de uma imagem através do HTML5 canvas
+  e Javascript
+categories:
 - canvas
 - javascript
 - HTML
 sitemap: true
+last_modified_at: 
 
 ---
-
-
 ```html
 <canvas id="canvas"></canvas>
 ```
@@ -59,6 +59,7 @@ Veja que acima, utilizamos o `getBoundingClientRect` e fizemos alguns cálculos 
 Agora que temos a posição X e Y do mouse, a única coisa que precisamos é extrair a informação do pixel desejado para descobrimos qual a cor do mesmo. Podemos fazer isso através da função `getImageData`
 
 
+{% raw %}
 <canvas id='canvas' width="300" style="width: 100%"></canvas>
 <script>
 const canvas = document.querySelector('#canvas');
@@ -71,8 +72,8 @@ canvas.addEventListener('mousemove', function (e) {
     const y = (e.clientY - rect.top) * canvas.height / rect.height;
     context.fillStyle = 'red'
     context.fillRect(x, y, 1, 1)
-
     console.log({x, y})
     
 })
 </script>
+{% endraw %}
