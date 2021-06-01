@@ -1,7 +1,7 @@
 ---
 layout: post
 color: "#222222"
-title: 'Como capturar a posição X e Y correta do Canvas '
+title: Como capturar a posição X e Y correta do Canvas corretamente?
 image: "/uploads/covers/canvas_html5.png"
 date: 2021-06-01 03:00:00 +0000
 excerpt: É comum ocorrer erros ao tentar capturar as coordenadas X  e Y do ponteiro
