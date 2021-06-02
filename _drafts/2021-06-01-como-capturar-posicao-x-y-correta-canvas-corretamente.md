@@ -103,10 +103,10 @@ document.addEventListener('DOMContentLoaded', function () {
 ---
 
 
-Acima, é possivel notar que o cálculo realizado anteriormente não consida o dimensionamento ocorrido no `canvas` através do CSS. Isso ocorre porque as coordenadas do canvas são relativas ae altura e largura definidas diretamente no elemento ou pelo Javascript (em outras palavras, o `width` e `height`definido diretamente no canvas).
+Acima, é possivel notar que o cálculo realizado anteriormente não consida o dimensionamento ocorrido no `canvas` através do CSS. Isso ocorre porque as coordenadas do canvas são relativas a altura e largura definidas diretamente no elemento ou pelo Javascript (em outras palavras, o `width` e `height`definido diretamente no canvas).
 
 
-## Obtendo as coordenadas do mouse em relação ao canvas corretamente
+## Obtendo a coordenadas de um Canvas redimensionado
 
 
 Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e realizar alguns cálculos para descobrir a coordenada correta do `canvas` em relação a sua transformação ou redimensionamento pelo CSS.
