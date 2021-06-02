@@ -118,7 +118,7 @@ Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e calcular
   const x = (event.clientX - rect.left) * canvas.width / rect.width;
   const y = (event.clientY - rect.top) * canvas.height / rect.height;
 
-})
+
 ```
 
 
