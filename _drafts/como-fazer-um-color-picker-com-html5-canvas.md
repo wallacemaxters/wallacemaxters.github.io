@@ -51,13 +51,11 @@ canvas.addEventListener('mousemove', function (e) {
 })
 ```
 
-Veja que acima, utilizamos o `getBoundingClientRect` e fizemos alguns cálculos para que a posição X e Y do canvas seja capturada corretamente. Isso garante que, caso ocorra  transformações do canvas com CSS, não haja erros na lógica da captura da posição do mouse.
-
+Para tirar como capturar coordenadas do canvas, leia a publicação que fiz sobre \[posicionamento X e Y do canvas\]
 
 ## Capturando a cor do pixel do HTML5 Canvas
 
 Agora que temos a posição X e Y do mouse, a única coisa que precisamos é extrair a informação do pixel desejado para descobrimos qual a cor do mesmo. Podemos fazer isso através da função `getImageData`
-
 
 {% raw %}
 <canvas id='canvas' width="300" style="width: 100%"></canvas>
@@ -67,13 +65,13 @@ const context = canvas.getContext('2d');
 context.fillStyle = '#202020'
 context.fillRect(0, 0, canvas.width, canvas.height);
 canvas.addEventListener('mousemove', function (e) {
-    const rect = canvas.getBoundingClientRect();
-    const x = (e.clientX - rect.left) * canvas.width / rect.width;
-    const y = (e.clientY - rect.top) * canvas.height / rect.height;
-    context.fillStyle = 'red'
-    context.fillRect(x, y, 1, 1)
-    console.log({x, y})
-    
+const rect = canvas.getBoundingClientRect();
+const x = (e.clientX - rect.left) * canvas.width / rect.width;
+const y = (e.clientY - rect.top) * canvas.height / rect.height;
+context.fillStyle = 'red'
+context.fillRect(x, y, 1, 1)
+console.log({x, y})
+
 })
 </script>
 {% endraw %}
