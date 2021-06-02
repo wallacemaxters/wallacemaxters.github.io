@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 O código acima tem como finalidade desenhar um quadrado de 5x5px quando o mouse é movido sobre o Canvas. Precisamos obter a posição `left` e `top` do elemento, pois os valores clientX e clientY são relativos à tela e não ao elemento.
 
 Tudo ocorre bem acima, porém,
-ao utilizar a mesma lógica quando o canvas possui alguma transformação pelo CSS, o comportamento é inesperado.
+ao utilizar a mesma lógica quando o canvas possui alguma transformação pelo CSS, o comportamento é diferente.
 
 Veja:
 
