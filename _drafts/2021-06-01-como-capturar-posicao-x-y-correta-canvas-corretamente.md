@@ -64,7 +64,7 @@ console.log({x, y})
 
 O código acima tem como finalidade desenhar um quadrado de 5x5 px na posição em que o ponteiro do mouse é movido sobre o Canvas. Note que tudo ocorre bem acima, sem nenhum problema.
 
-Ao tentar utilizar o `event.clientX` ou `event.clientY`, o valor retornado é incorreto.
+Porém, Ao tentar utilizar o `event.clientX` ou `event.clientY`, o valor retornado é incorreto.
 
 Isso ocorre porque o `event.clientX` e `event.clientY` não considera as transformações ocorridas em um `canvas` através do CSS.
 
