@@ -15,6 +15,8 @@ sitemap: true
 ---
 Quando utilizamos o HTML5 Canvas, é comum desejarmos obter as coordenadas X e Y do mouse em relação ao elemento para iteragir com o mesmo. Porém é muito comum ocorrer erros e confusões ao tentar capturar estas coordenadas quando o `<canvas>` está transformado ou dimensionado através do CSS.
 
+
+
 ## Obtendo as coordenadas relativas do ponteiro do mouse em um Canvas
 
 O código mais comum para obter as coordenadas X e Y do ponteiro de um mouse em relação a um elemento, é o seguinte:
