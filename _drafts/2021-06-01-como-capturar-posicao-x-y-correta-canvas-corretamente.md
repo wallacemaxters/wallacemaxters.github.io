@@ -114,11 +114,9 @@ Para corrigir isso, é necessário corrigir o valor das coordenadas X e Y consid
 
 
 ```javascript
-
   const rect = canvas.getBoundingClientRect();
   const x = (event.clientX - rect.left) * canvas.width / rect.width;
   const y = (event.clientY - rect.top) * canvas.height / rect.height;
-
 
 ```
 
