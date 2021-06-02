@@ -122,7 +122,7 @@ Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e calcular
 ```
 
 
-Veja:
+Com isso, agora temos a coordenada correta do mouse sobre elemento.
 
 ```html
 <canvas id="canvas" width="600" style="width: 100%"></canvas>
