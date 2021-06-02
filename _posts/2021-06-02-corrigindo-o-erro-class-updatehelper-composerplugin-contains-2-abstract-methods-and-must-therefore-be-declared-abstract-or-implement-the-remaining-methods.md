@@ -11,7 +11,7 @@ excerpt: Veja como solucionar o erro "Class UpdateHelper\ComposerPlugin contains
   methods"
 categories:
 - composer
-- php
+- PHP
 sitemap: true
 
 ---
