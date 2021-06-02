@@ -109,7 +109,7 @@ Acima, é possivel notar que o cálculo realizado anteriormente não consida o d
 ## Obtendo a coordenadas de um Canvas redimensionado
 
 
-Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e realizar alguns cálculos para descobrir a coordenada correta do `canvas` em relação a sua transformação ou redimensionamento pelo CSS.
+Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e calcular a proporção de acordo com o tamanho do elemento computado pelo css. para osto, vamos dividir a largura e altura original do canvas pela largura e altura computada pelo css.
 
 O código mínimo é o seguinte:
 
