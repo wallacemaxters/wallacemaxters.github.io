@@ -4,8 +4,7 @@ color: "#222222"
 title: Como capturar corretamente as coordenadas de um Canvas em HTML5?
 image: "/uploads/covers/canvas_html5.png"
 date: 2021-06-01T03:00:00.000+00:00
-excerpt: Veja como obter as coordenadas do mouse em relação ao Canvas quando o mesmo
-  é afetado pelas transformações do CSS.
+excerpt: Veja como obter as coordenadas X e Y relativas a um elemento Canvas no HTML5
 categories:
 - canvas
 - javascript
