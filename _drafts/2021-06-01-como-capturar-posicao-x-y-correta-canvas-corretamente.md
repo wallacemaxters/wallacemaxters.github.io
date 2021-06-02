@@ -109,9 +109,9 @@ Acima, é possivel notar que o cálculo realizado anteriormente não consida o d
 ## Obtendo a coordenadas de um Canvas redimensionado
 
 
-Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e calcular a proporção de acordo com o tamanho do elemento computado pelo css. para osto, vamos dividir a largura e altura original do canvas pela largura e altura computada pelo css.
+Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e calcular a proporção de acordo com o tamanho do elemento computado pelo css. Para isto, respectivamente, vamos dividir a largura e altura original do canvas pela largura e altura visivel no cliente.
 
-O código mínimo é o seguinte:
+veja:
 
 ```javascript
 canvas.addEventListener('mousemove', function (event) {
