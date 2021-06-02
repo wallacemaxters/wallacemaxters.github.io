@@ -6,7 +6,9 @@ title: Corrigindo o erro "Class UpdateHelper\ComposerPlugin contains 2 abstract 
   and must therefore be declared abstract or implement the remaining methods"
 image: "/uploads/composer.jpg"
 date: 2021-06-02 02:26:00 +0000
-excerpt: ''
+excerpt: Veja como solucionar o erro "Class UpdateHelper\ComposerPlugin contains 2
+  abstract methods and must therefore be declared abstract or implement the remaining
+  methods"
 categories:
 - composer
 - php
