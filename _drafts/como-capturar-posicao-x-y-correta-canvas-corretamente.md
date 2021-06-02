@@ -25,55 +25,89 @@ O código mais comum para obter as coordenadas X e Y do ponteiro de um mouse em 
 <canvas id='canvas' width="300" height="100"></canvas>
 ```
 ```javascript
-const canvas = document.querySelector('#canvas-normal');
+const canvas = document.querySelector('#canvas');
 const context = canvas.getContext('2d');
 context.fillStyle = '#000000'
 context.fillRect(0, 0, canvas.width, canvas.height);
 canvas.addEventListener('mousemove', function (event) {
-
     // captura a posição X e Y do CANVAS 
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
-
     context.fillStyle = '#ffffff'
     context.fillRect(x, y, 5, 5)
-    console.log({x, y})
-    
+    console.log({x, y})  
 })
 ```
 
 
+Resultado:
 <canvas title="Passe o mouse sobre o Canvas" id='canvas-normal' width="500" height="100"></canvas>
 
 
-
 <script>
-const canvas = document.querySelector('#canvas-normal');
-const context = canvas.getContext('2d');
-context.fillStyle = '#000000'
-context.fillRect(0, 0, canvas.width, canvas.height);
-canvas.addEventListener('mousemove', function (event) {
-    const rect = canvas.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    context.fillStyle = '#ffffff'
-    context.fillRect(x, y, 5, 5)
-    console.log({x, y})
-    
+document.addEventListener('DOMContentLoaded', function () {
+    const canvas = document.querySelector('#canvas-normal');
+    const context = canvas.getContext('2d');
+    context.fillStyle = '#000000'
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    canvas.addEventListener('mousemove', function (event) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        context.fillStyle = '#ffffff'
+        context.fillRect(x, y, 5, 5)
+        
+    })
 })
 </script>
 
 ----
 
-O código acima tem como finalidade desenhar um quadrado de 5x5 px na posição em que o ponteiro do mouse é movido sobre o Canvas. Note que tudo ocorre bem acima, sem nenhum problema.
+O código acima tem como finalidade desenhar um quadrado de 5x5 px nas coordenadas em que o ponteiro do mouse é movido sobre o Canvas. Note que tudo ocorre bem acima, sem nenhum problema.
 
-Ao tentar utilizar o `event.clientX` ou `event.clientY`, o valor retornado é incorreto.
+Porém, ao utilizar a mesma lógica quando o canvas possui alguma transformação pelo CSS, o comportamento é inesperado.
 
-Isso ocorre porque o `event.clientX` e `event.clientY` não considera as transformações ocorridas em um `canvas` através do CSS.
+Veja:
 
-Para corrigir isso é necessário utilizar o `getBoundingClientRect` e realizar alguns cálculos para descobrir a coordenada correta do `canvas` em relação a sua transformação ou redimensionamento pelo CSS.
+```html
+<canvas style="width: 100%" id='canvas' width="300" height="100"></canvas>
+```
+
+
+Resultado:
+
+<canvas style="width:  100%" id='canvas-errado' width="500" height="100"></canvas>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const canvas = document.querySelector('#canvas-errado');
+    const context = canvas.getContext('2d');
+    context.fillStyle = '#000000'
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    canvas.addEventListener('mousemove', function (event) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        context.fillStyle = '#ffffff'
+        context.fillRect(x, y, 5, 5)
+        
+    })
+});
+</script>
+
+---
+
+
+Isso ocorre porque o cálculo realizado anteriormente não considera as transformações ocorridas em um `canvas` através do CSS.
+
+
+## Obtendo as coordenadas do mouse em relação ao canvas corretamente
+
+
+Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e realizar alguns cálculos para descobrir a coordenada correta do `canvas` em relação a sua transformação ou redimensionamento pelo CSS.
 
 O código mínimo é o seguinte:
 
@@ -82,6 +116,7 @@ canvas.addEventListener('mousemove', function (event) {
   const rect = canvas.getBoundingClientRect();
   const x = (event.clientX - rect.left) * canvas.width / rect.width;
   const y = (event.clientY - rect.top) * canvas.height / rect.height;
+
 })
 ```
 
@@ -97,12 +132,10 @@ const context = canvas.getContext('2d');
 context.fillStyle = '#202020'
 context.fillRect(0, 0, canvas.width, canvas.height);
 
-canvas.addEventListener('mousemove', function (e) {
+canvas.addEventListener('mousemove', function (event) {
     const rect = canvas.getBoundingClientRect();
-    const x = (e.clientX - rect.left) * canvas.width / rect.width;
-    const y = (e.clientY - rect.top) * canvas.height / rect.height;
-
-    // desenha um quadrado de 5x5 na posição atual do mouse
+    const x = (event.clientX - rect.left) * canvas.width / rect.width;
+    const y = (event.clientY - rect.top) * canvas.height / rect.height;
 
     context.fillStyle = '#ffffff';
     context.fillRect(x, y, 5, 5)
@@ -111,23 +144,25 @@ canvas.addEventListener('mousemove', function (e) {
 
 Resultado:
 
-{% raw %}
-<canvas id='canvas' width="600" style="width: 100%"></canvas>
+<canvas id='canvas-correto' width="600" style="width: 100%"></canvas>
+
 <script>
-const canvas = document.querySelector('#canvas');
-const context = canvas.getContext('2d');
-context.fillStyle = '#202020'
-context.fillRect(0, 0, canvas.width, canvas.height);
-canvas.addEventListener('mousemove', function (event) {
-    const rect = canvas.getBoundingClientRect();
-    // const x = (e.clientX - rect.left) * canvas.width / rect.width;
-    // const y = (e.clientY - rect.top) * canvas.height / rect.height;
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    context.fillStyle = '#ffffff'
-    context.fillRect(x, y, 5, 5)
-    console.log({x, y})
-    
-})
+document.addEventListener('DOMContentLoaded', function (e) {
+    const canvas = document.querySelector('#canvas-correto');
+    const context = canvas.getContext('2d');
+    context.fillStyle = '#202020'
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    canvas.addEventListener('mousemove', function (event) {
+
+        const rect = canvas.getBoundingClientRect();
+
+        const x = (event.clientX - rect.left) * canvas.width / rect.width;
+        const y = (event.clientY - rect.top) * canvas.height / rect.height;
+
+        context.fillStyle = '#ffffff'
+        context.fillRect(x, y, 5, 5)
+
+        
+    })
+});
 </script>
-{% endraw %}
