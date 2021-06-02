@@ -3,7 +3,7 @@ layout: post
 color: "#222222"
 title: Como obter as coordenadas de um Canvas em HTML5?
 image: "/uploads/covers/canvas_html5.png"
-date: 2021-06-03 00:30:00 +0000
+date: 2021-06-02 12:30:00 +0000
 excerpt: Veja como obter as coordenadas X e Y relativas a um elemento Canvas no HTML5
 categories:
 - canvas
