@@ -109,26 +109,25 @@ Acima, é possivel notar que o cálculo realizado anteriormente não consida o d
 ## Obtendo a coordenadas de um Canvas redimensionado pelo CSS
 
 
-Para corrigir isso, é necessário corrigir o valor das coordenadas X e Y considerando o tamanho do Canvas no cliente. Basicamente, vamos dividir as dimensões originais do canvas pelas dimensões computadas no cliente.
+Para corrigir isso, é necessário corrigir o valor das coordenadas X e Y considerando o tamanho computado do Canvas no cliente. Basicamente, vamos dividir as dimensões originais do canvas pelas dimensões computadas no cliente. 
 
-
+Veja:
 
 ```javascript
   const rect = canvas.getBoundingClientRect();
   const x = (event.clientX - rect.left) * canvas.width / rect.width;
   const y = (event.clientY - rect.top) * canvas.height / rect.height;
-
 ```
 
+Com isso, podemos aplicar a proporção sobre as coordenadas X e Y do elemento.
 
-Com isso, agora temos a coordenada correta do mouse sobre elemento.
+Com as alterações  citadas, veja como passa ser o comportamento do Canvas nesse teste:
 
 ```html
 <canvas id="canvas" width="600" style="width: 100%"></canvas>
 ```
 
 ```javascript
-
 const canvas = document.querySelector('#canvas');
 const context = canvas.getContext('2d');
 context.fillStyle = '#202020'
