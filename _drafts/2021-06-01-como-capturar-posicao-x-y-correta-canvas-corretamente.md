@@ -17,7 +17,7 @@ Quando utilizamos o HTML5 Canvas, é comum desejarmos obter as coordenadas X e Y
 
 
 
-## Obtendo as coordenadas relativas do mouse em um Canvas
+## Obtendo as coordenadas do mouse relativo ao Canvas
 
 O código mais comum para obter as coordenadas X e Y do ponteiro de um mouse em relação ao canvas, é o seguinte:
 
@@ -106,10 +106,11 @@ document.addEventListener('DOMContentLoaded', function () {
 Acima, é possivel notar que o cálculo realizado anteriormente não consida o dimensionamento ocorrido no `canvas` através do CSS. Isso ocorre porque as coordenadas do canvas são relativas a altura e largura definidas diretamente no elemento ou pelo Javascript (em outras palavras, o `width` e `height`definido diretamente no canvas).
 
 
-## Obtendo a coordenadas de um Canvas redimensionado pelo css
+## Obtendo a coordenadas de um Canvas redimensionado pelo CSS
 
 
-Para corrigir isso, é necessário utilizar o `getBoundingClientRect` e calcular a proporção de acordo com o tamanho do elemento no cliente. Para isto, respectivamente, vamos dividir a largura e altura original do canvas pela largura e altura visivel no cliente.
+Para corrigir isso, é necessário corrigir o valor das coordenadas X e Y considerando o tamanho do Canvas no cliente. Basicamente, vamos dividir as dimensões originais do canvas pelas dimensões computadas no cliente.
+
 
 
 ```javascript
