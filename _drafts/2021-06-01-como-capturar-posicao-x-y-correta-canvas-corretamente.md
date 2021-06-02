@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ---
 
 
-Acima, é possivel notar que o cálculo realizado anteriormente não considera as transformações ocorridas em um `canvas` através do CSS. Isso ocorre porque as coordenadas do canvas são relativas as definições de altura e largura definidas diretamente no elemento ou pelo Javascript (em outras palavras, o `width` e `height`definido diretamente no canvas).
+Acima, é possivel notar que o cálculo realizado anteriormente não consida o dimensionamento ocorrido no `canvas` através do CSS. Isso ocorre porque as coordenadas do canvas são relativas as definições de altura e largura definidas diretamente no elemento ou pelo Javascript (em outras palavras, o `width` e `height`definido diretamente no canvas).
 
 
 ## Obtendo as coordenadas do mouse em relação ao canvas corretamente
