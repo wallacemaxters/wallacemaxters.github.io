@@ -19,7 +19,7 @@ Quando utilizamos o HTML5 Canvas, é comum desejarmos obter as coordenadas X e Y
 
 ## Obtendo as coordenadas relativas do mouse em um Canvas
 
-O código mais comum para obter as coordenadas X e Y do ponteiro de um mouse em relação ao , é o seguinte:
+O código mais comum para obter as coordenadas X e Y do ponteiro de um mouse em relação ao canvas, é o seguinte:
 
 ```html
 <canvas id='canvas' width="300" height="100"></canvas>
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ***
 
-O código acima tem como finalidade desenhar um quadrado de 5x5 px nas coordenadas em que o ponteiro do mouse é movido sobre o Canvas. Note que tudo ocorre bem acima, sem nenhum problema.
+O código acima tem como finalidade desenhar um quadrado de 5x5px quando o mouse é movido sobre o Canvas. Note que tudo ocorre bem acima, sem nenhum problema.
 
 Porém, ao utilizar a mesma lógica quando o canvas possui alguma transformação pelo CSS, o comportamento é inesperado.
 
