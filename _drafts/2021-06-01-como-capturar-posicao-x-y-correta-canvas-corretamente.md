@@ -103,25 +103,26 @@ document.addEventListener('DOMContentLoaded', function () {
 ---
 
 
-Acima, é possivel notar que o cálculo realizado anteriormente não consida o dimensionamento ocorrido no `canvas` através do CSS. Isso ocorre porque as coordenadas do canvas são relativas a altura e largura definidas diretamente no elemento ou pelo Javascript (em outras palavras, o `width` e `height`definido diretamente no canvas).
+Como pode ser ver no exemplo anterior, é possivel notar que o cálculo realizado anteriormente não considera o tamanho do `canvas` pelo CSS. Isso ocorre porque as coordenadas do canvas são relativos ao tamanho definido diretamente no elemento ou pelo Javascript - em outras palavras, o `width` e `height`definido diretamente no `canvas`.
 
 
 ## Obtendo a coordenadas de um Canvas redimensionado pelo CSS
 
 
-Para corrigir isso, é necessário corrigir o valor das coordenadas X e Y considerando o tamanho computado do Canvas no cliente. Basicamente, vamos dividir as dimensões originais do canvas pelas dimensões computadas no cliente. 
+Para corrigir isso, é necessário corrigir o valor das coordenadas X e Y considerando o tamanho computado do Canvas no cliente. Basicamente, vamos dividir as dimensões originais do canvas pelas dimensões computadas no cliente e multiplicar pelas respectivas coordenadas.
 
 Veja:
 
 ```javascript
-  const rect = canvas.getBoundingClientRect();
-  const x = (event.clientX - rect.left) * canvas.width / rect.width;
-  const y = (event.clientY - rect.top) * canvas.height / rect.height;
+const rect = canvas.getBoundingClientRect();
+const x = (event.clientX - rect.left) * canvas.width / rect.width;
+const y = (event.clientY - rect.top) * canvas.height / rect.height;
 ```
 
-Com isso, podemos aplicar a proporção sobre as coordenadas X e Y do elemento.
+Como visto, utilizamos os valores `width` e `height` retornados por `canvas.getBoundingClientRect()`, que são as dimensões do `canvas` computadas no cliente. Assim, podemos aplicar a proporção sobre as coordenadas X e Y do elemento para efetuar a correção desejada.
 
-Com as alterações  citadas, veja como passa ser o comportamento do Canvas nesse teste:
+
+O código final e o resultado são estes:
 
 ```html
 <canvas id="canvas" width="600" style="width: 100%"></canvas>
@@ -142,8 +143,6 @@ canvas.addEventListener('mousemove', function (event) {
     context.fillRect(x, y, 5, 5)
 })
 ```
-
-Resultado:
 
 <canvas id='canvas-correto' width="600" style="width: 100%"></canvas>
 
