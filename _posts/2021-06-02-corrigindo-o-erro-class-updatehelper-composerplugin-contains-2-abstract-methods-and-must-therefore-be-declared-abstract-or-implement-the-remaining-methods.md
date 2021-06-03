@@ -16,7 +16,8 @@ sitemap: true
 
 ---
 ## O erro
-Ao tentar executar o comando `composer install`, você pode receber o seguinte erro:
+Ao tentar executar o comando `composer install`
+em você pode receber o seguinte erro:
 
 > Class UpdateHelper\\ComposerPlugin contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods
 
