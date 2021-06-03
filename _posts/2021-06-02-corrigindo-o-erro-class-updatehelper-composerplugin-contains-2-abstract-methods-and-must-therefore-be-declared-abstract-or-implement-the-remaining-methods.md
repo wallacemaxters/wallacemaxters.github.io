@@ -16,15 +16,17 @@ sitemap: true
 
 ---
 ## O erro
-Ao tentar executar o comando `composer install`
-em você pode receber o seguinte erro:
+
+Ao tentar executar o comando `composer install` em um projeto Laravel, você pode receber o seguinte erro:
 
 > Class UpdateHelper\\ComposerPlugin contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods
 
 ## Possíveis causas
-Tudo indica que esse erro  ocorre ao tentar instalar a biblioteca `kylekatarnls/update-helper` através da versão 2 do Composer. 
 
-## Solução 
+Tudo indica que esse erro  ocorre ao tentar instalar a biblioteca `kylekatarnls/update-helper` através da versão 2 do Composer.
+
+## Solução
+
 Para solucionar isso, basta executar os seguintes comandos:
 
 ```bash
