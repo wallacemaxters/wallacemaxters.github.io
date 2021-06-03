@@ -1,17 +1,17 @@
 ---
 layout: post
-last_modified_at: 2021-06-02 02:26:07 +0000
+last_modified_at: 2021-06-02T02:26:07.000+00:00
 color: "#222222"
-title: Corrigindo o erro "Class UpdateHelper\ComposerPlugin contains 2 abstract methods
-  and must therefore be declared abstract or implement the remaining methods"
+title: Corrigindo o erro "Class UpdateHelper\ComposerPlugin contains 2 abstract methods..."
 image: "/uploads/composer.jpg"
-date: 2021-06-02 02:26:00 +0000
+date: 2021-06-02T02:26:00.000+00:00
 excerpt: Veja como solucionar o erro "Class UpdateHelper\ComposerPlugin contains 2
   abstract methods and must therefore be declared abstract or implement the remaining
   methods"
 categories:
 - composer
 - PHP
+- laravel
 sitemap: true
 
 ---
