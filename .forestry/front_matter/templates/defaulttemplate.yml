@@ -19,10 +19,11 @@ fields:
   config:
     maxSize: '1'
 - type: datetime
-  label: date
+  label: Data de publicação
   name: date
   config:
     required: true
+  default: now
 - name: last_modified_at
   type: datetime
   description: Data de atualização do post
