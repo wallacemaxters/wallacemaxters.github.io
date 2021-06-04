@@ -23,7 +23,9 @@ filename = '/home/user/arquivos.txt'
 os.path.exists(filename)
 ```
 
-> **NOTA**: Quando você utiliza `os.path.exists`, não é possível saber se o objeto verificado é um arquivo ou um diretório.
+Quando você utiliza `os.path.exists`, não é possível saber se o objeto verificado é um arquivo ou um diretório.
+
+Por isso, você pode tentar outra opção...
 
 ## Verificando se um arquivo existe
 
