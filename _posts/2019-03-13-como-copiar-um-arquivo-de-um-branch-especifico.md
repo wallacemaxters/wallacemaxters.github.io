@@ -3,10 +3,11 @@ layout: post
 date: 2019-03-13T23:36:58.000+00:00
 title: Como copiar um arquivo de um branch para outro no GIT?
 categories:
+- arquivos
 - git
 sitemap: true
 image: "/uploads/covers/git.jpg"
-last_modified_at: 2021-03-06 11:00:00 +0000
+last_modified_at: 2021-03-06T11:00:00.000+00:00
 excerpt: Veja as possíveis maneiras de se copiar um arquivo de um branch específico
   para o atual.
 
