@@ -8,6 +8,7 @@ date: 2021-06-04 13:12:00 +0000
 excerpt: Como descobrir se um determinado caminho existe? Como saber se é um arquivo
   ou não? Descubra neste tutorial!
 categories:
+- arquivos
 - python
 sitemap: true
 
