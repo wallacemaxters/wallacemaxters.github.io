@@ -5,7 +5,8 @@ color: "#222222"
 title: Como verificar se um arquivo ou diretório existe em Python?
 image: "/uploads/covers/python.svg"
 date: 2021-06-04 13:12:00 +0000
-excerpt: ''
+excerpt: Como descobrir se um determinado caminho existe? Como saber se é um arquivo
+  ou não? Descubra neste tutorial!
 categories:
 - python
 sitemap: true
