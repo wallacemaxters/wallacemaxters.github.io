@@ -11,7 +11,6 @@ categories:
 sitemap: false
 
 ---
-
 ## Verificando se um arquivo ou diretório existe
 
 Você pode utilizar a função `os.path.exists` para saber se determinado diretório ou arquivo existe.
@@ -24,12 +23,13 @@ filename = '/home/user/arquivos.txt'
 os.path.exists(filename)
 ```
 
->**NOTA**: Quando você utiliza `os.path.exists`, não é possível saber se o objeto verificado é um arquivo ou um diretório.
-
+> **NOTA**: Quando você utiliza `os.path.exists`, não é possível saber se o objeto verificado é um arquivo ou um diretório.
 
 ## Verificando se um arquivo existe
 
-Você pode utilizar a função `os.path.isfile`. Ela Retorna `True` caso o caminho exista e o mesmo seja um arquivo. 
+Além de verificar se determinado caminho existe, você também pode querer validar se o mesmo é um arquivo. 
+
+Para isso, você pode utilizar a função `os.path.isfile`. Ela Retorna `True` caso o caminho exista e o mesmo seja um arquivo.
 
 ```python
 import os
