@@ -8,7 +8,7 @@ date: 2021-06-04 13:12:00 +0000
 excerpt: ''
 categories:
 - python
-sitemap: false
+sitemap: true
 
 ---
 ## Verificando se um arquivo ou diretório existe
