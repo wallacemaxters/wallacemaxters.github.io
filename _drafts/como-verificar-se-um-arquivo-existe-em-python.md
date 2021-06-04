@@ -11,3 +11,10 @@ categories:
 sitemap: false
 
 ---
+Você pode utilizar a função `os.path.exists` para saber se determinado diretório ou arquivo existe.
+
+Veja:
+
+    import os
+    filename = '/home/user/arquivos.txt'
+    os.path.exists(filename)
