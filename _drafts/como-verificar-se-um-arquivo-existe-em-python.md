@@ -15,6 +15,8 @@ Você pode utilizar a função `os.path.exists` para saber se determinado diret�
 
 Veja:
 
-    import os
-    filename = '/home/user/arquivos.txt'
-    os.path.exists(filename)
+```python
+import os
+filename = '/home/user/arquivos.txt'
+os.path.exists(filename)
+```
