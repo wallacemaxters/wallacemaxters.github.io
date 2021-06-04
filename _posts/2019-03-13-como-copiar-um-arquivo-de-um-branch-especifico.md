@@ -7,7 +7,7 @@ categories:
 - git
 sitemap: true
 image: "/uploads/covers/git.jpg"
-last_modified_at: 2021-06-04 11:00:00 +0000
+last_modified_at: 2021-06-04 13:35:00 +0000
 excerpt: Veja as possíveis maneiras de se copiar um arquivo de um branch específico
   para o atual.
 
