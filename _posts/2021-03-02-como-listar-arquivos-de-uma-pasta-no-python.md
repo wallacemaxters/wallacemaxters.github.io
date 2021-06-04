@@ -2,13 +2,15 @@
 layout: post
 color: "#FF7575"
 title: Como listar arquivos de uma pasta no Python?
-date: 2021-03-02 13:31:00 -0300
+date: 2021-03-02T13:31:00.000-03:00
 categories:
+- arquivos
 - python
 sitemap: true
 image: "/uploads/covers/python.svg"
 excerpt: Neste tutorial, aprenda como listar arquivos de uma pasta recursivamente
   através do  Python.
+last_modified_at: 
 
 ---
 Para listar os arquivos de um diretório/pasta no Python, basta utilizamos a função `os.walk`.
