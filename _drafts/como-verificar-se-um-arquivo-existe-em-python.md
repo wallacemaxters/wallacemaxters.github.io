@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2021-06-04 13:12:16 +0000
+last_modified_at: 
 color: "#222222"
 title: Como verificar se um arquivo existe em Python?
 image: "/uploads/covers/python.svg"
