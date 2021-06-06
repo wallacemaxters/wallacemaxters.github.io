@@ -110,5 +110,6 @@ pages:
 - _posts/2021-06-02-corrigindo-o-erro-class-updatehelper-composerplugin-contains-2-abstract-methods-and-must-therefore-be-declared-abstract-or-implement-the-remaining-methods.md
 - _posts/2021-06-04-como-verificar-se-um-arquivo-existe-em-python.md
 - _posts/como-configurar-um-virtual-host-no-xampp-para-laravel.md
+- _posts/como-exportar-um-banco-de-dados-pelo-mysql.md
 - _posts/como-fazer-um-color-picker-com-html5-canvas.md
 - _posts/como-fazer-uma-sequencia-de-promises-com-loop.md
