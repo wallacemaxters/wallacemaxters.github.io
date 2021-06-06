@@ -41,3 +41,5 @@ Veja:
 ```bash
 mysqldump -u root -p nome_do_banco > dump.sql
 ```
+
+Após fazer isso, o arquivo `dump.sql` será criado no diretório atual com todos os dados do seu banco.
