@@ -11,6 +11,13 @@ categories:
 sitemap: true
 
 ---
+O comando para exportação do banco de dados MYSQL é o `mysqldump`.
+Caso este comando não esteja disponível no seu Linux, você precisa instalar a biblioteca `mysql-client`, conforme o exemplo abaixo:
+
+```bash
+sudo apt-get install mysql-client
+```
+
 ```bash
 mysqldump -u root -p nome_do_banco
 ```
