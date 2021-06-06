@@ -2,10 +2,10 @@
 layout: post
 date: 2021-06-06 11:56:17 -0300
 last_modified_at: 
-color: "#222222"
+color: "#FFFFFF"
 title: Como exportar um banco de dados Mysql pela linha de comando?
 image: "/uploads/mysql.png"
-excerpt: ''
+excerpt: 'Veja como exportar (dump) um banco de dados através da lihna de comando'
 categories:
 - bash
 - mysql
