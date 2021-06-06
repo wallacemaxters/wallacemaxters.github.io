@@ -6,12 +6,12 @@ categories:
 - mysql
 - linux
 sitemap: true
-image: '/uploads/mysql.png'
-excerpt: "Cansado de usar PHPMYADMIN para importar um dump para seu banco de dados? Aprenda a fazer isso pela linha de comando neste tutorial"
+image: "/uploads/mysql.png"
+excerpt: Cansado de usar PHPMyAdmin, Mysql Workbench, ou outras ferramentas, para
+  importar um dump para seu banco de dados? Aprenda a fazer tudo isso pela linha de
+  comando neste tutorial!
 
 ---
-
-
 É muito comum a utilização de ferramentas, como PHPMyAdmin ou Mysql Workbench,  para importar um dump para uma base de dados nova. Porém existe uma maneira mais simples e rápida, para quem é fã de fazer tudo pela linha de comando.
 
 ## Criando um  banco de dados pela linha de comando
