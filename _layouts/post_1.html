@@ -1,44 +1,53 @@
 ---
 layout: default
+disqus: true
 ---
 
-<header class="hero is-dark is-medium is-relative is-clipped">
-    <div class="hero-head">
-        {% include menu.html %}
-    </div>
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title has-text-primary">{{ page.title }}</h1>
-            <div class="subtitle pl-5 pr-5">{{ page.excerpt }}</div>
-        </div>
-    </div>
-</header>
+{% include menu.html theme="is-dark" %}
 
 <section class="section post-page">
     <div class="container">
-       <div class="columns is-multiline">
+        <div class="columns is-multiline">
+            <div class="column is-12 is-9-desktop">
+                <header class="block">
+                    <h1 class="title has-text-primary">{{ page.title }}</h1>
+                </header>
+            </div>
             <div class="column is-12-mobile is-9-desktop">
                 <!-- POST -->
                 <article class="card block post-page-article">
+                    {% if page.image %}
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img loading="eager" src="{{ page.image }}" alt="{{ page.title | escape }}"
+                                 title='{{ page.title | escape }}' >
+                        </figure>
+                    </div>
+                    {% endif %}
                     <div class="card-content">
-                        <div class="columns is-vcentered">
-                            <div class="column">
+                        <div class="columns">
+                            <span class="column">
                                 {% if page.last_modified_at %}
-                                    <div class="is-size-7">Atualizado em: <time datetime='{{ page.last_modified_at | date: "%Y-%m-%d" }}'>{{ page.last_modified_at | date: "%d/%m/%Y" }}</time></div>
+                                <small class="is-size-7">Atualizado em: <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%d/%m/%Y" }}</time></small>
                                 {% else %}
-                                    <div class="is-size-7">Publicado em: <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%d/%m/%Y" }}</time></div>
+                                <small class="is-size-7">
+                                    Publicado em: <time
+                                          datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+                                </small>
                                 {% endif %}
-                            </div>
+                                
+                            </span>
                             <div class="column has-text-right">
                                 {%- for category in page.categories -%}
                                 {% assign category_page = site.categorias | where: "label", category | first %}
                                 {% if category_page %}
                                 <a href="{{ category_page.url }}"
-                                    class="tag is-primary is-small">{{ category }}</a>&nbsp;
+                                   class="tag is-primary is-small">{{ category }}</a>&nbsp;
                                 {% endif %}
                                 {%- endfor -%}
                             </div>
                         </div>
+                        <hr>
                         <div class="content post-page-article-content">{{ content }}</div>
                     </div>
                 </article>
