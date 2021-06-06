@@ -11,6 +11,7 @@ excerpt: O git costuma considerar como modificação as alterações de permiss�
   pelo comando chmod e, algumas vezes, isso acaba atrapalhando no momento que é feito
   um git pull. Aprenda a solucionar esse problema definitivamente.
 
+max_posts: 3
 ---
 Vez ou outra, sempre tive problemas com alteração de permissões no GIT. Um amigo que trabalhava no mesmo projeto que eu costumava usar o usuário `root` do linux para muitas coisas, inclusive para abrir o Sublime Text e editar os arquivos do projeto.
 

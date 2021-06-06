@@ -76,7 +76,9 @@ main {
         display: flex;
         align-items: center;
         text-align: center;
-        font-size: 1.05rem;
+        font-size: 1rem;
+        word-break: break-word;
+        
         &:hover {
             background-color: transparentize($primary, 0.2);
             // color: $yellow;

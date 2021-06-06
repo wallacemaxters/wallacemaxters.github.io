@@ -12,14 +12,14 @@
     {% for category in page.categories %}
         {% for post in site.categories[category] %}
             {% if post.url == page.url or urls contains post.url %} {% continue %} {% endif %}
+            {% if post_count >= max_posts %}
+                {% break %}
+            {% endif %}
             {% assign urls = urls | push: post.url %}
             <div class="column is-12">
                 {% include link_card.html title=post.title url=post.url image=post.image height="150px" %}
             </div>
             {% assign post_count = post_count | plus: 1 %}
-            {% if post_count >= max_posts %}
-                {% break %}
-            {% endif %}
         {% endfor %}
     {% endfor %}
 </div>
