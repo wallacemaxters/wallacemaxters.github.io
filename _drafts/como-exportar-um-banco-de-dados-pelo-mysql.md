@@ -3,21 +3,26 @@ layout: post
 date: 2021-06-06 11:56:17 -0300
 last_modified_at: 
 color: "#222222"
-title: Como exportar um banco de dados pelo Mysql?
+title: Como exportar um banco de dados Mysql pela linha de comando?
 image: "/uploads/mysql.png"
 excerpt: ''
 categories:
+- bash
 - mysql
 sitemap: true
 
 ---
 O comando para exportação do banco de dados MYSQL é o `mysqldump`.
 
+## Instalando o mysql-client
+
 Caso este comando não esteja disponível no seu Linux, você precisa instalar a biblioteca `mysql-client`, conforme o exemplo abaixo:
 
 ```bash
 sudo apt-get install mysql-client
 ```
+
+## Exportando o banco de dados pela linha de comando
 
 Para exportar o banco de dados, execute o seguinte comando:
 
