@@ -3,8 +3,8 @@ layout: post
 title: Como importar um banco de dados MYSQL pela linha de comando?
 date: 2021-06-05 22:18:35 -0300
 categories:
+- bash
 - mysql
-- linux
 sitemap: true
 image: "/uploads/mysql.png"
 excerpt: Cansado de usar PHPMyAdmin, Mysql Workbench, ou outras ferramentas, para
