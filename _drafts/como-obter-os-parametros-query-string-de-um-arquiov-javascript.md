@@ -6,8 +6,9 @@ color: "#222222"
 title: Como obter os parâmetros query string de um arquiov Javascript?
 image: "/uploads/javascript.svg"
 excerpt: ''
-categories: []
-sitemap: false
+categories:
+- javascript
+sitemap: true
 
 ---
 Para obter a query string passada para um script, basta usar o código abaixo:
