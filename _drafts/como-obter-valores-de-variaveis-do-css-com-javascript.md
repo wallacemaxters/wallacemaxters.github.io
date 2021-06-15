@@ -4,7 +4,7 @@ date: 2021-06-15 15:28:46 -0300
 last_modified_at: 2021-06-15 15:28:46 -0300
 color: "#FFFFFF"
 title: Como obter valores de variáveis do CSS com Javascript?
-image: ''
+image: "/uploads/javascript.svg"
 excerpt: ''
 categories:
 - css
