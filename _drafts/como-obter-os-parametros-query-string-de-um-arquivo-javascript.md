@@ -11,8 +11,9 @@ categories:
 sitemap: true
 
 ---
-No Javascript, é possivel obter os valores de query string passados para um determinado script declarado no atributo `src`.
+No Javascript, é possivel obter os valores de query string passados para um determinado script declarado no atributo `src`, como no exemplo abaixo:
 
+```<script src="app.js?campo=valor"></script>```
 ## Acessando as informações script atual
 
 Para obter a query string passada para um script, basta usar o código abaixo:
