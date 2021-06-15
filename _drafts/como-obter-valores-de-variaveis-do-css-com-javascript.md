@@ -9,7 +9,7 @@ excerpt: ''
 categories:
 - css
 - javascript
-sitemap: false
+sitemap: true
 
 ---
 
