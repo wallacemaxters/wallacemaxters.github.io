@@ -12,13 +12,13 @@ categories:
 sitemap: true
 
 ---
-
 ```css
 :root{
   --color-primary: #add555;
 }
 ```
+
 ```javascript
-const value = getComputedStyle(document.body).getPropertyValue('--color-primary'); 
+const value = getComputedStyle(document.documentElement).getPropertyValue('--color-primary'); 
 console.log(value); // '#add555'
 ```
