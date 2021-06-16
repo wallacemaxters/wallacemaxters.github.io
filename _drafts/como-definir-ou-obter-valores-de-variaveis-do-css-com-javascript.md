@@ -10,7 +10,7 @@ categories:
 - css
 - javascript
 sitemap: true
-max_posts: 3
+max_posts: 5
 
 ---
 
