@@ -13,6 +13,7 @@ categories:
 - PHP
 - laravel
 sitemap: true
+max_posts: 3
 
 ---
 ## O erro
