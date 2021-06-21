@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Resolvendo o erro "laravel: comando não encontrado"'
-date: 2021-02-19 12:39:00 +0000
+date: 2021-02-19T12:39:00.000+00:00
 categories:
 - composer
 - laravel
@@ -10,6 +10,8 @@ image: "/uploads/laravel-comando-nao-encontrado.jpeg"
 excerpt: 'Ao tentar instalar o Laravel Installer através do Composer com o comando
   "composer global require laravel/installer", você pode receber o erro "laravel:
   comando não encontrado". Aprenda a solucionar isso nesse tutorial.'
+last_modified_at: 2021-06-21 18:53:00 -0300
+color: ''
 
 ---
 Ao tentar instalar o Laravel Installer através do Composer com o comando `composer global require laravel/installer`, pode acontecer de a instalação ocorrer normalmente. Porém ao tentar rodar o comando `laravel`, você pode receber um erro, dizendo que o comando não está disponível.
