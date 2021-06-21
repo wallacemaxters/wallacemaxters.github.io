@@ -8,6 +8,8 @@ sitemap: true
 image: "/uploads/javascript-objeto-vazio.jpeg"
 excerpt: Em Javascript, Object não possui a propriedade length. Porém há muitas maneiras
   de se verificar se um objeto é vazio. Aprenda neste tutorial.
+last_modified_at: 2021-06-20 21:36:00 -0300
+color: ''
 
 ---
 Em Javascript, sabemos que é possível saber se um `Array` é vazio simplesmente utilizando a propriedade `length`. Se ela for `0`, significa que o `Array` está vazio.
@@ -96,11 +98,11 @@ Sendo assim, também podemos usar  `length`.
 ```javascript
 var nao_vazio = {"valor": 5};
 var vazio = {};
-if (Object.entries(vazio) === 0) {
+if (Object.entries(vazio).length === 0) {
   console.log('vazio');
 }
 
-if (Object.entries(nao_vazio) > 0) {
+if (Object.entries(nao_vazio).length > 0) {
   console.log('não vazio');
 }
 ```
