@@ -24,6 +24,13 @@ $ laravel
 laravel: comando não encontrado
 ```
 
+Ou, ainda...
+
+```bash
+laravel: command not found
+```
+
+
 Isso geralmente acontece porque a [você não adicionou o diretório de instalação do Composer na variável PATH](\[% link 2021-02-19-como-adicionar-o-composer-ao-path.md %}).
 
 ## Corrigindo o erro "laravel: comando não encontrado"
