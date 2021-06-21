@@ -107,7 +107,7 @@ if (Object.entries(nao_vazio).length > 0) {
 }
 ```
 
-***
+----
 
 ### Versões mais antigas
 
