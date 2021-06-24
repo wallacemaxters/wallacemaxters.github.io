@@ -6,27 +6,33 @@ color: "#222222"
 title: como saber a versão do Composer?
 image: "/uploads/composer.jpg"
 excerpt: como saber a versão do Composer? Basta utilizar o comando "composer -V"
-categories: []
-sitemap: false
+categories:
+- composer
+- php
+sitemap: true
 
 ---
 Para descobrir a versão do Composer instalada na sua máquina, basta utilizar o argumento `-V` ou `--version`.
 
 Exemplo:
 
- ```bash
+```bash
 composer -V
 ```
 
 Ou
 
-
- ```bash
+```bash
 composer --version
 ```
 
+  
+Se você não estiver usando o Composer globalmente,  utilizando o arquivo `composer.phar`, basta fazer da seguinte forma:
+
+```bash
+php composer.phar -V 
+` `
+
 A saída será algo parecido com isso:
 
-```
-Composer version 2.1.3 2021-06-09 16:31:20
-```
+    Composer version 2.1.3 2021-06-09 16:31:20
