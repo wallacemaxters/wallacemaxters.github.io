@@ -12,7 +12,7 @@ categories:
 sitemap: true
 
 ---
-Para descobrir a versão do Composer instalada na sua máquina, basta utilizar o argumento `-V` ou `--version`.
+Para descobrir a versão do Composer instalada na sua máquina, basta utilizar o argumento `-V` ou `--version` junto ao comando `composer`.
 
 Exemplo:
 
