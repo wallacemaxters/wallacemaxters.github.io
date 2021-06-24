@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como instalar o Composer 2 no Linux?
-date: 2021-02-14 11:14:00 -0200
+date: 2021-02-14T11:14:00.000-02:00
 categories:
 - composer
 - PHP
@@ -11,11 +11,21 @@ image: "/uploads/composer.jpg"
 excerpt: O Composer 2 foi lançado, com várias novidades, principalmente em relação
   ao desempenho, como melhorias no uso da CPU e uma considerável diminuição no tempo
   de instalação e atualizações dos pacote. Veja como instalar no Linux.
+last_modified_at: 
+color: ''
 
 ---
+
+## O que é Composer?
+
+O Composer é uma ferramenta de gerenciamento de dependências para o PHP, criado principalmente para facilitar a instalação e atualização para dependências de projeto. 
+O Composer verifica de quais outros pacotes um projeto específico depende e os instalará para você, usando as versões de acordo com os requisitos do projeto.
+
+## O que há de novo no Composer 2?
+
 O [Composer 2](https://getcomposer.org/2/) foi lançado, com várias novidades, principalmente em relação ao desempenho, como melhorias no uso da CPU e um a considerável diminuição no tempo de instalação e atualizações dos pacotes.
 
-Vejamos como podemos instalar essa incrível versão no seu Linux
+Vejamos como podemos instalar essa incrível versão no seu Linux.
 
 ## Instalando o composer 2
 
