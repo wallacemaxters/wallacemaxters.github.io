@@ -27,11 +27,11 @@ composer --version
 ```
 
   
-Se você não estiver usando o Composer globalmente,  utilizando o arquivo `composer.phar`, basta fazer da seguinte forma:
+Se você não estiver usando o Composer globalmente, utilizando o arquivo `composer.phar`, basta fazer da seguinte forma:
 
 ```bash
 php composer.phar -V 
-` `
+```
 
 A saída será algo parecido com isso:
 
