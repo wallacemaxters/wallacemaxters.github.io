@@ -36,3 +36,15 @@ php composer.phar -V
 A saída será algo parecido com isso:
 
     Composer version 2.1.3 2021-06-09 16:31:20
+    
+
+Além disso, se você simplesmente executar `composer` ou `php composer.phar`, poderá visualizar a versão utilizar nas primeiras linhas de saída: 
+ ```
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.1.3 2021-06-09 16:31:20
+```
