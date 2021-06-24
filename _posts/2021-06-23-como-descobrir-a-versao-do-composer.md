@@ -8,7 +8,7 @@ image: "/uploads/composer.jpg"
 excerpt: como saber a versão do Composer? Basta utilizar o comando "composer -V"
 categories:
 - composer
-- php
+- PHP
 sitemap: true
 
 ---
