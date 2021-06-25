@@ -2,7 +2,7 @@
 layout: post
 title: Truques com o comando "php artisan serve"
 date: 2019-08-17T20:20:00.000-03:00
-last_modified_at: 2021-01-04T18:54:52.000-03:00
+last_modified_at: 2021-06-25T20:11:52.000-03:00
 categories:
 - artisan
 - laravel
@@ -11,8 +11,18 @@ sitemap: true
 image: "/uploads/laravel-terminal.png"
 
 ---
-O comando `php artisan serve` por padrão vem configurado para rodar em `localhost` na porta `8000`. Porém há dois parâmetros opcionais que tem como objetivo permitir modificar esse comportamento padrão: O `--port` e o `--host`. Atráves desses parâmetros, podemos realizar alguns truques na hora de testar nossa aplicações construida no Laravel.
 
+Neste tutorial, vamos aprender alguns truques com o comando `php artisan serve` que poderão ser muito úteis no dia a dia do desenvolvedor utilizador de Laravel. 
+
+## O que é PHP Artisan Serve?
+
+O comando `php artisan serve` tem como finalidade iniciar um servidor de desenvolvimento para a aplicação Laravel. Isso se torna bastante útil no processo do desenvolvimento, porque o desenvolvedor não precisa se preocupar em configurar um Apache ou Ngnix para servir a aplicação durante o processo de desenvolvimento local.
+
+### Como funciona o comando Artisan Serve?
+
+O comando `php artisan serve` por padrão vem configurado para ser executado no host `localhost` e na porta `8000`. Isso permite que você acesso sua aplicação Laravel através da url `http://localhost:8000`. Porém existem dois argumentos opcionais disponíveis neste comando, que permite modificar este comportamento padrão. Os parâmetros são `--port` e `--host`. Atráves deles, podemos realizar alguns truques na hora de iniciar o servidor local do Laravel.
+
+Vejamos alguns...
 
 ## Mudando a porta do servidor no Artisan Serve
 
@@ -38,8 +48,6 @@ php artisan serve --host=192.168.0.102
 O artisan estará rodando em `http://192.168.0.102:8000`.
 
 
-**Mas por quê?**
-
 Esse último exemplo é muito útil caso você queria testar a sua aplicação a partir de outro dispositivo conectado na mesma rede, como um celular, table ou notebook. Ao acessar o endereço IP e a porta, você terá acesso à aplicação.
 
 <!-- ads common -->
@@ -47,7 +55,7 @@ Esse último exemplo é muito útil caso você queria testar a sua aplicação a
 
 ## Vinculando o Artisan Serve a um domínio local
 
-Ainda é possível vincular o `--host` a um host local, como fazemos num Virtual Host do apache.
+Ainda é possível vincular o `--host` a um host local, como fazemos num Virtual Host do Apache.
 
 Tomando por exemplo do Linux, você poderia fazer o seguinte:
 
@@ -73,6 +81,7 @@ php artisan serve --host=0.0.0.0
 
 Sua aplicação estará disponível em `localhost`, no seu ip e nos demais hosts.
 
+--- 
 ## Utilizando o Artisan Serve na porta 80
 
 Por padrão, para não definir a porta ao acessar o domínio no Navegador, você precisa que ele esteja rodando na porta 80. Para isso bastaria rodar o Artisan Serve com o parâmetro `--port=80`. Porém, pode acontecer de essa porta já estar ocupada, caso você tenha o Nginx ou Apache instalado na sua máquina, pois esses processos ocupam a porta 80.
