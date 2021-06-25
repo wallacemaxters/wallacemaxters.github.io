@@ -32,7 +32,7 @@ Com o parâmetro `--port`, você pode definir que a porta `9000`, como no exempl
 php artisan serve --port=9000
 ```
 
-Esse primeiro truque pode ser útil, já que você pode querer rodar a mesma aplicação duas vezes em portas diferentes, ou mesmo rodar ela em outra porta por já ter uma utilizando a porta padrão 8000.
+Esse primeiro truque pode ser útil, já que você pode querer executar a mesma aplicação duas vezes em portas diferentes, ou mesmo executar ela em outra porta por já ter uma utilizando a porta padrão 8000.
 
 
 ## Expondo a aplicação através do IP da rede com o Artisan Serve
@@ -63,15 +63,15 @@ Tomando por exemplo do Linux, você poderia fazer o seguinte:
 
 - Adicione a linha `127.0.0.1   meusite.local` e salve.
 
-- Rode o comando `php artisan serve --host=meusite.local`.
+- Execute o comando `php artisan serve --host=meusite.local`.
 
 
-Ao fazer isso, a aplicação está rodando em `http://meusite.local:8000`.
+Ao fazer isso, a aplicação será executada em `http://meusite.local:8000`.
 
 
 ## Deixando o Artisan Serve disponível em todos os Hosts e IPs
 
-Você pode rodar sua aplicação no `artisan serve` e vincular a todos os hosts configurados no seu `/etc/hosts` bem como nos IPs. Basta utlizar a opção `0.0.0.0` na opção `--host`.
+Você pode executar sua aplicação no `php artisan serve` e vincular a todos os hosts configurados no seu `/etc/hosts` bem como nos IPs. Basta utlizar a opção `0.0.0.0` na opção `--host`.
 
 Exemplo:
 
@@ -84,9 +84,9 @@ Sua aplicação estará disponível em `localhost`, no seu ip e nos demais hosts
 --- 
 ## Utilizando o Artisan Serve na porta 80
 
-Por padrão, para não definir a porta ao acessar o domínio no Navegador, você precisa que ele esteja rodando na porta 80. Para isso bastaria rodar o Artisan Serve com o parâmetro `--port=80`. Porém, pode acontecer de essa porta já estar ocupada, caso você tenha o Nginx ou Apache instalado na sua máquina, pois esses processos ocupam a porta 80.
+Por padrão, para não definir a porta ao acessar o domínio no Navegador, você precisa que ele seja executado na porta 80. Para isso, bastaria executar o `php artisan serve` com o parâmetro `--port=80`. Porém, pode acontecer de essa porta já estar ocupada, caso você tenha o Nginx ou Apache instalado na sua máquina, pois esses processos ocupam a porta 80.
 
-Se você se encaixa no caso acima, você precisaria parar a execução desses serviços temporariamente. Basta rodar os seguintes comandos, de acordo com a necessidade:
+Se você se encaixa no caso acima, você precisaria parar a execução desses serviços temporariamente. Basta executar os seguintes comandos, de acordo com a necessidade:
 
 Nginx:
 
@@ -100,16 +100,21 @@ Apache2:
 sudo service apache2 stop
 ```
 
-**Observação:** Se ainda assim a porta se mantiver ocupada, você pode tentar rodar o seguinte comando para matar qualquer processo que esteja utilizando a porta `80`:
+**Observação:** Se ainda assim a porta se mantiver ocupada, você pode tentar executar o seguinte comando para matar qualquer processo que esteja utilizando a porta `80`:
 
 ```bash
 sudo fuser -k 80/tcp
 ```
 
-Após isso, você ainda poderá receber um "permission denied" ao tentar rodar o artisan serve na porta 80. Se isso acontecer, rode o comando como `sudo`.
+Após isso, você ainda poderá receber um "permission denied" ao tentar executar o artisan serve na porta 80. Se isso acontecer, execute o comando como `sudo`.
 
 Veja:
 
 ```php
 sudo php artisan serve --port=80 --host=meusite.local
 ```
+
+
+## Conclusão
+
+O `php artisan` é um comando muito útil para o desenvolvimento com Laravel e saber dominá-lo pode se tornar um grande diferencial para o desenvolvedor.
