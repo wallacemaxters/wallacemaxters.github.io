@@ -29,3 +29,7 @@ Através de `searchParams`, você pode obter opcionamente apenas um parâmetro.
 // ./script.js?campo=valor
 console.log(url.searchParams.get('campo')); // 'valor'
 ```
+
+## O que é o document.currentScript?
+
+A propriedade `document.currentScript` retorna o elemento `<script>` cujo o script está sendo executado.
