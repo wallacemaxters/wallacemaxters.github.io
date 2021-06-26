@@ -51,10 +51,7 @@ layout: default
             </div>
             <aside class="column is-12-mobile is-3-desktop">
                 <div class="block">{% include ads_article.html %}</div>
-                <nav class="block">
-                    <h4 class="title is-6 has-text-primary">Veja também</h4>
-                    <div class="box">{% include related_posts.html max_posts=page.max_posts %}</div>
-                </nav>
+                <div class="block">{% include related_posts.html title="Veja também" max_posts=page.max_posts %}</div>
                 <div class="block">{% include ads_common.html %}</div>
                 {% comment %} <div class="block">
                     <h4 class="title is-5 has-text-primary">Publicado por</h4>
