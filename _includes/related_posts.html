@@ -6,20 +6,21 @@
 {% assign post_count = 0 %}
 {% assign urls = '' | split: ',' %}
 
-
-<div class="columns is-multiline is-gapless">
-
-    {% for category in page.categories %}
-        {% for post in site.categories[category] %}
-            {% if post.url == page.url or urls contains post.url %} {% continue %} {% endif %}
-            {% if post_count >= max_posts %}
-                {% break %}
-            {% endif %}
-            {% assign urls = urls | push: post.url %}
-            <div class="column is-12">
-                {% include link_card.html title=post.title url=post.url image=post.image height="150px" %}
-            </div>
-            {% assign post_count = post_count | plus: 1 %}
+{% if max_posts > 0 %}
+    <h4 class="title is-6 has-text-primary">{{ include.title }}</h4>
+    <div class="columns is-multiline is-gapless">
+        {% for category in page.categories %}
+            {% for post in site.categories[category] %}
+                {% if post.url == page.url or urls contains post.url %} {% continue %} {% endif %}
+                {% if post_count >= max_posts %}
+                    {% break %}
+                {% endif %}
+                {% assign urls = urls | push: post.url %}
+                <div class="column is-12">
+                    {% include link_card.html title=post.title url=post.url image=post.image height="150px" %}
+                </div>
+                {% assign post_count = post_count | plus: 1 %}
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
-</div>
+    </div>
+{% endif %}
