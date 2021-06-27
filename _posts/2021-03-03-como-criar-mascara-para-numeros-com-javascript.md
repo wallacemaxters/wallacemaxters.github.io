@@ -3,6 +3,7 @@ layout: post
 title: Como criar máscara para números com Javascript?
 date: 2021-06-26T17:35:15.000-03:00
 categories:
+- codigo
 - javascript
 sitemap: true
 image: "/uploads/javascript.svg"
