@@ -1,6 +1,6 @@
 ---
 layout: tools
-image: "/uploads/covers/paleta-cores.jpg"
+image: /uploads/covers/apache.png
 sitemap: true
 title: Apache VirtualHost Generator
 excerpt: 'Ferramenta online para geração de virtual host para apache'
