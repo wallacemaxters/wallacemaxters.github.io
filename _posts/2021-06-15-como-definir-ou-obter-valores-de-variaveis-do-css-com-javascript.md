@@ -8,7 +8,7 @@ image: "/uploads/codigo-notebook-html.jpg"
 excerpt: Veja nesse tutorial como definir e alterar as variáveis nativas do CSS através
   do Javascript.
 categories:
-- css
+- CSS
 - javascript
 sitemap: true
 max_posts: 5
