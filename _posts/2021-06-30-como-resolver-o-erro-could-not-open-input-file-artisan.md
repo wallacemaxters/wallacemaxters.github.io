@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2021-04-30T22:59:44.000-03:00
+last_modified_at: 
 title: 'Como resolver o erro "Could not open input file: artisan"?'
 image: "/uploads/laravel-terminal.png"
 date: 2021-06-30 02:32:00 +0000
