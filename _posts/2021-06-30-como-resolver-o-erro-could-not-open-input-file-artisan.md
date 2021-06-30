@@ -10,7 +10,7 @@ categories:
 - laravel
 - PHP
 sitemap: true
-max_posts: 3
+max_posts: 5
 
 ---
 É muito comum em um projeto Laravel ocorrer o seguinte erro:
