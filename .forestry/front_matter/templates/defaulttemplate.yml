@@ -58,6 +58,16 @@ fields:
 - type: boolean
   name: sitemap
   label: sitemap
+- name: max_posts
+  type: number
+  label: Max Posts
+  description: ''
+  default: 5
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 pages:
 - _posts/2019-03-12-como-ignorar-mudanca-permissao-git.md
 - _posts/2019-03-17-por-que-o-button-submete-um-formulário-sem-type-submit.md
