@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2021-06-15T15:28:46.000-03:00
-last_modified_at: 2021-06-23 11:30:46 -0300
+last_modified_at: 2021-06-30 15:30:46 +0000
 color: "#FFFFFF"
 title: Como obter ou alterar valores de variáveis do CSS com Javascript?
 image: "/uploads/codigo-notebook-html.jpg"
@@ -18,7 +18,7 @@ No CSS, é possível definir variáveis, contendo valores específicos, que pode
 
 ## Obtendo o valor de uma variável CSS pelo Javascript
 
-Primeiramente, vamos suport que você definiu pelo CSS uma variável no selector `:root`. Para acessá-la pelo Javascript, é necessário utilizar `document.documentElement`.
+Primeiramente, vamos supor que você definiu pelo CSS uma variável no selector `:root`. Para acessá-la pelo Javascript, é necessário utilizar `document.documentElement`.
 
 Veja:
 
