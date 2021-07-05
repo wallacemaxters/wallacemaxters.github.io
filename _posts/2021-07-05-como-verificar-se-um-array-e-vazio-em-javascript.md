@@ -5,7 +5,7 @@ last_modified_at: 2021-07-05 20:13:46 +0000
 color: "#222222"
 max_posts: 2
 title: Como verificar se um Array é vazio em Javascript?
-image: ''
+image: "/uploads/verificar-array-vazio-javascript.png"
 excerpt: Aprenda como verificar se um Array está vazio ou não no Javascript através
   deste tutorial!
 categories:
